@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="114px" viewBox="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>+</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FEEB73" offset="0%"></stop>
+            <stop stop-color="#FFC800" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.52112676,46.4788732 L46.4788732,46.4788732 L46.4788732,63.5211268 L8.52112676,63.5211268 C3.8150384,63.5211268 0,59.7060884 0,55 C0,50.2939116 3.8150384,46.4788732 8.52112676,46.4788732 Z" id="path-2"></path>
+        <filter x="-4.3%" y="-11.7%" width="117.2%" height="146.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#FEEB73" offset="0%"></stop>
+            <stop stop-color="#FFC800" offset="100%"></stop>
+        </linearGradient>
+        <path d="M46.4788732,8.52112676 C46.4788732,3.8150384 50.2939116,0 55,0 C59.7060884,0 63.5211268,3.8150384 63.5211268,8.52112676 L63.5211268,101.478873 C63.5211268,106.184962 59.7060884,110 55,110 C50.2939116,110 46.4788732,106.184962 46.4788732,101.478873 L46.4788732,8.52112676 Z" id="path-5"></path>
+        <filter x="-11.7%" y="-1.8%" width="146.9%" height="107.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <path d="M63.5211268,46.4788732 L101.478873,46.4788732 C106.184962,46.4788732 110,50.2939116 110,55 C110,59.7060884 106.184962,63.5211268 101.478873,63.5211268 L63.5211268,63.5211268 L63.5211268,46.4788732 Z" id="path-7"></path>
+        <filter x="-4.3%" y="-11.7%" width="117.2%" height="146.9%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Airdrop" transform="translate(-1362.000000, -966.000000)">
+            <g id="top" transform="translate(384.000000, 886.000000)">
+                <g id="4" transform="translate(930.000000, 32.000000)">
+                    <g id="+" transform="translate(48.000000, 48.000000)">
+                        <g id="矩形">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <g id="路径">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                            <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        </g>
+                        <g id="矩形">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
