@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.9482ccbb.chunk.css",
+    "main.css": "/GallusFighter.github.io/static/css/main.4b191306.chunk.css",
     "main.js": "/GallusFighter.github.io/static/js/main.a6add585.chunk.js",
     "main.js.map": "/GallusFighter.github.io/static/js/main.a6add585.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.3f3615d6.js",
@@ -12,7 +12,7 @@
     "static/js/3.f063d90c.chunk.js.map": "/GallusFighter.github.io/static/js/3.f063d90c.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.9482ccbb.chunk.css.map": "/GallusFighter.github.io/static/css/main.9482ccbb.chunk.css.map",
+    "static/css/main.4b191306.chunk.css.map": "/GallusFighter.github.io/static/css/main.4b191306.chunk.css.map",
     "static/js/2.7713f43d.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.7713f43d.chunk.js.LICENSE.txt",
     "static/media/TEST.b9b09302.jpg": "/GallusFighter.github.io/static/media/TEST.b9b09302.jpg",
     "static/media/App.css": "/GallusFighter.github.io/static/media/tiret.d1af01c3.svg",
@@ -63,7 +63,7 @@
     "static/js/runtime-main.3f3615d6.js",
     "static/css/2.a75f5a2c.chunk.css",
     "static/js/2.7713f43d.chunk.js",
-    "static/css/main.9482ccbb.chunk.css",
+    "static/css/main.4b191306.chunk.css",
     "static/js/main.a6add585.chunk.js"
   ]
 }
