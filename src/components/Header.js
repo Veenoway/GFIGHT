@@ -11,7 +11,7 @@ const Header = () => {
                         </div>
                         <ul class="ul">
                             <li class="menut-item">
-                                <NavLink exact to="/docs" activeClassName="nav-active" className="display left-docs">
+                                <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs">
                                 {/* <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" class="display"> */}
                                 {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
                                 <i class="fas fa-file-alt yellow-icon"></i>Docs
