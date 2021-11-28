@@ -11,6 +11,7 @@ import bsc from "../images/bsc.png";
 import prenium from "../images/normal.gif";
 import standard from "../images/petit.gif";
 import collector from "../images/prenium.gif";
+import gallusLogo from '../images/logoGallus.png';
 
 const BlindBox = () => {
     // useEffect(() => {
@@ -101,7 +102,7 @@ const BlindBox = () => {
 
     function AfficherMasquer()
                     {
-                    var divInfo = document.getElementsById('popup');
+                    var divInfo = document.getElementById('hamburger');
                      
                     if (divInfo.style.display == 'none')
                     divInfo.style.display = 'block';
@@ -110,120 +111,135 @@ const BlindBox = () => {
                      
                     }
     
+                    
+    
 
     return (
         <>
-        {/* <div className="test hamburgertest" id="hamburger">
+        <div className="test hamburgertest" id="hamburger">
                 
                     <div class="vertical-header">
-                        <div class="image-top">
-                            <NavLink exact to="/" className="logo-top">ROFI</NavLink>
+                    <a className="hamburger-header" id="hhh" onClick={AfficherMasquer}>
+                        <i className="fas fa-bars hamburger-img"></i>
+                    </a>
+                    <div class="image-top">
+                            <NavLink exact to="/" className="logo-top">GALLUS</NavLink>
                         </div>
                         <ul class="ul">
                             <li class="menut-item">
-                                <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" class="display">
-                                    <i class="icon0 icon"></i>Buy GALLUS
+                                {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
+                                <a href="https://roosterfi.gitbook.io/gamecock-a-defight-metaverse/" class="display left-docs">
+                                {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
+                                <i class="fas fa-file-alt yellow-icon"></i>Docs
                                 </a>
+                                {/* </NavLink> */}
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/blindbox" activeClassName="nav-active" className="display">
-                                    <i class="icon5 icon"></i>Mystery box
+                                <NavLink exact to="/" activeClassName="nav-active" className="display">
+                                <i class="fas fa-box-open yellow-icon"></i>Mystery box
                                     <span className="tag">NEW</span>
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/community" activeClassName="nav-active" className="display">
-                                    <i class="icon13 icon"></i>Community
+                                <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
+                                <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
                                 </NavLink>
                             </li>
+                            <li class="menut-item">
+                                <NavLink exact to="/community" activeClassName="nav-active" className="display">
+                                <i class="fas fa-envelope-open yellow-icon"></i>Community
+                                </NavLink>
+                            </li>
+                            
                             <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
-                                    <i class="icon3 icon"></i>NFT Market
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display ">
+                                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/pool" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon1 icon"></i>
+                                <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
+                                <i class="fas fa-layer-group yellow-icon"></i>
                                     
                                     Pool
                                 </NavLink>
                                 
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/farms" activeClassName="nav-active" className="display disabled">
+                                <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
                                 
-                                        <i class="icon2 icon"></i>Farms
-                                        {/* <span className="tag">HOT</span> */}
+                                <i class="fas fa-tractor yellow-icon"></i>Farms
+                                        <span className="tag">HOT</span>
                                         
-                                {/* </NavLink>
+                                </NavLink>
                             </li>
                             
                             <li class="menut-item">
                                 <NavLink exact to="/gamebase" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon4 icon"></i>Gamebase
+                                <i class="fas fa-gamepad yellow-icon"></i>Gamebase
                                 </NavLink>
                             </li>
                             
                             <li class="menut-item">
                                 <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon6 icon"></i>Refine
+                                <i class="fas fa-lightbulb yellow-icon"></i>Refine
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/breed" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon7 icon"></i>Breed
+                                <i class="fas fa-egg yellow-icon"></i>Breed
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/cast" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon8 icon"></i>Cast
+                                <i class="fas fa-tools yellow-icon"></i>Cast
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/knight" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon9 icon"></i>Knight
+                                <i class="fas fa-feather-alt yellow-icon"></i>Fighter
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/bounty" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon10 icon"></i>Bounty
+                                <i class="fas fa-medal yellow-icon"></i>Bounty
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/airdrop" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon11 icon"></i>Airdrop
+                                <i class="fas fa-gifts yellow-icon"></i>Airdrop
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/evolve" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon12 icon"></i>Evolve
+                                <i class="fas fa-atom yellow-icon"></i>Evolve
                                     
                                 </NavLink>
                             </li>
                             
                             <li class="menut-item">
                                 <NavLink exact to="/help-center" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon14 icon"></i>Help Center
+                                <i class="fas fa-comments yellow-icon"></i>Help Center
                                 </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/app-download" activeClassName="nav-active" className="display disabled">
-                                    <i class="icon15 icon"></i>App Download
+                                <i class="fas fa-download yellow-icon"></i>App Download
                                 </NavLink>
                             </li>
 
 
                         </ul>
                     </div>
-                </div> */} 
+                </div> 
         <div className="pool">
-            <Header />
+            
         
         <div className="wallet-nav">
             <div className="button-aside-nav" >
-                <a href="" className="hamburger-nav-app" id="hhh" oncClick={AfficherMasquer}>
-                    <img src={hamburger} className="hamburger-img" />
+                <img src={gallusLogo} className="gallus-title-logo" />
+                <a className="hamburger-nav-app" id="hhh" onClick={AfficherMasquer}>
+                    <i className="fas fa-bars hamburger-img"></i>
                 </a>
             </div>
             <div className="logo-nav-wallet">

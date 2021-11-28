@@ -11,12 +11,12 @@ const Header = () => {
                         </div>
                         <ul class="ul">
                             <li class="menut-item">
-                                <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs">
-                                {/* <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" class="display"> */}
+                                {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
+                                <a href="https://roosterfi.gitbook.io/gamecock-a-defight-metaverse/" class="display left-docs">
                                 {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
                                 <i class="fas fa-file-alt yellow-icon"></i>Docs
-                                {/* </a> */}
-                                </NavLink>
+                                </a>
+                                {/* </NavLink> */}
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/" activeClassName="nav-active" className="display">
