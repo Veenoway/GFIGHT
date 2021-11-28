@@ -194,8 +194,8 @@ const MyNft = () => {
             </div>
             <div className="right-nav">
                 <div className="right-item">
-                    <a href="#" className="nft-owned ">{NftOwned}</a>
-                    <a href="#" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
+                    <a href="#my-nft" className="nft-owned ">{NftOwned}</a>
+                    <a href="#my-nft" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
                 </div>
 
             </div>
