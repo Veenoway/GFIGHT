@@ -111,7 +111,7 @@ const MyNft = () => {
                 let myNft = document.getElementById('main');
                 var nftOwned = document.createElement("NavLink");
                 nftOwned.classList.add('nft-owned');
-                myNft.appendChild(nftOwned);
+                document.getElementById('main').appendChild(nftOwned);
                 SetNftOwned('My NFT : ' + balance);
                 
 
