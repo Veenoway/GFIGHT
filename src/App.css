@@ -2641,7 +2641,8 @@ align-items:center;
     justify-content:center
   }
   .gallus-logo{
-    width:100% !important
+    width:100% !important;
+    margin-top:50px;
   }
   .wallet{
     padding:2px 10px;
