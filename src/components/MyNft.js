@@ -202,30 +202,7 @@ const MyNft = () => {
         </div>
         <div className="normal-layout" >
             <div className="container " id="main">
-                {/* <div className="row ">
-                    <div className="col-lg-6 flex-container">
-                        
-                        <div className="image-container ">
-                            <div className="neon-nft"></div>
-                            <img src={nftBox} alt="" className="image-nft-box" />
-                        </div>
-                    </div>
-                    <div className="col-lg-6 flexBox-nft">
-
-                        <div className="detail-container">
-                            <h1 className="title-Nft-desc">Dawnlight Badge - <span className="title-nft-secondColor">Bronze</span></h1>
-                            <div className="liseret-nft"></div>
-                            <p className="text-description-nft">lorem fhsbhneiuofhoi hnesh oighfosieh gfohgsih si ghopsegjh iogjesijg iojsegio joigse</p>
-                            <div className="center-button">
-                                <p>Current price : 654$</p>
-                                
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div> */}
-                
+              
             </div>
             
                 
