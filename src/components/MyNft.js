@@ -108,11 +108,11 @@ const MyNft = () => {
                 console.log(balance.toString())
 
                 
-                let myNft = document.getElementById('main');
-                var nftOwned = document.createElement("NavLink");
-                nftOwned.classList.add('nft-owned');
-                document.getElementById('main').appendChild(nftOwned);
-                SetNftOwned('My NFT : ' + balance);
+                
+                // var nftOwned = document.createElement("NavLink");
+                // nftOwned.classList.add('nft-owned');
+                
+                // SetNftOwned('My NFT : ' + balance);
                 
 
                 for (let i=0;i<balance;i++) {
