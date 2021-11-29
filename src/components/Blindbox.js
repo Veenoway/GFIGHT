@@ -143,6 +143,7 @@ const BlindBox = () => {
                             <li class="menut-item">
                                 <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
                                 <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
+                                <span className="tag">HOT</span>
                                 </NavLink>
                             </li>
                             <li class="menut-item">
@@ -150,12 +151,28 @@ const BlindBox = () => {
                                 <i class="fas fa-envelope-open yellow-icon"></i>Community
                                 </NavLink>
                             </li>
-                            
+                            <li class="menut-item">
+                                <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
+                               
+                                <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
+                                <span className="tagSoon ">Soon..</span>
+                                
+                                
+                                </NavLink>
+                            </li>
                             <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display ">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>
+                            </li>
+                            <li class="menut-item">
+                                <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
+                                <i class="fas fa-feather-alt yellow-icon"></i>
+                                    
+                                    Defight
+                                </NavLink>
+                                
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
@@ -169,7 +186,7 @@ const BlindBox = () => {
                                 <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
                                 
                                 <i class="fas fa-tractor yellow-icon"></i>Farms
-                                        <span className="tag">HOT</span>
+                                        
                                         
                                 </NavLink>
                             </li>
@@ -182,24 +199,10 @@ const BlindBox = () => {
                             
                             <li class="menut-item">
                                 <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-lightbulb yellow-icon"></i>Refine
+                                <i class="fas fa-lightbulb yellow-icon"></i>GOUVERNANCE
                                 </NavLink>
                             </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/breed" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-egg yellow-icon"></i>Breed
-                                </NavLink>
-                            </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/cast" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-tools yellow-icon"></i>Cast
-                                </NavLink>
-                            </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/knight" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-feather-alt yellow-icon"></i>Fighter
-                                </NavLink>
-                            </li>
+                            
                             <li class="menut-item">
                                 <NavLink exact to="/bounty" activeClassName="nav-active" className="display disabled">
                                 <i class="fas fa-medal yellow-icon"></i>Bounty
@@ -210,23 +213,14 @@ const BlindBox = () => {
                                 <i class="fas fa-gifts yellow-icon"></i>Airdrop
                                 </NavLink>
                             </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/evolve" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-atom yellow-icon"></i>Evolve
-                                    
-                                </NavLink>
-                            </li>
+                            
                             
                             <li class="menut-item">
                                 <NavLink exact to="/help-center" activeClassName="nav-active" className="display disabled">
                                 <i class="fas fa-comments yellow-icon"></i>Help Center
                                 </NavLink>
                             </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/app-download" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-download yellow-icon"></i>App Download
-                                </NavLink>
-                            </li>
+                            
 
 
                         </ul>
