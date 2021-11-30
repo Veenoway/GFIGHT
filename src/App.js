@@ -25,14 +25,14 @@ function App() {
       
       
       <div className="paddingLeft">
-        <Route exact path="/description" component={NftDescription} />
+        <Route exact path="/gdrgdr" component={NftDescription} />
         <Route exact path="/gallus-story" component={GallusStory} />
         <Route exact path="/community" component={Community} />
         <Route exact path="/my-nft" component={MyNft} />
-        <Route exact path="/pool" component={Pool} />
-        <Route exact path="/farms" component={Farms}/>
+        <Route exact path="/gsgrf" component={Pool} />
+        <Route exact path="/fse" component={Farms}/>
         <Route exact path="/" component={BlindBox} />
-        <Route exact path="/nft-market" component={NftMarket} />
+        <Route exact path="/nft-marketfsefs" component={NftMarket} />
       
         
         

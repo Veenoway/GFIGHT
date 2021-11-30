@@ -90,13 +90,11 @@ const Community = () => {
                         <NavLink exact to="/" className="logo-top">GALLUS</NavLink>
                     </div>
                     <ul class="ul">
-                        <li class="menut-item">
-                            {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
-                            <a href="https://roosterfi.gitbook.io/gamecock-a-defight-metaverse/" class="display left-docs">
-                            {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
-                            <i class="fas fa-file-alt yellow-icon"></i>Docs
-                            </a>
-                            {/* </NavLink> */}
+                    <li class="menut-item">
+                            <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
+                            <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
+                            <span className="tag">HOT</span>
+                            </NavLink>
                         </li>
                         <li class="menut-item">
                             <NavLink exact to="/" activeClassName="nav-active" className="display">
@@ -104,17 +102,8 @@ const Community = () => {
                                 <span className="tag">NEW</span>
                             </NavLink>
                         </li>
-                        <li class="menut-item">
-                            <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
-                            <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
-                            <span className="tag">HOT</span>
-                            </NavLink>
-                        </li>
-                        <li class="menut-item">
-                            <NavLink exact to="/community" activeClassName="nav-active" className="display">
-                            <i class="fas fa-envelope-open yellow-icon"></i>Community
-                            </NavLink>
-                        </li>
+                        
+                       
                         <li class="menut-item">
                             <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
                            
@@ -155,11 +144,7 @@ const Community = () => {
                             </NavLink>
                         </li>
                         
-                        <li class="menut-item">
-                            <NavLink exact to="/gamebase" activeClassName="nav-active" className="display disabled">
-                            <i class="fas fa-gamepad yellow-icon"></i>Gamebase
-                            </NavLink>
-                        </li>
+                        
                         
                         <li class="menut-item">
                             <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
@@ -180,10 +165,18 @@ const Community = () => {
                         
                         
                         <li class="menut-item">
-                            <NavLink exact to="/help-center" activeClassName="nav-active" className="display disabled">
-                            <i class="fas fa-comments yellow-icon"></i>Help Center
-                            </NavLink>
-                        </li>
+                                <NavLink exact to="/community" activeClassName="nav-active" className="display">
+                                <i class="fas fa-envelope-open yellow-icon"></i>Community
+                                </NavLink>
+                            </li>
+                            <li class="menut-item">
+                                {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
+                                <a href="https://galluspaper.gallusfighter.com/" target="_blank" class="display left-docs">
+                                {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
+                                <i class="fas fa-file-alt yellow-icon"></i>Gallus Paper
+                                </a>
+                                {/* </NavLink> */}
+                            </li>
                         
 
 
@@ -192,7 +185,7 @@ const Community = () => {
             </div> 
         <div className="pool community-main">
         
-        <div className="wallet-nav">
+        <div className="wallet-nav displayNone">
             
         <div className="button-aside-nav" >
                 <img src={gallusLogo} className="gallus-title-logo" />

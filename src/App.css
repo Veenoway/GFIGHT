@@ -85,7 +85,7 @@
   height:100vh;
   box-sizing: border-box;
   padding:16px 0 16px 16px;
-  background:url(./images/bg-nft.jpg);
+  background:url(./images/ecran3.jpg);
   background-size:cover;
   display:flex;
 }
@@ -281,7 +281,7 @@ align-items:center;
   color:#ffffff;
   font-weight:700;
   
-  background:url(./images/bg-nft.jpg);
+  background:url(../src/images/ecran_2.jpg);
   background-repeat:no-repeat;
   background-size:100% 100%;
   background-attachment: fixed;
@@ -795,9 +795,10 @@ align-items:center;
 }
 .title-nft-main{
   font-family:bungee;
-  color:#ed0000;
+  color:#ffffff;
   letter-spacing: 0px;
-  font-size:56px;
+  font-size:40px;
+  color:#ed0000
 }
 
 .color-nft{
@@ -846,7 +847,9 @@ align-items:center;
   background: linear-gradient(45deg, rgb(255, 0, 0) 0%, rgb(255, 154, 0) 10%, rgb(208, 222, 33) 20%, rgb(79, 220, 74) 30%, rgb(63, 218, 216) 40%, rgb(47, 201, 226) 50%, rgb(28, 127, 238) 60%, rgb(95, 21, 242) 70%, rgb(186, 12, 248) 80%, rgb(251, 7, 217) 90%, rgb(255, 0, 0) 100%) 0% 0% / 300% 300%;
   animation: 2s linear 0s infinite normal none running test;
 }
-
+a{
+  text-decoration: none;
+}
 @keyframes test {
   0% {
     background-position: 0% 50%;
@@ -2326,6 +2329,11 @@ a:hover{
   width:100%;
 }
 
+.centerFlex{
+  justify-content: center;
+    display: flex;
+}
+
 /* BOOK */
 
 .dis{
@@ -2503,7 +2511,14 @@ a:hover{
     transform-origin: center;
     
 }
+.container-nft{
+  margin-top:20px;
+  
+}
 
+.displayNone{
+  display:none
+}
 .hamburger-1{
   top:33%;
 }
@@ -2523,6 +2538,15 @@ a:hover{
   flex-direction:row
 }
 
+.hamburgertest{
+  /* padding:0px !important;
+  border-radius:0px !important; */
+  
+}
+.vertical-nft-header{
+  /* width:100%;
+  border-radius:0px !important; */
+}
 .hamburger-img{
   height:40px;
 }
@@ -2551,6 +2575,10 @@ align-items:center;
     width:100%;
     padding-left:20px;
     padding-right:20px;
+  }
+
+  .displayNone{
+    display:flex
   }
 
   #headder{
@@ -2632,6 +2660,10 @@ align-items:center;
   .center-button{
     justify-content:center
   }
+
+  .image-container{
+    margin-top:50px;
+  }
 }
 @media screen and (max-width: 766px) {
   .name-socialMedia{
@@ -2650,6 +2682,12 @@ align-items:center;
   }
   .logo-nav-wallet{
     display:none
+  }
+  .secondTitle-nft-main{
+    font-size:24px;
+  }
+  .image-container{
+    width:100% !important
   }
 }
 
@@ -2673,6 +2711,7 @@ align-items:center;
 }
 .container-nft{
   padding:0px !important;
+
 }
 }
 
@@ -2922,8 +2961,8 @@ align-items:center;
 }
 
 .image-nft-box{
-  width:394px;
-  height:394px;
+ width:100%;
+ height:auto;
   z-index:2;
   position:relative;
   background:url("./images/nft-box.gif");
@@ -2936,13 +2975,14 @@ align-items:center;
   /* border-width: 3px;
   border-image-slice: 60 30;
   border-image: linear-gradient(45deg, rgb(255, 0, 0), #f9c422) 1; */
-  width:400px;
+  width:90%;
   position:relative;
 }
 .flex-container{
   display:flex;
   justify-content: center;
   position:relative;
+  height:fit-content;
 }
 .detail-container{
   display:flex;
@@ -2958,7 +2998,7 @@ align-items:center;
 
 .title-Nft-desc{
   text-align: start;
-  font-size:44px;
+  font-size:39px;
   font-family:bungee;
   margin-bottom:10px;
   color:#ed0000;
@@ -3315,4 +3355,118 @@ align-items:center;
   align-items:center;
   height:100vh;
   margin:0px !important;
+}
+
+
+.container-nftImage{
+  width:90%;
+  height:auto;
+  background-color:black;
+  border:2px solid red
+}
+.main-nft-imageLeft{
+  width:100%
+}
+.secondTitle-nft-main{
+  margin-bottom:40px;
+  margin-top:50px;
+  font-size:32px;
+  font-family:bungee;
+  color:#fad621
+}
+.family-margin{
+  margin-bottom:100px;
+}
+.container-nftTexte{
+  height:280px;
+  background-color:rgba(255, 255, 255, 0.137);
+  margin-top:20px;
+  position:relative;
+  z-index:4;
+  padding:15px 35px 0px 15px;
+}
+.backDiv{
+  height:280px;
+  width:97%;
+  border:5px solid rgba(0, 0, 255, 0.637);
+  
+  position:absolute;
+  top:16px;
+  left:-10px;
+  z-index:0
+}
+.background-section{
+  /* background:url(../src/images/bg-inverse.png),url(../src/images/ecran_2.jpg);
+  background-size:100%,100% 100%;
+  background-position:0% 100%,center;
+  
+  background-attachment: scroll,fixed;
+  background-repeat: no-repeat; */
+
+}
+.relative{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.logoGallus-nft{
+  height:140px;
+  margin-top:25px;
+  margin-bottom:35px;
+}
+
+.padding-nft{
+  padding:50px 0px 200px 0;
+}
+
+.rowDisplay{
+  display:flex;
+  justify-content: space-around;
+  margin-top:60px !important;
+}
+
+.button-nft-main{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+}
+
+.background-button{
+  background-color:#ed0000;
+  padding: 10px 15px 10px 15px;
+  border-radius:10px;
+  z-index:1;
+  
+  
+  color:white;
+  text-decoration:none;
+  margin-top:35px;
+  line-height: 1.1;
+  letter-spacing: 1px;;
+  font-size:15px !important;
+  font-family:bungee
+}
+.family-nft{
+  font-family: 'Sen';
+  font-size:22px;
+}
+.royalFeather{
+  color:rgb(255, 231, 15)
+}
+
+.RedColor-nft{
+  color:rgb(255, 231, 15);
+}
+
+.background-section-2{
+  /* background:url(./images/manette_fond2.png),url(./images/bg-nft.jpg);
+  background-repeat:no-repeat;
+  background-size:100%, cover ;
+  background-attachment: scroll,scroll; */
+  
 }

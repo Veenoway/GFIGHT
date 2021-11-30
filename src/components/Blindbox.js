@@ -12,6 +12,13 @@ import prenium from "../images/normal.gif";
 import standard from "../images/petit.gif";
 import collector from "../images/prenium.gif";
 import gallusLogo from '../images/logoGallus.png';
+import gallus from "../gallus.png";
+import litleFeather from "../images/petitePlume.gif";
+import mediumFeather from "../images/moyennePlume.gif";
+import bigFeather from "../images/GrandePlume.gif";
+import exemple1 from "../images/exemple1.gif";
+import exemple2 from "../images/exemple2.gif";
+import exemple3 from "../images/exemple3.gif";
 
 const BlindBox = () => {
     // useEffect(() => {
@@ -95,7 +102,7 @@ const BlindBox = () => {
             }
             catch(error){
                 alert(error.message)
-                console.log(error)
+               
             }
        }
     }
@@ -116,9 +123,9 @@ const BlindBox = () => {
 
     return (
         <>
-        <div className="test hamburgertest" id="hamburger">
+        <div className="test hamburgertest " id="hamburger">
                 
-                    <div class="vertical-header">
+                    <div class="vertical-header vertical-nft-header">
                     <a className="hamburger-header" id="hhh" onClick={AfficherMasquer}>
                         <i className="fas fa-bars hamburger-img"></i>
                     </a>
@@ -127,12 +134,10 @@ const BlindBox = () => {
                         </div>
                         <ul class="ul">
                             <li class="menut-item">
-                                {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
-                                <a href="https://roosterfi.gitbook.io/gamecock-a-defight-metaverse/" class="display left-docs">
-                                {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
-                                <i class="fas fa-file-alt yellow-icon"></i>Docs
-                                </a>
-                                {/* </NavLink> */}
+                                <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
+                                <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
+                                <span className="tag">HOT</span>
+                                </NavLink>
                             </li>
                             <li class="menut-item">
                                 <NavLink exact to="/" activeClassName="nav-active" className="display">
@@ -140,17 +145,8 @@ const BlindBox = () => {
                                     <span className="tag">NEW</span>
                                 </NavLink>
                             </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
-                                <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
-                                <span className="tag">HOT</span>
-                                </NavLink>
-                            </li>
-                            <li class="menut-item">
-                                <NavLink exact to="/community" activeClassName="nav-active" className="display">
-                                <i class="fas fa-envelope-open yellow-icon"></i>Community
-                                </NavLink>
-                            </li>
+                            
+                            
                             <li class="menut-item">
                                 <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
                                
@@ -191,11 +187,7 @@ const BlindBox = () => {
                                 </NavLink>
                             </li>
                             
-                            <li class="menut-item">
-                                <NavLink exact to="/gamebase" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-gamepad yellow-icon"></i>Gamebase
-                                </NavLink>
-                            </li>
+                        
                             
                             <li class="menut-item">
                                 <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
@@ -215,10 +207,19 @@ const BlindBox = () => {
                             </li>
                             
                             
+                            
                             <li class="menut-item">
-                                <NavLink exact to="/help-center" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-comments yellow-icon"></i>Help Center
+                                <NavLink exact to="/community" activeClassName="nav-active" className="display">
+                                <i class="fas fa-envelope-open yellow-icon"></i>Community
                                 </NavLink>
+                            </li>
+                            <li class="menut-item">
+                                {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
+                                <a href="https://galluspaper.gallusfighter.com/" target="_blank" class="display left-docs">
+                                {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
+                                <i class="fas fa-file-alt yellow-icon"></i>Gallus Paper
+                                </a>
+                                {/* </NavLink> */}
                             </li>
                             
 
@@ -226,7 +227,7 @@ const BlindBox = () => {
                         </ul>
                     </div>
                 </div> 
-        <div className="pool">
+        <div className="pool background-section">
             
         
         <div className="wallet-nav">
@@ -250,36 +251,90 @@ const BlindBox = () => {
 
                 </div>
             </div>
-            <div className="normal-layout">
-                <div className="container container-nft">
-                <div className="nft-title-main">
-                        <h1 className="title-nft-main"> Exclusive GALLUSFIGHTER <br /><span className="color-nft">NFT Collection</span></h1>
-                        <p className="text-nft-main">The first first blood in the GameFi coming soon and his name is... Gallus Fighter ! This Exclusive NFT's Collection is only available on Opensea and it's the announcement of the opening of your future platform GALLUSFIGHTER.com.<br />
-                            The feathers are classified by rarity; the rarer your feather is, the more it gives you a Collector's Reward!
-                            Stay tuned and enter the arena for NFT's fights.
-                        </p>
+        
+        
+            <div className="normal-layout padding-nft">
+                <div className="container">
+                    <h1 className="title-nft-main">The <span className="royalFeather">ROYAL FEATHER</span>  NFT Collection BY</h1>
+                    <img src={gallus} className="logoGallus-nft" />
+                   
+                    <p className="family-nft">Each NFT Feather is a unique piece of art, enter the Mystery Box sale and receive one of the 500 small, medium or big NFT with golden or silver attributes and wrapped in one of the 6 beautifully designed boxes.</p>
+                   <div className=" button-nft-main"> <NavLink exact to="/gallus-story" className="background-button"> Discover the<br /> Gallus story</NavLink></div>
+                    <div className="row rowDisplay">
+                        <div className="col-lg-4 centerFlex">
+                            {/* <div className="container-nftImage">
+                                <img src={standard} className="main-nft-imageLeft" />
+                            </div> */}
+                            <div className="image-container ">
+                            <div className="neon-nft"></div>
+                                <img src={exemple3} alt="" className="image-nft-box" />
+                            </div>
+                            
+                        </div> 
+                        <div className="col-lg-4 centerFlex">
+                            {/* <div className="container-nftImage">
+                                <img src={prenium} className="main-nft-imageLeft" />
+                            </div> */}
+                            <div className="image-container ">
+                            <div className="neon-nft"></div>
+                                <img src={exemple1} alt="" className="image-nft-box" />
+                            </div>
+                        </div> 
+                        <div className="col-lg-4 centerFlex">
+                            {/* <div className="container-nftImage">
+                                <img src={collector} className="main-nft-imageLeft" />
+                            </div> */}
+                            <div className="image-container ">
+                            <div className="neon-nft"></div>
+                                <img src={exemple2} alt="" className="image-nft-box" />
+                            </div>
+                        </div> 
+                        
                     </div>
+                </div>
+            </div>
+            </div>
+            <div className="pool background-section-2">
+            
+            <div className="normal-layout">
+            <h2 className="secondTitle-nft-main">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</h2>
+               <p className="family-nft family-margin">Each NFT Feather is a unique piece of art, enter the Mystery Box sale and receive one of the 500 small, medium or big NFT with golden or silver with rarity attributes, also featured on the different Stickers and wrapped in one of the 6 beautifully designed boxes</p>
+               <div className="container container-nft">
+               
                     <div className="row ">
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
                             <div className="neon-nft"></div>
-                                <img src={standard} alt="" className="image-nft-box" />
+                                <img src={litleFeather} alt="" className="image-nft-box" />
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
                             <div className="detail-container">
-                                <h1 className="title-Nft-desc">small sickle feather - <span className="title-nft-secondColor"> Bronze</span></h1>
+                                <h1 className="title-Nft-desc">sickle feather - <span className="title-nft-secondColor"><br />small </span></h1>
                                 <div className="liseret-nft"></div>
-                                <p className="text-description-nft">lorem fhsbhneiuofhoi hnesh oighfosieh gfohgsih si ghopsegjh iogjesijg iojsegio joigse</p>
+                                <p className="text-description-nft">This fine feather will allow you to get a Premium reward in our universe of Play2Earn and in this way increase your capital in $GALLUS token.
+Take advantage of this unique benefit with the DeFi 
+                                </p>   
+                                <div className="bsc">
+                                    <p className="bsc-price-text">Prenium Reward : </p>
+                                    <img src={gallus} className="bsc-price" />
+                                    <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                </div> 
+                                <div className="bsc">
+                                    <p className="bsc-price-text">Quantity : </p>
+                                   
+                                    <p className="bsc-price-chiffre">330</p>
+                                </div>     
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
                                     <p className="bsc-price-chiffre">0,63</p>
                                 </div>
+                                
                                 <div className="center-button">
-                                    <a href="#" className="button-nft" onClick={purshase}>BUY</a>
+                                    <a href="#" className="button-nft disabled" onClick={purshase}>BUY</a>
                                     <div className="prenium-box-nft">
-                                        Standard Edition *
+                                        Small Edition *
                                     </div>
 
                                 </div>
@@ -291,18 +346,31 @@ const BlindBox = () => {
                         
                         <div className="col-lg-6 flexBox-nft">
                             <div className="detail-container">
-                                <h1 className="title-Nft-desc">lancet feather - <span className="title-nft-secondColor">Silver</span></h1>
+                                <h1 className="title-Nft-desc">lancet feather - <span className="title-nft-secondColor"><br />Medium</span></h1>
                                 <div className="liseret-nft"></div>
-                                <p className="text-description-nft">lorem fhsbhneiuofhoi hnesh oighfosieh gfohgsih si ghopsegjh iogjesijg iojsegio joigse</p>
+                                <p className="text-description-nft">All holders of this great feather will earn a high reward in $GALLUS Token and this will give you a considerable advantage to enter the GameFi.
+Take advantage of this unique benefit with the DeFi.
+</p>
+<div className="bsc">
+                                    <p className="bsc-price-text">High Reward : </p>
+                                    <img src={gallus} className="bsc-price" />
+                                    <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                </div> 
+                                <div className="bsc">
+                                    <p className="bsc-price-text">Quantity : </p>
+                                   
+                                    <p className="bsc-price-chiffre">150</p>
+                                </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
                                     <p className="bsc-price-chiffre">1,42</p>
                                 </div>
+                                
                                 <div className="center-button">
-                                    <a href="#" className="button-nft">BUY</a>
+                                    <a href="#" className="button-nft disabled">BUY</a>
                                     <div className="prenium-box-nft">
-                                        Prenium Edition *
+                                        Medium Edition *
                                     </div>
                                 </div>
                                 
@@ -311,7 +379,7 @@ const BlindBox = () => {
                         <div className="col-lg-6 flex-container">
                             <div className="image-container">
                                 <div className="neon-nft"></div>
-                                <img src={prenium} alt="" className="image-nft-box" />
+                                <img src={mediumFeather} alt="" className="image-nft-box" />
                             </div>
                         </div>
                     </div>
@@ -319,23 +387,36 @@ const BlindBox = () => {
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
                                 <div className="neon-nft"></div>
-                                <img src={collector} alt="" className="image-nft-box" />
+                                <img src={bigFeather} alt="" className="image-nft-box" />
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
                             <div className="detail-container">
-                                <h1 className="title-Nft-desc">big sickle feather - <span className="title-nft-secondColor">TITAN</span></h1>
+                                <h1 className="title-Nft-desc">sickle feather - <span className="title-nft-secondColor"><br />TITAN</span></h1>
                                 <div className="liseret-nft"></div>
-                                <p className="text-description-nft">lorem fhsbhneiuofhoi hnesh oighfosieh gfohgsih si ghopsegjh iogjesijg iojsegio joigse</p>
+                                <p className="text-description-nft">Only the best of the GALLUS Army can hope to open one of the rarest boxes containing a mysterious golden feathers. You only got one chance to join a private live Discord group with the Full Gallus Team.
+                                    Take advantage of this unique benefit with the DeFi.
+                                </p>
+                                <div className="bsc">
+                                    <p className="bsc-price-text">Crazy Reward : </p>
+                                    <img src={gallus} className="bsc-price" />
+                                    <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                </div> 
+                                
+                                <div className="bsc">
+                                    <p className="bsc-price-text">Quantity : </p>
+                                   
+                                    <p className="bsc-price-chiffre">20</p>
+                                </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
                                     <p className="bsc-price-chiffre">3,16</p>
                                 </div>
                                 <div className="center-button">
-                                    <a href="#" className="button-nft">BUY</a>
+                                    <a href="#" className="button-nft disabled">BUY</a>
                                     <div className="prenium-box-nft">
-                                        Collector Edition *
+                                        Titan Edition *
                                     </div>
 
                                 </div>
