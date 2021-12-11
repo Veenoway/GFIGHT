@@ -2334,6 +2334,7 @@ a:hover{
     display: flex;
 }
 
+
 /* BOOK */
 
 .dis{
@@ -2568,7 +2569,16 @@ align-items:center;
   height:40px;
   display:none
 }
-
+.CentPourcent1{
+  display:flex;
+  width:100% !important;
+  align-items: center;
+}
+.CentPourcent{
+  display:flex;
+  width:48% !important;
+  align-items: center;
+}
 /* MEDIA  */
 @media screen and (max-width: 1510px) {
   .wallet-nav{
@@ -2646,6 +2656,7 @@ align-items:center;
     width:100% !important;
     max-width:800px;
   }
+
 }
 
 @media screen and (max-width: 984px) {
@@ -2700,6 +2711,14 @@ align-items:center;
   }
 }
 
+@media (min-width: 2100px) and (max-width: 2580px) {
+
+  .lastContainer{
+    margin-bottom:400px !important;
+  }
+
+}
+
 @media screen and (max-width:575px) {
 .flex-socialMedia{
   justify-content:center;
@@ -2712,6 +2731,14 @@ align-items:center;
 .container-nft{
   padding:0px !important;
 
+}
+.secondTitle-nft-main{
+  margin-bottom:40px;
+  margin-top:50px;
+  font-size:24px !important;
+  font-family:bungee;
+  color:#fad621;
+  padding:10px;
 }
 }
 
@@ -2734,6 +2761,10 @@ align-items:center;
   }
   .detail-container{
     padding-left:10px !important;
+    
+  }
+  .last-detail-container{
+    margin-bottom: 150px;
   }
   .community-description{
     font-size:28px !important;
@@ -2758,6 +2789,15 @@ align-items:center;
   .vertical-header{
     width:100%;
     border-radius: 0px;
+  }
+  .family-margin{
+    padding:10px;
+  }
+  .CentPourcent{
+    display:flex;
+    width:100% !important;
+    margin-bottom:10px;
+
   }
 }
 
@@ -2975,7 +3015,7 @@ align-items:center;
   /* border-width: 3px;
   border-image-slice: 60 30;
   border-image: linear-gradient(45deg, rgb(255, 0, 0), #f9c422) 1; */
-  width:90%;
+  width:90% !important;
   position:relative;
 }
 .flex-container{
@@ -3019,6 +3059,7 @@ align-items:center;
   margin-top:20px;
   font-size:22px;
   font-family: 'Sen';
+  padding: 10px;
 }
 .image-nft-test{
   width:100%;
@@ -3282,6 +3323,7 @@ align-items:center;
 
 .bsc-price{
   height:30px;
+  margin-left:10px;
 }
 
 .bsc{
@@ -3290,12 +3332,13 @@ align-items:center;
 }
 
 .bsc-price-text{
-  margin-right:15px;
+  
   margin-bottom:0px !important;
   font-size: 22px;
   font-family:Sen;
   letter-spacing: 1px;
-  color:#f7F7F7
+  color:#f7F7F7;
+ 
 }
 
 .bsc-price-chiffre{
@@ -3304,6 +3347,14 @@ align-items:center;
   font-size: 22px;
   font-family:Sen;
   color:#f7F7F7
+}
+.bsc-price-chiffre1{
+  
+  margin-bottom:0px;
+  font-size: 22px;
+  font-family:Sen;
+  color:#f7F7F7;
+  text-align: start;
 }
 
 .yellow-icon{
@@ -3469,4 +3520,25 @@ align-items:center;
   background-size:100%, cover ;
   background-attachment: scroll,scroll; */
   
+}
+
+.margeTop{
+  margin-top:120px;
+}
+
+.discord-footer{
+  
+  height:40px;
+}
+
+.telegram-footer{
+  height:33px
+}
+
+.medium-footer{
+  height:42px;
+}
+
+.twitter-footer{
+  height:44px;
 }

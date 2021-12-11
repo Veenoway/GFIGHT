@@ -19,6 +19,10 @@ import bigFeather from "../images/GrandePlume.gif";
 import exemple1 from "../images/exemple1.gif";
 import exemple2 from "../images/exemple2.gif";
 import exemple3 from "../images/exemple3.gif";
+import footerTwitter from "../images/twitter2.png";
+import footerMedium from "../images/medium2.png";
+import footerMessage from "../images/discord2.png";
+import footerTelegram from "../images/telegram2.png";
 
 const BlindBox = () => {
     // useEffect(() => {
@@ -28,14 +32,27 @@ const BlindBox = () => {
 
     var [NftOwned, SetNftOwned] = useState('')
 
-    const gallusFeatherNFTAddress = "0x08a78270b5dC972F9cFF6619714221a1DA4d8F81";
+    const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
 
     async function connectMetaMask() {
-        if (typeof window.ethereum !== 'undefined') {
 
+        
+            //  console.log(network.name)
+            //  if (network.name === 'rinkeby' ) {
+            //  }
+
+        if (typeof window.ethereum !== 'undefined') {
+            
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             console.log(provider);
+            let network = await  provider.getNetwork()
             console.log(window.ethereum.selectedAddress);
+            console.log(network)
+            if (network.name !== 'bnb') {
+                alert('vous etes sur le mauvai réseau')
+            }
+
+            
         
             // request metamask to access the account
 
@@ -55,7 +72,7 @@ const BlindBox = () => {
 
 
 
-            const signer = provider.getSigner();
+                const signer = provider.getSigner();
                 const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
@@ -79,7 +96,7 @@ const BlindBox = () => {
         }
     }
     
-    async function purshase() {
+    async function purshaseSmall() {
         if (typeof window.ethereum !== 'undefined') {
 
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -94,10 +111,12 @@ const BlindBox = () => {
             
             const signer = provider.getSigner();
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-            const price = await contract.getPrice();
-            console.log(price.toString())
+            const priceSmall = await contract.getPriceSmall();
+            const priceMedium = await contract.getPriceMedium();
+            const priceLarge = await contract.getPriceLarge();
+            console.log(priceSmall.toString())
             try {
-                const transaction = await contract.purchase({value: price});
+                const transaction = await contract.purchaseSmall({value: priceSmall});
                 await transaction.wait();
             }
             catch(error){
@@ -106,6 +125,63 @@ const BlindBox = () => {
             }
        }
     }
+    async function purshaseLarge() {
+        if (typeof window.ethereum !== 'undefined') {
+
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            console.log(provider);
+            console.log(window.ethereum.selectedAddress);
+        
+        // request metamask to access the account
+
+            await window.ethereum.request({ method: "eth_requestAccounts" });
+            console.log(window.ethereum.selectedAddress);
+
+            
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+            const priceLarge = await contract.getPriceLarge();
+            console.log(priceLarge.toString())
+            try {
+                const transaction = await contract.purchaseLarge({value: priceLarge});
+                await transaction.wait();
+            }
+            catch(error){
+                alert(error.message)
+               
+            }
+       }
+    }
+    async function purshaseMedium() {
+        if (typeof window.ethereum !== 'undefined') {
+
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            console.log(provider);
+            console.log(window.ethereum.selectedAddress);
+        
+        // request metamask to access the account
+
+            await window.ethereum.request({ method: "eth_requestAccounts" });
+            console.log(window.ethereum.selectedAddress);
+
+            
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+            
+            const priceMedium = await contract.getPriceMedium();
+            
+            console.log(priceMedium.toString())
+            try {
+                const transaction = await contract.purchaseMedium({value: priceMedium});
+                await transaction.wait();
+            }
+            catch(error){
+                alert(error.message)
+               
+            }
+       }
+    }
+    
 
     function AfficherMasquer()
                     {
@@ -191,7 +267,7 @@ const BlindBox = () => {
                             
                             <li class="menut-item">
                                 <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                                <i class="fas fa-lightbulb yellow-icon"></i>GOUVERNANCE
+                                <i class="fas fa-lightbulb yellow-icon"></i>Governance
                                 </NavLink>
                             </li>
                             
@@ -246,8 +322,9 @@ const BlindBox = () => {
                 <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a href="#" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
+                        <a href="#" id="test"  onClick={connectMetaMask} className="wallet pool1" >Connect Wallet</a>
                     </div>
+                    {/* onClick={connectMetaMask} */}
 
                 </div>
             </div>
@@ -257,8 +334,11 @@ const BlindBox = () => {
                 <div className="container">
                     <h1 className="title-nft-main">The <span className="royalFeather">ROYAL FEATHER</span>  NFT Collection BY</h1>
                     <img src={gallus} className="logoGallus-nft" />
-                   
-                    <p className="family-nft">Each NFT Feather is a unique piece of art, enter the Mystery Box sale and receive one of the 500 small, medium or big NFT with golden or silver attributes and wrapped in one of the 6 beautifully designed boxes.</p>
+                    <h2 className="secondTitle-nft-main">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</h2>
+                    <p className="family-nft">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
+Choose the model you want: Small, Medium or Titan! <br />
+Each NFT Feather is inside one of 6 beautiful boxes decorated with 6 beautiful stickers and 7 different colored crests that make this collection so rare. 
+Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                    <div className=" button-nft-main"> <NavLink exact to="/gallus-story" className="background-button"> Discover the<br /> Gallus story</NavLink></div>
                     <div className="row rowDisplay">
                         <div className="col-lg-4 centerFlex">
@@ -277,7 +357,7 @@ const BlindBox = () => {
                             </div> */}
                             <div className="image-container ">
                             <div className="neon-nft"></div>
-                                <img src={exemple1} alt="" className="image-nft-box" />
+                                <img src={exemple2} alt="" className="image-nft-box" />
                             </div>
                         </div> 
                         <div className="col-lg-4 centerFlex">
@@ -286,7 +366,7 @@ const BlindBox = () => {
                             </div> */}
                             <div className="image-container ">
                             <div className="neon-nft"></div>
-                                <img src={exemple2} alt="" className="image-nft-box" />
+                                <img src={exemple1} alt="" className="image-nft-box" />
                             </div>
                         </div> 
                         
@@ -297,8 +377,8 @@ const BlindBox = () => {
             <div className="pool background-section-2">
             
             <div className="normal-layout">
-            <h2 className="secondTitle-nft-main">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</h2>
-               <p className="family-nft family-margin">Each NFT Feather is a unique piece of art, enter the Mystery Box sale and receive one of the 500 small, medium or big NFT with golden or silver with rarity attributes, also featured on the different Stickers and wrapped in one of the 6 beautifully designed boxes</p>
+            
+               
                <div className="container container-nft">
                
                     <div className="row ">
@@ -315,10 +395,12 @@ const BlindBox = () => {
                                 <p className="text-description-nft">This fine feather will allow you to get a Premium reward in our universe of Play2Earn and in this way increase your capital in $GALLUS token.
 Take advantage of this unique benefit with the DeFi 
                                 </p>   
-                                <div className="bsc">
-                                    <p className="bsc-price-text">Prenium Reward : </p>
+                                <div className="bsc row">
+                                <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">Premium Reward : </div>
+                                <div className="CentPourcent col-sm-12 col-md-6">   
                                     <img src={gallus} className="bsc-price" />
                                     <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                </div>
                                 </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Quantity : </p>
@@ -328,11 +410,12 @@ Take advantage of this unique benefit with the DeFi
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">0,63</p>
+                                    <p className="bsc-price-chiffre">0,33 BNB</p>
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a href="#" className="button-nft disabled" onClick={purshase}>BUY</a>
+                                    <a href="#" className="button-nft " onClick={purshaseSmall} >BUY</a>
+                                    {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
                                     </div>
@@ -345,16 +428,18 @@ Take advantage of this unique benefit with the DeFi
                     <div className="row play2earn-margin reverseRow">
                         
                         <div className="col-lg-6 flexBox-nft">
-                            <div className="detail-container">
+                            <div className="detail-container ">
                                 <h1 className="title-Nft-desc">lancet feather - <span className="title-nft-secondColor"><br />Medium</span></h1>
                                 <div className="liseret-nft"></div>
                                 <p className="text-description-nft">All holders of this great feather will earn a high reward in $GALLUS Token and this will give you a considerable advantage to enter the GameFi.
 Take advantage of this unique benefit with the DeFi.
 </p>
-<div className="bsc">
-                                    <p className="bsc-price-text">High Reward : </p>
-                                    <img src={gallus} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+<div className="bsc row">
+                                    <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">High Reward : </div>
+                                    <div className="CentPourcent col-sm-12 col-md-6">
+                                        <img src={gallus} className="bsc-price" />
+                                        <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                    </div>
                                 </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Quantity : </p>
@@ -362,13 +447,14 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">150</p>
                                 </div> 
                                 <div className="bsc">
+                                    
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">1,42</p>
+                                    <p className="bsc-price-chiffre">1,15 BNB</p>
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a href="#" className="button-nft disabled">BUY</a>
+                                    <a href="#" className="button-nft" onClick={purshaseMedium}>BUY</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -391,16 +477,18 @@ Take advantage of this unique benefit with the DeFi.
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
-                            <div className="detail-container">
+                            <div className="detail-container last-detail-container">
                                 <h1 className="title-Nft-desc">sickle feather - <span className="title-nft-secondColor"><br />TITAN</span></h1>
                                 <div className="liseret-nft"></div>
                                 <p className="text-description-nft">Only the best of the GALLUS Army can hope to open one of the rarest boxes containing a mysterious golden feathers. You only got one chance to join a private live Discord group with the Full Gallus Team.
                                     Take advantage of this unique benefit with the DeFi.
                                 </p>
-                                <div className="bsc">
-                                    <p className="bsc-price-text">Crazy Reward : </p>
-                                    <img src={gallus} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">$GALLUS Tokens</p>
+                                <div className="bsc row">
+                                <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">Crazy Reward : <img src={gallus} className="bsc-price" /></div>
+                                    <div className="CentPourcent1 col-sm-12 col-md-12">
+                                        
+                                        <p className="bsc-price-chiffre1">$GALLUS Tokens + Private Access with Team GALLUS</p>
+                                    </div>
                                 </div> 
                                 
                                 <div className="bsc">
@@ -411,18 +499,47 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
                                     <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">3,16</p>
+                                    <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
                                 <div className="center-button">
-                                    <a href="#" className="button-nft disabled">BUY</a>
+                                    <a href="#" className="button-nft" onClick={purshaseLarge}>BUY</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
 
                                 </div>
                                 
+
+                                
                             </div>
                         </div>
+            <section className="section-9 ">
+                <div className="normal-layout">
+                    <div className="contact-footer margeTop">
+                        <a href="https://twitter.com/GallusFighter" target="_blank" className="contact-link">
+                            <img src={footerTwitter} alt="twitter logo" className="img-footer twitter-footer" />
+                        </a>
+                        <a href="https://medium.com/@gallusfighter" target="_blank" className="contact-link">
+                            <img src={footerMedium} alt="medium logo" className="img-footer medium-footer" />
+                        </a>
+                        <a href="https://t.me/gallus_fighter " target="_blank" className="contact-link">
+                            <img src={footerTelegram} alt="telegram logo" className="img-footer telegram-footer" />
+                        </a>
+                        <a href="https://discord.gg/vGe43sRgNr" target="_blank" className="contact-link">
+                            <img src={footerMessage} alt="discord logo" className="img-footer discord-footer" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section className="section-10">
+           <div className="normal-layout">
+                  <div className="footer-copyright">
+                        
+                     Copyright© 2021 Gallus Fighter - All rights reserved.
+      
+                  </div>
+              </div>
+          </section>
                     </div>
                 </div>
                 

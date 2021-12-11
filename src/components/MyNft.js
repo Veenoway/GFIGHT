@@ -78,7 +78,7 @@ const MyNft = () => {
 
   
 
-    const gallusFeatherNFTAddress = "0x08a78270b5dC972F9cFF6619714221a1DA4d8F81";
+    const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
 
     async function connectMetaMask() {
         if (typeof window.ethereum !== 'undefined') {
@@ -124,29 +124,39 @@ const MyNft = () => {
                     console.log(uri)
 
                     // changing url
-
+                  
+                  
+ 
                     var deleteFirstChar = uri.substring(6, uri.length - 0);
                     var url = 'https://gateway.pinata.cloud/ipfs' + deleteFirstChar 
-                    console.log(url)
                     
                     
-                    console.log(Http)
-                    setHttp(url)
                     // Get url to data
-                    console.log(data)
-
+                   
                     await axios
                     .get(url)
                     .then((res) => 
                     data = res.data) 
                     console.log(data)
+                    var url = data.image
+                        console.log(url)
+                        console.log(Http)
+                    setHttp(url)
+                    var ipfsImage = uri.substring(0, uri.length - 36);
+                    console.log(ipfsImage)
+var deleteImageChar = data.image.substring(6, data.image.length - 0)
+                   var imageUrl = 'https://gateway.pinata.cloud/ipfs' + deleteImageChar
+                    if ( url.includes('ipfs://') ) {
+                        console.log("ok")
+                        
+                        
+                        
+                    }
                     
-                    var deleteImageChar = data.image.substring(6, data.image.length - 0)
-                    var imageUrl = 'https://gateway.pinata.cloud/ipfs' + deleteImageChar
 
                     let myNft = document.getElementById('main');
                     
-                   
+                   var imageUrl = url
             
                     var nftBoxCreated = `<div class="row margin-row">
                     <div class="col-lg-6 flex-container">
@@ -275,7 +285,7 @@ const MyNft = () => {
                         
                         <li class="menut-item">
                             <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                            <i class="fas fa-lightbulb yellow-icon"></i>GOUVERNANCE
+                            <i class="fas fa-lightbulb yellow-icon"></i>Governance
                             </NavLink>
                         </li>
                         

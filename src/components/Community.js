@@ -23,6 +23,13 @@ const Community = () => {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             console.log(provider);
             console.log(window.ethereum.selectedAddress);
+
+             // IF NETWORK DIFFERENT OF 
+
+             let network = await  ethers.provider.getNetwork()
+             console.log(network.name)
+             if (network.name === 'rinkeby' ) {
+             }
         
             // request metamask to access the account
 
@@ -40,9 +47,9 @@ const Community = () => {
                 
 
 
+                // RECUP CONTRACT.PRIX
 
-
-            const signer = provider.getSigner();
+                const signer = provider.getSigner();
                 const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
@@ -148,7 +155,7 @@ const Community = () => {
                         
                         <li class="menut-item">
                             <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                            <i class="fas fa-lightbulb yellow-icon"></i>GOUVERNANCE
+                            <i class="fas fa-lightbulb yellow-icon"></i>Governance
                             </NavLink>
                         </li>
                         
@@ -162,21 +169,22 @@ const Community = () => {
                             <i class="fas fa-gifts yellow-icon"></i>Airdrop
                             </NavLink>
                         </li>
-                        
-                        
                         <li class="menut-item">
                                 <NavLink exact to="/community" activeClassName="nav-active" className="display">
                                 <i class="fas fa-envelope-open yellow-icon"></i>Community
                                 </NavLink>
-                            </li>
-                            <li class="menut-item">
+                        </li>
+                        <li class="menut-item">
                                 {/* <NavLink exact to="/my-nft" activeClassName="nav-active" className="display left-docs"> */}
                                 <a href="https://galluspaper.gallusfighter.com/" target="_blank" class="display left-docs">
                                 {/* <i class="fas fa-coins yellow-icon"></i>Buy GALLUS */}
                                 <i class="fas fa-file-alt yellow-icon"></i>Gallus Paper
                                 </a>
                                 {/* </NavLink> */}
-                            </li>
+                        </li>
+                        
+                        
+                        
                         
 
 
@@ -215,34 +223,26 @@ const Community = () => {
                 {/* <img src={cotcot} alt="gallus cot" className="cotcot" /> */}
                 <div className="centerRow">
                 <div className="row flex-socialMedia">
-                
                     <div className="col-lg-7 flex-container community-container">
-                        
                         <div className="community-box">
                             <div className="left-socialMedia">
-                                    <img src={twitter} alt="twitter logo" className="logo-socialMedia" />
-                                    <p className="name-socialMedia">Twitter</p>
+                                <img src={twitter} alt="twitter logo" className="logo-socialMedia" />
+                                <p className="name-socialMedia">Twitter</p>
                             </div>
-                            <div className="right-socialMedia">
-                                    
-                                    <a href="https://twitter.com/GallusFighter" className="text-socialMedia">https://twitter.com/GallusFighter</a>
-                                    
+                            <div className="right-socialMedia">    
+                                <a href="https://twitter.com/GallusFighter" target="_blank" className="text-socialMedia">https://twitter.com/GallusFighter</a>      
                             </div>
-                            
                         </div>
                     </div>
                     <div className="col-lg-7 flex-container community-container">
                         <div className="community-box">
                             <div className="left-socialMedia">
-                                    <img src={medium} alt="twitter logo" className="logo-socialMedia" />
-                                    <p className="name-socialMedia">Medium</p>
+                                <img src={medium} alt="twitter logo" className="logo-socialMedia" />
+                                <p className="name-socialMedia">Medium</p>
                             </div>
-                            <div className="right-socialMedia">
-                                    
-                            <a href="https://twitter.com/GallusFighter" className="text-socialMedia">https://medium.com/@gallusfighter</a>
-                                   
-                            </div>
-                            
+                            <div className="right-socialMedia">       
+                            <a href="https://medium.com/@gallusfighter" target="_blank" className="text-socialMedia">https://medium.com/@gallusfighter</a>     
+                            </div>  
                         </div>
                     </div>
                     <div className="col-lg-7 flex-container community-container">
@@ -253,39 +253,29 @@ const Community = () => {
                             </div>
                             <div className="right-socialMedia">
                                     
-                            <a href="https://t.me/joinchat/s_7y43-0rX8zM2M8" className="text-socialMedia">https://t.me/joinchat/s_7y43-0rX8zM2M8</a>
+                            <a href="https://t.me/gallus_fighter " target="_blank" className="text-socialMedia">https://https://t.me/gallus_fighter </a>
                                    
                             </div>
                             
                         </div>
                     </div>
-                    <div className="col-lg-7 flex-container community-container">
+                    <div className="col-lg-7 flex-container community-container lastContainer">
                         <div className="community-box">
                             <div className="left-socialMedia">
-                                    <img src={discord} alt="twitter logo" className="logo-socialMedia" />
-                                    <p className="name-socialMedia">Discord</p>
+                                <img src={discord} alt="twitter logo" className="logo-socialMedia" />
+                                <p className="name-socialMedia">Discord</p>
                             </div>
-                            <div className="right-socialMedia">
-                                    
-                            <a href="https://discord.gg/ek4wyKJ5" className="text-socialMedia">https://discord.gg/ek4wyKJ5</a>
-                                    
+                            <div className="right-socialMedia">       
+                            <a href="https://discord.gg/vGe43sRgNr" target="_blank" className="text-socialMedia">https://discord.gg/vGe43sRgNr</a>     
                             </div>
-                            
                         </div>
                     </div>
-                    
                 </div>
-                </div>
-                
-                
-                
+                </div>  
             </div>
-            
-                
-            </div>
-        
         </div>
-        </>
+    </div>
+</>
     )
 }
 

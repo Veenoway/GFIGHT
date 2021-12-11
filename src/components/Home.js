@@ -1,179 +1,179 @@
-// import React from 'react';
-// import discord from "../images/discord.png";
-// import twitter from "../images/twitter.png";
-// import medium from "../images/medium.png";
-// import telegram from "../images/telegram.png";
-// import cotcot from "../images/fight_chicken_2.png";
-// import gallus from "../gallus.png";
-// import icon1 from "../images/icon-metaverse1.svg";
-// import icon2 from "../images/icon-metaverse2.svg";
-// import icon3 from "../images/icon-metaverse3.svg";
-// import tokenomic from "../images/logo.gif";
-// import { NavLink } from 'react-router-dom';
-// import blackHole1 from "../images/icon-blackHole.svg";
-// import blackHole2 from "../images/icon-blackHole-2.svg";
-// import blackHole3 from "../images/icon-blackHole-3.svg";
-// import blackHole4 from "../images/icon-blackHole-4.svg";
-// import blackHole5 from "../images/icon-blackHole-5.svg";
-// import blackHole6 from "../images/icon-blackHole-6.svg";
-// import metamask1 from "../images/metamask-1.png";
-// import metamask2 from "../images/metamask-2.png";
-// import metamask3 from "../images/metamask-3.png";
-// import binance from "../images/binance.png";
-// import binanceNFT from "../images/binanceNFT.png";
-// import certik from "../images/certik.png";
-// import coinmarket from "../images/coinmarketcap.png";
-// import coingecko from "../images/coingecko.png";
-// import pancakeswap from "../images/pancakeswap.png";
-// import trustwallet from "../images/trustwallet.png";
-// import cryptonews from "../images/cryptonews.png";
-// import footerTwitter from "../images/footer-twitter.svg";
-// import footerMedium from "../images/footer-medium.svg";
-// import footerMessage from "../images/footer-message.svg";
-// import footerTelegram from "../images/footer-telegram.svg";
-// import figurine from "../testegg.png";
-// import egg from "../eggIncub.jpg";
-// import testimg from "../TEST.jpg";
-// import charles from "../halo2.jpg";
-// import halo from "../halo.jpg";
-// import space from "../space.jpg";
+import React from 'react';
+import discord from "../images/discord.png";
+import twitter from "../images/twitter.png";
+import medium from "../images/medium.png";
+import telegram from "../images/telegram.png";
+import cotcot from "../images/fight_chicken_2.png";
+import gallus from "../gallus.png";
+import icon1 from "../images/icon-metaverse1.svg";
+import icon2 from "../images/icon-metaverse2.svg";
+import icon3 from "../images/icon-metaverse3.svg";
+import tokenomic from "../images/logo.gif";
+import { NavLink } from 'react-router-dom';
+import blackHole1 from "../images/icon-blackHole.svg";
+import blackHole2 from "../images/icon-blackHole-2.svg";
+import blackHole3 from "../images/icon-blackHole-3.svg";
+import blackHole4 from "../images/icon-blackHole-4.svg";
+import blackHole5 from "../images/icon-blackHole-5.svg";
+import blackHole6 from "../images/icon-blackHole-6.svg";
+import metamask1 from "../images/metamask-1.png";
+import metamask2 from "../images/metamask-2.png";
+import metamask3 from "../images/metamask-3.png";
+import binance from "../images/binance.png";
+import binanceNFT from "../images/binanceNFT.png";
+import certik from "../images/certik.png";
+import coinmarket from "../images/coinmarketcap.png";
+import coingecko from "../images/coingecko.png";
+import pancakeswap from "../images/pancakeswap.png";
+import trustwallet from "../images/trustwallet.png";
+import cryptonews from "../images/cryptonews.png";
+import footerTwitter from "../images/footer-twitter.svg";
+import footerMedium from "../images/footer-medium.svg";
+import footerMessage from "../images/footer-message.svg";
+import footerTelegram from "../images/footer-telegram.svg";
+import figurine from "../testegg.png";
+import egg from "../eggIncub.jpg";
+import testimg from "../TEST.jpg";
+import charles from "../halo2.jpg";
+import halo from "../halo.jpg";
+import space from "../space.jpg";
 
-// const Home = () => {
+const Home = () => {
 
-//     var pages = document.getElementsByClassName('page');
-//     for(var i = 0; i < pages.length; i++)
-//       {
-//         var page = pages[i];
-//         if (i % 2 === 0)
-//           {
-//             page.style.zIndex = (pages.length - i);
-//           }
-//       }
+    var pages = document.getElementsByClassName('page');
+    for(var i = 0; i < pages.length; i++)
+      {
+        var page = pages[i];
+        if (i % 2 === 0)
+          {
+            page.style.zIndex = (pages.length - i);
+          }
+      }
   
-//     document.addEventListener('DOMContentLoaded', function(){
-//       for(var i = 0; i < pages.length; i++)
-//         {
-//           //Or var page = pages[i];
-//           pages[i].pageNum = i + 1;
-//           pages[i].onclick=function()
-//             {
-//               if (this.pageNum % 2 === 0)
-//                 {
-//                   this.classList.remove('flipped');
-//                   this.previousElementSibling.classList.remove('flipped');
-//                 }
-//               else
-//                 {
-//                   this.classList.add('flipped');
-//                   this.nextElementSibling.classList.add('flipped');
-//                 }
-//              }
-//           }
-//     });
+    document.addEventListener('DOMContentLoaded', function(){
+      for(var i = 0; i < pages.length; i++)
+        {
+          //Or var page = pages[i];
+          pages[i].pageNum = i + 1;
+          pages[i].onclick=function()
+            {
+              if (this.pageNum % 2 === 0)
+                {
+                  this.classList.remove('flipped');
+                  this.previousElementSibling.classList.remove('flipped');
+                }
+              else
+                {
+                  this.classList.add('flipped');
+                  this.nextElementSibling.classList.add('flipped');
+                }
+             }
+          }
+    });
 
-//     function AfficherMasquer()
-//     {
-//     document.getElementById('divacacher');
+    function AfficherMasquer()
+    {
+    document.getElementById('divacacher');
      
-//     if ( document.getElementById('divacacher').style.display == 'none')
-//     document.getElementById('divacacher').style.display = 'flex';
-//     else
-//     document.getElementById('divacacher').style.display = 'none';
+    if ( document.getElementById('divacacher').style.display == 'none')
+    document.getElementById('divacacher').style.display = 'flex';
+    else
+    document.getElementById('divacacher').style.display = 'none';
      
-//     }
+    }
         
     
-//     return (
-//     <div classname="home">
-//         <div className="header">
-//             <div className="header-fixed">
-//                 <div className="container-nav">
+    return (
+    <div classname="home">
+        <div className="header">
+            <div className="header-fixed">
+                <div className="container-nav">
                     
-//                     <a href="/" className="nav-logo"></a>
-//                     <div className="space"></div>
-//                     <div className="nav-list">
-//                         <a href="" className="selected font">HOME</a>
-//                         <a href="" className="unselected font">METAVERSE</a>
-//                         <a href="" className="unselected font">TOKEN</a>
-//                         <a href="" className="unselected font">BLIND BOX</a>
-//                         <a href="" className="unselected font" onClick="AfficherMasquer()">GAMEBASE</a>
-//                         <a href="" className="unselected font">POOL</a>
-//                         <a href="" className="unselected font">NFT</a>
-//                         <a href="" className="unselected font">BOUNTY</a>
-//                         <a href="" className="unselected font">DOCS</a>
+                    <a href="/" className="nav-logo"></a>
+                    <div className="space"></div>
+                    <div className="nav-list">
+                        <a href="" className="selected font">HOME</a>
+                        <a href="" className="unselected font">METAVERSE</a>
+                        <a href="" className="unselected font">TOKEN</a>
+                        <a href="" className="unselected font">BLIND BOX</a>
+                        <a href="" className="unselected font" onClick="AfficherMasquer()">GAMEBASE</a>
+                        <a href="" className="unselected font">POOL</a>
+                        <a href="" className="unselected font">NFT</a>
+                        <a href="" className="unselected font">BOUNTY</a>
+                        <a href="" className="unselected font">DOCS</a>
 
-//                     </div>
-//                     <a className="menu-icon">
-//                         <span className="hamburger-common hamburger-1"></span>
-//                         <span className="hamburger-common hamburger-2"></span>
-//                         <span className="hamburger-common hamburger-3"></span>
-//                     </a>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className="home-page">
-//         <div className="section-1">
-//             <section className="section-common ">
-//                 <div className="normal-layout">
-//                     <div className="main-title">
-//                         <div className="left-1">
-//                             <h3 className="rofi-title">GALLUS FIGHTER<br /> <span className="defight-color">DEFIGHT</span></h3>
-//                             <p className="p-text">Decentralized Meme Coin Creates the BEST Metaverse on BSC</p>
-//                             <p className="p-text">ROOSTER FIGHT METAVERSE = NFT + GameFi + SmartToy + ROFI World</p>
-//                             <div className="btn-1">
-//                                 <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-color">BUY $ROFI</a>
-//                                 <NavLink exact to="/blindbox" className="btn-border-color">ROFI APP</NavLink>
+                    </div>
+                    <a className="menu-icon">
+                        <span className="hamburger-common hamburger-1"></span>
+                        <span className="hamburger-common hamburger-2"></span>
+                        <span className="hamburger-common hamburger-3"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div className="home-page">
+        <div className="section-1">
+            <section className="section-common ">
+                <div className="normal-layout">
+                    <div className="main-title">
+                        <div className="left-1">
+                            <h3 className="rofi-title">GALLUS FIGHTER<br /> <span className="defight-color">DEFIGHT</span></h3>
+                            <p className="p-text">Decentralized Meme Coin Creates the BEST Metaverse on BSC</p>
+                            <p className="p-text">ROOSTER FIGHT METAVERSE = NFT + GameFi + SmartToy + ROFI World</p>
+                            <div className="btn-1">
+                                <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-color">BUY $ROFI</a>
+                                <NavLink exact to="/blindbox" className="btn-border-color">ROFI APP</NavLink>
                                 
-//                                 <div className="contact">
-//                                     <a href="" className="contact-a">
-//                                         <img src={telegram} alt="discord logo" className="contact-logo"/>
-//                                     </a>
-//                                     <a href="" className="contact-a">
-//                                         <img src={twitter} alt="discord logo" className="contact-logo"/>
-//                                     </a>
-//                                     <a href="" className="contact-a">
-//                                         <img src={medium} alt="discord logo" className="contact-logo"/>
-//                                     </a>
-//                                     <a href="" className="contact-a">
-//                                         <img src={discord} alt="discord logo" className="contact-logo"/>
-//                                     </a>
+                                <div className="contact">
+                                    <a href="" className="contact-a">
+                                        <img src={telegram} alt="discord logo" className="contact-logo"/>
+                                    </a>
+                                    <a href="" className="contact-a">
+                                        <img src={twitter} alt="discord logo" className="contact-logo"/>
+                                    </a>
+                                    <a href="" className="contact-a">
+                                        <img src={medium} alt="discord logo" className="contact-logo"/>
+                                    </a>
+                                    <a href="" className="contact-a">
+                                        <img src={discord} alt="discord logo" className="contact-logo"/>
+                                    </a>
 
-//                                 </div>
-//                             </div>
-//                         </div>
-//                         <div className="right-1">
-//                             <img src={gallus} alt="logo jojo" className="image-right"/>
-//                         </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="right-1">
+                            <img src={gallus} alt="logo jojo" className="image-right"/>
+                        </div>
 
-//                     </div>
-//                     <div className="main-stats">
-//                         <div className="flex-box">
-//                             <h5 className="stats-numbers">64.25%</h5>
-//                             <p className="stats-text">Total supply to Black Hole</p>
-//                         </div>
-//                         <div className="flex-box">
-//                             <h5 className="stats-numbers">64.25%</h5>
-//                             <p className="stats-text">Total supply to Black Hole</p>
-//                         </div>
-//                         <div className="flex-box">
-//                             <h5 className="stats-numbers">64.25%</h5>
-//                             <p className="stats-text">Total supply to Black Hole</p>
-//                         </div>
-//                         <div className="flex-box">
-//                             <h5 className="stats-numbers">64.25%</h5>
-//                             <p className="stats-text">Total supply to Black Hole</p>
-//                         </div>
-//                         <div className="flex-box">
-//                             <h5 className="stats-numbers">64.25%</h5>
-//                             <p className="stats-text">Total supply to Black Hole</p>
-//                         </div>
+                    </div>
+                    <div className="main-stats">
+                        <div className="flex-box">
+                            <h5 className="stats-numbers">64.25%</h5>
+                            <p className="stats-text">Total supply to Black Hole</p>
+                        </div>
+                        <div className="flex-box">
+                            <h5 className="stats-numbers">64.25%</h5>
+                            <p className="stats-text">Total supply to Black Hole</p>
+                        </div>
+                        <div className="flex-box">
+                            <h5 className="stats-numbers">64.25%</h5>
+                            <p className="stats-text">Total supply to Black Hole</p>
+                        </div>
+                        <div className="flex-box">
+                            <h5 className="stats-numbers">64.25%</h5>
+                            <p className="stats-text">Total supply to Black Hole</p>
+                        </div>
+                        <div className="flex-box">
+                            <h5 className="stats-numbers">64.25%</h5>
+                            <p className="stats-text">Total supply to Black Hole</p>
+                        </div>
 
-//                     </div>
+                    </div>
 
-//                 </div>
+                </div>
 
-//             </section>
-            {/* <section className="section-common section-15">
+             </section>
+            <section className="section-common section-15">
             <div className="container container-nft">
                     <div className="row">
                         <div className="col-lg-6">
@@ -194,8 +194,8 @@
                         </div>
                     </div>
                 </div>
-            </section> */}
-            {/* <section className="section-common1 ">
+            </section>
+            <section className="section-common1 ">
                 <div className="normal-layout">
                     <h3 className="metaverse-title">GALLUS DEFIGHT</h3>
                     <div className="metaverse-container">
@@ -243,9 +243,9 @@
                          </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
             
-            {/* <section className="section-common section-4">
+            <section className="section-common section-4">
                 <div className="normal-layout">
                     <h3 className="black-hole-title">BLACK HOLE ALGORITHM</h3>
                     <div className="section-4-flex">
@@ -295,8 +295,8 @@
 
                     </div>
                 </div>
-            </section> */}
-             {/* <section className="section-common section-4">
+            </section>
+             <section className="section-common section-4">
                 <div className="normal-layout">
                     <h3 className="gallus-play2earn-title">GALLUS PLAY-TO-EARN</h3>
                     <div className="container container-play2earn">
@@ -530,8 +530,8 @@
                         </a>
                     </div>
                 </div>
-            </section> */}
-            {/* <section id="divacacher"  className="book-page divacacher" >
+            </section> 
+             {/* <section id="divacacher"  className="book-page divacacher" >
                 <button onClick={AfficherMasquer} className="position-button">❌</button>
              
                 <div class="book dis" >
@@ -572,21 +572,21 @@
                     </div>
                 </div>
             </section> */}
-//             <section className="section-10">
-//                 <div className="normal-layout">
-//                     <div className="footer-copyright">
+            <section className="section-10">
+                <div className="normal-layout">
+                    <div className="footer-copyright">
                         
-//                         Copyright© 2021 Rooster Fight - Veeno - All rights reserved.
+                        Copyright© 2021 Rooster Fight - Veeno - All rights reserved.
       
-//                     </div>
-//                 </div>
-//             </section>
+                    </div>
+                </div>
+            </section>
             
 
-//         </div>
+        </div>
         
-//     </div>
-//     )
-// }
+    </div>
+    )
+}
 
-// export default Home;
+export default Home;

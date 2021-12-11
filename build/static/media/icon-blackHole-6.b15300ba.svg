@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Whale Shock Safety_fill</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_4" transform="translate(-1210.000000, -3835.000000)" fill-rule="nonzero">
+            <g id="TOKENOMIC" transform="translate(-1113.000000, 2977.000000)">
+                <g id="Games" transform="translate(2185.000000, 794.000000)">
+                    <g id="Whale-Shock-Safety_fill" transform="translate(138.000000, 64.000000)">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="60" height="60"></rect>
+                        <path d="M51,30 C51,41.6117648 41.6117648,51 30,51 C24.9518333,51 20.3239225,49.2255863 16.7049821,46.2654734 L46.2654734,16.7049821 C49.2255863,20.3239225 51,24.9518333 51,30 Z M30,9 C35.0481667,9 39.6760775,10.7744137 43.2950179,13.7345266 L13.7345266,43.2950179 C10.7744137,39.6760775 9,35.0481667 9,30 C9,18.3882353 18.3882353,9 30,9 Z" id="icon" fill="#431216"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -3,9 +3,9 @@ import twitter from "../images/twitter.png";
 import medium from "../images/medium.png";
 import telegram from "../images/telegram.png";
 import discord from "../images/discord.png";
-import page1 from "../images/page_1_test.jpg";
-import page2 from "../images/page_2_test.jpg";
-import page3 from "../images/page_3_test.jpg";
+import page1 from "../images/webton_anglais_001.jpg";
+import page2 from "../images/webton_anglais_002.jpg";
+import page3 from "../images/webton_anglais_003.jpg";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ethers }from "ethers";
@@ -148,7 +148,7 @@ const GallusStory = () => {
                         
                         <li class="menut-item">
                             <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
-                            <i class="fas fa-lightbulb yellow-icon"></i>GOUVERNANCE
+                            <i class="fas fa-lightbulb yellow-icon"></i>Governance
                             </NavLink>
                         </li>
                         
@@ -201,7 +201,8 @@ const GallusStory = () => {
             <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a href="#" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
+                        <a href="#" id="test" className="wallet pool1" >Connect Wallet</a>
+                        {/* onClick={connectMetaMask} */}
                     </div>
 
                 </div>
