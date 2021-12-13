@@ -23,6 +23,11 @@ import footerTwitter from "../images/twitter2.png";
 import footerMedium from "../images/medium2.png";
 import footerMessage from "../images/discord2.png";
 import footerTelegram from "../images/telegram2.png";
+import video1 from "../images/gallus_intro_low_reso.mp4";
+
+import Video from "./Video";
+
+
 
 const BlindBox = () => {
     // useEffect(() => {
@@ -234,8 +239,16 @@ const BlindBox = () => {
                             </li>
                             <li class="menut-item ">
                                 <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
-                                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
+                                <i class="fas fa-home yellow-icon"></i>Website
                                     <span className="tagSoon ">Soon..</span>
+                                </NavLink>
+                            </li>
+
+                            
+                            <li class="menut-item ">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
+                                    
                                 </NavLink>
                             </li>
                             <li class="menut-item">
@@ -382,6 +395,7 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                <div className="container container-nft">
                
                     <div className="row ">
+                    
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
                             <div className="neon-nft"></div>
@@ -508,9 +522,9 @@ Take advantage of this unique benefit with the DeFi.
                                     </div>
 
                                 </div>
-                                
+                               
 
-                                
+                                </div>
                             </div>
                         </div>
             <section className="section-9 ">
@@ -546,7 +560,7 @@ Take advantage of this unique benefit with the DeFi.
                     
                 </div>
             
-            </div>
+           
         </>
     )
 }

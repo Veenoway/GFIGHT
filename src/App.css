@@ -3166,7 +3166,8 @@ align-items:center;
 }
 
 .play2earn-margin{
-  margin-top:120px !important;
+  margin-top:180px !important;
+  align-items: center;
 }
 
 .play2earn-right2{
@@ -3466,12 +3467,12 @@ align-items:center;
 
 .logoGallus-nft{
   height:140px;
-  margin-top:25px;
-  margin-bottom:35px;
+  margin-top: 65px;
+  margin-bottom: 15px;
 }
 
 .padding-nft{
-  padding:50px 0px 200px 0;
+  padding:50px 0px 100px 0;
 }
 
 .rowDisplay{
@@ -3505,6 +3506,7 @@ align-items:center;
 .family-nft{
   font-family: 'Sen';
   font-size:22px;
+ 
 }
 .royalFeather{
   color:rgb(255, 231, 15)
@@ -3541,4 +3543,26 @@ align-items:center;
 
 .twitter-footer{
   height:44px;
+}
+
+.video{
+  width:100%;
+  margin-top:50px;
+  border-radius: 20px;
+  margin-bottom:130px;
+}
+
+.buttonNFT{
+  display: flex;
+ 
+  
+}
+
+.buttonSell{
+  background-color:#ed0000;
+  color:yellow;
+  padding:10px 20px;
+  font-family: Bungee;
+  border-radius:12px;
+  text-decoration: none;
 }

@@ -7,9 +7,9 @@ const Cards = (props) => {
     const { image } = props;
     function AfficherMasquer()
                     {
-                    var divInfo = document.getElementById('popup');
+                    var divInfo = document.querySelector('.popup');
                      
-                    if (divInfo.style.display == 'none')
+                    if (divInfo.style.display == 'none'  )
                     divInfo.style.display = 'block';
                     else
                     divInfo.style.display = 'none';
@@ -19,8 +19,10 @@ const Cards = (props) => {
     console.log(image)
     console.log(image.id)
    
+    
   
-   
+   var test = image.id
+   var testOne = document.getElementsByClassName('buy')
 
     return (
 
@@ -68,7 +70,7 @@ const Cards = (props) => {
                                             
                                                 
                                             <div className="index2"><div className="neon4"></div>
-                                                <a href="" className="yellowOne"><span className="testtttt">BUY</span></a>
+                                                <a  className="yellowOne TestONE" ><span className="testtttt">BUY</span></a>
                                             </div>
                                         </div>
                                         
@@ -77,41 +79,35 @@ const Cards = (props) => {
 
 
                                 </div>
-                                <div id="popups">
-                                    {image.id ? (
-                                <div className="popup" id="popup">
-       <button onClick={AfficherMasquer} className="position-button"><i class="far fa-times-circle"></i></button>
-<div class="row margin-row testons">
-       <div class="col-lg-6 flex-container">
-           
-           <div class="image-container ">
-               <div class="neon-nft"></div>
-               <img src="" alt="" class="image-nft-box" />
-           </div>
-       </div>
-       <div class="col-lg-6 flexBox-nft">
- 
-           <div class="detail-container">
-               <h1 class="title-Nft-desc">blabla<span className="title-nft-secondColor"></span></h1>
-               <div class="liseret-nft"></div>
-               <p class="text-description-nft">{image.title}</p>
-               <div class="center-button">
-                   
-                   
- 
-               </div>
+                                <div class="popups" >
+                                    {image ? (
+                                    <div className="popup" id="popup">
+                                        <button onClick={AfficherMasquer} className="position-button"><i class="far fa-times-circle"></i></button>
+                                        <div class="row margin-row testons">
+                                            <div class="col-lg-6 flex-container">
+                                                
+                                                <div class="image-container ">
+                                                    <div class="neon-nft"></div>
+                                                    <img src="" alt="" class="image-nft-box" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 flexBox-nft">
+                                        
+                                                <div class="detail-container">
+                                                    <h1 class="title-Nft-desc">{image.title}<span className="title-nft-secondColor"></span></h1>
+                                                    <div class="liseret-nft"></div>
+                                                    <p class="text-description-nft">{image.title}</p>
+                                                    
                
                
-           </div>
-       </div>
-   </div>
+                                                </div>
+                                            </div>
+                                        </div>
                    
-               </div>) : ( null )}
-                                </div>
-
-                               
-                               
-                            </div>
+                                    </div>
+                                ) : ( null )}
+                            </div>   
+                        </div>
                             
     )
 }

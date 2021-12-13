@@ -172,6 +172,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                             <h1 class="title-Nft-desc">${data.name}<span className="title-nft-secondColor"></span></h1>
                             <div class="liseret-nft"></div>
                             <p class="text-description-nft">${data.description}</p>
+                            
                             <div class="center-button">
                                 
                                 
