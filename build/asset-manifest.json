@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.27880a03.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.abb33ece.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.abb33ece.chunk.js.map",
-    "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.defcb60a.js",
-    "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.defcb60a.js.map",
+    "main.css": "/GallusFighter.github.io/static/css/main.17ba3b9c.chunk.css",
+    "main.js": "/GallusFighter.github.io/static/js/main.69a518e9.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.69a518e9.chunk.js.map",
+    "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.24c0667c.js",
+    "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.24c0667c.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.b9655030.chunk.js": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js",
-    "static/js/2.b9655030.chunk.js.map": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js.map",
-    "static/js/3.ad44d9a7.chunk.js": "/GallusFighter.github.io/static/js/3.ad44d9a7.chunk.js",
-    "static/js/3.ad44d9a7.chunk.js.map": "/GallusFighter.github.io/static/js/3.ad44d9a7.chunk.js.map",
+    "static/js/2.7f9a8e20.chunk.js": "/GallusFighter.github.io/static/js/2.7f9a8e20.chunk.js",
+    "static/js/2.7f9a8e20.chunk.js.map": "/GallusFighter.github.io/static/js/2.7f9a8e20.chunk.js.map",
+    "static/js/3.4754f7d0.chunk.js": "/GallusFighter.github.io/static/js/3.4754f7d0.chunk.js",
+    "static/js/3.4754f7d0.chunk.js.map": "/GallusFighter.github.io/static/js/3.4754f7d0.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.27880a03.chunk.css.map": "/GallusFighter.github.io/static/css/main.27880a03.chunk.css.map",
-    "static/js/2.b9655030.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js.LICENSE.txt",
+    "static/css/main.17ba3b9c.chunk.css.map": "/GallusFighter.github.io/static/css/main.17ba3b9c.chunk.css.map",
+    "static/js/2.7f9a8e20.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.7f9a8e20.chunk.js.LICENSE.txt",
     "static/media/GrandePlume.7e2b31c1.gif": "/GallusFighter.github.io/static/media/GrandePlume.7e2b31c1.gif",
     "static/media/TEST.b9b09302.jpg": "/GallusFighter.github.io/static/media/TEST.b9b09302.jpg",
     "static/media/App.css": "/GallusFighter.github.io/static/media/tiret.d1af01c3.svg",
@@ -31,6 +31,7 @@
     "static/media/footer-message.fa540838.svg": "/GallusFighter.github.io/static/media/footer-message.fa540838.svg",
     "static/media/footer-telegram.5efb962c.svg": "/GallusFighter.github.io/static/media/footer-telegram.5efb962c.svg",
     "static/media/footer-twitter.89f54112.svg": "/GallusFighter.github.io/static/media/footer-twitter.89f54112.svg",
+    "static/media/gallus_intro_low_reso.af32c110.mp4": "/GallusFighter.github.io/static/media/gallus_intro_low_reso.af32c110.mp4",
     "static/media/halo.c8fa2358.jpg": "/GallusFighter.github.io/static/media/halo.c8fa2358.jpg",
     "static/media/halo2.3e4048b1.jpg": "/GallusFighter.github.io/static/media/halo2.3e4048b1.jpg",
     "static/media/hamburger.adae399d.jpg": "/GallusFighter.github.io/static/media/hamburger.adae399d.jpg",
@@ -67,10 +68,10 @@
     "static/media/webton_anglais_003.e26699e5.jpg": "/GallusFighter.github.io/static/media/webton_anglais_003.e26699e5.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.defcb60a.js",
+    "static/js/runtime-main.24c0667c.js",
     "static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.b9655030.chunk.js",
-    "static/css/main.27880a03.chunk.css",
-    "static/js/main.abb33ece.chunk.js"
+    "static/js/2.7f9a8e20.chunk.js",
+    "static/css/main.17ba3b9c.chunk.css",
+    "static/js/main.69a518e9.chunk.js"
   ]
 }
