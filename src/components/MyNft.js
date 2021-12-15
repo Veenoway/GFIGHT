@@ -145,7 +145,7 @@ const MyNft = () => {
                     var ipfsImage = uri.substring(0, uri.length - 36);
                     console.log(ipfsImage)
 var deleteImageChar = data.image.substring(6, data.image.length - 0)
-                   var imageUrl = 'https://gateway.pinata.cloud/ipfs' + deleteImageChar
+                   var imageUrl = 'https://gallus.mypinata.cloud/ipfs' + deleteImageChar
                    console.log(imageUrl)
                     if ( url.includes('ipfs://') ) {
                         console.log("ok")

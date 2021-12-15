@@ -26,7 +26,7 @@ const Cards = (props) => {
                     var divInfo = document.querySelector('.popup');
                         var popup = document.getElementById('popup')
                     var textcreate = `
-                                        <button id="event" className="position-button"><i class="far fa-times-circle"></i></button>
+                                        <button id="event" class="position-button"><i class="far fa-times-circle"></i></button>
                                         <div class="row margin-row testons">
                                             <div class="col-lg-5 flex-container">
                                                 

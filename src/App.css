@@ -2396,12 +2396,12 @@ a:hover{
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color:rgb(216, 216, 216);
+  background:linear-gradient(137deg,rgba(36,36,36,.774),rgba(7, 77, 255, 0.568) 0,rgba(255, 0, 0, 0.52))
   
   
 }
 .fa-times-circle{
-  color:rgb(0, 0, 0);
+  color:rgba(223, 223, 223, 0.883);
   font-weight:400;
   width:100%;
 }
