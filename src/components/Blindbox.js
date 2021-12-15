@@ -41,9 +41,20 @@ const BlindBox = () => {
     // for metamask (the plugin add "ethereum" to the window object)
 
     var [NftOwned, SetNftOwned] = useState('')
+    var [quantity, SetQuantity] = useState([])
+    var [quantityLargeNft, SetQuantityLargeNft] = useState([])
+    var [quantitySmallNft, SetQuantitySmallNft] = useState([])
 
     const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
 
+
+
+ 
+
+
+
+
+    
     async function connectMetaMask() {
 
         
@@ -156,7 +167,15 @@ const BlindBox = () => {
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceSmall = await contract.getPriceSmall();
             const priceMedium = await contract.getPriceMedium();
-            const priceLarge = await contract.getPriceLarge();
+            // const priceLarge = await contract.getPriceLarge();
+
+
+          
+            var quantitySmall = await contract.remainingSmall();
+            var smallQuantity = quantitySmall.toString()
+            SetQuantitySmallNft(smallQuantity)
+            
+            console.log(quantitySmallNft)
             console.log(priceSmall.toString())
             try {
                 const transaction = await contract.purchaseSmall({value: priceSmall});
@@ -202,6 +221,101 @@ const BlindBox = () => {
             }
        }
     }
+
+
+    async function showMediumQuantity() {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+            console.log(provider);
+            console.log(window.ethereum.selectedAddress);
+        
+        // request metamask to access the account
+
+            await window.ethereum.request({ method: "eth_requestAccounts" });
+            console.log(window.ethereum.selectedAddress);
+
+           
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+             var quantityMedium = await contract.remainingMedium();
+            const priceMedium = await contract.getPriceMedium();
+            
+            var mediumQuantity = quantityMedium.toString()
+
+            SetQuantity(mediumQuantity)
+            console.log(quantity)
+            console.log(priceMedium.toString())
+    }
+
+    showMediumQuantity()
+
+    async function showSmallQuantity() {
+        
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        console.log(provider);
+        console.log(window.ethereum.selectedAddress);
+    
+    // request metamask to access the account
+
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        console.log(window.ethereum.selectedAddress);
+
+        
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+        const priceSmall = await contract.getPriceSmall();
+        const priceMedium = await contract.getPriceMedium();
+        // const priceLarge = await contract.getPriceLarge();
+
+
+      
+        var quantitySmall = await contract.remainingSmall();
+        var smallQuantity = quantitySmall.toString()
+        SetQuantitySmallNft(smallQuantity)
+        
+        console.log(quantitySmallNft)
+        console.log(priceSmall.toString())
+    }
+
+    showSmallQuantity()
+
+    async function showLargeQuantity() {
+        
+        try {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        console.log(provider);
+        console.log(window.ethereum.selectedAddress);
+    
+    // request metamask to access the account
+
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        console.log(window.ethereum.selectedAddress);
+
+        
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+        const priceLarge = await contract.getPriceLarge()
+
+        
+        
+        var quantityLarge = await contract.remainingLarge();
+        var largeQuantity = quantityLarge.toString()
+        SetQuantityLargeNft(largeQuantity)
+        
+        console.log(quantityLargeNft)
+        console.log(priceLarge.toString())
+
+        }
+        catch(error) {
+           
+            SetQuantityLargeNft('SOLD OUT')
+        }
+
+        
+    }
+
+    showLargeQuantity()
+
+
     async function purshaseLarge() {
         if (typeof window.ethereum !== 'undefined') {
 
@@ -218,16 +332,21 @@ const BlindBox = () => {
             const signer = provider.getSigner();
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceLarge = await contract.getPriceLarge();
+            var quantityLarge = await contract.remainingLarge();
+            var largeQuantity = quantityLarge.toString()
+            SetQuantityLargeNft(largeQuantity)
             console.log(priceLarge.toString())
+            console.log(quantityLargeNft)
+            
             try {
                 const transaction = await contract.purchaseLarge({value: priceLarge});
                 await transaction.wait();
-                console.log()
+                console.log(quantityLargeNft)
             }
             catch(error){
                
                 // CONSTRUCTOR
-
+                console.log(quantityLargeNft)
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
@@ -279,18 +398,24 @@ const BlindBox = () => {
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
-            
+           
             const signer = provider.getSigner();
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-            
+             var quantityMedium = await contract.remainingMedium();
             const priceMedium = await contract.getPriceMedium();
             
+            var mediumQuantity = quantityMedium.toString()
+
+            SetQuantity(mediumQuantity)
+            console.log(quantity)
             console.log(priceMedium.toString())
             try {
                 const transaction = await contract.purchaseMedium({value: priceMedium});
                 await transaction.wait();
+
             }
             catch(error){
+                
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
@@ -330,7 +455,7 @@ const BlindBox = () => {
             }
        }
     }
-    
+    console.log(quantity)
 
     function AfficherMasquer()
                     {
@@ -583,7 +708,7 @@ Take advantage of this unique benefit with the DeFi
                                 <div className="bsc">
                                     <p className="bsc-price-text">Quantity : </p>
                                    
-                                    <p className="bsc-price-chiffre">330</p>
+                                    <p className="bsc-price-chiffre">{quantitySmallNft}</p>
                                 </div>     
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
@@ -622,7 +747,7 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="bsc">
                                     <p className="bsc-price-text">Quantity : </p>
                                    
-                                    <p className="bsc-price-chiffre">150</p>
+                                    <p className="bsc-price-chiffre">{quantity}</p>
                                 </div> 
                                 <div className="bsc">
                                     
@@ -678,7 +803,7 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="bsc">
                                     <p className="bsc-price-text">Quantity : </p>
                                    
-                                    <p className="bsc-price-chiffre">20</p>
+                                    <p className="bsc-price-chiffre">{quantityLargeNft}</p>
                                 </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
