@@ -165,7 +165,12 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                         <div class="image-container ">
                             <div class="neon-nft-perso"></div>
                             
-                            <video src=${imageUrl} class="image-nft-box-perso"  />
+                            
+                            <video  width="250" class="image-nft-box " autoPlay muted loop>
+                                
+                                <source src=${imageUrl} type="video/mp4" autoplay loop/>
+                                <source src=${imageUrl} type="video/webm" autoplay loop/>
+                            </video>
                         </div>
                     </div>
                     <div class="col-lg-6 flexBox-nft">
@@ -186,11 +191,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                 </div>`
                     myNft.innerHTML += nftBoxCreated
 
-                    if (test.innerHTML == newWalletAdress) {
-                        test.addEventListener("click", function(event){
-                            event.preventDefault()
-                        })
-                    }
+                   
             
             
                 }
