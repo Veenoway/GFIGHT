@@ -121,11 +121,19 @@ const Community = () => {
                             </NavLink>
                         </li>
                         <li class="menut-item ">
-                            <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
-                            <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
-                                <span className="tagSoon ">Soon..</span>
-                            </NavLink>
-                        </li>
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <i class="fas fa-home yellow-icon"></i>Website
+                                    <span className="tagSoon ">Soon..</span>
+                                </NavLink>
+                            </li>
+
+                            
+                            <li class="menut-item ">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
+                                    
+                                </NavLink>
+                            </li>
                         <li class="menut-item">
                             <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
                             <i class="fas fa-feather-alt yellow-icon"></i>

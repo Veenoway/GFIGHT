@@ -146,6 +146,7 @@ const MyNft = () => {
                     console.log(ipfsImage)
 var deleteImageChar = data.image.substring(6, data.image.length - 0)
                    var imageUrl = 'https://gateway.pinata.cloud/ipfs' + deleteImageChar
+                   console.log(imageUrl)
                     if ( url.includes('ipfs://') ) {
                         console.log("ok")
                         
@@ -156,14 +157,15 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
 
                     let myNft = document.getElementById('main');
                     
-                   var imageUrl = url
+                //    var imageUrl = url
             
                     var nftBoxCreated = `<div class="row margin-row">
                     <div class="col-lg-6 flex-container">
                         
                         <div class="image-container ">
-                            <div class="neon-nft"></div>
-                            <img src=${imageUrl} alt="" class="image-nft-box" />
+                            <div class="neon-nft-perso"></div>
+                            
+                            <video src=${imageUrl} class="image-nft-box-perso"  />
                         </div>
                     </div>
                     <div class="col-lg-6 flexBox-nft">
@@ -198,9 +200,15 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
             }
             
         }
+       
       
 
     }
+    useEffect(() => {
+        connectMetaMask()
+    }, [])
+    
+    
     function AfficherMasquer()
                     {
                     var divInfo = document.getElementById('hamburger');
@@ -239,7 +247,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                         
                         
                         <li class="menut-item">
-                            <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
+                            <NavLink exact to="/my-nft"  className="display disabled">
                            
                             <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
                             <span className="tagSoon ">Soon..</span>
@@ -248,11 +256,19 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                             </NavLink>
                         </li>
                         <li class="menut-item ">
-                            <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
-                            <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
-                                <span className="tagSoon ">Soon..</span>
-                            </NavLink>
-                        </li>
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <i class="fas fa-home yellow-icon"></i>Website
+                                    <span className="tagSoon ">Soon..</span>
+                                </NavLink>
+                            </li>
+
+                            
+                            <li class="menut-item ">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
+                                    
+                                </NavLink>
+                            </li>
                         <li class="menut-item">
                             <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
                             <i class="fas fa-feather-alt yellow-icon"></i>
@@ -337,7 +353,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
             <div className="right-nav">
                 <div className="right-item">
                     <a href="#my-nft" className="nft-owned ">{NftOwned}</a>
-                    <a href="#my-nft" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
+                    <a href="#my-nft" id="test" className="wallet pool1" ></a>
                 </div>
 
             </div>

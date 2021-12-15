@@ -5,16 +5,68 @@ import NftDescription from "./NftDescription"
 const Cards = (props) => {
 
     const { image } = props;
+
+    function Masquer() {
+
+    var divInfo = document.querySelector('.popup');
+    
+    if (divInfo.style.display == 'none'  )
+                    divInfo.style.display = 'block';
+                    else
+                    divInfo.style.display = 'none';
+
+                    
+                     
+    }   
+    
+
+    
     function AfficherMasquer()
                     {
                     var divInfo = document.querySelector('.popup');
+                        var popup = document.getElementById('popup')
+                    var textcreate = `
+                                        <button id="event" className="position-button"><i class="far fa-times-circle"></i></button>
+                                        <div class="row margin-row testons">
+                                            <div class="col-lg-5 flex-container">
+                                                
+                                                <div class="image-container ">
+                                                    <div class="neon-nft"></div>
+                                                    <img src=${image.image} alt="" class="image-nft-box-market" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7 flexBox-nft">
+                                        
+                                                <div class="detail-container">
+                                                    <h1 class="title-Nft-desc">${image.title}<span className="title-nft-secondColor"></span></h1>
+                                                    <div class="liseret-nft"></div>
+                                                    <p class="text-description-nft">${image.description}</p>
+                                                    
+               
+               
+                                                </div>
+                                            </div>
+                                        </div>
+                   
+                                   `;
+                    
+                    divInfo.innerHTML = textcreate
                      
+                    const button = document.getElementById('event');
+                    button.addEventListener('click', Masquer)
+
+
                     if (divInfo.style.display == 'none'  )
                     divInfo.style.display = 'block';
                     else
                     divInfo.style.display = 'none';
+
+                    
                      
                     }
+                    
+
+
 
     console.log(image)
     console.log(image.id)
@@ -76,37 +128,19 @@ const Cards = (props) => {
                                         
                                         
                                     </div>
+                                    <div class="popups" >
+                                    
+                                    <div className="popup" id="popup">
+                                        
+                                        
+                                        </div>
+                                        </div>
 
 
                                 </div>
-                                <div class="popups" >
-                                    {image ? (
-                                    <div className="popup" id="popup">
-                                        <button onClick={AfficherMasquer} className="position-button"><i class="far fa-times-circle"></i></button>
-                                        <div class="row margin-row testons">
-                                            <div class="col-lg-6 flex-container">
-                                                
-                                                <div class="image-container ">
-                                                    <div class="neon-nft"></div>
-                                                    <img src="" alt="" class="image-nft-box" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 flexBox-nft">
-                                        
-                                                <div class="detail-container">
-                                                    <h1 class="title-Nft-desc">{image.title}<span className="title-nft-secondColor"></span></h1>
-                                                    <div class="liseret-nft"></div>
-                                                    <p class="text-description-nft">{image.title}</p>
-                                                    
-               
-               
-                                                </div>
-                                            </div>
-                                        </div>
-                   
-                                    </div>
-                                ) : ( null )}
-                            </div>   
+                                
+                                
+                               
                         </div>
                             
     )

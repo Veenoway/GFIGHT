@@ -25,7 +25,12 @@ import footerMessage from "../images/discord2.png";
 import footerTelegram from "../images/telegram2.png";
 import video1 from "../images/gallus_intro_low_reso.mp4";
 
-import Video from "./Video";
+import Video from "../images/testfeather.mp4";
+import Video2 from "../images/testfeather1.mp4";
+import Video1 from "../images/testfeather2.mp4";
+import VideoSmall from "../images/little.mp4";
+import VideoMedium from "../images/medium.mp4";
+import VideoLarge from "../images/large.mp4";
 
 
 
@@ -53,8 +58,41 @@ const BlindBox = () => {
             let network = await  provider.getNetwork()
             console.log(window.ethereum.selectedAddress);
             console.log(network)
-            if (network.name !== 'bnb') {
-                alert('vous etes sur le mauvai réseau')
+            if (network.name !== 'eth') {
+
+                var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box')
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'Wrong Network'
+                title.classList.add('title-popup-network')
+
+
+                var text = document.createElement('p');
+                popupBox.appendChild(text);
+                text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+                text.classList.add('text-popup-network')
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+
+
             }
 
             
@@ -125,7 +163,41 @@ const BlindBox = () => {
                 await transaction.wait();
             }
             catch(error){
-                alert(error.message)
+                var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'SMALL FEATHER ARE SOLD OUT'
+                title.classList.add('title-popup-soldout')
+
+
+                
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                
             }
        }
@@ -150,9 +222,47 @@ const BlindBox = () => {
             try {
                 const transaction = await contract.purchaseLarge({value: priceLarge});
                 await transaction.wait();
+                console.log()
             }
             catch(error){
-                alert(error.message)
+               
+                // CONSTRUCTOR
+
+                var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'TITAN FEATHER ARE SOLD OUT'
+                title.classList.add('title-popup-soldout')
+
+
+                
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                
             }
        }
@@ -181,7 +291,41 @@ const BlindBox = () => {
                 await transaction.wait();
             }
             catch(error){
-                alert(error.message)
+                var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'MEDIUM FEATHER ARE SOLD OUT'
+                title.classList.add('title-popup-soldout')
+
+
+                
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                
             }
        }
@@ -203,7 +347,8 @@ const BlindBox = () => {
     
 
     return (
-        <>
+        <div id="contain">
+           
         <div className="test hamburgertest " id="hamburger">
                 
                     <div class="vertical-header vertical-nft-header">
@@ -346,7 +491,7 @@ const BlindBox = () => {
             <div className="normal-layout padding-nft">
                 <div className="container">
                     <h1 className="title-nft-main">The <span className="royalFeather">ROYAL FEATHER</span>  NFT Collection BY</h1>
-                    <img src={gallus} className="logoGallus-nft" />
+                    <img src={gallusLogo} className="logoGallus-nft" />
                     <h2 className="secondTitle-nft-main">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</h2>
                     <p className="family-nft">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
 Choose the model you want: Small, Medium or Titan! <br />
@@ -359,8 +504,13 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                                 <img src={standard} className="main-nft-imageLeft" />
                             </div> */}
                             <div className="image-container ">
-                            <div className="neon-nft"></div>
-                                <img src={exemple3} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                                
+                            <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={Video} type="video/webm" autoplay loop/>
+                                <source src={Video}type="video/mp4" autoplay loop/>
+                            </video>
+                            
                             </div>
                             
                         </div> 
@@ -369,8 +519,13 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                                 <img src={prenium} className="main-nft-imageLeft" />
                             </div> */}
                             <div className="image-container ">
-                            <div className="neon-nft"></div>
-                                <img src={exemple2} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                                {/* <img src={exemple2} alt="" className="image-nft-box" /> */}
+                                <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={Video2} type="video/webm" autoplay loop/>
+                                <source src={Video2}type="video/mp4" autoplay loop/>
+                            </video>
+                            
                             </div>
                         </div> 
                         <div className="col-lg-4 centerFlex">
@@ -378,8 +533,12 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                                 <img src={collector} className="main-nft-imageLeft" />
                             </div> */}
                             <div className="image-container ">
-                            <div className="neon-nft"></div>
-                                <img src={exemple1} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                                {/* <img src={exemple1} alt="" className="image-nft-box" /> */}
+                                <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={Video1} type="video/webm" autoplay loop/>
+                                <source src={Video1}type="video/mp4" autoplay loop/>
+                            </video>
                             </div>
                         </div> 
                         
@@ -398,8 +557,11 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                     
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
-                            <div className="neon-nft"></div>
-                                <img src={litleFeather} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                            <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={VideoSmall} type="video/webm" autoplay loop/>
+                                <source src={VideoSmall}type="video/mp4" autoplay loop/>
+                            </video>
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
@@ -410,9 +572,11 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
 Take advantage of this unique benefit with the DeFi 
                                 </p>   
                                 <div className="bsc row">
-                                <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">Premium Reward : </div>
-                                <div className="CentPourcent col-sm-12 col-md-6">   
-                                    <img src={gallus} className="bsc-price" />
+                                <div className="bsc-price-text  CentPourcent col-sm-12 col-md-2">Premium Reward : </div>
+                                <div className="col-sm-12 col-md-6 CentPourcent2">   
+                                
+                                {/* <img src={exemple1} alt="" className="image-nft-box" /> */}
+                                <img src={gallus} className="bsc-price" />
                                     <p className="bsc-price-chiffre">$GALLUS Tokens</p>
                                 </div>
                                 </div> 
@@ -449,8 +613,8 @@ Take advantage of this unique benefit with the DeFi
 Take advantage of this unique benefit with the DeFi.
 </p>
 <div className="bsc row">
-                                    <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">High Reward : </div>
-                                    <div className="CentPourcent col-sm-12 col-md-6">
+                                    <div className="bsc-price-text  CentPourcent3 col-sm-12 col-md-6">High Reward : </div>
+                                    <div className="CentPourcent2 col-sm-12 col-md-6">
                                         <img src={gallus} className="bsc-price" />
                                         <p className="bsc-price-chiffre">$GALLUS Tokens</p>
                                     </div>
@@ -478,16 +642,22 @@ Take advantage of this unique benefit with the DeFi.
                         </div>
                         <div className="col-lg-6 flex-container">
                             <div className="image-container">
-                                <div className="neon-nft"></div>
-                                <img src={mediumFeather} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                            <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={VideoMedium} type="video/webm" autoplay loop/>
+                                <source src={VideoMedium}type="video/mp4" autoplay loop/>
+                            </video>
                             </div>
                         </div>
                     </div>
                     <div className="row play2earn-margin">
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
-                                <div className="neon-nft"></div>
-                                <img src={bigFeather} alt="" className="image-nft-box" />
+                            <div className="neon-nft-perso"></div>
+                            <video  width="250" className="image-nft-box " autoPlay muted loop>
+                                <source src={VideoLarge} type="video/webm" autoplay loop/>
+                                <source src={VideoLarge}type="video/mp4" autoplay loop/>
+                            </video>
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
@@ -498,10 +668,10 @@ Take advantage of this unique benefit with the DeFi.
                                     Take advantage of this unique benefit with the DeFi.
                                 </p>
                                 <div className="bsc row">
-                                <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">Crazy Reward : <img src={gallus} className="bsc-price" /></div>
+                                <div className="bsc-price-text  CentPourcent4 col-sm-12 col-md-6">Crazy Reward : <img src={gallus} className="bsc-price" /></div>
                                     <div className="CentPourcent1 col-sm-12 col-md-12">
                                         
-                                        <p className="bsc-price-chiffre1">$GALLUS Tokens + Private Access with Team GALLUS</p>
+                                        <p className="bsc-price-chiffre1">$GALLUS Tokens + VIP Access with Gallus Team</p>
                                     </div>
                                 </div> 
                                 
@@ -561,7 +731,7 @@ Take advantage of this unique benefit with the DeFi.
                 </div>
             
            
-        </>
+        </div>
     )
 }
 

@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <HashRouter basename="/" hashType="noslash"> 
-      {/* <Route exact path="/h" component={Home} /> */}
+      <Route exact path="/h" component={Home} />
       
       
       <div className="paddingLeft">

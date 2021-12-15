@@ -42,6 +42,7 @@ const NftMarket = () => {
 
     <div className="pool">
         <Header />
+        
         <div className="wallet-nav">
             <div className="logo-nav">
                 <a href="" className="logoJOJO"></a>
@@ -74,6 +75,7 @@ Stay tuned and enter the arena for NFT's fights.</p>
         </div>
         
     </div>
+    
     
     )};
 
