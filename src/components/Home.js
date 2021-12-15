@@ -252,14 +252,14 @@ const Home = () => {
                             {/* <img src={blackHole2} className="box-3-img" alt="logo blackHole"/> */}
                             <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
                             <h5 className="box-title">100% <br /> Decentralized</h5>
-                            <p className="box-text">JOJO Tokens are led by community nodes and managed by volunteers. The ownership of the contract has been burned, and the start-up is completely implemented as liquidity.</p>
+                            <p className="box-text">Gallus Tokens are led by community nodes and managed by volunteers. The ownership of the contract has been burned, and the start-up is completely implemented as liquidity.</p>
                         </div>
                         <div className="box-3">
                             
                             {/* <img src={blackHole3} className="box-3-img" alt="logo blackHole"/> */}
                             <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
                             <h5 className="box-title">Currency Holding Dividend Mechanism</h5>
-                            <p className="box-text">4% of all transactions are allocated to holders. Watch the content your wallet climb the moment you hold $JOJO.</p>
+                            <p className="box-text">4% of all transactions are allocated to holders. Watch the content your wallet climb the moment you hold $GALLUS.</p>
                         
                     </div>
                         
@@ -270,14 +270,14 @@ const Home = () => {
                             {/* <img src={blackHole4} className="box-3-img" alt="logo blackHole"/> */}
                             <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
                             <h5 className="box-title">Fair Launch</h5>
-                            <p className="box-text">100% of JOJO supply is seeded as liquidity, which means that there is no presale and no allocation to team members.</p>
+                            <p className="box-text">100% of GALLUS supply is seeded as liquidity, which means that there is no presale and no allocation to team members.</p>
                         </div>
                         <div className="box-3">
                         
                             {/* <img src={blackHole5} className="box-3-img" alt="logo blackHole"/> */}
                             <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
                             <h5 className="box-title">Continuously Rising Price Floor</h5>
-                            <p className="box-text">3% of every transaction fees is locked as liquidity in PancakeSwap JOJO/BNB pool, creating an ever rising price floor.</p>
+                            <p className="box-text">3% of every transaction fees is locked as liquidity in PancakeSwap GALLUS/BNB pool, creating an ever rising price floor.</p>
                         </div>
                         <div className="box-3">
                         
@@ -363,7 +363,7 @@ const Home = () => {
                 <div className="normal-layout">
                     <h3 className="tokenomic-title">GALLUS <span className="yellowColorText">FIGURINE</span></h3>
                     <div className="main-tokenomic">
-                        <p className="left-text">JOJO Token is issued based on the Binance Smart Chain, which is completely decentralized, without any private equity and team reservations, and adopts a super combustion mechanism to make the number of Tokens burn very quickly, greatly reducing the circulation of the total supply. Under the premise of fair issuance, JOJO will trigger the corresponding Token distribution for each transfer or transaction on the chain, which includes currency holding income,
+                        <p className="left-text">GALLUS Token is issued based on the Binance Smart Chain, which is completely decentralized, without any private equity and team reservations, and adopts a super combustion mechanism to make the number of Tokens burn very quickly, greatly reducing the circulation of the total supply. Under the premise of fair issuance, GALLUS will trigger the corresponding Token distribution for each transfer or transaction on the chain, which includes currency holding income,
                          Token burn and NFT mining pool, and will burn all private keys to ensure its fairness.</p>
                          <div className="token-image">
                              <img src={figurine} alt="tokenomic image " className="eggs"/>
@@ -403,7 +403,7 @@ const Home = () => {
                             
                             <h5 className="create-wallet-title">Use $BNB to exchange $COCK</h5>
                             <p className="first-text">Go to the DApps tab at the bottom, find <strong> PancakeSwap V2 </strong>  , click “Choose Currency”, enter the contract address in the search bar, and you should be able to find COCK.<br/>
-                                JOJO counterparty address: Before the exchange, click the gear and set the <strong> slide to 12-15% </strong>  , set the amount you want to buy and click the exchange button.
+                            GALLUS FIGHTER counterparty address: Before the exchange, click the gear and set the <strong> slide to 12-15% </strong>  , set the amount you want to buy and click the exchange button.
                             </p>
                             <p className="first-text"> PancakeSwap :<br /> https://exchange.pancakeswap.finance
                             </p>
@@ -508,46 +508,46 @@ const Home = () => {
                         <li className="faq-item">
                             <div className="item-title">
                                 <span className="tags">1</span>
-                                What’s the tokenomics of "JOJO"? And how do we expect the price of "JOJO"?
+                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
                             </div>
                             <div className="item-text">
-                            At the begining, 50% of JOJO tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $JOJO chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $JOJO/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
                             <div className="item-title">
                                 <span className="tags">2</span>
-                                What’s the tokenomics of "JOJO"? And how do we expect the price of "JOJO"?
+                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
                             </div>
                             <div className="item-text">
-                            At the begining, 50% of JOJO tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $JOJO chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $JOJO/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
                             <div className="item-title">
                                 <span className="tags">3</span>
-                                What’s the tokenomics of "JOJO"? And how do we expect the price of "JOJO"?
+                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
                             </div>
                             <div className="item-text">
-                            At the begining, 50% of JOJO tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $JOJO chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $JOJO/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
                             <div className="item-title">
                                 <span className="tags">4</span>
-                                What’s the tokenomics of "JOJO"? And how do we expect the price of "JOJO"?
+                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
                             </div>
                             <div className="item-text">
-                            At the begining, 50% of JOJO tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $JOJO chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $JOJO/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
                             <div className="item-title">
                                 <span className="tags">5</span>
-                                What’s the tokenomics of "JOJO"? And how do we expect the price of "JOJO"?
+                                What’s the tokenomics of "GALLUS"? And how do we expect the price of "GALLUS"?
                             </div>
                             <div className="item-text">
-                            At the begining, 50% of JOJO tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $JOJO chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $JOJO/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
 
