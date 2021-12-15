@@ -3153,6 +3153,7 @@ align-items:center;
   background-image:linear-gradient(137deg, rgba(36, 36, 36, 0.774) 0%, #074dff73 0%, rgba(255, 0, 0, 0.507) 100%);
   border-radius:12px;
   color:white;
+  cursor: pointer;
   text-decoration:none;
   font-family:bungee;
   letter-spacing: 1px;
@@ -3831,4 +3832,13 @@ justify-content: center;
   padding:40px 40px 20px 40px;
   box-shadow: 0 0 10px rgba(216, 216, 216, 0.719);
   position:relative
+}
+
+/* VIDEO */
+
+.video-gallus{
+  border-radius:40px;
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.397);
+  margin-top:40px;
+  object-fit:cover;
 }

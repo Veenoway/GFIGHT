@@ -32,6 +32,8 @@ import VideoSmall from "../images/little.mp4";
 import VideoMedium from "../images/medium.mp4";
 import VideoLarge from "../images/large.mp4";
 
+import gallusVideo from "../images/gallus_intro_low_reso.mp4";
+
 
 
 const BlindBox = () => {
@@ -255,7 +257,9 @@ const BlindBox = () => {
         console.log(window.ethereum.selectedAddress);
     
     // request metamask to access the account
-
+        try {
+            
+        
         await window.ethereum.request({ method: "eth_requestAccounts" });
         console.log(window.ethereum.selectedAddress);
 
@@ -274,6 +278,11 @@ const BlindBox = () => {
         
         console.log(quantitySmallNft)
         console.log(priceSmall.toString())
+}
+        catch(error) {
+           
+            SetQuantityLargeNft('SOLD OUT')
+        }
     }
 
     showSmallQuantity()
@@ -319,6 +328,7 @@ const BlindBox = () => {
     async function purshaseLarge() {
         if (typeof window.ethereum !== 'undefined') {
 
+            try {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             console.log(provider);
             console.log(window.ethereum.selectedAddress);
@@ -338,7 +348,7 @@ const BlindBox = () => {
             console.log(priceLarge.toString())
             console.log(quantityLargeNft)
             
-            try {
+            
                 const transaction = await contract.purchaseLarge({value: priceLarge});
                 await transaction.wait();
                 console.log(quantityLargeNft)
@@ -346,7 +356,7 @@ const BlindBox = () => {
             catch(error){
                
                 // CONSTRUCTOR
-                console.log(quantityLargeNft)
+                
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
@@ -412,6 +422,42 @@ const BlindBox = () => {
             try {
                 const transaction = await contract.purchaseMedium({value: priceMedium});
                 await transaction.wait();
+                
+                var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'Achat effectué'
+                title.classList.add('title-popup-soldout')
+
+
+                
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
 
             }
             catch(error){
@@ -717,7 +763,7 @@ Take advantage of this unique benefit with the DeFi
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a href="#" className="button-nft " onClick={purshaseSmall} >BUY</a>
+                                    <a  className="button-nft " onClick={purshaseSmall} >BUY</a>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
@@ -757,7 +803,7 @@ Take advantage of this unique benefit with the DeFi.
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a href="#" className="button-nft" onClick={purshaseMedium}>BUY</a>
+                                    <a  className="button-nft" onClick={purshaseMedium}>BUY</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -811,7 +857,7 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
                                 <div className="center-button">
-                                    <a href="#" className="button-nft" onClick={purshaseLarge}>BUY</a>
+                                    <a  className="button-nft" onClick={purshaseLarge}>BUY</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
