@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/GallusFighter.github.io/static/css/main.99439148.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.48b48da6.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.48b48da6.chunk.js.map",
+    "main.js": "/GallusFighter.github.io/static/js/main.87c6b8a7.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.87c6b8a7.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.defcb60a.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.defcb60a.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.b9655030.chunk.js": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js",
-    "static/js/2.b9655030.chunk.js.map": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js.map",
+    "static/js/2.d0cddf8d.chunk.js": "/GallusFighter.github.io/static/js/2.d0cddf8d.chunk.js",
+    "static/js/2.d0cddf8d.chunk.js.map": "/GallusFighter.github.io/static/js/2.d0cddf8d.chunk.js.map",
     "static/js/3.ad44d9a7.chunk.js": "/GallusFighter.github.io/static/js/3.ad44d9a7.chunk.js",
     "static/js/3.ad44d9a7.chunk.js.map": "/GallusFighter.github.io/static/js/3.ad44d9a7.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
     "static/css/main.99439148.chunk.css.map": "/GallusFighter.github.io/static/css/main.99439148.chunk.css.map",
-    "static/js/2.b9655030.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.b9655030.chunk.js.LICENSE.txt",
+    "static/js/2.d0cddf8d.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.d0cddf8d.chunk.js.LICENSE.txt",
     "static/media/GrandePlume.7e2b31c1.gif": "/GallusFighter.github.io/static/media/GrandePlume.7e2b31c1.gif",
     "static/media/TEST.b9b09302.jpg": "/GallusFighter.github.io/static/media/TEST.b9b09302.jpg",
     "static/media/App.css": "/GallusFighter.github.io/static/media/tiret.d1af01c3.svg",
@@ -83,8 +83,8 @@
   "entrypoints": [
     "static/js/runtime-main.defcb60a.js",
     "static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.b9655030.chunk.js",
+    "static/js/2.d0cddf8d.chunk.js",
     "static/css/main.99439148.chunk.css",
-    "static/js/main.48b48da6.chunk.js"
+    "static/js/main.87c6b8a7.chunk.js"
   ]
 }
