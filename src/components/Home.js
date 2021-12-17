@@ -290,7 +290,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-             <section className="section-common section-4">
+             <section className="section-common section-4-2">
                 <div className="normal-layout">
                     <h3 className="gallus-play2earn-title">GALLUS <span className="yellowColorText">PLAY-TO-EARN</span></h3>
                     <div className="container container-play2earn">
