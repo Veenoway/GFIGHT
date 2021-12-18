@@ -535,7 +535,7 @@ const Home = () => {
 
             </section>
             
-            <section className="section-7">
+            {/* <section className="section-7">
                 <div className="normal-layout">
                     <h3 className="partners-title">GALLUS <span className="yellowColorText">PARTNERS</span></h3>
                     <div className="list-partners">
@@ -565,7 +565,103 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
+            </section> */}
+            <section>
+            <h3 className="partners-title">GALLUS <span className="yellowColorText">ROADMAP</span></h3>
+            <div className="timeline">
+            
+                <ul className="timeline-ul">
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                               
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3>fhofhsoihfpeshf</h3>
+                            <p>
+                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                                
+                            </p>
+                            <div className="time">
+                                <h4>January 2018</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <div className="clear"></div>
+                </ul>
+                </div>
             </section>
+
+
+
             <section>
                 <div className="gallus-team-container">
                     <div className="normal-layout">
@@ -685,7 +781,7 @@ const Home = () => {
                         </li>
 
                     </ul>
-
+                    
                 </div>
             </section>
             <section className="section-9">
