@@ -724,7 +724,7 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                
                <div className="container container-nft">
                
-                    <div className="row ">
+                    <div className="row card-nft">
                     
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
@@ -774,7 +774,7 @@ Take advantage of this unique benefit with the DeFi
                             </div>
                         </div>
                     </div>
-                    <div className="row play2earn-margin reverseRow">
+                    <div className="row play2earn-margin reverseRow card-nft">
                         
                         <div className="col-lg-6 flexBox-nft">
                             <div className="detail-container ">
@@ -821,7 +821,7 @@ Take advantage of this unique benefit with the DeFi.
                             </div>
                         </div>
                     </div>
-                    <div className="row play2earn-margin">
+                    <div className="row play2earn-margin card-nft">
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
                             <div className="neon-nft-perso"></div>

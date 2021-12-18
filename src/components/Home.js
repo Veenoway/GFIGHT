@@ -42,9 +42,22 @@ import miz from "../images/miz.jpg"
 import nico from "../images/nico.jpg"
 import macron from "../images/macron.jpg"
 import sylvain from "../images/sylvain.jpg"
-import niho from "../images/niho.jpg"
+import niho from "../images/niho.jpg";
+import $ from 'jquery';
 
 const Home = () => {
+
+
+    $(function () {
+        $(window).on('scroll', function () {
+            if ( $(window).scrollTop() > 10 ) {
+                $('.header-fixed').addClass('actives');
+            } else {
+                $('.header-fixed').removeClass('actives');
+            }
+        });
+    });
+
 
     var pages = document.getElementsByClassName('page');
     for(var i = 0; i < pages.length; i++)
@@ -77,16 +90,123 @@ const Home = () => {
           }
     });
 
-    function AfficherMasquer()
-    {
-    document.getElementById('divacacher');
-     
-    if ( document.getElementById('divacacher').style.display == 'none')
-    document.getElementById('divacacher').style.display = 'flex';
-    else
-    document.getElementById('divacacher').style.display = 'none';
-     
+
+    // function afficher() {
+
+    //     const faq5 = document.getElementById('faq5');
+    //     const answer5 = document.createElement('div');
+    //     faq5.appendChild(answer5);
+    //     answer5.classList.add('item-text');
+    //     answer5.style.display = 'none';
+    //     answer5.innerHTML = ' At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.'
+        
+    //     if ( answer5.style.display == "none") {
+    //         answer5.style.display = "flex";
+    //     } else {
+    //         answer5.style.display = "none"
+    //     }
+
+            
+    // }
+
+    function AfficherMasquer() {
+
+        var faq5 = document.getElementById('faq5');
+        var arrow = document.getElementById('arrow5')
+        
+        if ( faq5.style.display == 'none') {
+            
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+        }
+        
+        else {
+
+            arrow.style.transform = 'rotate(0turn)';
+            faq5.style.display = 'none';
+
+        }
+        
     }
+    function AfficherMasquer4() {
+
+        var faq5 = document.getElementById('faq4');
+        var arrow = document.getElementById('arrow4')
+        
+        if ( faq5.style.display == 'none') {
+
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+        } 
+        else {
+
+            faq5.style.display = 'none';
+            arrow.style.transform = 'rotate(0turn)';
+
+        }
+        
+         
+    }
+
+    function AfficherMasquer3() {
+
+        var faq5 = document.getElementById('faq3');
+        var arrow = document.getElementById('arrow3')
+        
+        if ( faq5.style.display == 'none') {
+
+        faq5.style.display = 'flex';
+        arrow.style.transform = 'rotate(0.5turn)';
+
+        }
+        else {
+
+            faq5.style.display = 'none';
+            arrow.style.transform = 'rotate(0turn)';
+        }
+        
+         
+    }
+
+    function AfficherMasquer2() {
+
+        var faq5 = document.getElementById('faq2');
+        var arrow = document.getElementById('arrow2')
+        
+        if ( faq5.style.display == 'none') {
+
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+    
+            }
+            else {
+    
+                faq5.style.display = 'none';
+                arrow.style.transform = 'rotate(0turn)';
+            }
+         
+    }
+
+    function AfficherMasquer1() {
+
+        var faq5 = document.getElementById('faq1');
+        var arrow = document.getElementById('arrow1')
+        
+        if ( faq5.style.display == 'none') {
+
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+    
+        }
+        else {
+    
+            faq5.style.display = 'none';
+            arrow.style.transform = 'rotate(0turn)';
+        }
+         
+    }
+
+
         
     
     return (
@@ -507,48 +627,61 @@ const Home = () => {
                     <ul className="faq-list">
                         <li className="faq-item">
                             <div className="item-title">
+                            
                                 <span className="tags">1</span>
                                 What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                <a className="fleche1" onClick={AfficherMasquer1}><i class="fas fa-arrow-circle-down" id="arrow1"></i></a>
                             </div>
-                            <div className="item-text">
+                            <div className="item-text" id="faq1">
                             At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
+                        
                             <div className="item-title">
                                 <span className="tags">2</span>
                                 What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                <a className="fleche1" onClick={AfficherMasquer2}><i class="fas fa-arrow-circle-down" id="arrow2"></i></a>
                             </div>
-                            <div className="item-text">
+                            <div className="item-text" id="faq2">
                             At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
                         </li>
                         <li className="faq-item">
+                        
                             <div className="item-title">
                                 <span className="tags">3</span>
                                 What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                <a className="fleche1" onClick={AfficherMasquer3}><i class="fas fa-arrow-circle-down" id="arrow3"></i></a>
                             </div>
-                            <div className="item-text">
+                            <div className="item-text" id="faq3">
                             At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
+                            
                         </li>
                         <li className="faq-item">
-                            <div className="item-title">
+                       
+                            <div className="item-title" >
                                 <span className="tags">4</span>
                                 What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                <a className="fleche1" onClick={AfficherMasquer4}><i class="fas fa-arrow-circle-down" id="arrow4"></i></a>
                             </div>
-                            <div className="item-text">
+                            <div className="item-text" id="faq4">
                             At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
+                            
                         </li>
-                        <li className="faq-item">
+                        <li className="faq-item" >
+                            
                             <div className="item-title">
                                 <span className="tags">5</span>
                                 What’s the tokenomics of "GALLUS"? And how do we expect the price of "GALLUS"?
+                                <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
                             </div>
-                            <div className="item-text">
+                            <div className="item-text" id="faq5">
                             At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
                             </div>
+                            
                         </li>
 
                     </ul>

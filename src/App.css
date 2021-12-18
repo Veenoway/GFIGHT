@@ -2156,10 +2156,11 @@ a{
       word-break: break-word;
       background: rgb(36,36,36);
 background: linear-gradient(323deg, rgba(36, 36, 36, 0.774) 0%, rgba(58, 62, 180, 0.835) 0%, rgba(237, 0, 0, 0.815) 100%);
-      border-radius: 40px;
+border-radius: 29px;
       padding: 32px 32px 32px 68px;
       list-style: none;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.609);
+      position:relative
 }
 
 .item-title{
@@ -2167,7 +2168,9 @@ background: linear-gradient(323deg, rgba(36, 36, 36, 0.774) 0%, rgba(58, 62, 180
   font-weight: 700;
   color: rgb(228, 213, 0);
   position: relative;
-  text-align:start
+  text-align:start;
+  display: flex;
+  justify-content: space-between;
 }
 
 .tags{
@@ -3853,4 +3856,53 @@ justify-content: center;
   box-shadow:0 0 10px rgba(255, 255, 255, 0.397);
   margin-top:40px;
   object-fit:cover;
+}
+
+.card-nft{
+  background: linear-gradient(137deg, rgba(36, 36, 36, 0.774) 0%, #0038c765 0%, rgba(187, 0, 0, 0.383) 100%);
+    padding: 30px 5px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #ffffff40;
+}
+
+.fleche{
+  position:relative;
+  background-color:green
+}
+.fleche1{
+  color:white;
+  
+  font-size: 26px;
+  cursor:pointer;
+  
+}
+
+#faq5{
+  display:none;
+}
+#faq4{
+  display:none;
+}
+#faq3{
+  display:none;
+}
+#faq2{
+  display:none;
+}
+#faq1{
+  display:none;
+}
+
+.fa-arrow-circle-down{
+  transform: rotate(0turn);
+  display:inline-block;
+  transition: transform .35s ease-in-out;
+  color:white;
+
+  font-size: 26px;
+}
+
+.actives{
+  background:linear-gradient(137deg, rgba(36, 36, 36, 0.774) 0%, #192a75 0%, rgb(129, 27, 27) 100%);
+  transition: all 0.6s ease-in-out;
 }
