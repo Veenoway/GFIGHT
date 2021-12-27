@@ -264,15 +264,15 @@ const Home = () => {
                     
                     {/* <div className="space"></div> */}
                     <div className="nav-list ">
-                        <NavLink exact to="/" className="selected font">HOME</NavLink>
-                        <NavLink exact to="/#ystery-box" className="unselected font">MYSTERY BOX</NavLink>
-                        <NavLink exact to="/gallus-story" className="unselected font">STORY</NavLink>
-                        <NavLink exact to="/" className="selected font"><img src={logoGallus} className="logoMain"/></NavLink>
-                        <NavLink exact to="/community" className="unselected font">COMMUNITY</NavLink>
+                        <a href="/" className="selected font">HOME</a>
+                        <a href="/#mystery-box" className="unselected font">MYSTERY BOX</a>
+                        <a href="/#gallus-story" className="unselected font">STORY</a>
+                        <a href="/" className="selected font"><img src={logoGallus} className="logoMain"/></a>
+                        <a href="/#community" className="unselected font">COMMUNITY</a>
                         
                         
                         
-                        <NavLink exact to="/#mystery-box" className="unselected font">APP</NavLink>
+                        <a href="/#mystery-box" className="unselected font">APP</a>
                         <a href="https://galluspaper.gallusfighter.com/" className="unselected font">DOCS</a>
 
                     </div>
@@ -284,11 +284,11 @@ const Home = () => {
                     <div className="navClick" id="navClick">
                         {/* <img src={gallus} className="logo-nav-mobile" /> */}
                         <ul className="ul-popup">
-                            <NavLink exact to="/" className="li-popup"><li>HOME</li></NavLink>
-                            <NavLink exact to="/mystery-box"className="li-popup"><li>PRE-SALE</li></NavLink>
-                            <NavLink exact to="/gallus-story" className="li-popup"><li>GALLUS STORY</li></NavLink>
-                            <NavLink exact to="/community" className="li-popup"><li>COMMUNITY</li></NavLink>
-                            <NavLink exact  to="/mystery-box" className="li-popup"><li>APP</li></NavLink>
+                            <a href="/" className="li-popup"><li>HOME</li></a>
+                            <a href="/mystery-box"className="li-popup"><li>PRE-SALE</li></a>
+                            <a href="/gallus-story" className="li-popup"><li>GALLUS STORY</li></a>
+                            <a href="/community" className="li-popup"><li>COMMUNITY</li></a>
+                            <a href="/mystery-box" className="li-popup"><li>APP</li></a>
                             <a href="https://galluspaper.gallusfighter.com/" className="li-popup"><li>DOCS</li></a>
                         </ul>
                     </div>
@@ -307,7 +307,7 @@ const Home = () => {
                             <div className="btn-1">
                                 <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color disabled">
                                 <img src={icon_2} className="icon-btn " />
-                                    BUY GALLUS 
+                                    LAUNCH 
                                 
                                 </a>
                                 <NavLink exact to="/mystery-box" className="btn-border-color">

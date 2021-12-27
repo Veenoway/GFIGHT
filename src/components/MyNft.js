@@ -242,40 +242,42 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                     </div>
                     <ul class="ul">
                     <li class="menut-item">
-                            <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
-                            <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
-                            <span className="tag">HOT</span>
-                            </NavLink>
-                        </li>
-                        <li class="menut-item">
-                            <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
-                            <i class="fas fa-box-open yellow-icon"></i>Mystery box
-                                <span className="tag">NEW</span>
-                            </NavLink>
-                        </li>
-                        
-                        
-                        <li class="menut-item">
-                            <NavLink exact to="/my-nft"  className="display disabled">
-                           
-                            <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
-                            <span className="tagSoon ">Soon..</span>
-                            
-                            
-                            </NavLink>
-                        </li>
-                        <li class="menut-item ">
-                                <NavLink exact to="/" activeClassName="nav-active " className="display disabled">
-                                <i class="fas fa-home yellow-icon"></i>Website
-                                    <span className="tagSoon ">Soon..</span>
+                                <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
+                                <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
+                                {/* <span className="tag"></span> */}
                                 </NavLink>
                             </li>
+                            <li class="menut-item">
+                                <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
+                                <i class="fas fa-box-open yellow-icon"></i>
+                                {/* <img src={icon_2} className="webtest" /> */}
+                                Mystery box 
+                                    <span className="tag">HOT</span>
+                                </NavLink>
+                            </li>
+                            
+                            <li class="menut-item ">
+                                <NavLink exact to="/" activeClassName="nav-active " className="display ">
+                                <i class="fas fa-home yellow-icon"></i>Website
+                                    <span className="tag ">NEW</span>
+                                </NavLink>
+                            </li>
+                            <li class="menut-item">
+                                <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
+                               
+                                <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
+                                <span className="tagSoon ">Soon..</span>
+                                
+                                
+                                </NavLink>
+                            </li>
+                           
 
                             
                             <li class="menut-item ">
                                 <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
-                                    
+                                <span className="tagSoon ">Soon..</span>
                                 </NavLink>
                             </li>
                         <li class="menut-item">
