@@ -272,7 +272,7 @@ const Home = () => {
                         
                         
                         
-                        <a href="/#mystery-box" className="unselected font">APP</a>
+                        <NavLink exact to="/#mystery-box" className="unselected font">APP</NavLink>
                         <a href="https://galluspaper.gallusfighter.com/" className="unselected font">DOCS</a>
 
                     </div>
@@ -307,7 +307,7 @@ const Home = () => {
                             <div className="btn-1">
                                 <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color disabled">
                                 <img src={icon_2} className="icon-btn " />
-                                    LAUNCH 
+                                    BUY GALLUS 
                                 
                                 </a>
                                 <NavLink exact to="/mystery-box" className="btn-border-color">
