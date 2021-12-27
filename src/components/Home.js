@@ -288,7 +288,7 @@ const Home = () => {
                             <NavLink exact to="/mystery-box"className="li-popup"><li>PRE-SALE</li></NavLink>
                             <NavLink exact to="/gallus-story" className="li-popup"><li>GALLUS STORY</li></NavLink>
                             <NavLink exact to="/community" className="li-popup"><li>COMMUNITY</li></NavLink>
-                            <NavLink exact="/mystery-box" className="li-popup"><li>APP</li></NavLink>
+                            <NavLink exact  to="/mystery-box" className="li-popup"><li>APP</li></NavLink>
                             <a href="https://galluspaper.gallusfighter.com/" className="li-popup"><li>DOCS</li></a>
                         </ul>
                     </div>
