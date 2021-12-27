@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/GallusFighter.github.io/static/css/main.2ab3c774.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.35e9f075.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.35e9f075.chunk.js.map",
+    "main.js": "/GallusFighter.github.io/static/js/main.e66c76f4.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.e66c76f4.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.9f8aa632.chunk.js": "/GallusFighter.github.io/static/js/2.9f8aa632.chunk.js",
-    "static/js/2.9f8aa632.chunk.js.map": "/GallusFighter.github.io/static/js/2.9f8aa632.chunk.js.map",
+    "static/js/2.62565418.chunk.js": "/GallusFighter.github.io/static/js/2.62565418.chunk.js",
+    "static/js/2.62565418.chunk.js.map": "/GallusFighter.github.io/static/js/2.62565418.chunk.js.map",
     "static/js/3.b62c4f64.chunk.js": "/GallusFighter.github.io/static/js/3.b62c4f64.chunk.js",
     "static/js/3.b62c4f64.chunk.js.map": "/GallusFighter.github.io/static/js/3.b62c4f64.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
     "static/css/main.2ab3c774.chunk.css.map": "/GallusFighter.github.io/static/css/main.2ab3c774.chunk.css.map",
-    "static/js/2.9f8aa632.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.9f8aa632.chunk.js.LICENSE.txt",
+    "static/js/2.62565418.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.62565418.chunk.js.LICENSE.txt",
     "static/media/Asset_2.1a3ccaef.png": "/GallusFighter.github.io/static/media/Asset_2.1a3ccaef.png",
     "static/media/Governance.84c1c293.png": "/GallusFighter.github.io/static/media/Governance.84c1c293.png",
     "static/media/GrandePlume.7e2b31c1.gif": "/GallusFighter.github.io/static/media/GrandePlume.7e2b31c1.gif",
@@ -100,8 +100,8 @@
   "entrypoints": [
     "static/js/runtime-main.1776477a.js",
     "static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.9f8aa632.chunk.js",
+    "static/js/2.62565418.chunk.js",
     "static/css/main.2ab3c774.chunk.css",
-    "static/js/main.35e9f075.chunk.js"
+    "static/js/main.e66c76f4.chunk.js"
   ]
 }
