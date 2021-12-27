@@ -305,14 +305,14 @@ const Home = () => {
                             <p className="p-text">Participate with your GALLUS NFTs in bloody battles and collect your rewards when you are victorious!</p>
                             <p className="p-text">Upgrade your GALLUS FIGHTER, train it or use any DeFi services with your NFTs and/or $GALLUS Tokens and take your profits!</p>
                             <div className="btn-1">
-                                <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color disabled">
+                                <NavLink exact to="/mystery-box" className="btn-border-color-3 ">
                                 <img src={icon_2} className="icon-btn " />
-                                    LAUNCH 
+                                   GALLUS PRE-SALE 
                                 
-                                </a>
-                                <NavLink exact to="/mystery-box" className="btn-border-color">
+                                </NavLink>
+                                <NavLink exact to="/gallus-story" className="btn-border-color">
                                     <img src={controller} className="icon-btn" />
-                                   Gallus APP
+                                   GALLUS STORY
                                     
                                 </NavLink>
                                 

@@ -39,6 +39,7 @@ import VideoLarge from "../images/large.mp4";
 
 import gallusVideo from "../images/gallus_intro_low_reso.mp4";
 import icon_2 from "../images/Asset_2.png";
+import story from "../images/story.png";
 
 
 
@@ -735,7 +736,7 @@ Choose the model you want: Small, Medium or Titan! </p>
             <div className="normal-layout">
             
                
-               <div className="container-nft">
+               <div className="container-nft-2">
                
                     <div className="row card-nft">
                     
@@ -780,8 +781,8 @@ Take advantage of this unique benefit with the DeFi
                                 
                                 <div className="center-button">
                                     <div className="">
-                                    <a  className="btn-border-color" onClick={purshaseSmall} >
-                                    <img src={icon_2} className="icon-btn" />BUY gallus</a></div>
+                                    <a  className="btn-border-color-small" onClick={purshaseSmall} >
+                                    <img src={icon_2} className="icon-btn" />BUY SMALL FEATHER</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
@@ -822,8 +823,8 @@ Take advantage of this unique benefit with the DeFi.
                                 
                                 <div className="center-button">
                                     
-                                <a  className="btn-border-color" onClick={purshaseMedium} >
-                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
+                                <a  className="btn-border-color-medium" onClick={purshaseMedium} >
+                                    <img src={icon_2} className="icon-btn" />BUY MEDIUM FEATHER</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -877,8 +878,8 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
                                 <div className="center-button">
-                                <a  className="btn-border-color" onClick={purshaseLarge} >
-                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
+                                <a  className="btn-border-color-titan" onClick={purshaseLarge} >
+                                    <img src={icon_2} className="icon-btn" />BUY TITAN FEATHER</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>

@@ -1633,7 +1633,7 @@ a{
     font-weight: 400;
     color: white;
     line-height: 1.4;
-    padding: 0px 80px 0px 0px;
+    padding: 0px 119px 0px 0px;
 }
 
 .btn-1{
@@ -3887,6 +3887,10 @@ align-items:center;
   
 }
 
+.container-nft-2{
+  padding:0px 0px 90px 0;
+}
+
 .play2earn-left{
   /* height:400px;
   background:linear-gradient(323deg, rgba(36, 36, 36, 0.774) 0%, #074fff45 0%, rgb(255 0 0 / 24%) 100%);
@@ -3964,7 +3968,7 @@ align-items:center;
 }
 
 .play2earn-margin{
-  margin-top:180px !important;
+  margin-top:100px !important;
   align-items: center;
 }
 
@@ -4798,7 +4802,33 @@ ul{
     line-height:0;
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:185px;
+    min-width:214px;
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+}
+.btn-border-color-3{
+  border: 2px solid #0000ff;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: end;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
+    min-width:242px;
     box-sizing:border-box;
     margin-right: 24px;
     text-decoration: none;
@@ -4824,7 +4854,7 @@ ul{
     line-height:0;
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
-    min-width:185px;
+    
     box-sizing:border-box;
     margin-right: 24px;
     text-decoration: none;
@@ -4835,6 +4865,34 @@ ul{
     transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
 }
 
+.btn-border-color-3:hover{
+  border: 2px solid #0707b4;
+    color: #f7F7F7;
+    background-color: #0000ff;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: end;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+    
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+    transform: scale(1.1);
+    transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
+}
 
 
 .icon-box{
@@ -4848,3 +4906,169 @@ ul{
 }
 
 /* caroussel */
+.btn-border-color-small{
+  border: 2px solid #0000ff;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: end;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
+    min-width:268px;
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+}
+
+.btn-border-color-small:hover{
+  border: 2px solid #0707b4;
+  color: #f7F7F7;
+  background-color: #0000ff;
+  height:52px;
+  line-height:1.2;
+  display:inline-flex;
+  align-items:center;
+  justify-content: end;
+  text-align: center;
+  cursor:pointer;
+  transition: all .3s ease 0s;
+  font-weight: 700;
+  padding: 0 9px;
+  font-size:18px;
+  line-height:0;
+  border-radius:15px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+  
+  box-sizing:border-box;
+  margin-right: 24px;
+  text-decoration: none;
+  font-family: 'bungee', cursive;
+  position:relative;
+  margin-left:20px;
+  transform: scale(1.1);
+  transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
+}
+
+.btn-border-color-medium{
+  border: 2px solid #0000ff;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: end;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
+    min-width:280px;
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+}
+
+.btn-border-color-medium:hover{
+  border: 2px solid #0707b4;
+  color: #f7F7F7;
+  background-color: #0000ff;
+  height:52px;
+  line-height:1.2;
+  display:inline-flex;
+  align-items:center;
+  justify-content: end;
+  text-align: center;
+  cursor:pointer;
+  transition: all .3s ease 0s;
+  font-weight: 700;
+  padding: 0 9px;
+  font-size:18px;
+  line-height:0;
+  border-radius:15px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+  
+  box-sizing:border-box;
+  margin-right: 24px;
+  text-decoration: none;
+  font-family: 'bungee', cursive;
+  position:relative;
+  margin-left:20px;
+  transform: scale(1.1);
+  transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
+}
+
+.btn-border-color-titan{
+  border: 2px solid #0000ff;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: end;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
+    min-width:264px;
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+}
+.btn-border-color-titan:hover{
+  border: 2px solid #0707b4;
+  color: #f7F7F7;
+  background-color: #0000ff;
+  height:52px;
+  line-height:1.2;
+  display:inline-flex;
+  align-items:center;
+  justify-content: end;
+  text-align: center;
+  cursor:pointer;
+  transition: all .3s ease 0s;
+  font-weight: 700;
+  padding: 0 9px;
+  font-size:18px;
+  line-height:0;
+  border-radius:15px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+  
+  box-sizing:border-box;
+  margin-right: 24px;
+  text-decoration: none;
+  font-family: 'bungee', cursive;
+  position:relative;
+  margin-left:20px;
+  transform: scale(1.1);
+  transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
+}
