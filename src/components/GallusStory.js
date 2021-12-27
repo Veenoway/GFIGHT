@@ -211,7 +211,7 @@ const GallusStory = () => {
             <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a href="#" id="test" className="wallet pool1" >Connect Wallet</a>
+                        <a  id="test" className="wallet pool1" >Connect Wallet</a>
                         {/* onClick={connectMetaMask} */}
                     </div>
 

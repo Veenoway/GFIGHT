@@ -782,7 +782,7 @@ Take advantage of this unique benefit with the DeFi
                                 <div className="center-button">
                                     <div className="">
                                     <a  className="btn-border-color-small" onClick={purshaseSmall} >
-                                    <img src={icon_2} className="icon-btn" />BUY SMALL FEATHER</a></div>
+                                    <img src={icon_2} className="icon-btn" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
@@ -824,7 +824,7 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="center-button">
                                     
                                 <a  className="btn-border-color-medium" onClick={purshaseMedium} >
-                                    <img src={icon_2} className="icon-btn" />BUY MEDIUM FEATHER</a>
+                                    <img src={icon_2} className="icon-btn" />BUY MEDIUM</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -879,7 +879,7 @@ Take advantage of this unique benefit with the DeFi.
                                 </div>
                                 <div className="center-button">
                                 <a  className="btn-border-color-titan" onClick={purshaseLarge} >
-                                    <img src={icon_2} className="icon-btn" />BUY TITAN FEATHER</a>
+                                    <img src={icon_2} className="icon-btn" />BUY TITAN</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
