@@ -104,7 +104,7 @@ const Community = () => {
                             </NavLink>
                         </li>
                         <li class="menut-item">
-                            <NavLink exact to="/" activeClassName="nav-active" className="display">
+                            <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
                             <i class="fas fa-box-open yellow-icon"></i>Mystery box
                                 <span className="tag">NEW</span>
                             </NavLink>
@@ -112,7 +112,7 @@ const Community = () => {
                         
                        
                         <li class="menut-item">
-                            <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
+                            <NavLink exact to="/comingsoon" activeClassName="nav-active" className="display disabled">
                            
                             <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
                             <span className="tagSoon ">Soon..</span>
@@ -121,7 +121,7 @@ const Community = () => {
                             </NavLink>
                         </li>
                         <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <NavLink exact to="/" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-home yellow-icon"></i>Website
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>

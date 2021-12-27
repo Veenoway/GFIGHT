@@ -95,6 +95,10 @@ const MyNft = () => {
                 console.log(window.ethereum.selectedAddress);
                 var test = document.getElementById('test') ;
                 var walletAdress = window.ethereum.selectedAddress;
+                test.addEventListener("click", function(e) {
+                    e.preventDefault()
+                    console.log("woops")
+                }, false);
 
 
                 // Slice wallet adress and Show it
@@ -208,6 +212,10 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
     useEffect(() => {
         connectMetaMask()
     }, [])
+
+   
+  
+    
     
     
     function AfficherMasquer()
@@ -240,7 +248,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                             </NavLink>
                         </li>
                         <li class="menut-item">
-                            <NavLink exact to="/" activeClassName="nav-active" className="display">
+                            <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
                             <i class="fas fa-box-open yellow-icon"></i>Mystery box
                                 <span className="tag">NEW</span>
                             </NavLink>
@@ -257,7 +265,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                             </NavLink>
                         </li>
                         <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <NavLink exact to="/" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-home yellow-icon"></i>Website
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>

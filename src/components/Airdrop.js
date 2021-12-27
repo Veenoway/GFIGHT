@@ -3,19 +3,16 @@ import twitter from "../images/twitter.png";
 import medium from "../images/medium.png";
 import telegram from "../images/telegram.png";
 import discord from "../images/discord.png";
-import page1 from "../images/webton_anglais_001.jpg";
-import page2 from "../images/webton_anglais_002.jpg";
-import page3 from "../images/webton_anglais_003.jpg";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ethers }from "ethers";
 import GallusFeatherNFT from '../GallusFeatherNFT.json';
+import cotcot from '../images/fight_chicken_2.png';
 import gallusLogo from '../images/logoGallus.png';
+import hamburger from "../images/hamburger.jpg";
 
 
-
-const GallusStory = () => {
-
+const Airdrop = () => {
     var [NftOwned, SetNftOwned] = useState('')
 
     const gallusFeatherNFTAddress = "0x08a78270b5dC972F9cFF6619714221a1DA4d8F81";
@@ -26,6 +23,13 @@ const GallusStory = () => {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             console.log(provider);
             console.log(window.ethereum.selectedAddress);
+
+             // IF NETWORK DIFFERENT OF 
+
+             let network = await  ethers.provider.getNetwork()
+             console.log(network.name)
+             if (network.name === 'rinkeby' ) {
+             }
         
             // request metamask to access the account
 
@@ -43,9 +47,9 @@ const GallusStory = () => {
                 
 
 
+                // RECUP CONTRACT.PRIX
 
-
-            const signer = provider.getSigner();
+                const signer = provider.getSigner();
                 const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
@@ -67,8 +71,8 @@ const GallusStory = () => {
 
             }
         }
+        
     }
-    
     function AfficherMasquer()
                     {
                     var divInfo = document.getElementById('hamburger');
@@ -79,6 +83,8 @@ const GallusStory = () => {
                     divInfo.style.display = 'none';
                      
                     }
+    
+    
     return (
         <>
          <div className="test hamburgertest" id="hamburger">
@@ -91,22 +97,22 @@ const GallusStory = () => {
                         <NavLink exact to="/" className="logo-top">GALLUS</NavLink>
                     </div>
                     <ul class="ul">
-                        <li class="menut-item">
+                    <li class="menut-item">
                             <NavLink exact to="/gallus-story" activeClassName="nav-active" className="display">
                             <i class="fas fa-book-open yellow-icon" ></i>Gallus Story
                             <span className="tag">HOT</span>
                             </NavLink>
                         </li>
                         <li class="menut-item">
-                            <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
+                            <NavLink exact to="/" activeClassName="nav-active" className="display">
                             <i class="fas fa-box-open yellow-icon"></i>Mystery box
                                 <span className="tag">NEW</span>
                             </NavLink>
                         </li>
                         
-                        
+                       
                         <li class="menut-item">
-                            <NavLink exact to="/coming-soon" activeClassName="nav-active" className="display disabled">
+                            <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
                            
                             <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
                             <span className="tagSoon ">Soon..</span>
@@ -115,7 +121,7 @@ const GallusStory = () => {
                             </NavLink>
                         </li>
                         <li class="menut-item ">
-                                <NavLink exact to="/" activeClassName="nav-active " className="display disabled">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-home yellow-icon"></i>Website
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>
@@ -154,6 +160,7 @@ const GallusStory = () => {
                         </li>
                         
                         
+                        
                         <li class="menut-item">
                             <NavLink exact to="/refine" activeClassName="nav-active" className="display disabled">
                             <i class="fas fa-lightbulb yellow-icon"></i>Governance
@@ -166,12 +173,10 @@ const GallusStory = () => {
                             </NavLink>
                         </li>
                         <li class="menut-item">
-                            <NavLink exact to="/airdrop" activeClassName="nav-active" className="display disabled">
+                            <NavLink exact to="/airdrop" activeClassName="nav-active" className="display">
                             <i class="fas fa-gifts yellow-icon"></i>Airdrop
                             </NavLink>
                         </li>
-                        
-                        
                         <li class="menut-item">
                                 <NavLink exact to="/community" activeClassName="nav-active" className="display">
                                 <i class="fas fa-envelope-open yellow-icon"></i>Community
@@ -186,14 +191,18 @@ const GallusStory = () => {
                                 {/* </NavLink> */}
                         </li>
                         
+                        
+                        
+                        
 
 
                     </ul>
                 </div>
             </div> 
-        <div className="pool ">
+        <div className="community-main airdrop-container">
         
-        <div className="wallet-nav">
+        <div className="wallet-nav displayNone">
+            
         <div className="button-aside-nav" >
                 <img src={gallusLogo} className="gallus-title-logo" />
                 <a className="hamburger-nav-app" id="hhh" onClick={AfficherMasquer}>
@@ -203,34 +212,32 @@ const GallusStory = () => {
         <div className="logo-nav-wallet">
             <a href="" className="logoJOJO"></a>
                 <div className="pool1">
-                    Gallus story
+                    Community 
                 </div>
             </div>
             <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a href="#" id="test" className="wallet pool1" >Connect Wallet</a>
-                        {/* onClick={connectMetaMask} */}
+                        <a href="#" id="test" className="wallet pool1" onClick={connectMetaMask}>Connect Wallet</a>
                     </div>
 
                 </div>
         </div>
         <div className="normal-layout">
-            <div className="container container-nft container-story">
+            <div className="container container-nft">
                 
-                <img src={page1} className="story-page" />
-                <img src={page2} className="story-page" />
-                <img src={page3} className="story-page" />
-                
-                
-            </div>
+                {/* <h1 className="community-title">Official Channel</h1> */}
+                <p className="airdrop-description">Welcome to Gallus Airdrop !</p>
+                {/* <img src={cotcot} alt="gallus cot" className="cotcot" /> */}
+                <div className="centerRow">
+               
             
-                
+                </div>  
             </div>
-        
         </div>
-        </>
+    </div>
+</>
     )
 }
 
-export default GallusStory;
+export default Airdrop;

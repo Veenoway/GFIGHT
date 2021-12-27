@@ -12,6 +12,8 @@ import MyNft from './components/MyNft';
 import Community from './components/Community';
 import GallusStory from './components/GallusStory';
 import { HashRouter } from 'react-router-dom'
+import Airdrop from './components/Airdrop';
+
 
 
 
@@ -21,18 +23,19 @@ function App() {
   return (
     <div className="App">
       <HashRouter basename="/" hashType="noslash"> 
-      <Route exact path="/h" component={Home} />
+      <Route exact path="/" component={Home} />
       
       
       <div className="paddingLeft">
-        <Route exact path="/gdrgdr" component={NftDescription} />
+        {/* <Route exact path="/gdrgdr" component={NftDescription} /> */}
+        <Route exact path="/airdrop" component={Airdrop} />
         <Route exact path="/gallus-story" component={GallusStory} />
         <Route exact path="/community" component={Community} />
         <Route exact path="/my-nft" component={MyNft} />
-        <Route exact path="/gsgrf" component={Pool} />
-        <Route exact path="/fse" component={Farms}/>
-        <Route exact path="/" component={BlindBox} />
-        <Route exact path="/nft-marketfsefs" component={NftMarket} />
+        {/* <Route exact path="/gsgrf" component={Pool} /> */}
+        {/* <Route exact path="/fse" component={Farms}/> */}
+        <Route exact path="/mystery-box" component={BlindBox} />
+        <Route exact path="/nft-market" component={NftMarket} />
       
         
         

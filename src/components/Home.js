@@ -43,7 +43,30 @@ import nico from "../images/nico.jpg"
 import macron from "../images/macron.jpg"
 import sylvain from "../images/sylvain.jpg"
 import niho from "../images/niho.jpg";
+import bios from "../images/bios.jpg";
 import $ from 'jquery';
+import title from "../images/title.png"
+import icon_2 from "../images/Asset_2.png";
+import controller from "../images/gamecontroller.png";
+import farm from "../images/farm.png";
+import governance from "../images/Governance.png";
+import reward from "../images/reward1.png";
+import stacking from "../images/stacking.png";
+import mining from "../images/mining.png";
+import swap from "../images/swap.png";
+import figurines from "../images/figurine.png";
+import finance from "../images/finance.png";
+import fightgallus from "../fight_chicken.png";
+import docpiece from "../images/doc_piece.png";
+import eggs from "../images/oeuf.png";
+import VideoLarge from "../images/large.mp4";
+import logoGallus from "../images/logoGallus.png";
+import team from "../images/moov.png";
+import mine from "../images/troll.png";
+import mine1 from "../images/mine1.png"
+
+
+
 
 const Home = () => {
 
@@ -207,72 +230,119 @@ const Home = () => {
     }
 
 
+    
+
+    function showHeader() {
+        const hamburger = document.getElementById('navClick');
+        if (hamburger.style.display == "none") {
+
+            hamburger.style.display = "flex"
+        }
+        else 
+            hamburger.style.display = "none"
+            
+
+
+
+           
+
+    }
+
+    function Afficher() {
+        
+    }
+
+  
         
     
     return (
     <div classname="home">
         <div className="header">
             <div className="header-fixed">
-                <div className="container-nav">
+                <div className="container-nav-2">
                     
-                    <a href="/" className="nav-logo"></a>
-                    <div className="space"></div>
-                    <div className="nav-list">
-                        <a href="" className="selected font">HOME</a>
-                        <a href="" className="unselected font">METAVERSE</a>
-                        <a href="" className="unselected font">TOKEN</a>
-                        <a href="" className="unselected font">BLIND BOX</a>
-                        <a href="" className="unselected font" onClick="AfficherMasquer()">GAMEBASE</a>
-                        <a href="" className="unselected font">POOL</a>
-                        <a href="" className="unselected font">NFT</a>
-                        <a href="" className="unselected font">BOUNTY</a>
-                        <a href="" className="unselected font">DOCS</a>
+                    
+                    {/* <div className="space"></div> */}
+                    <div className="nav-list ">
+                        <a href="/" className="selected font">HOME</a>
+                        <a href="/#mystery-box" className="unselected font">MYSTERY BOX</a>
+                        <a href="/#gallus-story" className="unselected font">STORY</a>
+                        <a href="/" className="selected font"><img src={logoGallus} className="logoMain"/></a>
+                        <a href="/#community" className="unselected font">COMMUNITY</a>
+                        
+                        
+                        
+                        <a href="/#mystery-box" className="unselected font">APP</a>
+                        <a href="https://galluspaper.gallusfighter.com/" className="unselected font">DOCS</a>
 
                     </div>
-                    <a className="menu-icon">
-                        <span className="hamburger-common hamburger-1"></span>
-                        <span className="hamburger-common hamburger-2"></span>
-                        <span className="hamburger-common hamburger-3"></span>
+                    <img src={logoGallus} className="barreNav-logo" />
+                    <a className="menu-icon cursor" id="menu-icon" onClick={showHeader}>
+                        <i class="fas fa-bars"></i>
+                        
                     </a>
+                    <div className="navClick" id="navClick">
+                        {/* <img src={gallus} className="logo-nav-mobile" /> */}
+                        <ul className="ul-popup">
+                            <a href="/" className="li-popup"><li>HOME</li></a>
+                            <a href="/mystery-box"className="li-popup"><li>PRE-SALE</li></a>
+                            <a href="/gallus-story" className="li-popup"><li>GALLUS STORY</li></a>
+                            <a href="/community" className="li-popup"><li>COMMUNITY</li></a>
+                            <a href="/mystery-box" className="li-popup"><li>APP</li></a>
+                            <a href="https://galluspaper.gallusfighter.com/" className="li-popup"><li>DOCS</li></a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div className="home-page">
         <div className="section-1">
-            <section className="section-common ">
+            <section className="section-common heightMain">
                 <div className="normal-layout">
                     <div className="main-title">
                         <div className="left-1">
                             <h3 className="rofi-title">GALLUS FIGHTER<br /> <span className="defight-color">DEFIGHT</span></h3>
-                            <p className="p-text">Decentralized Meme Coin Creates the BEST Metaverse on BSC</p>
-                            <p className="p-text">ROOSTER FIGHT METAVERSE = NFT + GameFi + SmartToy + ROFI World</p>
+                            <p className="p-text">Participate with your GALLUS NFTs in bloody battles and collect your rewards when you are victorious!</p>
+                            <p className="p-text">Upgrade your GALLUS FIGHTER, train it or use any DeFi services with your NFTs and/or $GALLUS Tokens and take your profits!</p>
                             <div className="btn-1">
-                                <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-color">BUY $ROFI</a>
-                                <NavLink exact to="/blindbox" className="btn-border-color">ROFI APP</NavLink>
+                                <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color disabled">
+                                <img src={icon_2} className="icon-btn " />
+                                    LAUNCH 
+                                
+                                </a>
+                                <NavLink exact to="/mystery-box" className="btn-border-color">
+                                    <img src={controller} className="icon-btn" />
+                                   Gallus APP
+                                    
+                                </NavLink>
                                 
                                 <div className="contact">
-                                    <a href="" className="contact-a">
-                                        <img src={telegram} alt="discord logo" className="contact-logo"/>
+                                    <a href="https://t.me/gallus_fighter " target="_blank" className="contact-a">
+                                        {/* <img src={telegram} alt="discord logo" className="contact-logo"/> */}
+                                        <i class="fab fa-telegram-plane contact-logo contact-logo-a"></i>
                                     </a>
-                                    <a href="" className="contact-a">
-                                        <img src={twitter} alt="discord logo" className="contact-logo"/>
+                                    <a href="https://twitter.com/GallusFighter" target="_blank" className="contact-a">
+                                        {/* <img src={twitter} alt="discord logo" className="contact-logo"/> */}
+                                        <i class="fab fa-twitter contact-logo contact-logo-b"></i>
                                     </a>
-                                    <a href="" className="contact-a">
-                                        <img src={medium} alt="discord logo" className="contact-logo"/>
+                                    <a href="https://medium.com/@gallusfighter" target="_blank" className="contact-a">
+                                        {/* <img src={medium} alt="discord logo" className="contact-logo"/> */}
+                                        <i class="fab fa-medium-m contact-logo contact-logo-c"></i>
                                     </a>
-                                    <a href="" className="contact-a">
-                                        <img src={discord} alt="discord logo" className="contact-logo"/>
+                                    <a href="https://discord.gg/vGe43sRgNr" target="_blank" className="contact-a">
+                                        {/* <img src={discord} alt="discord logo" className="contact-logo"/> */}
+                                        <i class="fab fa-discord contact-logo contact-logo-d"></i>
                                     </a>
 
                                 </div>
                             </div>
                         </div>
-                        <div className="right-1">
+                        <div className="right-home">
                             <img src={gallus} alt="logo jojo" className="image-right"/>
                         </div>
 
                     </div>
-                    <div className="main-stats">
+                    {/* <div className="main-stats">
                         <div className="flex-box">
                             <h5 className="stats-numbers">64.25%</h5>
                             <p className="stats-text">Total supply to Black Hole</p>
@@ -294,7 +364,7 @@ const Home = () => {
                             <p className="stats-text">Total supply to Black Hole</p>
                         </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
 
@@ -305,8 +375,8 @@ const Home = () => {
                     <h3 className="metaverse-title">GALLUS <span className="yellowColorText">DEFIGHT</span></h3>
                     <div className="metaverse-container">
                         <div className="box-3">
-                            {/* <img src={icon1} alt="nft" className="metaverse-images" /> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
+                            <img src={icon_2} alt="nft" className="metaverse-images" />
+                            
                             <h5 className="cards-title">De<span >Fi</span>ght<br /> <span className="defight-color">For <span>Fi</span>ght</span></h5>
                             <p className="cards-text">DeFight is a new concept blending a game where you fight other players in 1v1 with your hero with famous DeFi services.
                                 Gallus Fighter opens a new era of unlimited possibilities with a First Blood game experience based on Blockchain technology. Choose your Gallus Titan between many different Origins and attributes, improve your skills with training and go fight other players in 1v1 battles and multiplayer deathmatches tournaments to rank up as best fighter of the DeFight Metaverse
@@ -314,7 +384,7 @@ const Home = () => {
                         </div>
                         <div className="box-3">
                             {/* <img src={icon2} alt="nft" className="metaverse-images" /> */}
-                            <div className="metaverse-images"><i class="fas fa-hand-holding-usd"></i></div>
+                            <img src={finance} alt="nft" className="metaverse-images" />
                             <h5 className="cards-title">De<span >Fi</span>ght<br /> <span className="defight-color">For <span>Fi</span>nance</span></h5>
                             <p className="cards-text">With the inception of the now-famous DeFi services, the crypto ecosystem has reached a new step in democratizing decentralized finance and fair wealth to the masses. Gallus Fighter is the next generation of DeFi services offering “classic” Staking, Farming and Exchange products but also new NFT-based yield products: breeding, Cast and many more to discover
                                 “The DeFight concept will offer the best APY in the GameFi world on Gallus Fighter DeFi App”
@@ -323,7 +393,7 @@ const Home = () => {
                         </div>
                         <div className="box-3">
                             {/* <img src={icon3} alt="nft" className="metaverse-images" /> */}
-                            <div className="metaverse-images"><i class="fas fa-feather-alt"></i></div>
+                            <img src={figurines} alt="nft" className="metaverse-images" />
                             <h5 className="cards-title">De<span >Fi</span>ght<br /> <span className="defight-color">For <span>Fi</span>gurine</span></h5>
                             <p className="cards-text">NFT stormed the crypto world and opened a new throng of possibilities by mixing real life assets with its digital counterparts, and beyond. The Gallus Fighter Metaverse will mix the last innovations in DeFi and Gaming by introducing the first NFT real-life Figurine to Collect, Stake, Play and earn in the Gaming App.
                                 Get the chance to receive a real-life Figurine for your NFT Gallus Hero from our exclusive collection and receive dedicated skins, items and many other special benefits
@@ -333,7 +403,41 @@ const Home = () => {
                 </div>
             </section>
         </div>
-            <section className="section-common section-3">
+            {/* <section className="section-common section-3">
+                <div className="normal-layout">
+                    <h3 className="tokenomic-title">GALLUS <span className="yellowColorText">PRE SALE </span></h3>
+                    <div className="main-tokenomic">
+                        <p className="left-text-2">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
+
+                        The basis of $GALLUS Tokenomics is the “Henhouse Vault” burning concept. A large portion of the initial token supply will be locked into this specific address and gradually burned over time. In addition, a fair percentage of each transaction fee is automatically sent to the Vault.
+                        The Henhouse Vault smart contract will burn $GALLUS each time it reaches pre-determined numbers of token wallet addresses.<br /> <br />
+
+                        Liquidity will be provided through farming pairs on the Gallus Fighter DeFi App, starting with a BNB / GALLUS pool. A Liquidity boost mechanism will fuel the farm pool with tokens upheld from on-chain $GALLUS transactions.<br /> <br />
+
+                        Redstribution, stream of value
+                        </p>
+                        <NavLink exact to="/mystery-box" className="btn-border-color-2">
+                                    <img src={controller} className="icon-btn" />
+                                   GET YOURS !
+                                    
+                                </NavLink>
+                         <div className="token-image-2">
+                    </div>
+                    <div>
+                         <div className="image-container ">
+                            <div className="neon-nft-perso"></div>
+                                {/* <img src={exemple2} alt="" className="image-nft-box" /> */}
+                                {/* <video  width="250" className="image-nft-box-2 " autoPlay muted loop>
+                                <source src={VideoLarge} type="video/webm" autoplay loop/>
+                                <source src={VideoLarge}type="video/mp4" autoplay loop/>
+                            </video>
+                            
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section> */} 
+             <section className="section-common section-3">
                 <div className="normal-layout">
                     <h3 className="tokenomic-title">GALLUS <span className="yellowColorText">TOKENOMIC</span></h3>
                     <div className="main-tokenomic">
@@ -353,33 +457,37 @@ const Home = () => {
                 </div>
             </section>
             
+            
             <section className="section-common section-4">
                 <div className="normal-layout">
-                    <h3 className="black-hole-title">BLACK HOLE <span className="yellowColorText">ALGORITHM</span></h3>
+                    {/* <img src={title} className="img-title" />  */}
+                    <h3 className="metaverse-title">Gallus Defi</h3>
                     <div className="section-4-flex">
                         <div className="box-3">
                             
                        
                         
                             {/* <img src={blackHole1} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">Indestructible</h5>
-                            <p className="box-text">Liquidity is locked in PancakeSwap, and the ownership of the contract has been transferred to the burning address.</p>
+                            <img src={swap} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">SWAP / LIQUIDITY</h5>
+                            <p className="box-text">Become a liquidity provider ! Every time someone provides liquidity, they will be rewarded with commissions in $GALLUS Tokens when other people in the Gallus community use our liquidity pool. </p>
                         </div>
                         
                         <div className="box-3">
                             
                             {/* <img src={blackHole2} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">100% <br /> Decentralized</h5>
-                            <p className="box-text">Gallus Tokens are led by community nodes and managed by volunteers. The ownership of the contract has been burned, and the start-up is completely implemented as liquidity.</p>
+                            <img src={stacking} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">STAKING</h5>
+                            <p className="box-text">Staking is the process of delegating and/or locking your Tokens to earn rewards in $GALLUS Tokens. Participe to the Next-Generation Staking Pools
+</p>
                         </div>
                         <div className="box-3">
                             
                             {/* <img src={blackHole3} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">Currency Holding Dividend Mechanism</h5>
-                            <p className="box-text">4% of all transactions are allocated to holders. Watch the content your wallet climb the moment you hold $GALLUS.</p>
+                            <img src={farm} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">FARMING</h5>
+                            <p className="box-text">Farming is a great way to earn rewards in $GALLUS Tokens. Unlike Staking, Farms are made to work with 2 tokens, like $GALLUS&BNB, in order to get new Tokens called LP (Liquidity Provider). Put them into the Farm to earn rewards.
+</p>
                         
                     </div>
                         
@@ -388,89 +496,92 @@ const Home = () => {
                     <div className="section-4-flex">
                         <div className="box-3">
                             {/* <img src={blackHole4} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">Fair Launch</h5>
-                            <p className="box-text">100% of GALLUS supply is seeded as liquidity, which means that there is no presale and no allocation to team members.</p>
+                            <img src={mining} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">MINING</h5>
+                            <p className="box-text">Contribute easily and without knowledge to several online blockchains by owning miners that earn tokens! Done with legal cleanliness and compliance with the necessary protection measures at the facility.</p>
                         </div>
                         <div className="box-3">
                         
                             {/* <img src={blackHole5} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">Continuously Rising Price Floor</h5>
-                            <p className="box-text">3% of every transaction fees is locked as liquidity in PancakeSwap GALLUS/BNB pool, creating an ever rising price floor.</p>
+                            <img src={governance} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">GOVERNANCE</h5>
+                            <p className="box-text">Governance is a democratic process that allows each active member to submit or vote on proposals for changes, improvements or evolutions to the entire GALLUS community. To participate in Governance you must commit a certain amount of your $GALLUS Tokens</p>
                         </div>
                         <div className="box-3">
                         
                             {/* <img src={blackHole6} className="box-3-img" alt="logo blackHole"/> */}
-                            <div className="metaverse-images"><i class="fas fa-gamepad"></i></div>
-                            <h5 className="box-title">Whale Shock Safety</h5>
-                            <p className="box-text">No wallet holds more than 1% of token supply and no transaction can involve more than 10 billion tokens.</p>
+                            <img src={reward} alt="nft" className="metaverse-images" />
+                            <h5 className="box-title">REWARDS HOLDERS</h5>
+                            <p className="box-text">This rewards process is established only for $GALLUS Tokens holders who regularly receive in their wallet an amount in Tokens for their loyalty.
+</p>
                         </div>
 
                     </div>
                 </div>
             </section>
+           
+            
              <section className="section-common section-4-2">
                 <div className="normal-layout">
                     <h3 className="gallus-play2earn-title">GALLUS <span className="yellowColorText">PLAY-TO-EARN</span></h3>
                     <div className="container container-play2earn">
                         <div className="row ">
-                            <div className="col-lg-7">
+                            <div className="col-lg-6">
                                 <div className="play2earn-left">
                                     <div className="play2earn-image-left">
-                                        <img src={testimg} alt="" className="image-play2earn" />
+                                        <img src={eggs} alt="" className="image-play2earn" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-6">
                                 <div className="play2earn-right">
-                                    <h2 className="play2earn-title">Test en carton</h2>
-                                    <p className="play2earn-text">fiueshf feuif iousheioufh siugefhsegoih osgh oisehigoh soghseg hioghiose hoigseiobg obgesiobgioseo ghoigsehiog hioeghiosehgi esoig </p>
+                                    <h2 className="play2earn-title">GALLUS</h2>
+                                    <p className="play2earn-text-left">Born from a cloning experiment gone wrong, the Gallus are Dino-Coqs who have only one mission: to become the best fighter of the Metaverse. Each Gallus is unique and possess their own specific fighting skills and attributes. From now on the Blockchain can count on these new fighting Heroes!</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="row play2earn-margin">
-                            <div className="col-lg-5">
+                        <div className="row play2earn-margin reverse">
+                            <div className="col-lg-6">
                                 <div className="play2earn-left2">
-                                    <h2 className="play2earn-title">Test en carton</h2>
-                                    <p className="play2earn-text">fiueshf feuif iousheioufh siugefhsegoih osgh oisehigoh soghseg hioghiose hoigseiobg obgesiobgioseo ghoigsehiog hioeghiosehgi esoig </p>
+                                    <h2 className="play2earn-title-right">1 vs 1</h2>
+                                    <p className="play2earn-text">Gallus Fighter is an e-sport game featuring 2 heroes dueling in an all out merciless battle! Representatives from all over the world have close eyes on these clashs to see who will come as the strongest Gallus in the whole blockchain Metaverse.</p>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-6">
                                 <div className="play2earn-right2 ">
                                     <div className="play2earn-image-right">
-                                        <img src={charles} alt="" className="image-play2earn" />
+                                        <img src={mine} alt="" className="image-play2earn" />
                                     </div>
                                 </div>
                             </div>
                             
                         </div>
                         <div className="row play2earn-margin">
-                            <div className="col-lg-7">
+                            <div className="col-lg-6">
                                 <div className="play2earn-left">
                                     <div className="play2earn-image-left">
-                                        <img src={halo} alt="" className="image-play2earn" />
+                                        <img src={mine1} alt="" className="image-play2earn" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-6">
                                 <div className="play2earn-right">
-                                    <h2 className="play2earn-title">Test en carton</h2>
-                                    <p className="play2earn-text">fiueshf feuif iousheioufh siugefhsegoih osgh oisehigoh soghseg hioghiose hoigseiobg obgesiobgioseo ghoigsehiog hioeghiosehgi esoig </p>
+                                    <h2 className="play2earn-title">Smart tools</h2>
+                                    <p className="play2earn-text-left">Smart tools like Upgrade, Breeding or Training are at the core of the Gallus Fighter gameplay! When these fighting heroes are not fighting, their only wish is in becoming better and stronger by leveraging, for example, "training"for a fixed term to improve fighting stats...</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="row play2earn-margin">
-                            <div className="col-lg-5">
+                        <div className="row play2earn-margin reverse">
+                            <div className="col-lg-6">
                                 <div className="play2earn-left2">
-                                    <h2 className="play2earn-title">Test en carton</h2>
-                                    <p className="play2earn-text">fiueshf feuif iousheioufh siugefhsegoih osgh oisehigoh soghseg hioghiose hoigseiobg obgesiobgioseo ghoigsehiog hioeghiosehgi esoig </p>
+                                    <h2 className="play2earn-title-right">Earn $Gallus Tokens</h2>
+                                    <p className="play2earn-text">When you reach victory through your feathers, you will be fulfilled with a rainfall of $Gallus Token rewards! Gallus Fighter is the fighting game that best rewards its fighters with Jackpots never seen before in the GameFi Metavers! By stacking your $GALLUS wealth, live it up to use them in the various services of the DeFight Metaverse or just treat yourself for the hard work !</p>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-6">
                                 <div className="play2earn-right2 ">
                                     <div className="play2earn-image-right">
-                                        <img src={space} alt="" className="image-play2earn" />
+                                        <img src={docpiece} alt="" className="image-play2earn" />
                                     </div>
                                 </div>
                             </div>
@@ -493,11 +604,11 @@ const Home = () => {
             </section>
             <section className="section-5">
                 <div class="container container-metamask">
-                    <div class="row" >
-                        <div class="col-md-6">
+                    <div class="row reverse" >
+                        <div class="col-md-6 img-meta width100">
                             <img src={metamask1} className="image-metamask" alt="metamask"/>
                         </div>
-                        <div class="col-md-6 middle">
+                        <div class="col-md-6 middle width100">
                             <h3 className="section-5-title">How To Buy <br /> $GALLUS ?</h3>
                             <h5 className="section-5-second-title">Create a wallet</h5>
                             <p className="first-text">On Google Chrome, visit <strong>metamask.io</strong> to download the extension and set up the wallet. Android and IOS users can download the <strong>Trust Wallet</strong> app.</p>
@@ -505,23 +616,23 @@ const Home = () => {
                         </div>
                         <div class="row margin-top" >
                         
-                        <div class="col-md-6 middle"  >
+                        <div class="col-md-6 middle2 width100"  >
                             
-                            <h5 className="create-wallet-title">Create a wallet</h5>
+                            <h5 className="create-wallet-title ">Create a wallet</h5>
                             <p className="first-text">On Google Chrome, visit <strong>metamask.io</strong> to download the extension and set up the wallet. Android and IOS users can download the <strong>Trust Wallet</strong> app.</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 img-meta width100">
                             <img src={metamask2} className="image-metamask" alt="metamask"/>
                         </div>
                         </div>
-                        <div className="row margin-top padding-bottom">
-                        <div class="col-md-6">
+                        <div className="row margin-top padding-bottom reverse">
+                        <div class="col-md-6 width100">
                             <img src={metamask3} className="image-metamask" alt="metamask"/>
                         </div>
                         
-                        <div className="col-md-6 middle" >
+                        <div className="col-md-6 middle width100" >
                             
-                            <h5 className="create-wallet-title">Use $BNB to exchange $COCK</h5>
+                            <h5 className="section-5-second-title">Use $BNB to exchange $COCK</h5>
                             <p className="first-text">Go to the DApps tab at the bottom, find <strong> PancakeSwap V2 </strong>  , click “Choose Currency”, enter the contract address in the search bar, and you should be able to find COCK.<br/>
                             GALLUS FIGHTER counterparty address: Before the exchange, click the gear and set the <strong> slide to 12-15% </strong>  , set the amount you want to buy and click the exchange button.
                             </p>
@@ -566,7 +677,7 @@ const Home = () => {
                     </div>
                 </div>
             </section> */}
-            <section>
+            {/* <section className="blackBg">
             <h3 className="partners-title">GALLUS <span className="yellowColorText">ROADMAP</span></h3>
             <div className="timeline">
             
@@ -658,62 +769,25 @@ const Home = () => {
                     <div className="clear"></div>
                 </ul>
                 </div>
-            </section>
+            </section> */}
 
 
 
-            <section>
+            <section className="background-team"><h3 className="team-main-title">GALLUS <span className="yellowColorText">TEAM</span></h3>
+                <div className="background-teamMooving"></div>
                 <div className="gallus-team-container">
                     <div className="normal-layout">
                     
+                                
+                                
+                                
+                                
+                            
+{/*                     
                         <div className="team-container container">
                             <div className="team-gallus row">
-                            <h3 className="team-main-title">GALLUS <span className="yellowColorText">TEAM</span></h3>
-                                <div className="box-team col-lg-4">
-                                    <img src={veeno} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">VEENO</h3>
-                                    <h5 className="team-sous-titre">DEVOLOPPER FRONT-END</h5>
-                                    {/* <p className="team-text">lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    <img src={miz} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">MIZ</h3>
-                                    <h5 className="team-sous-titre">GENIUS DESIGN</h5>
-                                    {/* <p className="team-text">lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    <img src={nico} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">SQUARX</h3>
-                                    <h5 className="team-sous-titre">COMMUNITY MANAGER<br /> CO-FOUNDER</h5>
-                                    {/* <p className="team-text">lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    <img src={sylvain} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">NIAVLYS</h3>
-                                    <h5 className="team-sous-titre">PROJECT MANAGER<br /> CO-FOUNDER</h5>
-                                    {/* <p className="team-text">lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    <img src={macron} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">MACRON</h3>
-                                    <h5 className="team-sous-titre">PRESS RELATIONSHIP</h5>
-                                    {/* <p className="team-text">lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    
-                                    <img src={niho} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">NIHOAME</h3>
-                                    <h5 className="team-sous-titre">GENIUS DESIGN</h5>
-                                    {/* <p className="team-text"> lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
-                                <div className="box-team col-lg-4">
-                                    <img src={veeno} className="team-image" alt="gallus team"/> 
-                                    <h3 className="team-titre">BIOS42</h3>
-                                    <h5 className="team-sous-titre">DEVELOPPER BLOCKCHAIN</h5>
-                                    {/* <p className="team-text"> lfkiolsen ofnsoiefn nefonsofn soenf oinsefn senfsneo nfosnen nsek fnselnf lksen f</p> */}
-                                </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -807,7 +881,7 @@ const Home = () => {
                 <div className="normal-layout">
                     <div className="footer-copyright">
                         
-                        Copyright© 2021 Gallus Fighter - Veeno - All rights reserved.
+                        Copyright© 2021 Gallus Fighter - All rights reserved.
       
                     </div>
                 </div>

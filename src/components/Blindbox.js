@@ -28,11 +28,18 @@ import video1 from "../images/gallus_intro_low_reso.mp4";
 import Video from "../images/testfeather.mp4";
 import Video2 from "../images/testfeather1.mp4";
 import Video1 from "../images/testfeather2.mp4";
+
+
 import VideoSmall from "../images/little.mp4";
 import VideoMedium from "../images/medium.mp4";
 import VideoLarge from "../images/large.mp4";
 
+
+
+
 import gallusVideo from "../images/gallus_intro_low_reso.mp4";
+import icon_2 from "../images/Asset_2.png";
+
 
 
 
@@ -50,6 +57,7 @@ const BlindBox = () => {
     const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
 
 
+   
 
  
 
@@ -138,7 +146,7 @@ const BlindBox = () => {
                 var nftOwned = document.createElement("NavLink");
                 nftOwned.classList.add('nft-owned');
                 myNft.appendChild(nftOwned);
-                SetNftOwned('My NFT : ' + balance);
+                SetNftOwned('MY NFT : ' + balance);
                 
 
                 for (let i=0;i<balance;i++) {
@@ -396,6 +404,35 @@ const BlindBox = () => {
             }
        }
     }
+
+    function showNft() {
+
+
+        const videoSmallTest = document.getElementById('videoOfsmall');
+        
+
+        if (videoSmallTest.src == Video1) {
+            videoSmallTest.src = VideoSmall
+        } else{
+            videoSmallTest.src = Video1
+        }
+
+    }
+    function showNormalNft() {
+
+
+        const videoSmallTest = document.getElementById('videoOfsmall');
+        
+
+        if (videoSmallTest.src == VideoSmall) {
+            videoSmallTest.src = Video1
+        } else{
+            videoSmallTest.src = VideoSmall
+        }
+
+    }
+  
+
     async function purshaseMedium() {
         if (typeof window.ethereum !== 'undefined') {
 
@@ -537,8 +574,10 @@ const BlindBox = () => {
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/" activeClassName="nav-active" className="display">
-                                <i class="fas fa-box-open yellow-icon"></i>Mystery box
+                                <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
+                                <i class="fas fa-box-open yellow-icon"></i>
+                                {/* <img src={icon_2} className="webtest" /> */}
+                                Mystery box 
                                     <span className="tag">NEW</span>
                                 </NavLink>
                             </li>
@@ -554,7 +593,7 @@ const BlindBox = () => {
                                 </NavLink>
                             </li>
                             <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
+                                <NavLink exact to="/" activeClassName="nav-active " className="display disabled">
                                 <i class="fas fa-home yellow-icon"></i>Website
                                     <span className="tagSoon ">Soon..</span>
                                 </NavLink>
@@ -651,7 +690,7 @@ const BlindBox = () => {
                 <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a href="#" id="test"  onClick={connectMetaMask} className="wallet pool1" >Connect Wallet</a>
+                        <a  id="test"  onClick={connectMetaMask} className="wallet pool1" >Connect Wallet</a>
                     </div>
                     {/* onClick={connectMetaMask} */}
 
@@ -659,80 +698,57 @@ const BlindBox = () => {
             </div>
         
         
-            <div className="normal-layout padding-nft">
-                <div className="container">
-                    <h1 className="title-nft-main">The <span className="royalFeather">ROYAL FEATHER</span>  NFT Collection BY</h1>
-                    <img src={gallusLogo} className="logoGallus-nft" />
-                    <h2 className="secondTitle-nft-main">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</h2>
-                    <p className="family-nft">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
-Choose the model you want: Small, Medium or Titan! <br />
-Each NFT Feather is inside one of 6 beautiful boxes decorated with 6 beautiful stickers and 7 different colored crests that make this collection so rare. 
-Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
-                   <div className=" button-nft-main"> <NavLink exact to="/gallus-story" className="background-button"> Discover the<br /> Gallus story</NavLink></div>
-                    <div className="row rowDisplay">
-                        <div className="col-lg-4 centerFlex">
-                            {/* <div className="container-nftImage">
-                                <img src={standard} className="main-nft-imageLeft" />
-                            </div> */}
-                            <div className="image-container ">
-                            <div className="neon-nft-perso"></div>
+            <div className="normal-layout padding-nft-2">
+            <div className="main-title">
+                        <div className="left-1">
+                            <h3 className="rofi-title-2">THE ROYAL FEATHER<br /> <span className="defight-color">NFT Collection BY</span></h3>
+                            <p className="p-text">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</p>
+                            <p className="p-text">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
+Choose the model you want: Small, Medium or Titan! </p>
+                            <div className="btn-1">
+                                {/* <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color">
+                                <img src={icon_2} className="icon-btn" />
+                                    BUY Gallus
                                 
-                            <video  width="250" className="image-nft-box " autoPlay muted loop>
-                                <source src={Video} type="video/webm" autoplay loop/>
-                                <source src={Video}type="video/mp4" autoplay loop/>
-                            </video>
-                            
+                                </a>
+                                <NavLink exact to="/blindbox" className="btn-border-color">
+                                    <img src={icon_2} className="icon-btn" />
+                                   Gallus APP
+                                    
+                                </NavLink> */}
+                               {/* <NavLink exact to="/blindbox" className="btn-border-color">
+                                    <img src={icon_2} className="icon-btn" />
+                                   Our Story
+                                    
+                                </NavLink> */}
+                                
                             </div>
-                            
-                        </div> 
-                        <div className="col-lg-4 centerFlex">
-                            {/* <div className="container-nftImage">
-                                <img src={prenium} className="main-nft-imageLeft" />
-                            </div> */}
-                            <div className="image-container ">
-                            <div className="neon-nft-perso"></div>
-                                {/* <img src={exemple2} alt="" className="image-nft-box" /> */}
-                                <video  width="250" className="image-nft-box " autoPlay muted loop>
-                                <source src={Video2} type="video/webm" autoplay loop/>
-                                <source src={Video2}type="video/mp4" autoplay loop/>
-                            </video>
-                            
-                            </div>
-                        </div> 
-                        <div className="col-lg-4 centerFlex">
-                            {/* <div className="container-nftImage">
-                                <img src={collector} className="main-nft-imageLeft" />
-                            </div> */}
-                            <div className="image-container ">
-                            <div className="neon-nft-perso"></div>
-                                {/* <img src={exemple1} alt="" className="image-nft-box" /> */}
-                                <video  width="250" className="image-nft-box " autoPlay muted loop>
-                                <source src={Video1} type="video/webm" autoplay loop/>
-                                <source src={Video1}type="video/mp4" autoplay loop/>
-                            </video>
-                            </div>
-                        </div> 
-                        
+                        </div>
+                        <div className="right-1">
+                            <img src={gallusLogo} alt="logo jojo" className="image-right"/>
+                        </div>
+
                     </div>
-                </div>
-            </div>
-            </div>
+               </div>
             <div className="pool background-section-2">
             
             <div className="normal-layout">
             
                
-               <div className="container container-nft">
+               <div className="container-nft">
                
                     <div className="row card-nft">
                     
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
+                                
                             <div className="neon-nft-perso"></div>
-                            <video  width="250" className="image-nft-box " autoPlay muted loop>
-                                <source src={VideoSmall} type="video/webm" autoplay loop/>
-                                <source src={VideoSmall}type="video/mp4" autoplay loop/>
+                            <video  width="250" className="image-nft-box " id ="videoOfsmall"  autoPlay muted loop>
+                                <source src={VideoSmall} type="video/webm"   autoplay loop/>
+                                <source src={VideoSmall}type="video/mp4" id ="videosmall"onClick={showNft}autoplay loop/>
                             </video>
+                            <button className="buttons-loot"onClick={showNft}>Random version</button>
+                        <button className="buttons-loot-2"onClick={showNormalNft}>Possible loot</button>
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
@@ -763,7 +779,9 @@ Take advantage of this unique benefit with the DeFi
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a  className="button-nft " onClick={purshaseSmall} >BUY</a>
+                                    <div className="">
+                                    <a  className="btn-border-color" onClick={purshaseSmall} >
+                                    <img src={icon_2} className="icon-btn" />BUY gallus</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
@@ -771,7 +789,7 @@ Take advantage of this unique benefit with the DeFi
 
                                 </div>
                                 
-                            </div>
+                            </div></div>
                         </div>
                     </div>
                     <div className="row play2earn-margin reverseRow card-nft">
@@ -803,7 +821,9 @@ Take advantage of this unique benefit with the DeFi.
                                 </div>
                                 
                                 <div className="center-button">
-                                    <a  className="button-nft" onClick={purshaseMedium}>BUY</a>
+                                    
+                                <a  className="btn-border-color" onClick={purshaseMedium} >
+                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -857,7 +877,8 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
                                 <div className="center-button">
-                                    <a  className="button-nft" onClick={purshaseLarge}>BUY</a>
+                                <a  className="btn-border-color" onClick={purshaseLarge} >
+                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
@@ -868,7 +889,7 @@ Take advantage of this unique benefit with the DeFi.
                                 </div>
                             </div>
                         </div>
-            <section className="section-9 ">
+            <section className="section ">
                 <div className="normal-layout">
                     <div className="contact-footer margeTop">
                         <a href="https://twitter.com/GallusFighter" target="_blank" className="contact-link">
@@ -886,7 +907,7 @@ Take advantage of this unique benefit with the DeFi.
                     </div>
                 </div>
             </section>
-            <section className="section-10">
+            <section className="section">
            <div className="normal-layout">
                   <div className="footer-copyright">
                         
