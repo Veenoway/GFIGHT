@@ -1950,6 +1950,16 @@ a{
     background-repeat: no-repeat;
     
 }
+
+.section-presale{
+  background:black;
+  background-position: 0 0;
+  background-size: cover;
+  padding-top:180px;
+  padding-bottom:300px;
+  color: white;
+  background-repeat: no-repeat;
+}
 .section-31{
   /* background-image: url("../src/images/background-3.svg"); */
   background-color:black;
@@ -2172,7 +2182,7 @@ a{
 }
 
 .row{
-  margin-top:60px
+  margin-top:0px
 }
 .padding-bottom{
   padding-bottom:90px
@@ -2316,6 +2326,12 @@ border-radius: 29px;
   display: flex;
   justify-content: space-between;
 }
+
+.home-nft-section{
+  width:300px;
+ 
+}
+
 
 .tags{
   position: absolute;
@@ -3804,6 +3820,7 @@ align-items:center;
 
 .heightMain{
   padding-top: 100px;
+  padding-bottom: 241px;
   height: 100%;
   justify-content: center;
   display: flex;
@@ -4846,6 +4863,16 @@ ul{
 
 }
 
+.icon-btn-nftSale{
+  height:46px;
+  position:absolute;
+  top:-07px;
+  left:-18px;
+  box-shadow:0 0 5px rgba(255, 255, 255, 0.185);
+  border-radius:50%;
+  transform:scale(1)
+}
+
 .btn-border-color-2{
   border: 2px solid #0000ff;
     color: #f7F7F7;
@@ -4876,11 +4903,11 @@ ul{
     left:270px;
 }
 
-.btn-border-color{
+.btn-border-color-nftSale{
   border: 2px solid #0000ff;
     color: #f7F7F7;
     background-color: #0707b4;
-    height:52px;
+    height:42px;
     line-height:1.2;
     display:inline-flex;
     align-items:center;
@@ -4902,6 +4929,8 @@ ul{
     position:relative;
     margin-left:20px;
 }
+
+
 .btn-border-color-3{
   border: 2px solid #0000ff;
     color: #f7F7F7;
@@ -4920,7 +4949,7 @@ ul{
     line-height:0;
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:242px;
+    min-width:207px;
     box-sizing:border-box;
     margin-right: 24px;
     text-decoration: none;

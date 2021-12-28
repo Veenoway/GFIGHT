@@ -55,16 +55,7 @@ const BlindBox = () => {
     var [quantityLargeNft, SetQuantityLargeNft] = useState([])
     var [quantitySmallNft, SetQuantitySmallNft] = useState([])
 
-    const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
-
-
-   
-
- 
-
-
-
-
+    const gallusFeatherNFTAddress = "0xBA5112b636d75e33d789175690b8Af70881ce336";
     
     async function connectMetaMask() {
 
@@ -80,7 +71,7 @@ const BlindBox = () => {
             let network = await  provider.getNetwork()
             console.log(window.ethereum.selectedAddress);
             console.log(network)
-            if (network.name !== 'eth') {
+            if (network.name !== 'bnb') {
 
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
@@ -193,6 +184,7 @@ const BlindBox = () => {
                 await transaction.wait();
             }
             catch(error){
+                console.log(error)
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
