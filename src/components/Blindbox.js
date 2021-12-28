@@ -185,7 +185,9 @@ const BlindBox = () => {
             }
             catch(error){
                 console.log(error.data.message)
+
                 if (error.data.message == "execution reverted: Pausable: paused") {
+
                     var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
@@ -207,32 +209,30 @@ const BlindBox = () => {
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
                 title.innerHTML = "Presale is closed for now"
-                console.log(title.innerHTML = error.data.message)
-                title.classList.add('title-popup-soldout')
-
-
                 
-
-
+                title.classList.add('title-popup-soldout')
                 var button = document.createElement('button');
                 popupBox.appendChild(button);
                 button.classList.add('btn-popup-network')
                 button.innerHTML = 'OK'
-
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                })
+                    })
                 }
+
+
+                if (error.data.message == "err: insufficient funds for transfer: address 0x77A89C51f106D6cD547542a3A83FE73cB4459135 (supplied gas 12510499)") {
+
+               
+
+
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
-                
-
                 var popupBox = document.createElement('div');
                 containert.appendChild(popupBox);
                 popupBox.classList.add('popup-box-soldout')
-
                 var img = document.createElement('img');
                 popupBox.appendChild(img);
                 
@@ -243,8 +243,8 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = error.data.message
-                console.log(title.innerHTML = error.data.message)
+                title.innerHTML = "Sorry you don't have enough BNB..."
+                
                 title.classList.add('title-popup-soldout')
 
 
@@ -258,8 +258,11 @@ const BlindBox = () => {
 
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                })
-               
+                    })
+                }
+
+
+
             }
        }
     }
