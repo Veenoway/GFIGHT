@@ -184,7 +184,45 @@ const BlindBox = () => {
                 await transaction.wait();
             }
             catch(error){
-                console.log(error)
+                console.log(error.data.message)
+                if (error.data.message == "execution reverted: Pausable: paused") {
+                    var maint = document.getElementById('hamburger')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Presale is closed for now"
+                console.log(title.innerHTML = error.data.message)
+                title.classList.add('title-popup-soldout')
+
+
+                
+
+
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+                }
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
@@ -205,7 +243,8 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = 'SMALL FEATHER ARE SOLD OUT'
+                title.innerHTML = error.data.message
+                console.log(title.innerHTML = error.data.message)
                 title.classList.add('title-popup-soldout')
 
 
