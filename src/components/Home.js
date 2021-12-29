@@ -373,7 +373,7 @@ const Home = () => {
 
              <section className="section-common section-presale">
                 <div className="normal-layout">
-                    <h3 className="tokenomic-title">GALLUS <span className="yellowColorText">PRE-SALE FEATHER</span></h3>
+                    <h3 className="tokenomic-title">the #1 Gallus Fighter<br /><span className="yellowColorText">NFT Feather <span className="bgMooving">sale is live !</span></span></h3>
                     <div className="main-tokenomic">
                         <p className="left-text">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
 
@@ -640,15 +640,20 @@ const Home = () => {
                         <div class="col-md-6 middle width100">
                             <h3 className="section-5-title">How To Buy <br /> $GALLUS ?</h3>
                             <h5 className="section-5-second-title">Create a wallet</h5>
-                            <p className="first-text">On Google Chrome, visit <strong>metamask.io</strong> to download the extension and set up the wallet. Android and IOS users can download the <strong>Trust Wallet</strong> app.</p>
+                            <p className="first-text">On your web browser go to the address <strong>metamask.io</strong> and install the extension to set up a wallet.
+Android ans iOS users can also download the Trust Wallet app which is more user friendly</p>
                         </div>
                         </div>
                         <div class="row margin-top" >
                         
                         <div class="col-md-6 middle2 width100"  >
                             
-                            <h5 className="create-wallet-title ">Create a wallet</h5>
-                            <p className="first-text">On Google Chrome, visit <strong>metamask.io</strong> to download the extension and set up the wallet. Android and IOS users can download the <strong>Trust Wallet</strong> app.</p>
+                            <h5 className="create-wallet-title ">Send $BNB to your Wallet</h5>
+                            <p className="first-text">You will need to get $BNB to transact on the Binance Smart Chain and to buy $GALLUS.
+Get $BNB on an exchange such as https://binance.com/ or https://pancakeswap.com/ and send it to your Metamask or Trust Wallet. To do so, copy your BEP-20 wallet address and paste it on your app as a recipient address. 
+WARNING: please make sure that you are sending $BNB to the BEP-20 network (not BEP-2 or not ETH)<br />
+(Metamask only): with Metamask, you need to add the BSC to your wallet as it is not present by default. For this, please follow these instructions: https://docs.binance.org/smart-chain/wallet/metamask.html</p>
+
                         </div>
                         <div class="col-md-6 img-meta width100">
                             <img src={metamask2} className="image-metamask" alt="metamask"/>
@@ -661,9 +666,11 @@ const Home = () => {
                         
                         <div className="col-md-6 middle width100" >
                             
-                            <h5 className="section-5-second-title">Use $BNB to exchange $COCK</h5>
-                            <p className="first-text">Go to the DApps tab at the bottom, find <strong> PancakeSwap V2 </strong>  , click “Choose Currency”, enter the contract address in the search bar, and you should be able to find COCK.<br/>
-                            GALLUS FIGHTER counterparty address: Before the exchange, click the gear and set the <strong> slide to 12-15% </strong>  , set the amount you want to buy and click the exchange button.
+                            <h5 className="section-5-second-title">Buy $GALLUS</h5>
+                            <p className="first-text">You’re almost there!
+Go to https://exchange.pancakeswap.finance/ (or directly from the « DApps" tab at the bottom of the Trust Wallet App), find PancakeSwap V2 , click “Choose Currency” and enter the contract address (XXXX) in the search bar, and you should be able to find GALLUS.
+Note: for improved results to make your order, go to the settings menu by clicking the gear and set the slide to 12-15% 
+Set the amount you want to buy and click the exchange button.
                             </p>
                             <p className="first-text"> PancakeSwap :<br /> https://exchange.pancakeswap.finance
                             </p>
@@ -828,33 +835,34 @@ const Home = () => {
                             <div className="item-title">
                             
                                 <span className="tags">1</span>
-                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                What are the NFT Feathers ?
+
                                 <a className="fleche1" onClick={AfficherMasquer1}><i class="fas fa-arrow-circle-down" id="arrow1"></i></a>
                             </div>
                             <div className="item-text" id="faq1">
-                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            NFT Feathers are the very first NFT collectibles for sale to kickstart the Gallus Fighter project. They are very special and rare as there is only 500 of them. They provide with specific Defi and benefits. For more, check the Pre-Sale tab
                             </div>
                         </li>
                         <li className="faq-item">
                         
                             <div className="item-title">
                                 <span className="tags">2</span>
-                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                When will the token and Gallus NFT be available ?
                                 <a className="fleche1" onClick={AfficherMasquer2}><i class="fas fa-arrow-circle-down" id="arrow2"></i></a>
                             </div>
                             <div className="item-text" id="faq2">
-                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            We are working on it really hard, please watch our roadmap on the Gallus whitepaper
                             </div>
                         </li>
                         <li className="faq-item">
                         
                             <div className="item-title">
                                 <span className="tags">3</span>
-                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                How can I find more information about the Gallus Fighter project ?
                                 <a className="fleche1" onClick={AfficherMasquer3}><i class="fas fa-arrow-circle-down" id="arrow3"></i></a>
                             </div>
                             <div className="item-text" id="faq3">
-                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            All you need to know about our project is on the Gallus Whitepaper: https://galluspaper.gallusfighter.com
                             </div>
                             
                         </li>
@@ -862,11 +870,14 @@ const Home = () => {
                        
                             <div className="item-title" >
                                 <span className="tags">4</span>
-                                What’s the tokenomics of "Gallus Fighter"? And how do we expect the price of "Gallus Fighter"?
+                                What are the tokenomics of « GALLUS » ?
                                 <a className="fleche1" onClick={AfficherMasquer4}><i class="fas fa-arrow-circle-down" id="arrow4"></i></a>
                             </div>
                             <div className="item-text" id="faq4">
-                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            The Defight Metaverse is powered by smart tokenomics design to support a strong demand for the $GALLUS token. $GALLUS transactions will enable the distribution of a constant flow of value to 3 major investment pools:
+- DeFight Rewards: this pool will be used to reward investors taking part in NFT and token based DeFi and in game products, See DeFiGht: NFT & Token DeFifor more details
+- Smart Burn: tokens retrieved from $GALLUS transactions will be locked in the Smart Burn pool and gradually burned while the number of $GALLUS holders reaches specific thresholds
+- High Liquidity: an important share of levied tokens will be provided to increase liquidity in Pancake Swap pools
                             </div>
                             
                         </li>
@@ -874,11 +885,36 @@ const Home = () => {
                             
                             <div className="item-title">
                                 <span className="tags">5</span>
-                                What’s the tokenomics of "GALLUS"? And how do we expect the price of "GALLUS"?
+                                What is the inital breakout for the $GALLUS token launch ?
                                 <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
                             </div>
                             <div className="item-text" id="faq5">
-                            At the begining, 50% of GALLUS tokens will be burned by sending to "Black Hole Account". 10% of each transaction amount on the $GALLUS chain will be deducted and redistributed, of which: 4% is allocated to the currency holding address; 3% is allocated to NFT POOL; 3% is exchanged for $GALLUS/$BNB and injected into PancakeSwap 2.0 liquidity pool. These have guaranteed a continuously rising price floor.
+                            A total of 1,000,000,000,000 (1 Trillion) $GALLUS tokens will be created at launch. The distribution will be operated through a fair launch principle to foster a decentralized repartition to the community
+As a fully decentralized project, the team will not receive any $GALLUS token from the initial distribution. This mechanism is whale-resistant and will align the project team expectations with the Gallus Fighter community
+                            </div>
+                            
+                        </li>
+                        <li className="faq-item" >
+                            
+                            <div className="item-title">
+                                <span className="tags">6</span>
+                                What is the $GALLUS Fighter smart contract address ?
+                                <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
+                            </div>
+                            <div className="item-text" id="faq5">
+                            Only use this official smart contract address to operate with $GALLUS : Coming soon...
+                            </div>
+                            
+                        </li>
+                        <li className="faq-item" >
+                            
+                            <div className="item-title">
+                                <span className="tags">7</span>
+                                Do you have any plans in marketing and listing ?
+                                <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
+                            </div>
+                            <div className="item-text" id="faq5">
+                            Firstly we will add the liquidity on PancakeSwap, and will work with more exchanges, communities, medias to increase exposure. All achievements come from and belong to the community.
                             </div>
                             
                         </li>

@@ -160,7 +160,43 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
+        let network = await  provider.getNetwork()
+        if (network.name !== 'bnb') {
 
+            var maint = document.getElementById('hamburger')
+            var containert = document.createElement('div');
+            containert.classList.add('container-popup-network');
+            maint.appendChild(containert);
+            
+
+            var popupBox = document.createElement('div');
+            containert.appendChild(popupBox);
+            popupBox.classList.add('popup-box')
+
+
+            var title = document.createElement('h3')
+            popupBox.appendChild(title);
+            title.innerHTML = 'Wrong Network'
+            title.classList.add('title-popup-network')
+
+
+            var text = document.createElement('p');
+            popupBox.appendChild(text);
+            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+            text.classList.add('text-popup-network')
+
+
+            var button = document.createElement('button');
+            popupBox.appendChild(button);
+            button.classList.add('btn-popup-network')
+            button.innerHTML = 'OK'
+
+            button.addEventListener('click', function (e) {
+                containert.style.display = 'none'
+            })
+
+
+        }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -177,6 +213,7 @@ const BlindBox = () => {
             var smallQuantity = quantitySmall.toString()
             SetQuantitySmallNft(smallQuantity)
             
+           
             console.log(quantitySmallNft)
             console.log(priceSmall.toString())
             try {
@@ -208,7 +245,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Presale is closed for now"
+                title.innerHTML = "Presale is closed for now.."
                 
                 title.classList.add('title-popup-soldout')
                 var button = document.createElement('button');
@@ -220,8 +257,8 @@ const BlindBox = () => {
                     })
                 }
 
-
-                if (error.data.message == "err: insufficient funds for transfer: address 0x77A89C51f106D6cD547542a3A83FE73cB4459135 (supplied gas 12510499)") {
+                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
+                if (sentence) {
 
                
 
@@ -260,6 +297,14 @@ const BlindBox = () => {
                     containert.style.display = 'none'
                     })
                 }
+
+               
+                alert(error.data.message)
+                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
+               
+
+                alert(dataMessage)
+                alert(sentence)
 
 
 
@@ -377,7 +422,45 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
+            
 
+
+        
+        let network = await  provider.getNetwork()
+            if (network.name !== 'bnb') {
+
+            var maint = document.getElementById('hamburger')
+            var containert = document.createElement('div');
+            containert.classList.add('container-popup-network');
+            maint.appendChild(containert);
+            
+
+            var popupBox = document.createElement('div');
+            containert.appendChild(popupBox);
+            popupBox.classList.add('popup-box')
+
+
+            var title = document.createElement('h3')
+            popupBox.appendChild(title);
+            title.innerHTML = 'Wrong Network'
+            title.classList.add('title-popup-network')
+
+
+            var text = document.createElement('p');
+            popupBox.appendChild(text);
+            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+            text.classList.add('text-popup-network')
+
+
+            var button = document.createElement('button');
+            popupBox.appendChild(button);
+            button.classList.add('btn-popup-network')
+            button.innerHTML = 'OK'
+
+            button.addEventListener('click', function (e) {
+                containert.style.display = 'none'
+            })
+            }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -400,42 +483,42 @@ const BlindBox = () => {
                
                 // CONSTRUCTOR
                 
-                var maint = document.getElementById('hamburger')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
+                // var maint = document.getElementById('hamburger')
+                // var containert = document.createElement('div');
+                // containert.classList.add('container-popup-network');
+                // maint.appendChild(containert);
                 
 
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
+                // var popupBox = document.createElement('div');
+                // containert.appendChild(popupBox);
+                // popupBox.classList.add('popup-box-soldout')
 
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
+                // var img = document.createElement('img');
+                // popupBox.appendChild(img);
                 
                 
-                img.classList.add('img-popup-network')
-                img.src = gallus
+                // img.classList.add('img-popup-network')
+                // img.src = gallus
 
 
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = 'TITAN FEATHER ARE SOLD OUT'
-                title.classList.add('title-popup-soldout')
+                // var title = document.createElement('h3')
+                // popupBox.appendChild(title);
+                // title.innerHTML = 'TITAN FEATHER ARE SOLD OUT'
+                // title.classList.add('title-popup-soldout')
 
 
                 
 
 
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
+                // var button = document.createElement('button');
+                // popupBox.appendChild(button);
+                // button.classList.add('btn-popup-network')
+                // button.innerHTML = 'OK'
 
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                })
-               
+                // button.addEventListener('click', function (e) {
+                //     containert.style.display = 'none'
+                // })
+               console.log(error)
             }
        }
     }
@@ -476,7 +559,43 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
+        let network = await  provider.getNetwork()
+        if (network.name !== 'bnb') {
 
+            var maint = document.getElementById('hamburger')
+            var containert = document.createElement('div');
+            containert.classList.add('container-popup-network');
+            maint.appendChild(containert);
+            
+
+            var popupBox = document.createElement('div');
+            containert.appendChild(popupBox);
+            popupBox.classList.add('popup-box')
+
+
+            var title = document.createElement('h3')
+            popupBox.appendChild(title);
+            title.innerHTML = 'Wrong Network'
+            title.classList.add('title-popup-network')
+
+
+            var text = document.createElement('p');
+            popupBox.appendChild(text);
+            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+            text.classList.add('text-popup-network')
+
+
+            var button = document.createElement('button');
+            popupBox.appendChild(button);
+            button.classList.add('btn-popup-network')
+            button.innerHTML = 'OK'
+
+            button.addEventListener('click', function (e) {
+                containert.style.display = 'none'
+            })
+
+
+        }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -494,6 +613,7 @@ const BlindBox = () => {
             try {
                 const transaction = await contract.purchaseMedium({value: priceMedium});
                 await transaction.wait();
+                
                 
                 var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');

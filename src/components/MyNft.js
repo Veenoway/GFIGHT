@@ -78,7 +78,7 @@ const MyNft = () => {
 
   
 
-    const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
+    const gallusFeatherNFTAddress = "0xBA5112b636d75e33d789175690b8Af70881ce336";
 
     async function connectMetaMask() {
         if (typeof window.ethereum !== 'undefined') {
