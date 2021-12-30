@@ -346,7 +346,7 @@ const Home = () => {
                             <p className="p-text">Participate with your GALLUS NFTs in bloody battles and collect your rewards when you are victorious!</p>
                             <p className="p-text">Upgrade your GALLUS FIGHTER, train it or use any DeFi services with your NFTs and/or $GALLUS Tokens and take your profits!</p>
                             <div className="btn-1">
-                                <NavLink exact to="/mystery-box" className="btn-border-color-3 ">
+                                <NavLink exact to="/presale" className="btn-border-color-3 ">
                                 <img src={icon_2} className="icon-btn " />
                                    NFT PRE-SALE 
                                 
