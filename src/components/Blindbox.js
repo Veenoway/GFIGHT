@@ -39,7 +39,6 @@ import VideoLarge from "../images/large.mp4";
 
 import gallusVideo from "../images/gallus_intro_low_reso.mp4";
 import icon_2 from "../images/Asset_2.png";
-import story from "../images/story.png";
 
 
 
@@ -55,7 +54,16 @@ const BlindBox = () => {
     var [quantityLargeNft, SetQuantityLargeNft] = useState([])
     var [quantitySmallNft, SetQuantitySmallNft] = useState([])
 
-    const gallusFeatherNFTAddress = "0xBA5112b636d75e33d789175690b8Af70881ce336";
+    const gallusFeatherNFTAddress = "0x63Ca7D1EBD39DfabC9eEE3e600E28aa79637A1eB";
+
+
+   
+
+ 
+
+
+
+
     
     async function connectMetaMask() {
 
@@ -71,9 +79,9 @@ const BlindBox = () => {
             let network = await  provider.getNetwork()
             console.log(window.ethereum.selectedAddress);
             console.log(network)
-            if (network.name !== 'bnb') {
+            if (network.name !== 'eth') {
 
-                var maint = document.getElementById('contain')
+                var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -160,43 +168,7 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
-        let network = await  provider.getNetwork()
-        if (network.name !== 'bnb') {
 
-            var maint = document.getElementById('contain')
-            var containert = document.createElement('div');
-            containert.classList.add('container-popup-network');
-            maint.appendChild(containert);
-            
-
-            var popupBox = document.createElement('div');
-            containert.appendChild(popupBox);
-            popupBox.classList.add('popup-box')
-
-
-            var title = document.createElement('h3')
-            popupBox.appendChild(title);
-            title.innerHTML = 'Wrong Network'
-            title.classList.add('title-popup-network')
-
-
-            var text = document.createElement('p');
-            popupBox.appendChild(text);
-            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-            text.classList.add('text-popup-network')
-
-
-            var button = document.createElement('button');
-            popupBox.appendChild(button);
-            button.classList.add('btn-popup-network')
-            button.innerHTML = 'OK'
-
-            button.addEventListener('click', function (e) {
-                containert.style.display = 'none'
-            })
-
-
-        }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -213,7 +185,6 @@ const BlindBox = () => {
             var smallQuantity = quantitySmall.toString()
             SetQuantitySmallNft(smallQuantity)
             
-           
             console.log(quantitySmallNft)
             console.log(priceSmall.toString())
             try {
@@ -221,11 +192,7 @@ const BlindBox = () => {
                 await transaction.wait();
             }
             catch(error){
-                console.log(error.data.message)
-
-                if (error.data.message == "execution reverted: Pausable: paused") {
-
-                    var maint = document.getElementById('contain')
+                var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -245,43 +212,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Presale is closed for now.."
-                
-                title.classList.add('title-popup-soldout')
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                    })
-                }
-
-                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
-                if (sentence) {
-
-               
-
-
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
-                
-                
-                img.classList.add('img-popup-network')
-                img.src = gallus
-
-
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
-                
+                title.innerHTML = 'SMALL FEATHER ARE SOLD OUT'
                 title.classList.add('title-popup-soldout')
 
 
@@ -295,19 +226,8 @@ const BlindBox = () => {
 
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                    })
-                }
-
+                })
                
-                alert(error.data.message)
-                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
-               
-
-                alert(dataMessage)
-                alert(sentence)
-
-
-
             }
        }
     }
@@ -422,45 +342,7 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
-            
 
-
-        
-        let network = await  provider.getNetwork()
-            if (network.name !== 'bnb') {
-
-            var maint = document.getElementById('hamburger')
-            var containert = document.createElement('div');
-            containert.classList.add('container-popup-network');
-            maint.appendChild(containert);
-            
-
-            var popupBox = document.createElement('div');
-            containert.appendChild(popupBox);
-            popupBox.classList.add('popup-box')
-
-
-            var title = document.createElement('h3')
-            popupBox.appendChild(title);
-            title.innerHTML = 'Wrong Network'
-            title.classList.add('title-popup-network')
-
-
-            var text = document.createElement('p');
-            popupBox.appendChild(text);
-            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-            text.classList.add('text-popup-network')
-
-
-            var button = document.createElement('button');
-            popupBox.appendChild(button);
-            button.classList.add('btn-popup-network')
-            button.innerHTML = 'OK'
-
-            button.addEventListener('click', function (e) {
-                containert.style.display = 'none'
-            })
-            }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -480,11 +362,10 @@ const BlindBox = () => {
                 console.log(quantityLargeNft)
             }
             catch(error){
-                console.log(error.data.message)
-
-                if (error.data.message == "execution reverted: Pausable: paused") {
-
-                    var maint = document.getElementById('contain')
+               
+                // CONSTRUCTOR
+                
+                var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -504,43 +385,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Presale is closed for now.."
-                
-                title.classList.add('title-popup-soldout')
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                    })
-                }
-
-                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
-                if (sentence) {
-
-               
-
-
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
-                
-                
-                img.classList.add('img-popup-network')
-                img.src = gallus
-
-
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
-                
+                title.innerHTML = 'TITAN FEATHER ARE SOLD OUT'
                 title.classList.add('title-popup-soldout')
 
 
@@ -554,19 +399,8 @@ const BlindBox = () => {
 
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                    })
-                }
-
+                })
                
-                alert(error.data.message)
-                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
-               
-
-                alert(dataMessage)
-                alert(sentence)
-
-
-
             }
        }
     }
@@ -607,43 +441,7 @@ const BlindBox = () => {
             console.log(window.ethereum.selectedAddress);
         
         // request metamask to access the account
-        let network = await  provider.getNetwork()
-        if (network.name !== 'bnb') {
 
-            var maint = document.getElementById('contain')
-            var containert = document.createElement('div');
-            containert.classList.add('container-popup-network');
-            maint.appendChild(containert);
-            
-
-            var popupBox = document.createElement('div');
-            containert.appendChild(popupBox);
-            popupBox.classList.add('popup-box')
-
-
-            var title = document.createElement('h3')
-            popupBox.appendChild(title);
-            title.innerHTML = 'Wrong Network'
-            title.classList.add('title-popup-network')
-
-
-            var text = document.createElement('p');
-            popupBox.appendChild(text);
-            text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-            text.classList.add('text-popup-network')
-
-
-            var button = document.createElement('button');
-            popupBox.appendChild(button);
-            button.classList.add('btn-popup-network')
-            button.innerHTML = 'OK'
-
-            button.addEventListener('click', function (e) {
-                containert.style.display = 'none'
-            })
-
-
-        }
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -662,8 +460,7 @@ const BlindBox = () => {
                 const transaction = await contract.purchaseMedium({value: priceMedium});
                 await transaction.wait();
                 
-                
-                var maint = document.getElementById('contain')
+                var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -701,11 +498,8 @@ const BlindBox = () => {
 
             }
             catch(error){
-                console.log(error.data.message)
-
-                if (error.data.message == "execution reverted: Pausable: paused") {
-
-                    var maint = document.getElementById('contain')
+                
+                var maint = document.getElementById('hamburger')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -725,43 +519,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Presale is closed for now.."
-                
-                title.classList.add('title-popup-soldout')
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                    })
-                }
-
-                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
-                if (sentence) {
-
-               
-
-
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
-                
-                
-                img.classList.add('img-popup-network')
-                img.src = gallus
-
-
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
-                
+                title.innerHTML = 'MEDIUM FEATHER ARE SOLD OUT'
                 title.classList.add('title-popup-soldout')
 
 
@@ -775,19 +533,8 @@ const BlindBox = () => {
 
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                    })
-                }
-
+                })
                
-                alert(error.data.message)
-                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
-               
-
-                alert(dataMessage)
-               
-
-
-
             }
        }
     }
@@ -827,7 +574,7 @@ const BlindBox = () => {
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/presale" activeClassName="nav-active" className="display">
+                                <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
                                 <i class="fas fa-box-open yellow-icon"></i>
                                 {/* <img src={icon_2} className="webtest" /> */}
                                 Mystery box 
@@ -988,7 +735,7 @@ Choose the model you want: Small, Medium or Titan! </p>
             <div className="normal-layout">
             
                
-               <div className="container-nft-2">
+               <div className="container-nft">
                
                     <div className="row card-nft">
                     
@@ -1033,8 +780,8 @@ Take advantage of this unique benefit with the DeFi
                                 
                                 <div className="center-button">
                                     <div className="">
-                                    <a  className="btn-border-color-small" onClick={purshaseSmall} >
-                                    <img src={icon_2} className="icon-btn" />BUY SMALL</a></div>
+                                    <a  className="btn-border-color" onClick={purshaseSmall} >
+                                    <img src={icon_2} className="icon-btn" />BUY gallus</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft">
                                         Small Edition *
@@ -1075,8 +822,8 @@ Take advantage of this unique benefit with the DeFi.
                                 
                                 <div className="center-button">
                                     
-                                <a  className="btn-border-color-medium" onClick={purshaseMedium} >
-                                    <img src={icon_2} className="icon-btn" />BUY MEDIUM</a>
+                                <a  className="btn-border-color" onClick={purshaseMedium} >
+                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -1130,8 +877,8 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
                                 <div className="center-button">
-                                <a  className="btn-border-color-titan" onClick={purshaseLarge} >
-                                    <img src={icon_2} className="icon-btn" />BUY TITAN</a>
+                                <a  className="btn-border-color" onClick={purshaseLarge} >
+                                    <img src={icon_2} className="icon-btn" />BUY GALLUS</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
