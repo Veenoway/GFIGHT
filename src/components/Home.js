@@ -902,7 +902,7 @@ Set the amount you want to buy and click the exchange button.
                                 <a className="fleche1" onClick={AfficherMasquer3}><i class="fas fa-arrow-circle-down" id="arrow3"></i></a>
                             </div>
                             <div className="item-text" id="faq3">
-                            All you need to know about our project is on the Gallus Whitepaper: https://galluspaper.gallusfighter.com
+                            All you need to know about our project is on the : <a href="https://galluspaper.gallusfighter.com" className="afaq"> Gallus Whitepaper</a>
                             </div>
                             
                         </li>
