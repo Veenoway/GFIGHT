@@ -784,7 +784,7 @@ const BlindBox = () => {
                
 
                 alert(dataMessage)
-                alert(sentence)
+               
 
 
 
