@@ -105,7 +105,7 @@ const Community = () => {
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/mystery-box" activeClassName="nav-active" className="display">
+                                <NavLink exact to="/presale" activeClassName="nav-active" className="display">
                                 <i class="fas fa-box-open yellow-icon"></i>
                                 {/* <img src={icon_2} className="webtest" /> */}
                                 Mystery box 
