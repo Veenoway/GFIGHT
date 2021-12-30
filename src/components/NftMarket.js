@@ -57,6 +57,7 @@ const NftMarket = () => {
 
                 </div>
         </div>
+        
         <div className="main-nft">
             <div className="pool-grid">
                 <div className="nft-title-main">
@@ -65,6 +66,27 @@ const NftMarket = () => {
 The feathers are classified by rarity; the rarer your feather is, the more it gives you a Collector's Reward!
 Stay tuned and enter the arena for NFT's fights.</p>
                 </div>
+                <section className="search-section">
+                    <div className="search-container">
+                        <div className="left-view">
+                            <div className="onglets">
+                                <div className="onglets-menu">
+                                    <a className=" menu-onglets-item-right selected-onglets">Gallus Feather</a>
+                                    <a className="menu-onglets-item  selected">Gallus Fighter</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="space"></div>
+                        <div className="right-view">
+                            <div className="onglets">
+                                <div className="onglets-menu">
+                                    <a className="menu-onglets-item-right selected-onglets">Gallus Feather</a>
+                                    <a className="menu-onglets-item selected">Gallus Fighter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
                                 {data.map((image) => (
                                     <Cards image={image} key={image.title} />

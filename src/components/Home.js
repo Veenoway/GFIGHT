@@ -230,6 +230,46 @@ const Home = () => {
          
     }
 
+    
+    function AfficherMasquer5() {
+
+        var faq5 = document.getElementById('faq6');
+        var arrow = document.getElementById('arrow7')
+        
+        if ( faq5.style.display == 'none') {
+
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+    
+        }
+        else {
+    
+            faq5.style.display = 'none';
+            arrow.style.transform = 'rotate(0turn)';
+        }
+         
+    }
+
+    
+    function AfficherMasquer6() {
+
+        var faq5 = document.getElementById('faq7');
+        var arrow = document.getElementById('arrow6')
+        
+        if ( faq5.style.display == 'none') {
+
+            faq5.style.display = 'flex';
+            arrow.style.transform = 'rotate(0.5turn)';
+    
+        }
+        else {
+    
+            faq5.style.display = 'none';
+            arrow.style.transform = 'rotate(0turn)';
+        }
+         
+    }
+
 
     
 
@@ -373,7 +413,7 @@ const Home = () => {
 
              <section className="section-common section-presale">
                 <div className="normal-layout">
-                    <h3 className="tokenomic-title">the #1 Gallus Fighter<br /><span className="yellowColorText">NFT Feather <span className="bgMooving">sale is live !</span></span></h3>
+                    <h3 className="tokenomic-title">join the <span className="yellowColorText"><span className="bgMooving">presale now !</span></span></h3>
                     <div className="main-tokenomic">
                         <p className="left-text">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
 
@@ -623,8 +663,8 @@ const Home = () => {
                 <div className="normal-layout">
                     <h3 className="tokenomic-title">GALLUS <span className="yellowColorText">FIGURINE</span></h3>
                     <div className="main-tokenomic">
-                        <p className="left-text">GALLUS Token is issued based on the Binance Smart Chain, which is completely decentralized, without any private equity and team reservations, and adopts a super combustion mechanism to make the number of Tokens burn very quickly, greatly reducing the circulation of the total supply. Under the premise of fair issuance, GALLUS will trigger the corresponding Token distribution for each transfer or transaction on the chain, which includes currency holding income,
-                         Token burn and NFT mining pool, and will burn all private keys to ensure its fairness.</p>
+                        
+<p className="left-text">Get ready to bring  your metaverse to real life! You can own real collectible Gallus figurine and other Gallus goodies in limited edition to materialise your memorable victory . More events are coming to make you truly enjoy a fun community life !</p>
                          <div className="token-image">
                              <img src={figurine} alt="tokenomic image " className="eggs"/>
                          </div>
@@ -899,9 +939,9 @@ As a fully decentralized project, the team will not receive any $GALLUS token fr
                             <div className="item-title">
                                 <span className="tags">6</span>
                                 What is the $GALLUS Fighter smart contract address ?
-                                <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
+                                <a className="fleche1"  onClick={AfficherMasquer5}><i class="fas fa-arrow-circle-down" id="arrow7"></i></a>
                             </div>
-                            <div className="item-text" id="faq5">
+                            <div className="item-text" id="faq6">
                             Only use this official smart contract address to operate with $GALLUS : Coming soon...
                             </div>
                             
@@ -911,9 +951,9 @@ As a fully decentralized project, the team will not receive any $GALLUS token fr
                             <div className="item-title">
                                 <span className="tags">7</span>
                                 Do you have any plans in marketing and listing ?
-                                <a className="fleche1"  onClick={AfficherMasquer}><i class="fas fa-arrow-circle-down" id="arrow5"></i></a>
+                                <a className="fleche1"  onClick={AfficherMasquer6}><i class="fas fa-arrow-circle-down" id="arrow6"></i></a>
                             </div>
-                            <div className="item-text" id="faq5">
+                            <div className="item-text" id="faq7">
                             Firstly we will add the liquidity on PancakeSwap, and will work with more exchanges, communities, medias to increase exposure. All achievements come from and belong to the community.
                             </div>
                             

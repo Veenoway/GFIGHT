@@ -73,7 +73,7 @@ const BlindBox = () => {
             console.log(network)
             if (network.name !== 'bnb') {
 
-                var maint = document.getElementById('hamburger')
+                var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -163,7 +163,7 @@ const BlindBox = () => {
         let network = await  provider.getNetwork()
         if (network.name !== 'bnb') {
 
-            var maint = document.getElementById('hamburger')
+            var maint = document.getElementById('contain')
             var containert = document.createElement('div');
             containert.classList.add('container-popup-network');
             maint.appendChild(containert);
@@ -225,7 +225,7 @@ const BlindBox = () => {
 
                 if (error.data.message == "execution reverted: Pausable: paused") {
 
-                    var maint = document.getElementById('hamburger')
+                    var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -263,7 +263,7 @@ const BlindBox = () => {
                
 
 
-                var maint = document.getElementById('hamburger')
+                var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -299,12 +299,11 @@ const BlindBox = () => {
                 }
 
                
-                alert(error.data.message)
+                
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-                alert(dataMessage)
-                alert(sentence)
+             
 
 
 
@@ -480,45 +479,93 @@ const BlindBox = () => {
                 console.log(quantityLargeNft)
             }
             catch(error){
+                console.log(error.data.message)
+
+                if (error.data.message == "execution reverted: Pausable: paused") {
+
+                    var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Presale is closed for now.."
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                    })
+                }
+
+                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
+                if (sentence) {
+
                
-                // CONSTRUCTOR
-                
-                // var maint = document.getElementById('hamburger')
-                // var containert = document.createElement('div');
-                // containert.classList.add('container-popup-network');
-                // maint.appendChild(containert);
-                
-
-                // var popupBox = document.createElement('div');
-                // containert.appendChild(popupBox);
-                // popupBox.classList.add('popup-box-soldout')
-
-                // var img = document.createElement('img');
-                // popupBox.appendChild(img);
-                
-                
-                // img.classList.add('img-popup-network')
-                // img.src = gallus
 
 
-                // var title = document.createElement('h3')
-                // popupBox.appendChild(title);
-                // title.innerHTML = 'TITAN FEATHER ARE SOLD OUT'
-                // title.classList.add('title-popup-soldout')
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Sorry you don't have enough BNB..."
+                
+                title.classList.add('title-popup-soldout')
 
 
                 
 
 
-                // var button = document.createElement('button');
-                // popupBox.appendChild(button);
-                // button.classList.add('btn-popup-network')
-                // button.innerHTML = 'OK'
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
 
-                // button.addEventListener('click', function (e) {
-                //     containert.style.display = 'none'
-                // })
-               console.log(error)
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                    })
+                }
+
+               
+               
+                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
+               
+
+         
+        
+                
+
+
             }
        }
     }
@@ -562,7 +609,7 @@ const BlindBox = () => {
         let network = await  provider.getNetwork()
         if (network.name !== 'bnb') {
 
-            var maint = document.getElementById('hamburger')
+            var maint = document.getElementById('contain')
             var containert = document.createElement('div');
             containert.classList.add('container-popup-network');
             maint.appendChild(containert);
@@ -615,7 +662,7 @@ const BlindBox = () => {
                 await transaction.wait();
                 
                 
-                var maint = document.getElementById('hamburger')
+                var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -653,8 +700,11 @@ const BlindBox = () => {
 
             }
             catch(error){
-                
-                var maint = document.getElementById('hamburger')
+                console.log(error.data.message)
+
+                if (error.data.message == "execution reverted: Pausable: paused") {
+
+                    var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
@@ -674,7 +724,43 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = 'MEDIUM FEATHER ARE SOLD OUT'
+                title.innerHTML = "Presale is closed for now.."
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                    })
+                }
+
+                var sentence = error.data.message.includes("err: insufficient funds for transfer:")
+                if (sentence) {
+
+               
+
+
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Sorry you don't have enough BNB..."
+                
                 title.classList.add('title-popup-soldout')
 
 
@@ -688,8 +774,17 @@ const BlindBox = () => {
 
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
-                })
+                    })
+                }
+
                
+                var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
+               
+
+             
+
+
+
             }
        }
     }
