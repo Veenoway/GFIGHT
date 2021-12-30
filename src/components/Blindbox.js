@@ -299,11 +299,12 @@ const BlindBox = () => {
                 }
 
                
-                
+                alert(error.data.message)
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-             
+                alert(dataMessage)
+                alert(sentence)
 
 
 
@@ -557,12 +558,12 @@ const BlindBox = () => {
                 }
 
                
-               
+                alert(error.data.message)
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-         
-        
+                alert(dataMessage)
+                alert(sentence)
 
 
 
@@ -778,10 +779,12 @@ const BlindBox = () => {
                 }
 
                
+                alert(error.data.message)
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-             
+                alert(dataMessage)
+                alert(sentence)
 
 
 
