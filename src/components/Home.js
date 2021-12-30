@@ -306,14 +306,14 @@ const Home = () => {
                     {/* <div className="space"></div> */}
                     <div className="nav-list ">
                         <NavLink exact to="/" className="selected font">HOME</NavLink>
-                        <NavLink exact to="/mystery-box" className="unselected font">PRE-SALE </NavLink>
+                        <NavLink exact to="/presale" className="unselected font">PRE-SALE </NavLink>
                         <NavLink exact to="/gallus-story" className="unselected font">STORY</NavLink>
                         <NavLink exact to="/" className="selected font"><img src={logoGallus} className="logoMain"/></NavLink>
                         <NavLink exact to="/community" className="unselected font">COMMUNITY</NavLink>
                         
                         
                         
-                        <NavLink exact to="/mystery-box" className="unselected font">APP</NavLink>
+                        <NavLink exact to="/presale" className="unselected font">APP</NavLink>
                         <a href="https://galluspaper.gallusfighter.com/" className="unselected font">DOCS</a>
 
                     </div>
@@ -326,10 +326,10 @@ const Home = () => {
                         {/* <img src={gallus} className="logo-nav-mobile" /> */}
                         <ul className="ul-popup">
                             <NavLink exact to="/" className="li-popup"><li>HOME</li></NavLink>
-                            <NavLink exact to="/mystery-box"className="li-popup"><li>PRE-SALE</li></NavLink>
+                            <NavLink exact to="/presale"className="li-popup"><li>PRE-SALE</li></NavLink>
                             <NavLink exact to="/gallus-story" className="li-popup"><li>GALLUS STORY</li></NavLink>
                             <NavLink exact to="/community" className="li-popup"><li>COMMUNITY</li></NavLink>
-                            <NavLink exact to="/mystery-box" className="li-popup"><li>APP</li></NavLink>
+                            <NavLink exact to="/presale" className="li-popup"><li>APP</li></NavLink>
                             <a href="https://galluspaper.gallusfighter.com/" className="li-popup"><li>DOCS</li></a>
                         </ul>
                     </div>

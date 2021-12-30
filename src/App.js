@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/my-nft" component={MyNft} />
         {/* <Route exact path="/gsgrf" component={Pool} /> */}
         {/* <Route exact path="/fse" component={Farms}/> */}
-        <Route exact path="/mystery-box" component={BlindBox} />
+        <Route exact path="/presale" component={BlindBox} />
         <Route exact path="/nft-market" component={NftMarket} />
       
         
