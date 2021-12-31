@@ -297,12 +297,15 @@ align-items:center;
 .logoJOJO{
   display:none
 }
-
+.list-marketnft{
+  display:flex;
+  justify-content: space-between;
+}
 .pool{
   font-size:24px;
   color:#ffffff;
   font-weight:700;
-  
+  min-height:100vh;
   background:url(../src/images/bggallus1.jpg);
   background-repeat:no-repeat;
   background-size:100% 100%;
@@ -444,8 +447,17 @@ align-items:center;
   display:inline-flex;
   align-items: center;
   overflow: auto;
-  background-color:#f7f7f7;
-  box-shadow: 0 6px 12px 0 #dcdcdc
+  background:linear-gradient(137deg,rgba(36, 36, 36, 0.774),rgb(7, 77, 255) 0,rgb(0, 1, 31));;
+ 
+}
+
+.selected-market{
+  background:linear-gradient(137deg,rgba(36,36,36,.774),rgba(7, 77, 255, 0.493) 0,rgba(0, 2, 51, 0.945));
+  color:white;
+  font-family: Bungee;
+  letter-spacing: .6px;
+  box-shadow: 0 0px 7px 0 #dcdcdc62;
+  
 }
 
 .selected{
@@ -468,10 +480,12 @@ align-items:center;
   font-weight:700;
   text-decoration: none;
   margin:0;
-  
+  color: rgba(255, 255, 255, 0.671);
+  font-family: bungee;
+  letter-spacing: .6px;
 }
 .unselected{
-  color: #694f4e;
+  
 }
 
 .pool-view{
@@ -723,9 +737,27 @@ align-items:center;
 }
 
 .ttt{
-  position:relative;
-  max-width:350px;
-  margin:15px
+  /* position:relative;
+  max-width:350px; */
+  
+}
+
+.boite-3{
+height:457px;
+}
+
+.left-text-presale{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align:start;
 }
 
 .collector{
@@ -734,8 +766,9 @@ align-items:center;
   font-family:bungee;
 
   left:15px;
-  padding:0px 10px;
-  background-color:rgb(250 218 33);
+  padding:2px 10px;
+  background:linear-gradient(
+    180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
   border-radius:5px;
   font-size:13px;
   color:rgb(0, 0, 0)
@@ -814,7 +847,7 @@ align-items:center;
 }
 
 .nft-title-main{
-  margin:30px 0 120px 0
+  margin:90px 0 30px 0
 }
 .title-nft-main{
   font-family:bungee;
@@ -823,10 +856,28 @@ align-items:center;
   font-size:44px;
   color:#ed0000;
   margin-top:10px;
+  color: rgba(255,0,0,0);
+    letter-spacing: 1px;
+    background: #ed0000;
+    background: linear-gradient(
+180deg,#ed0000,#edd600 100%,#f8b21a 0);
+    -webkit-background-clip: text;
+}
+
+.noneDisplay{
+  display:none
 }
 
 .color-nft{
   color:#fad621;
+}
+
+#mediumData{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .index2{
   z-index:2;
@@ -1976,8 +2027,8 @@ a{
   background:black;
   background-position: 0 0;
   background-size: cover;
-  padding-top:180px;
-  padding-bottom:300px;
+  padding-top:0px;
+  padding-bottom:70px;
   color: white;
   background-repeat: no-repeat;
 }
@@ -3319,6 +3370,7 @@ align-items:center;
 }
 .gallus-play2earn-title{
   font-size:36px !important;
+  padding-left:0px !important;
 }
 
 .tokenomic-title{
@@ -3678,7 +3730,7 @@ align-items:center;
   }
 
   .section-common1{
-    margin-top:10px;
+    margin-top:0px;
   }
 
   .btn-1{
@@ -4918,13 +4970,13 @@ ul{
 }
 
 .airdrop-container{
-  height:100vh;
+  height:100%;
   font-size: 24px;
     color: #ffffff;
     font-weight: 700;
-    background: url(../src/images/airdrop.png);
+    background: url(../src/images/bggallus1.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-attachment: fixed;
     flex: 1 1;
     overflow: hidden;
@@ -4934,11 +4986,17 @@ ul{
 }
 
 .airdrop-description{
-  margin-bottom:70px;
-  color:#950000;
+  margin-bottom:110px;
+  
   font-family:'Bungee';
   font-size:52px;
   letter-spacing:2px;
+  color: rgba(255, 0, 0, 0);
+  letter-spacing: 1px;
+  background: rgb(237,0,0);
+  background: linear-gradient( 
+180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
+  -webkit-background-clip: text;
 }
 
 /* BUTTON */
@@ -4954,8 +5012,12 @@ ul{
 
 }
 
+.comingsoon-airdrop{
+  margin-bottom:150px;
+}
+
 .icon-btn-nftSale{
-  height:46px;
+  height:66px;
   position:absolute;
   top:-07px;
   left:-18px;
@@ -4998,7 +5060,7 @@ ul{
   border: 2px solid #0000ff;
     color: #f7F7F7;
     background-color: #0707b4;
-    height:42px;
+    height:52px;
     line-height:1.2;
     display:inline-flex;
     align-items:center;
@@ -5012,7 +5074,7 @@ ul{
     line-height:0;
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:214px;
+    min-width:187px;
     box-sizing:border-box;
     margin-right: 24px;
     text-decoration: none;
@@ -5311,9 +5373,11 @@ ul{
 
 .menu-onglets-item{
   background: ghostwhite;
-  padding:10px 20px;
-  border-radius: 0px 20px 20px 0;
+  padding:0px 10px;
+  border-radius:  0  10px 10px 0px ;
   text-decoration: none;
+  font-size: 20px;
+    font-family: 'Bungee';
 }
 
 .selected-onglets{
@@ -5321,9 +5385,122 @@ ul{
 }
 
 .menu-onglets-item-right{
-  padding:10px 20px;
-  border-radius: 20px 0 0px 20px;
+  padding:0px 10px;
+  border-radius: 10px 0 0px 10px;
   text-decoration: none;
-  color:black
+  color:black;
+  font-size: 20px;
+    font-family: 'Bungee';
   
+}
+
+.sell-btn{
+  background: ghostwhite;
+    padding: 0px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Bungee';
+
+}
+
+.airdrop-item{
+  
+  display:flex;
+  justify-content:space-between;
+  width: 100%;
+  
+}
+
+.box-airdrop{
+  background: rgba(0, 0, 0, 0.603);
+
+  width:30%;
+  
+  padding:30px 20px;
+  display:flex;
+  flex-direction: column;
+  
+  align-items:center;
+  justify-content: space-around;
+  
+}
+
+.airdrop-title{
+  margin-bottom:10px;
+  font-family: Bungee;
+  color: rgba(255, 0, 0, 0);
+  letter-spacing: 1px;
+  background: rgb(237,0,0);
+  background: linear-gradient( 
+180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
+  -webkit-background-clip: text;
+}
+
+.airdrop-img{
+  width:100%;
+  object-fit:cover;
+  height: 100%;
+  
+}
+
+.box-airdrop-right{
+  
+
+  display:flex;
+  justify-content: start;
+  align-items: center;
+  font-size:2rem;
+  font-family: Bungee;
+ 
+}
+
+.airdrop-main-title{
+  color: rgb(228, 228, 228);
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 48, 206, 0.486);
+    font-size: 45px;
+    margin-bottom: 40px;
+    
+}
+
+
+.flexairdrop{
+  display: flex;
+  background: url(../src/images/airdrop.png);
+  background-size: cover;
+  box-shadow: 0 0 10px #ffffff2b;
+}
+
+.airdrop-left{
+  font-size:17px;
+  margin-top:10px;
+  font-family:Ubuntu;
+  letter-spacing: .6px;
+}
+
+.airdrop-right{
+  font-size:18px;
+  margin-top:10px;
+  font-family:Ubuntu;
+  letter-spacing: .6px;
+}
+
+.airdrop-container-btn{
+  background:rgb(133, 133, 133);
+  padding:6px 15px;
+  border-radius:10px;
+  font-size:18px;
+  font-family: Bungee;
+  margin-top:18px;
+  letter-spacing: .6px;
+}
+
+.btn-airdrop{
+  text-decoration: none;
+  color:rgb(192, 192, 192);
+}
+
+.container-btn-airdrop{
+  margin-top:20px
 }

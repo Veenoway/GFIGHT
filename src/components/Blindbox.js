@@ -280,7 +280,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
+                title.innerHTML = "You don't have enough BNB for this transaction"
                 
                 title.classList.add('title-popup-soldout')
 
@@ -299,12 +299,10 @@ const BlindBox = () => {
                 }
 
                
-                alert(error.data.message)
+                
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-                alert(dataMessage)
-                alert(sentence)
 
 
 
@@ -320,6 +318,8 @@ const BlindBox = () => {
         
         // request metamask to access the account
 
+            try {
+
             await window.ethereum.request({ method: "eth_requestAccounts" });
             console.log(window.ethereum.selectedAddress);
 
@@ -334,6 +334,13 @@ const BlindBox = () => {
             SetQuantity(mediumQuantity)
             console.log(quantity)
             console.log(priceMedium.toString())
+
+            }
+
+            catch(error) {
+           
+                SetQuantity('SOLD OUT')
+            }
     }
     
     useEffect(() => {    showMediumQuantity()  }, []);
@@ -369,7 +376,7 @@ const BlindBox = () => {
 }
         catch(error) {
            
-            SetQuantityLargeNft('SOLD OUT')
+            SetQuantitySmallNft('SOLD OUT')
         }
     }
 
@@ -540,7 +547,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
+                title.innerHTML = "You don't have enough BNB for this transaction"
                 
                 title.classList.add('title-popup-soldout')
 
@@ -559,12 +566,11 @@ const BlindBox = () => {
                 }
 
                
-                alert(error.data.message)
+               
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-                alert(dataMessage)
-                alert(sentence)
+              
 
 
 
@@ -761,7 +767,7 @@ const BlindBox = () => {
 
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
-                title.innerHTML = "Sorry you don't have enough BNB..."
+                title.innerHTML = "You don't have enough BNB for this transaction"
                 
                 title.classList.add('title-popup-soldout')
 
@@ -780,12 +786,10 @@ const BlindBox = () => {
                 }
 
                
-                alert(error.data.message)
+               
                 var dataMessage = error.data.message.search("err: insufficient funds for transfer:")
                
 
-                alert(dataMessage)
-                alert(sentence)
 
 
 
@@ -831,7 +835,7 @@ const BlindBox = () => {
                                 <NavLink exact to="/presale" activeClassName="nav-active" className="display">
                                 <i class="fas fa-box-open yellow-icon"></i>
                                 {/* <img src={icon_2} className="webtest" /> */}
-                                Mystery box 
+                                Pre Sale 
                                     <span className="tag">HOT</span>
                                 </NavLink>
                             </li>
@@ -990,19 +994,19 @@ Choose the model you want: Small, Medium or Titan! </p>
             
                
                <div className="container-nft-2">
-               
+                
                     <div className="row card-nft">
                     
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
-                                
-                            <div className="neon-nft-perso"></div>
-                            <video  width="250" className="image-nft-box " id ="videoOfsmall"  autoPlay muted loop>
-                                <source src={VideoSmall} type="video/webm"   autoplay loop/>
-                                <source src={VideoSmall}type="video/mp4" id ="videosmall"onClick={showNft}autoplay loop/>
-                            </video>
-                            <button className="buttons-loot"onClick={showNft}>Random version</button>
-                        <button className="buttons-loot-2"onClick={showNormalNft}>Possible loot</button>
+                                    
+                                <div className="neon-nft-perso"></div>
+                                <video  width="250" className="image-nft-box " id ="videoOfsmall"  autoPlay muted loop>
+                                    <source src={VideoSmall} type="video/webm"   autoplay loop/>
+                                    <source src={VideoSmall}type="video/mp4" id ="videosmall"onClick={showNft}autoplay loop/>
+                                </video>
+                            {/* <button className=""onClick={showNft}>Random version</button>
+                        <button className=""onClick={showNormalNft}>Possible loot</button> */}
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">

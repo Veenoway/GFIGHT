@@ -10,7 +10,8 @@ import GallusFeatherNFT from '../GallusFeatherNFT.json';
 import cotcot from '../images/fight_chicken_2.png';
 import gallusLogo from '../images/logoGallus.png';
 import hamburger from "../images/hamburger.jpg";
-
+import airdrop from "../images/airdrop.png";
+import icon_2 from "../images/Asset_2.png";
 
 const Airdrop = () => {
     var [NftOwned, SetNftOwned] = useState('')
@@ -105,10 +106,16 @@ const Airdrop = () => {
                         </li>
                         <li class="menut-item">
                             <NavLink exact to="/" activeClassName="nav-active" className="display">
-                            <i class="fas fa-box-open yellow-icon"></i>Mystery box
-                                <span className="tag">NEW</span>
+                            <i class="fas fa-box-open yellow-icon"></i>Pre Sale
+                            <span className="tag">HOT</span>
                             </NavLink>
                         </li>
+                        <li class="menut-item ">
+                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display ">
+                                <i class="fas fa-home yellow-icon"></i>Website
+                                <span className="tag">NEW</span>
+                                </NavLink>
+                            </li>
                         
                        
                         <li class="menut-item">
@@ -120,12 +127,7 @@ const Airdrop = () => {
                             
                             </NavLink>
                         </li>
-                        <li class="menut-item ">
-                                <NavLink exact to="/nft-market" activeClassName="nav-active " className="display disabled">
-                                <i class="fas fa-home yellow-icon"></i>Website
-                                    <span className="tagSoon ">Soon..</span>
-                                </NavLink>
-                            </li>
+                        
 
                             
                             <li class="menut-item ">
@@ -227,13 +229,90 @@ const Airdrop = () => {
             <div className="container container-nft">
                 
                 {/* <h1 className="community-title">Official Channel</h1> */}
-                <p className="airdrop-description">Welcome to Gallus Airdrop !</p>
+                <h1 className="airdrop-description">Welcome to Gallus  Airdrop !</h1>
                 {/* <img src={cotcot} alt="gallus cot" className="cotcot" /> */}
-                <div className="centerRow">
-               
+                <div className="box-airdrop-right">
+                        <h2 className="airdrop-main-title">On Going Event</h2>
+                    </div>
+                <div className="flexairdrop">
+
+                    <div className="box-airdrop">
+                        <h3 className="airdrop-title">Gallus Fighter Airdrop</h3>
+                        <div className="airdrop-item">
+                            
+                            <span className="airdrop-left">Total NFT value</span>
+                            <span className="airdrop-right">$50.000</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Maximum</span>
+                            <span className="airdrop-right">TBA</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Max Participants</span>
+                            <span className="airdrop-right">TBA</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Status</span>
+                            <span className="airdrop-right">Coming soon</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Access</span>
+                            <span className="airdrop-right">Community</span>
+                        </div>
+                        
+                            {/* <a className="btn-airdrop">DETAILS</a> */}
+                            <div className="container-btn-airdrop">
+                                    <a  className="btn-border-color-small"  >
+                                    <img src={icon_2} className="icon-btn" />Airdrop</a></div>
+                        
+                    </div>
+                    
             
                 </div>  
             </div>
+          
+                
+                {/* <h1 className="community-title">Official Channel</h1> */}
+                {/* <img src={cotcot} alt="gallus cot" className="cotcot" /> */}
+                <div className="box-airdrop-right">
+                        <h2 className="airdrop-main-title">Event Coming Soon..</h2>
+                    </div>
+                <div className="flexairdrop comingsoon-airdrop">
+
+                    <div className="box-airdrop">
+                        <h3 className="airdrop-title">Gallus Fighter Token Airdrop</h3>
+                        <div className="airdrop-item">
+                            
+                            <span className="airdrop-left">Total NFT value</span>
+                            <span className="airdrop-right">$50.000</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Maximum</span>
+                            <span className="airdrop-right">TBA</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Max Participants</span>
+                            <span className="airdrop-right">TBA</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Status</span>
+                            <span className="airdrop-right">Coming soon</span>
+                        </div>
+                        <div className="airdrop-item">
+                            <span className="airdrop-left">Access</span>
+                            <span className="airdrop-right">Community</span>
+                        </div>
+                        
+                            {/* <a className="btn-airdrop">DETAILS</a> */}
+                            <div className="container-btn-airdrop">
+                                    <a  className="btn-border-color-small"  >
+                                    <img src={icon_2} className="icon-btn" />Airdrop</a></div>
+                        
+                    </div>
+                    
+            
+                </div>  
+          
         </div>
     </div>
 </>

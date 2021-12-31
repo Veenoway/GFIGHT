@@ -64,7 +64,7 @@ import logoGallus from "../images/logoGallus.png";
 import team from "../images/moov.png";
 import mine from "../images/troll.png";
 import mine1 from "../images/mine1.png";
-
+import boite3 from "../images/boite3.png"
 
 
 
@@ -413,24 +413,21 @@ const Home = () => {
 
              <section className="section-common section-presale">
                 <div className="normal-layout">
-                    <h3 className="tokenomic-title">join the <span className="yellowColorText"><span className="bgMooving">presale now !</span></span></h3>
+                    <h3 className="tokenomic-title">Gallus Presale <span className="yellowColorText"><span className="bgMooving">is on !</span></span></h3>
                     <div className="main-tokenomic">
-                        <p className="left-text">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
+                        <p className="left-text-presale">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
 
                         The basis of $GALLUS Tokenomics is the “Henhouse Vault” burning concept. A large portion of the initial token supply will be locked into this specific address and gradually burned over time. In addition, a fair percentage of each transaction fee is automatically sent to the Vault.
                         The Henhouse Vault smart contract will burn $GALLUS each time it reaches pre-determined numbers of token wallet addresses.
                        <br /><br />
-                        <NavLink exact to="/gallus-story" className="btn-border-color-nftSale">
+                        <NavLink exact to="/#presale" className="btn-border-color-nftSale">
                                     <img src={controller} className="icon-btn-nftSale" />
-                                   GALLUS PRE-SALE
+                                   GET YOURS !
                                     
                                 </NavLink>
                         </p>
                        
-                        <video  width="250" className="home-nft-section" autoPlay muted loop>
-                                <source src={VideoLarge} type="video/webm" autoplay loop/>
-                                <source src={VideoLarge}type="video/mp4" autoplay loop/>
-                            </video>
+                       <img src={boite3} className="boite-3"/>
                          </div>
                          <div className="token-image">
 

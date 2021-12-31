@@ -76,9 +76,13 @@ const Cards = (props) => {
    var test = image.id
    var testOne = document.getElementsByClassName('buy')
 
+
+
     return (
 
         <div className="ttt">
+
+        
             
         <div className="nft-item section-item">
                                     <div className="neon"></div>

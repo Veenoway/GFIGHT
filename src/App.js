@@ -13,6 +13,9 @@ import Community from './components/Community';
 import GallusStory from './components/GallusStory';
 import { HashRouter } from 'react-router-dom'
 import Airdrop from './components/Airdrop';
+import Medium from './components/MarketComponent/Medium';
+import Small from './components/MarketComponent/Small';
+import Titan from './components/MarketComponent/Titan';
 
 
 
@@ -36,6 +39,9 @@ function App() {
         {/* <Route exact path="/fse" component={Farms}/> */}
         <Route exact path="/presale" component={BlindBox} />
         <Route exact path="/nft-market" component={NftMarket} />
+        <Route exact path="/nft-market/medium" component={Medium} />
+        <Route exact path="/nft-market/small" component={Small} />
+        <Route exact path="/nft-market/titan" component={Titan} />
       
         
         
