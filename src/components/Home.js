@@ -65,6 +65,10 @@ import team from "../images/moov.png";
 import mine from "../images/troll.png";
 import mine1 from "../images/mine1.png";
 import boite3 from "../images/boite3.png"
+import gallusStory from "../images/gallusStory.png"
+import presale from "../images/presale.png"
+import yours from "../images/yours.png"
+
 
 
 
@@ -347,12 +351,12 @@ const Home = () => {
                             <p className="p-text">Upgrade your GALLUS FIGHTER, train it or use any DeFi services with your NFTs and/or $GALLUS Tokens and take your profits!</p>
                             <div className="btn-1">
                                 <NavLink exact to="/presale" className="btn-border-color-3 ">
-                                <img src={icon_2} className="icon-btn " />
+                                <img src={presale} className="icon-btn " />
                                    NFT PRE-SALE 
                                 
                                 </NavLink>
                                 <NavLink exact to="/gallus-story" className="btn-border-color-3">
-                                    <img src={controller} className="icon-btn" />
+                                    <img src={gallusStory} className="icon-btn" />
                                    GALLUS STORY
                                     
                                 </NavLink>
@@ -421,7 +425,7 @@ const Home = () => {
                         The Henhouse Vault smart contract will burn $GALLUS each time it reaches pre-determined numbers of token wallet addresses.
                        <br /><br />
                         <NavLink exact to="/#presale" className="btn-border-color-nftSale">
-                                    <img src={controller} className="icon-btn-nftSale" />
+                                    <img src={yours} className="icon-btn-nftSale" />
                                    GET YOURS !
                                     
                                 </NavLink>
@@ -514,7 +518,7 @@ const Home = () => {
 
                         Liquidity will be provided through farming pairs on the Gallus Fighter DeFi App, starting with a BNB / GALLUS pool. A Liquidity boost mechanism will fuel the farm pool with tokens upheld from on-chain $GALLUS transactions.<br /> <br />
 
-                        Redstribution, stream of value
+                    
                         </p>
                          <div className="token-image">
                              <img src={tokenomic} alt="tokenomic image " className="eggs"/>

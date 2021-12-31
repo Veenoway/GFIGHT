@@ -25,6 +25,10 @@ import footerMessage from "../images/discord2.png";
 import footerTelegram from "../images/telegram2.png";
 import video1 from "../images/gallus_intro_low_reso.mp4";
 
+import mediumFeatherImg from "../images/mediumfeather.png";
+import smallFeatherImg from "../images/smallfeather.png";
+import largeFeatherImg from "../images/largefeather.png";
+
 import Video from "../images/testfeather.mp4";
 import Video2 from "../images/testfeather1.mp4";
 import Video1 from "../images/testfeather2.mp4";
@@ -1081,7 +1085,7 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="center-button">
                                     
                                 <a  className="btn-border-color-medium" onClick={purshaseMedium} >
-                                    <img src={icon_2} className="icon-btn" />BUY MEDIUM</a>
+                                    <img src={mediumFeatherImg} className="icon-btn" />BUY MEDIUM</a>
                                     <div className="prenium-box-nft">
                                         Medium Edition *
                                     </div>
@@ -1136,7 +1140,7 @@ Take advantage of this unique benefit with the DeFi.
                                 </div>
                                 <div className="center-button">
                                 <a  className="btn-border-color-titan" onClick={purshaseLarge} >
-                                    <img src={icon_2} className="icon-btn" />BUY TITAN</a>
+                                    <img src={largeFeatherImg} className="icon-btn" />BUY TITAN</a>
                                     <div className="prenium-box-nft">
                                         Titan Edition *
                                     </div>
