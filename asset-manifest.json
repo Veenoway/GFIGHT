@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.269257ff.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.d0b2ed14.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.d0b2ed14.chunk.js.map",
+    "main.css": "/GallusFighter.github.io/static/css/main.7bd5afb2.chunk.css",
+    "main.js": "/GallusFighter.github.io/static/js/main.68d8419e.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.68d8419e.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.b62c4f64.chunk.js.map": "/GallusFighter.github.io/static/js/3.b62c4f64.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.269257ff.chunk.css.map": "/GallusFighter.github.io/static/css/main.269257ff.chunk.css.map",
+    "static/css/main.7bd5afb2.chunk.css.map": "/GallusFighter.github.io/static/css/main.7bd5afb2.chunk.css.map",
     "static/js/2.33dedd89.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.33dedd89.chunk.js.LICENSE.txt",
     "static/media/Asset_2.1a3ccaef.png": "/GallusFighter.github.io/static/media/Asset_2.1a3ccaef.png",
     "static/media/Governance.84c1c293.png": "/GallusFighter.github.io/static/media/Governance.84c1c293.png",
@@ -41,6 +41,7 @@
     "static/media/footer-message.fa540838.svg": "/GallusFighter.github.io/static/media/footer-message.fa540838.svg",
     "static/media/footer-telegram.5efb962c.svg": "/GallusFighter.github.io/static/media/footer-telegram.5efb962c.svg",
     "static/media/footer-twitter.89f54112.svg": "/GallusFighter.github.io/static/media/footer-twitter.89f54112.svg",
+    "static/media/gallusStory.67117646.png": "/GallusFighter.github.io/static/media/gallusStory.67117646.png",
     "static/media/gallus_intro_low_reso.af32c110.mp4": "/GallusFighter.github.io/static/media/gallus_intro_low_reso.af32c110.mp4",
     "static/media/gamecontroller.78c3495b.png": "/GallusFighter.github.io/static/media/gamecontroller.78c3495b.png",
     "static/media/halo.c8fa2358.jpg": "/GallusFighter.github.io/static/media/halo.c8fa2358.jpg",
@@ -56,6 +57,7 @@
     "static/media/icon-metaverse2.315218e5.svg": "/GallusFighter.github.io/static/media/icon-metaverse2.315218e5.svg",
     "static/media/icon-metaverse3.df06608f.svg": "/GallusFighter.github.io/static/media/icon-metaverse3.df06608f.svg",
     "static/media/large.34bb249b.mp4": "/GallusFighter.github.io/static/media/large.34bb249b.mp4",
+    "static/media/largefeather.a01577d9.png": "/GallusFighter.github.io/static/media/largefeather.a01577d9.png",
     "static/media/little.0028918e.mp4": "/GallusFighter.github.io/static/media/little.0028918e.mp4",
     "static/media/logo.4a11f490.gif": "/GallusFighter.github.io/static/media/logo.4a11f490.gif",
     "static/media/logo.6ce24c58.svg": "/GallusFighter.github.io/static/media/logo.6ce24c58.svg",
@@ -64,6 +66,7 @@
     "static/media/macron.9937fae4.jpg": "/GallusFighter.github.io/static/media/macron.9937fae4.jpg",
     "static/media/medium.772078ff.mp4": "/GallusFighter.github.io/static/media/medium.772078ff.mp4",
     "static/media/medium2.e52b8ff9.png": "/GallusFighter.github.io/static/media/medium2.e52b8ff9.png",
+    "static/media/mediumfeather.76962390.png": "/GallusFighter.github.io/static/media/mediumfeather.76962390.png",
     "static/media/metamask-1.5d05b8af.png": "/GallusFighter.github.io/static/media/metamask-1.5d05b8af.png",
     "static/media/metamask-2.cfe5d080.png": "/GallusFighter.github.io/static/media/metamask-2.cfe5d080.png",
     "static/media/metamask-3.583e9872.png": "/GallusFighter.github.io/static/media/metamask-3.583e9872.png",
@@ -79,7 +82,9 @@
     "static/media/petit.45fe27dc.gif": "/GallusFighter.github.io/static/media/petit.45fe27dc.gif",
     "static/media/petitePlume.8b745cd1.gif": "/GallusFighter.github.io/static/media/petitePlume.8b745cd1.gif",
     "static/media/prenium.9cd06265.gif": "/GallusFighter.github.io/static/media/prenium.9cd06265.gif",
+    "static/media/presale.596cafef.png": "/GallusFighter.github.io/static/media/presale.596cafef.png",
     "static/media/reward1.91eae694.png": "/GallusFighter.github.io/static/media/reward1.91eae694.png",
+    "static/media/smallfeather.d53d3c5c.png": "/GallusFighter.github.io/static/media/smallfeather.d53d3c5c.png",
     "static/media/space.d6c2ed3d.jpg": "/GallusFighter.github.io/static/media/space.d6c2ed3d.jpg",
     "static/media/stacking.3d8d8e6c.png": "/GallusFighter.github.io/static/media/stacking.3d8d8e6c.png",
     "static/media/story.a3d1ea9a.png": "/GallusFighter.github.io/static/media/story.a3d1ea9a.png",
@@ -97,13 +102,14 @@
     "static/media/veeno.218055bf.jpg": "/GallusFighter.github.io/static/media/veeno.218055bf.jpg",
     "static/media/webton_anglais_001.240f24a4.jpg": "/GallusFighter.github.io/static/media/webton_anglais_001.240f24a4.jpg",
     "static/media/webton_anglais_002.a7f18c00.jpg": "/GallusFighter.github.io/static/media/webton_anglais_002.a7f18c00.jpg",
-    "static/media/webton_anglais_003.3aa6fda6.jpg": "/GallusFighter.github.io/static/media/webton_anglais_003.3aa6fda6.jpg"
+    "static/media/webton_anglais_003.3aa6fda6.jpg": "/GallusFighter.github.io/static/media/webton_anglais_003.3aa6fda6.jpg",
+    "static/media/yours.11a9f6c5.png": "/GallusFighter.github.io/static/media/yours.11a9f6c5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1776477a.js",
     "static/css/2.a75f5a2c.chunk.css",
     "static/js/2.33dedd89.chunk.js",
-    "static/css/main.269257ff.chunk.css",
-    "static/js/main.d0b2ed14.chunk.js"
+    "static/css/main.7bd5afb2.chunk.css",
+    "static/js/main.68d8419e.chunk.js"
   ]
 }
