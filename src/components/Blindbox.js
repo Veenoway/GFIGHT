@@ -966,7 +966,9 @@ const BlindBox = () => {
                             <h3 className="rofi-title-2">THE ROYAL FEATHER<br /> <span className="defight-color">NFT Collection BY</span></h3>
                             <p className="p-text">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</p>
                             <p className="p-text">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
-Choose the model you want: Small, Medium or Titan! </p>
+Choose the model you want: Small, Medium or Titan! <br /><br />
+Each NFT Feather is inside one of 6 beautiful boxes decorated with 6 beautiful stickers and 7 different colored crests that make this collection so rare. 
+Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                             <div className="btn-1">
                                 {/* <a href="https://pancakeswap.finance/swap#/swap?outputCurrency=0x78a499a998bdd5a84cf8b5abe49100d82de12f1c" className="btn-border-color">
                                 <img src={icon_2} className="icon-btn" />
