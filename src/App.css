@@ -1590,6 +1590,8 @@ a{
     font-family: 'bungee', cursive;
 }
 
+
+
 .selected{
   opacity: 1;
 }
@@ -1746,6 +1748,7 @@ a{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 15px;
 }
 
 .contact-a{
@@ -2745,6 +2748,21 @@ a:hover{
   
   
 }
+
+.presale-section-title{
+  font-weight: 700;
+white-space: nowrap;
+margin: 0;
+text-align: center;
+font-family: "bungee",cursive;
+color: rgba(255,0,0,0);
+letter-spacing: 1px;
+background: #ed0000;
+background: linear-gradient(180deg,#ed0000,#edd600 100%,#f8b21a 0);
+    background-clip: border-box;
+-webkit-background-clip: text;
+font-size:48px
+}
 .fa-times-circle{
   color:rgba(223, 223, 223, 0.883);
   font-weight:400;
@@ -3204,6 +3222,9 @@ align-items:center;
   .left-socialMedia{
     justify-content:center
   }
+  .section-common1{
+    padding-top:0px;
+  }
   .gallus-logo{
     width:100% !important;
     margin-top:50px;
@@ -3221,12 +3242,29 @@ align-items:center;
   .image-container{
     width:100% !important
   }
+  .tokenomic-title{
+    font-size:32px !important
+  }
+
+  .section-common1{
+    width: 100%;
+  }
+  .presale-section-title{
+    font-size:25px !important;
+    text-align: center !important;
+  }
+}
+
+.presale-section-title{
+  font-size:72px;
 }
 
 @media (min-width: 990px) and (max-width: 1200px) {
   .name-socialMedia{
     margin-left:5px !important;
   }
+
+  
   .logo-socialMedia{
     margin-left: -3px !important;
   }
@@ -3235,6 +3273,10 @@ align-items:center;
     width: 100%;
     justify-content: center;
     
+  }
+
+  .boite-3{
+    height: 320px;
   }
   .right-home{
     /* position:initial;
@@ -3250,7 +3292,7 @@ align-items:center;
   }
 
   .section-common1{
-    margin-top:80px;
+    margin-top:0px;
   }
 }
 
@@ -3276,6 +3318,9 @@ align-items:center;
     margin-right:10px;
     margin-top:-50px;
     margin-top: -50px;
+  }
+  .presale-section-title{
+    font-size:48px;
   }
 
   .background-teamMooving{
@@ -3336,8 +3381,16 @@ align-items:center;
     width:425px;
     top:268px;
   }
+  .boite-3{
+    height: 320px;
+  }
 }
 @media screen and (max-width:575px) {
+
+  .presale-section-title{
+    font-size:25px !important;
+    text-align: center !important;
+  }
 .flex-socialMedia{
   justify-content:center;
   padding-left:10px !important;
@@ -3374,7 +3427,7 @@ align-items:center;
 }
 
 .tokenomic-title{
-  font-size:36px ;
+  font-size:32px ;
 }
 .secondTitle-nft-main{
   margin-bottom:40px;
@@ -3546,10 +3599,42 @@ align-items:center;
 
 @media screen and (max-width: 960px) {
 
+  .boite-3{
+    height: auto;
+width: 100%;
+  }
+
+  .presale-section-title{
+    font-weight: 700;
+  white-space: nowrap;
+  margin: 0;
+  text-align: center;
+  font-family: "bungee",cursive;
+  color: rgba(255,0,0,0);
+  letter-spacing: 1px;
+  background: #ed0000;
+  background: linear-gradient(180deg,#ed0000,#edd600 100%,#f8b21a 0);
+      background-clip: border-box;
+  -webkit-background-clip: text;
+  font-size:38px
+  }
+
+  .heightMain{
+    width: 100%;
+  }
+
+  .btn-border-color-3:hover{
+    margin-top:20px;
+  }
+  .btn-border-color-3{
+    margin-top:20px;
+  }
+
   .normal-layout{
     font-size:32px;
     width:100%;
     padding: 0px 15px;
+    padding:0px;
   }
 
   .rofi-title-2{
@@ -4209,11 +4294,12 @@ align-items:center;
 
 .image-play2earn{
   /* border-radius: 50%; */
-  height:100%
+  height: auto;
+width: 100%;
 }
 
 .play2earn-margin{
-  margin-top:100px !important;
+  
   align-items: center;
 }
 
@@ -5077,6 +5163,7 @@ ul{
     min-width:187px;
     box-sizing:border-box;
     margin-right: 24px;
+    margin-top:20px;
     text-decoration: none;
     font-family: 'bungee', cursive;
     position:relative;
