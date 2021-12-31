@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.fd648446.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.702891c3.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.702891c3.chunk.js.map",
+    "main.css": "/GallusFighter.github.io/static/css/main.269257ff.chunk.css",
+    "main.js": "/GallusFighter.github.io/static/js/main.d0b2ed14.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.d0b2ed14.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.1ed38b29.chunk.js": "/GallusFighter.github.io/static/js/2.1ed38b29.chunk.js",
-    "static/js/2.1ed38b29.chunk.js.map": "/GallusFighter.github.io/static/js/2.1ed38b29.chunk.js.map",
+    "static/js/2.33dedd89.chunk.js": "/GallusFighter.github.io/static/js/2.33dedd89.chunk.js",
+    "static/js/2.33dedd89.chunk.js.map": "/GallusFighter.github.io/static/js/2.33dedd89.chunk.js.map",
     "static/js/3.b62c4f64.chunk.js": "/GallusFighter.github.io/static/js/3.b62c4f64.chunk.js",
     "static/js/3.b62c4f64.chunk.js.map": "/GallusFighter.github.io/static/js/3.b62c4f64.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.fd648446.chunk.css.map": "/GallusFighter.github.io/static/css/main.fd648446.chunk.css.map",
-    "static/js/2.1ed38b29.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.1ed38b29.chunk.js.LICENSE.txt",
+    "static/css/main.269257ff.chunk.css.map": "/GallusFighter.github.io/static/css/main.269257ff.chunk.css.map",
+    "static/js/2.33dedd89.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.33dedd89.chunk.js.LICENSE.txt",
     "static/media/Asset_2.1a3ccaef.png": "/GallusFighter.github.io/static/media/Asset_2.1a3ccaef.png",
     "static/media/Governance.84c1c293.png": "/GallusFighter.github.io/static/media/Governance.84c1c293.png",
     "static/media/GrandePlume.7e2b31c1.gif": "/GallusFighter.github.io/static/media/GrandePlume.7e2b31c1.gif",
@@ -22,6 +22,7 @@
     "static/media/bg-nft.82ebd3b5.jpg": "/GallusFighter.github.io/static/media/bg-nft.82ebd3b5.jpg",
     "static/media/binanceNFT.06b56103.png": "/GallusFighter.github.io/static/media/binanceNFT.06b56103.png",
     "static/media/bios.2363bc88.jpg": "/GallusFighter.github.io/static/media/bios.2363bc88.jpg",
+    "static/media/boite3.ccd4ada4.png": "/GallusFighter.github.io/static/media/boite3.ccd4ada4.png",
     "static/media/bsc.92643887.png": "/GallusFighter.github.io/static/media/bsc.92643887.png",
     "static/media/coingecko.04501aa6.png": "/GallusFighter.github.io/static/media/coingecko.04501aa6.png",
     "static/media/coinmarketcap.9f6670f5.png": "/GallusFighter.github.io/static/media/coinmarketcap.9f6670f5.png",
@@ -101,8 +102,8 @@
   "entrypoints": [
     "static/js/runtime-main.1776477a.js",
     "static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.1ed38b29.chunk.js",
-    "static/css/main.fd648446.chunk.css",
-    "static/js/main.702891c3.chunk.js"
+    "static/js/2.33dedd89.chunk.js",
+    "static/css/main.269257ff.chunk.css",
+    "static/js/main.d0b2ed14.chunk.js"
   ]
 }
