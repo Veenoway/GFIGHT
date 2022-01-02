@@ -1708,6 +1708,7 @@ a{
     color: white;
     line-height: 1.4;
     padding: 0px 119px 0px 0px;
+    font-family:'Sen'
 }
 
 .btn-1{
@@ -1956,7 +1957,7 @@ a{
   background: linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(0 75 163) 25%,rgb(255, 0, 0) 80%, rgb(0 72 215 / 88%) 100%) 0% 0% / 300% 300%
 }
 .neon-nft-perso{
-  filter: blur(1px);
+  filter: blur(5px);
   border-radius:30px !important;
   position: absolute;
   top: -5px;
@@ -2034,6 +2035,7 @@ a{
   padding-bottom:70px;
   color: white;
   background-repeat: no-repeat;
+  width: 100%;
 }
 .section-31{
   /* background-image: url("../src/images/background-3.svg"); */
@@ -3385,7 +3387,49 @@ align-items:center;
     height: 320px;
   }
 }
+
+.position{
+  display:flex;
+  
+}
 @media screen and (max-width:575px) {
+
+  .icon-btn{
+    height:58px !important;
+
+  }
+
+  .heightMain{
+    padding-bottom:135px !important;
+  }
+
+  .gallus-team-container{
+    padding-bottom:27px !important;
+  }
+
+  .container-play2earn{
+    margin-bottom: 54px !important;
+  }
+
+  .btn-border-color-titan{
+    height:45px !important;
+    letter-spacing:1px;
+    font-weight:300;
+    font-size:17px
+  }
+  .btn-border-color-small{
+    height:45px !important;
+    letter-spacing:1px;
+    font-weight:300;
+    font-size:17px
+  }
+
+  .btn-border-color-medium{
+    height:45px !important;
+    letter-spacing:1px;
+    font-weight:300;
+    font-size:17px
+  }
 
   .presale-section-title{
     font-size:25px !important;
@@ -3457,6 +3501,8 @@ align-items:center;
 
 .p-text{
   padding:0px;
+  font-size:.6em;
+  font-family:'Sen'
 }
 
 .right-home{
@@ -3481,7 +3527,7 @@ align-items:center;
     color:#f7F7F7;
     font-weight:400;
     margin-top:20px;
-    font-size:22px;
+    font-size:.6em;
     font-family: 'Sen';
     padding:10px;
     
@@ -3508,7 +3554,7 @@ align-items:center;
   }
 
   .tokenomic-title{
-    font-size:25px;
+    font-size:24px !important;
   }
 
   .title-Nft-desc{
@@ -3547,7 +3593,11 @@ align-items:center;
 
   }
   .play2earn-image-left{
-    transform:rotate(0deg) !important
+    transform:rotate(0deg) !important;
+    
+      left: 0px;
+      /* border:2px solid rgba(194, 194, 194, 0.63); */
+    
   }
 
   .normal-layout{
@@ -3597,13 +3647,69 @@ align-items:center;
   }
 }
 
+
+
+
+
+@media (min-width: 961px) { 
+
+  .text-description-nft{
+    font-size:.8em !important
+  }
+
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 960px) {
 
   .boite-3{
     height: auto;
 width: 100%;
   }
+  .neon-nft-perso{
+    top:-4px;
+    bottom:7.5px;
+  }
 
+  .section-5-title
+
+  .position{
+    justify-content: end !important;
+  }
+  
+
+  .bsc{
+    justify-content: space-between;
+    padding-right:20px;
+  }
+
+  .bsc-price-chiffre{
+    font-size:0.6em !important;
+  }
+  .bsc-price-chiffre1{
+    font-size:0.6em !important;
+  }
+
+  .bsc-price-text{
+    font-family: 'Sen';
+  letter-spacing: -0.6px;
+  font-size:.6em !important;
+  font-weight:400 !important;
+  letter-spacing:-0.4px !important;
+  text-align: start;
+
+  }
+
+  .text-description-nft{
+    
+  }
   .presale-section-title{
     font-weight: 700;
   white-space: nowrap;
@@ -3662,7 +3768,7 @@ width: 100%;
   }
 
   .rofi-title{
-    font-size:52px ;
+    font-size:1.3em ;
     text-align: start ;
   }
   border-wi
@@ -3940,7 +4046,11 @@ width: 100%;
 }
 .image-container{
   position:relative;
-  max-width:540px;
+  max-width:450px;
+}
+
+.width100{
+  width:100%
 }
 
 .padding-nft-2{
@@ -4103,6 +4213,7 @@ width: 100%;
   flex-direction:column;
   padding-left:20px;
   
+  
 }
 
 .text-boxNft{
@@ -4129,6 +4240,11 @@ width: 100%;
 .title-nft-secondColor{
   color:#fad621
 }
+
+p{
+  font-family: 'Sen';
+  letter-spacing: -0.6px;
+}
 .title-Nft-bot{
   text-align: center;
   font-size:32px;
@@ -4138,10 +4254,11 @@ width: 100%;
 .text-description-nft{
   text-align: start;
   color:#f7F7F7;
-  font-weight:400;
+  font-weight:300;
   margin-top:20px;
-  font-size:22px;
+  font-size: .6em;
   font-family: 'Sen';
+  letter-spacing: -0.6px;
   
 }
 .image-nft-test{
@@ -4478,24 +4595,24 @@ width: 100%;
 .bsc-price-text{
   
   margin-bottom:0px !important;
-  font-size: 22px;
-  font-family:Sen;
-  letter-spacing: 1px;
+  font-size: .85em;
+  font-family:Ubuntu;
+  letter-spacing: -0.5px;
   color:#f7F7F7;
- 
+  font-weight: 400;
 }
 
 .bsc-price-chiffre{
   margin-left:10px;
   margin-bottom:0px;
-  font-size: 22px;
-  font-family:Sen;
+  font-size: .8em;
+  font-family:Ubuntu;
   color:#f7F7F7
 }
 .bsc-price-chiffre1{
-  
+  margin-left:10px;
   margin-bottom:0px;
-  font-size: 22px;
+  font-size: .8em;
   font-family:Sen;
   color:#f7F7F7;
   text-align: start;

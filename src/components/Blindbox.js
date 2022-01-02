@@ -1016,7 +1016,7 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
                             </div>
                         </div>
                         <div className="col-lg-6 flexBox-nft">
-                            <div className="detail-container">
+                            <div className="detail-container width100">
                                 <h1 className="title-Nft-desc">sickle feather - <span className="title-nft-secondColor"><br />small </span></h1>
                                 <div className="liseret-nft"></div>
                                 <p className="text-description-nft">This fine feather will allow you to get a Premium reward in our universe of Play2Earn and in this way increase your capital in $GALLUS token.
@@ -1024,7 +1024,7 @@ Take advantage of this unique benefit with the DeFi
                                 </p>   
                                 <div className="bsc row">
                                 <div className="bsc-price-text  CentPourcent col-sm-12 col-md-2">Premium Reward : </div>
-                                <div className="col-sm-12 col-md-6 CentPourcent2">   
+                                <div className="col-sm-12 col-md-6 CentPourcent2 position">   
                                 
                                 {/* <img src={exemple1} alt="" className="image-nft-box" /> */}
                                 <img src={gallus} className="bsc-price" />
@@ -1032,9 +1032,9 @@ Take advantage of this unique benefit with the DeFi
                                 </div>
                                 </div> 
                                 <div className="bsc">
-                                    <p className="bsc-price-text">Quantity : </p>
+                                    <div className="left-t"><p className="bsc-price-text">Quantity : </p></div>
                                    
-                                    <p className="bsc-price-chiffre">{quantitySmallNft}</p>
+                                    <div className="left-t"><p className="bsc-price-chiffre">{quantitySmallNft}</p></div>
                                 </div>     
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
@@ -1123,9 +1123,9 @@ Take advantage of this unique benefit with the DeFi.
                                     Take advantage of this unique benefit with the DeFi.
                                 </p>
                                 <div className="bsc row">
-                                <div className="bsc-price-text  CentPourcent4 col-sm-12 col-md-6">Crazy Reward : <img src={gallus} className="bsc-price" /></div>
+                                <div className="bsc-price-text  CentPourcent4 col-sm-12 col-md-6">Crazy Reward : </div>
                                     <div className="CentPourcent1 col-sm-12 col-md-12">
-                                        
+                                        <img src={gallus} className="bsc-price" />
                                         <p className="bsc-price-chiffre1">$GALLUS Tokens + VIP Access with Gallus Team</p>
                                     </div>
                                 </div> 
@@ -1137,6 +1137,7 @@ Take advantage of this unique benefit with the DeFi.
                                 </div> 
                                 <div className="bsc">
                                     <p className="bsc-price-text">Price : </p>
+                                    
                                     <img src={bsc} className="bsc-price" />
                                     <p className="bsc-price-chiffre">2,95 BNB</p>
                                 </div>
