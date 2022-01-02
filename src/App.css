@@ -743,7 +743,8 @@ align-items:center;
 }
 
 .boite-3{
-height:410px;
+height:330px;
+margin-top: -140px;
 }
 
 .left-text-presale{
@@ -2020,8 +2021,8 @@ a{
     background:black;
     background-position: 0 0;
     background-size: cover;
-    padding-top:180px;
-    padding-bottom:120px;
+    padding-top:100px;
+    padding-bottom:50px;
     color: white;
     background-repeat: no-repeat;
     
@@ -2874,9 +2875,16 @@ font-size:48px
 }
 
 .eggs{
-  height:550px ;
+  height: 420px;
+    margin-top: -60px;
+    margin-right: 147px;
 }
-
+.eggs2{
+ 
+  height: 500px;
+  margin-right: 40px;
+  margin-top:0px
+}
 .menu-icon{
   
     width: 48px;
@@ -3222,6 +3230,15 @@ align-items:center;
     display:none
   }
 
+  .eggs2{
+    height: auto;
+    width: 100%;
+    margin-right: 1px;
+    margin-top: 0px;
+  }
+  .margeTop{
+    margin-top:0px !important;
+  }
   .contact{
     margin-top:30px;
     margin-left:0px;
@@ -3284,6 +3301,7 @@ align-items:center;
 
   .boite-3{
     height: 320px;
+    margin-top: -80px;
   }
   .right-home{
     /* position:initial;
@@ -3326,6 +3344,11 @@ align-items:center;
     margin-top:-50px;
     margin-top: -50px;
   }
+  .eggs{
+    height: 370px;
+    margin-top: -116px;
+    margin-right: 71px;
+  }
   .presale-section-title{
     font-size:48px;
     margin-left: 3%;
@@ -3336,9 +3359,7 @@ align-items:center;
     margin-bottom:80px;
   }
 
-  .eggs{
-    height:460px;
-  }
+  
   .gallus-play2earn-title{
     font-size:52px !important;
     padding-left:35px;
@@ -3622,7 +3643,7 @@ align-items:center;
     
   }
   .last-detail-container{
-    margin-bottom: 150px;
+    margin-bottom: 90px;
   }
   .community-description{
     font-size:28px !important;
@@ -3652,6 +3673,7 @@ align-items:center;
   .eggs{
     width:100%;
     height:auto !important;
+    max-width: 234px;
   }
 
   .box-3 {
@@ -3678,7 +3700,7 @@ align-items:center;
   }
   .CentPourcent{
     display:flex;
-    width:100% !important;
+    width:auto !important;
     margin-bottom:10px;
 
   }
@@ -3717,6 +3739,7 @@ align-items:center;
   .boite-3{
     height: auto;
 width: 100%;
+margin-top: 0px;
   }
   .neon-nft-perso{
     top:-4px;
@@ -3919,7 +3942,9 @@ width: 100%;
   }
 
   .eggs{
-    height:300px;
+    height: 300px;
+    margin-top: -31px;
+    margin-right: 0px;
   }
 
   .section-4-flex{
@@ -3937,8 +3962,8 @@ width: 100%;
   }
 
   .section-3{
-    padding-top:100px;
-    padding-bottom:80px;
+    padding-top:50px;
+    padding-bottom:0px;
   }
   .faq-list{
     padding: 10px;
@@ -5328,7 +5353,7 @@ ul{
     min-width:187px;
     box-sizing:border-box;
     margin-right: 24px;
-    margin-top:20px;
+    margin-top:0px;
     text-decoration: none;
     font-family: 'bungee', cursive;
     position:relative;

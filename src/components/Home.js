@@ -67,7 +67,8 @@ import mine1 from "../images/mine1.png";
 import boite3 from "../images/boite3.png"
 import gallusStory from "../images/gallusStory.png"
 import presale from "../images/presale.png"
-import yours from "../images/yours.png"
+import yours from "../images/yours.png";
+import status from "../images/STATUE.png"
 
 
 
@@ -419,10 +420,10 @@ const Home = () => {
                 <div className="normal-layout">
                     <h3 className="presale-section-title">Gallus Presale <span className="yellowColorText"><span className="bgMooving"></span></span></h3>
                     <div className="main-tokenomic">
-                        <p className="left-text-presale">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
-
-                        The basis of $GALLUS Tokenomics is the “Henhouse Vault” burning concept. A large portion of the initial token supply will be locked into this specific address and gradually burned over time. In addition, a fair percentage of each transaction fee is automatically sent to the Vault.
-                        The Henhouse Vault smart contract will burn $GALLUS each time it reaches pre-determined numbers of token wallet addresses.
+                        <p className="left-text-presale">NFT feathers are the first ever collection of rare digital collectibles that will reveal their DeFight powers in the Gallus Fighter App. 
+They will be revealed at the end of the Pre-Sale that will take place very soon !
+Holding these unique pieces will allow you to obtain future rewards. 
+Be one of the first to acquire this one and Join the Action !
                        <br /><br />
                         <NavLink exact to="/#presale" className="btn-border-color-nftSale">
                                     <img src={yours} className="icon-btn-nftSale" />
@@ -521,7 +522,7 @@ const Home = () => {
                     
                         </p>
                          <div className="token-image">
-                             <img src={tokenomic} alt="tokenomic image " className="eggs"/>
+                             <img src={tokenomic} alt="tokenomic image " className="eggs2"/>
                          </div>
                     </div>
                 </div>
@@ -667,7 +668,7 @@ const Home = () => {
                         
 <p className="left-text">Get ready to bring  your metaverse to real life! You can own real collectible Gallus figurine and other Gallus goodies in limited edition to materialise your memorable victory . More events are coming to make you truly enjoy a fun community life !</p>
                          <div className="token-image">
-                             <img src={figurine} alt="tokenomic image " className="eggs"/>
+                             <img src={status} alt="tokenomic image " className="eggs"/>
                          </div>
                     </div>
                 </div>
