@@ -417,7 +417,7 @@ const Home = () => {
 
              <section className="section-common section-presale">
                 <div className="normal-layout">
-                    <h3 className="presale-section-title">Gallus Presale <br/><span className="yellowColorText"><span className="bgMooving">is on !</span></span></h3>
+                    <h3 className="presale-section-title">Gallus Presale <span className="yellowColorText"><span className="bgMooving"></span></span></h3>
                     <div className="main-tokenomic">
                         <p className="left-text-presale">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
 

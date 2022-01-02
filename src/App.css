@@ -743,7 +743,7 @@ align-items:center;
 }
 
 .boite-3{
-height:457px;
+height:410px;
 }
 
 .left-text-presale{
@@ -753,7 +753,7 @@ height:457px;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-top: 24px;
+    margin-top: 31px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
@@ -2755,7 +2755,7 @@ a:hover{
   font-weight: 700;
 white-space: nowrap;
 margin: 0;
-text-align: center;
+text-align: start;
 font-family: "bungee",cursive;
 color: rgba(255,0,0,0);
 letter-spacing: 1px;
@@ -3323,6 +3323,7 @@ align-items:center;
   }
   .presale-section-title{
     font-size:48px;
+    margin-left: 3%;
   }
 
   .background-teamMooving{
@@ -3404,7 +3405,7 @@ align-items:center;
   }
 
   .gallus-team-container{
-    padding-bottom:27px !important;
+    padding-bottom:27px .presale-section-title;
   }
 
   .container-play2earn{
@@ -3714,7 +3715,7 @@ width: 100%;
     font-weight: 700;
   white-space: nowrap;
   margin: 0;
-  text-align: center;
+  text-align: start;
   font-family: "bungee",cursive;
   color: rgba(255,0,0,0);
   letter-spacing: 1px;
