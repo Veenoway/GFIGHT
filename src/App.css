@@ -3108,7 +3108,8 @@ align-items:center;
   }
 
   .center-button{
-    justify-content:center
+    justify-content:center;
+    margin-top:35px;
   }
 
   .container-nft-2{
@@ -3429,6 +3430,14 @@ align-items:center;
 
   }
 
+  .prenium-box-nft2{
+    justify-content: center !important;
+  }
+
+  .title-countdown{
+    margin-top:20px
+  }
+
   .btn-border-color-3{
     height:45px !important;
     min-width:198px !important;
@@ -3722,6 +3731,10 @@ align-items:center;
 
   .text-description-nft{
     font-size:.8em !important
+  }
+
+  .metaverse-title{
+    margin-top:216px
   }
 
 }
@@ -5780,4 +5793,54 @@ ul{
 
 .container-btn-airdrop{
   margin-top:20px
+}
+
+.countdown{
+  display: flex;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    background:linear-gradient( 
+      180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
+    justify-content: center;
+    margin-right: 10px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 4px 10px;
+    color:white;
+    font-family:Sen;
+    box-shadow:0 0 6px #d0d0d090;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.prenium-box-nft{
+  justify-content: center;
+  display:flex;
+  align-items: center;
+}
+
+.prenium-box-nft2{
+  justify-content: space-between;
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  width: 100%;
+}
+
+
+.flexCount{
+  display:flex;
+}
+
+.title-countdown{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.countdown-start{
+  font-size:1.25em;
+  font-family:Sen;
+
 }

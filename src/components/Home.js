@@ -298,6 +298,36 @@ const Home = () => {
         
     }
 
+    function getChrono() {
+
+    
+        const now = new Date().getTime();
+        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
+
+        const distanceBase = countDownDate - now ;
+        const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
+        const seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
+        console.log(days, hours, minutes,seconds)
+        var countdownDays = document.getElementById('countdownDays');
+        var countdownHours = document.getElementById('countdownHours');
+        var countdownMinutes = document.getElementById('countdownMinutes');
+        var countdownSeconds = document.getElementById('countdownSeconds');
+        countdownDays.innerHTML = `${days}D`;
+        countdownHours.innerHTML = `${hours}H`;
+        countdownMinutes.innerHTML = `${minutes}M`;
+        countdownSeconds.innerHTML = `${seconds}S`;
+
+    }
+
+    
+
+    const countDownInterval = setInterval(() => {
+        getChrono()
+    }, 1000)
+
+    
   
         
     
@@ -424,12 +454,30 @@ const Home = () => {
 They will be revealed at the end of the Pre-Sale that will take place very soon !
 Holding these unique pieces will allow you to obtain future rewards. 
 Be one of the first to acquire this one and Join the Action !
-                       <br /><br />
+                       <br /><br /><div className="prenium-box-nft2" >
                         <NavLink exact to="/#presale" className="btn-border-color-nftSale">
                                     <img src={yours} className="icon-btn-nftSale" />
                                    GET YOURS !
                                     
                                 </NavLink>
+                                <div className="title-countdown">
+                                <h4 className="countdown-start">Presale Start in :</h4>
+                                        <div className="flexCount">
+                                            <div className="countdown" id="countdownDays">
+                                            
+                                            </div>
+                                            <div className="countdown" id="countdownHours">
+                                                
+                                            </div>
+                                            <div className="countdown" id="countdownMinutes">
+                                                
+                                            </div>
+                                            <div className="countdown" id="countdownSeconds">
+                                                
+                                            </div>
+                                       </div> 
+                                    </div>
+                                    </div>
                         </p>
                        
                        <img src={boite3} className="boite-3"/>
@@ -438,6 +486,7 @@ Be one of the first to acquire this one and Join the Action !
 
                          
                     </div>
+                    
                 </div>
             </section>
 

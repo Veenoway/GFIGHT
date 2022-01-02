@@ -814,7 +814,53 @@ const BlindBox = () => {
                     }
     
                     
+    function getChrono() {
+
     
+        const now = new Date().getTime();
+        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
+
+        const distanceBase = countDownDate - now ;
+        const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
+        const seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
+        console.log(days, hours, minutes,seconds)
+        var countdownDays = document.getElementById('countdownDays');
+        var countdownHours = document.getElementById('countdownHours');
+        var countdownMinutes = document.getElementById('countdownMinutes');
+        var countdownSeconds = document.getElementById('countdownSeconds');
+        countdownDays.innerHTML = `${days}D`;
+        countdownHours.innerHTML = `${hours}H`;
+        countdownMinutes.innerHTML = `${minutes}M`;
+        countdownSeconds.innerHTML = `${seconds}S`;
+
+        var countdownDays2 = document.getElementById('countdownDays2');
+        var countdownHours2 = document.getElementById('countdownHours2');
+        var countdownMinutes2 = document.getElementById('countdownMinutes2');
+        var countdownSeconds2 = document.getElementById('countdownSeconds2');
+        countdownDays2.innerHTML = `${days}D`;
+        countdownHours2.innerHTML = `${hours}H`;
+        countdownMinutes2.innerHTML = `${minutes}M`;
+        countdownSeconds2.innerHTML = `${seconds}S`;
+
+        var countdownDays3 = document.getElementById('countdownDays3');
+        var countdownHours3 = document.getElementById('countdownHours3');
+        var countdownMinutes3 = document.getElementById('countdownMinutes3');
+        var countdownSeconds3 = document.getElementById('countdownSeconds3');
+        countdownDays3.innerHTML = `${days}D`;
+        countdownHours3.innerHTML = `${hours}H`;
+        countdownMinutes3.innerHTML = `${minutes}M`;
+        countdownSeconds3.innerHTML = `${seconds}S`;
+
+    }
+
+    
+
+    const countDownInterval = setInterval(() => {
+        getChrono()
+    }, 1000)
+
 
     return (
         <div id="contain">
@@ -1051,8 +1097,20 @@ Take advantage of this unique benefit with the DeFi
                                     <a  className="btn-border-color-small" onClick={purshaseSmall} >
                                     <img src={icon_2} className="icon-btn" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
-                                    <div className="prenium-box-nft">
-                                        Small Edition *
+                                    <div className="prenium-box-nft" >
+                                        <div className="countdown" id="countdownDays">
+                                           
+                                        </div>
+                                        <div className="countdown" id="countdownHours">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownMinutes">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownSeconds">
+                                            
+                                        </div>
+                                        
                                     </div>
 
                                 </div>
@@ -1096,8 +1154,20 @@ Take advantage of this unique benefit with the DeFi.
                                     
                                 <a  className="btn-border-color-medium" onClick={purshaseMedium} >
                                     <img src={mediumFeatherImg} className="icon-btn" />BUY MEDIUM</a>
-                                    <div className="prenium-box-nft">
-                                        Medium Edition *
+                                    <div className="prenium-box-nft" >
+                                        <div className="countdown" id="countdownDays3">
+                                           
+                                        </div>
+                                        <div className="countdown" id="countdownHours3">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownMinutes3">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownSeconds3">
+                                            
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 
@@ -1158,8 +1228,20 @@ Take advantage of this unique benefit with the DeFi.
                                     
                                 <a  className="btn-border-color-titan" onClick={purshaseLarge} >
                                     <img src={largeFeatherImg} className="icon-btn" />BUY TITAN</a>
-                                    <div className="prenium-box-nft">
-                                        Titan Edition *
+                                    <div className="prenium-box-nft" >
+                                        <div className="countdown" id="countdownDays2">
+                                           
+                                        </div>
+                                        <div className="countdown" id="countdownHours2">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownMinutes2">
+                                            
+                                        </div>
+                                        <div className="countdown" id="countdownSeconds2">
+                                            
+                                        </div>
+                                        
                                     </div>
 
                                 </div>
