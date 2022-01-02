@@ -1037,9 +1037,13 @@ Take advantage of this unique benefit with the DeFi
                                     <div className="left-t"><p className="bsc-price-chiffre">{quantitySmallNft}</p></div>
                                 </div>     
                                 <div className="bsc">
-                                    <p className="bsc-price-text">Price : </p>
-                                    <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">0,33 BNB</p>
+                                    <div className="left-container-resp">
+                                        <p className="bsc-price-text">Price : </p>
+                                    </div>
+                                    <div className="right-container-resp">
+                                        <img src={bsc} className="bsc-price" />
+                                        <p className="bsc-price-chiffre">0,33 BNB</p>
+                                    </div>
                                 </div>
                                 
                                 <div className="center-button">
@@ -1056,7 +1060,7 @@ Take advantage of this unique benefit with the DeFi
                             </div></div>
                         </div>
                     </div>
-                    <div className="row play2earn-margin reverseRow card-nft">
+                    <div className="row play2earn-margin reverseRow card-nft ">
                         
                         <div className="col-lg-6 flexBox-nft">
                             <div className="detail-container ">
@@ -1066,7 +1070,7 @@ Take advantage of this unique benefit with the DeFi
 Take advantage of this unique benefit with the DeFi.
 </p>
 <div className="bsc row">
-                                    <div className="bsc-price-text  CentPourcent3 col-sm-12 col-md-6">High Reward : </div>
+                                    <div className="bsc-price-text  CentPourcent col-sm-12 col-md-6">High Reward : </div>
                                     <div className="CentPourcent2 col-sm-12 col-md-6">
                                         <img src={gallus} className="bsc-price" />
                                         <p className="bsc-price-chiffre">$GALLUS Tokens</p>
@@ -1078,11 +1082,15 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">{quantity}</p>
                                 </div> 
                                 <div className="bsc">
-                                    
-                                    <p className="bsc-price-text">Price : </p>
-                                    <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">1,15 BNB</p>
+                                    <div className="left-container-resp">
+                                        <p className="bsc-price-text">Price : </p>
+                                    </div>
+                                    <div className="right-container-resp">
+                                        <img src={bsc} className="bsc-price" />
+                                        <p className="bsc-price-chiffre">1.15 BNB</p>
+                                    </div>
                                 </div>
+                                
                                 
                                 <div className="center-button">
                                     
@@ -1105,7 +1113,7 @@ Take advantage of this unique benefit with the DeFi.
                             </div>
                         </div>
                     </div>
-                    <div className="row play2earn-margin card-nft">
+                    <div className="row play2earn-margin card-nft titan-margin">
                         <div className="col-lg-6 flex-container">
                             <div className="image-container ">
                             <div className="neon-nft-perso"></div>
@@ -1136,12 +1144,18 @@ Take advantage of this unique benefit with the DeFi.
                                     <p className="bsc-price-chiffre">{quantityLargeNft}</p>
                                 </div> 
                                 <div className="bsc">
-                                    <p className="bsc-price-text">Price : </p>
-                                    
-                                    <img src={bsc} className="bsc-price" />
-                                    <p className="bsc-price-chiffre">2,95 BNB</p>
+                                    <div className="left-container-resp">
+                                        <p className="bsc-price-text">Price : </p>
+                                    </div>
+                                    <div className="right-container-resp">
+                                        <img src={bsc} className="bsc-price" />
+                                        <p className="bsc-price-chiffre">2.95 BNB</p>
+                                    </div>
                                 </div>
+
+                                
                                 <div className="center-button">
+                                    
                                 <a  className="btn-border-color-titan" onClick={purshaseLarge} >
                                     <img src={largeFeatherImg} className="icon-btn" />BUY TITAN</a>
                                     <div className="prenium-box-nft">
@@ -1176,7 +1190,7 @@ Take advantage of this unique benefit with the DeFi.
            <div className="normal-layout">
                   <div className="footer-copyright">
                         
-                     Copyright© 2021 Gallus Fighter - All rights reserved.
+                     Copyright© 2022 Gallus Fighter - All rights reserved.
       
                   </div>
               </div>

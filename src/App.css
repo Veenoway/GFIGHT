@@ -2968,12 +2968,12 @@ align-items:center;
 }
 .CentPourcent{
   display:flex;
-  width:41% !important;
+  width:auto !important;
   align-items: center;
 }
 .CentPourcent2{
   display:flex;
-  width:57% !important;
+  width:auto !important;
   align-items: center;
   
 }
@@ -3076,7 +3076,12 @@ align-items:center;
 
 }
 
-@media screen and (max-width: 984px) {
+.titan-margin{
+  margin-top: 90px !important
+;
+}
+
+@media screen and (max-width: 992px) {
   .reverseRow{
     flex-direction: column-reverse;
   }
@@ -3393,11 +3398,18 @@ align-items:center;
   display:flex;
   
 }
+.right-container-resp{
+  display:flex;
+}
 @media screen and (max-width:575px) {
 
   .icon-btn{
     height:58px !important;
 
+  }
+
+  .prenium-box-nft{
+    display:none;
   }
 
   .heightMain{
@@ -3702,7 +3714,7 @@ width: 100%;
     font-family: 'Sen';
   letter-spacing: -0.6px;
   font-size:.6em !important;
-  font-weight:400 !important;
+  font-weight:600 !important;
   letter-spacing:-0.4px !important;
   text-align: start;
 
@@ -4600,15 +4612,17 @@ width: 100%;
   font-family:Ubuntu;
   letter-spacing: -0.5px;
   color:#f7F7F7;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .bsc-price-chiffre{
   margin-left:10px;
   margin-bottom:0px;
   font-size: .8em;
-  font-family:Ubuntu;
-  color:#f7F7F7
+  font-family:Sen;
+  letter-spacing: -.6px;
+  color:#f7F7F7;
+  font-weight:500
 }
 .bsc-price-chiffre1{
   margin-left:10px;
@@ -4616,6 +4630,7 @@ width: 100%;
   font-size: .8em;
   font-family:Sen;
   color:#f7F7F7;
+  letter-spacing: -.6px;
   text-align: start;
 }
 
