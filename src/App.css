@@ -3408,6 +3408,36 @@ align-items:center;
 
   }
 
+  .btn-border-color-3{
+    height:45px !important;
+    min-width:198px !important;
+  }
+  .play2earn-title-right{
+    text-align:center !important
+  }
+
+  .play2earn-text-left{
+    text-align: center !important;
+  }
+
+  .play2earn-title{
+    text-align:center !important
+  }
+
+  .play2earn-left2{}
+  
+  .play2earn-text{
+    text-align:center !important
+  }
+  .play2earn-image-right{
+    height:auto !important
+  }
+
+  .play2earn-left2{
+    height:auto !important;
+    margin-bottom:40px;
+  }
+
   .prenium-box-nft{
     display:none;
   }
@@ -3517,6 +3547,8 @@ align-items:center;
   font-size:.6em;
   font-family:'Sen'
 }
+
+
 
 .right-home{
   top:85px;
@@ -4372,7 +4404,7 @@ p{
   height: 350px;
   /* transform:rotate(-10deg); */
   
-  left: 10px;
+  left: 0px;
   /* border:2px solid rgba(194, 194, 194, 0.63); */
 }
 
@@ -4465,7 +4497,7 @@ width: 100%;
   width: 350px;
   height: 350px;
   
-  right: 10px;
+  right: 0px;
   /* border:2px solid rgba(218, 218, 218, 0.623); */
 }
 
