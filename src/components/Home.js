@@ -381,8 +381,9 @@ const Home = () => {
                     <div className="main-title">
                         <div className="left-1">
                             <h3 className="rofi-title">GALLUS FIGHTER<br /> <span className="defight-color">DEFIGHT</span></h3>
-                            <p className="p-text">Participate with your GALLUS NFTs in bloody battles and collect your rewards when you are victorious!</p>
-                            <p className="p-text">Upgrade your GALLUS FIGHTER, train it or use any DeFi services with your NFTs and/or $GALLUS Tokens and take your profits!</p>
+                            <p className="p-text">Welcome to Gallus Fighter, home of the first DeFiGht play to earn Metaverse !
+</p>
+                            <p className="p-text">Get your NFT Gallus and engage in Play to earn fighting tournaments, bet on your favourite champion or use as collateral in the latest DeFi products</p>
                             <div className="btn-1">
                                 <NavLink exact to="/presale" className="btn-border-color-3 ">
                                 <img src={presale} className="icon-btn " />

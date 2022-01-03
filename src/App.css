@@ -5266,6 +5266,7 @@ justify-content: center;
   
 }
 
+
 .timeline-li:nth-child(odd){
   float:left;
   text-align:right;
@@ -5282,6 +5283,21 @@ justify-content: center;
   
   background: linear-gradient(
   137deg, rgba(36, 36, 36, 0.774) 0%, #ffda07 0%, rgb(255, 0, 0) 100%);
+  border-radius:50%;
+  box-shadow: 0 0 0 3px rgba(75, 75, 75, 0.486)
+
+
+}
+.timeline-li:nth-child(1):before{
+  content:'';
+  position:absolute;
+  top:100px;
+  right:-6px;
+  width:10px;
+  height:10px;
+  
+  background: linear-gradient(
+  137deg, rgba(36, 36, 36, 0.774) 0%, #ffffff 0%, rgb(87, 87, 87) 100%);
   border-radius:50%;
   box-shadow: 0 0 0 3px rgba(75, 75, 75, 0.486)
 
