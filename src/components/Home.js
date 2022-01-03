@@ -68,7 +68,8 @@ import boite3 from "../images/boite3.png"
 import gallusStory from "../images/gallusStory.png"
 import presale from "../images/presale.png"
 import yours from "../images/yours.png";
-import status from "../images/STATUE.png"
+import status from "../images/STATUE.png";
+import roadmap from "../images/roadmap.png"
 
 
 
@@ -302,7 +303,7 @@ const Home = () => {
 
     
         const now = new Date().getTime();
-        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+01').getTime();
+        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
 
         const distanceBase = countDownDate - now ;
         const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
@@ -318,6 +319,8 @@ const Home = () => {
         countdownHours.innerHTML = `${hours}H`;
         countdownMinutes.innerHTML = `${minutes}M`;
         countdownSeconds.innerHTML = `${seconds}S`;
+
+       
 
     }
 
@@ -722,7 +725,7 @@ Be one of the first to acquire this one and Join the Action !
                     </div>
                 </div>
             </section>
-            <section className="section-5">
+            {/* <section className="section-5">
                 <div class="container container-metamask">
                     <div class="row reverse" >
                         <div class="col-md-6 img-meta width100">
@@ -771,7 +774,16 @@ Set the amount you want to buy and click the exchange button.
                     </div>
                 </div>
 
-            </section>
+            </section> */}
+
+{/*              
+            <section className="section-common section-3">
+                <div className="normal-layout">
+                    
+                             <img src={roadmap} alt="tokenomic image " className="width100"/>
+                         
+                </div>
+            </section> */}
             
             {/* <section className="section-7">
                 <div className="normal-layout">
@@ -804,99 +816,113 @@ Set the amount you want to buy and click the exchange button.
                     </div>
                 </div>
             </section> */}
-            {/* <section className="blackBg">
+            <section className="blackBg">
             <h3 className="partners-title">GALLUS <span className="yellowColorText">ROADMAP</span></h3>
             <div className="timeline">
             
                 <ul className="timeline-ul">
                     <li className="timeline-li">
                         <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                            <h3 className="roadmap-title">IGNITION</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Project Website Release</li>
+                                <li className="li-roadmap">Social Media Release</li>
+                                <li className="li-roadmap">White Paper Release</li>
+                                <li className="li-roadmap">Defight App Launch</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">NFT FEATHER</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">NFT Feather Smart Contract Deployement</li>
+                                <li className="li-roadmap">NFT Feather Sale</li>
+                                
+                            </ul>
+                            
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">NFT GALLUS</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">NFT Gallus Smart Contract Deployment</li>
+                                <li className="li-roadmap">NFT Gallus Initial Sale</li>
+                                <li className="li-roadmap">Bounty Program</li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">$GALLUS TOKEN</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">$GALLUS Fair Launch</li>
+                                <li className="li-roadmap">$GALLUS Airdrop to community</li>
+                                <li className="li-roadmap">Pancake Swap Launch</li>
+                                
+                            </ul>
+                           
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">MARKETPLACE </h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">NFT Gallus Market Place</li>
+                                <li className="li-roadmap">Included on CoinmarketCap, CoinGecko, Dappradar etc...</li>
+                                <li className="li-roadmap">Join Binance MVB Program</li>
+                                <li className="li-roadmap">Enter Binance NFT Marktet</li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">DEFI</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Launch Defight Farming Pairs</li>
+                                <li className="li-roadmap">Smart Tools Launch</li>
                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
+                            </ul>
+                            
                         </div>
                     </li>
                     <li className="timeline-li">
                         <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
-                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
+                            <h3 className="roadmap-title">GAME LAUNCH</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Release Gallus Fighter Game</li>
+                            </ul>
                         </div>
                     </li>
                     <li className="timeline-li">
                         <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
-                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
+                            <h3 className="roadmap-title">IGNITION</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Project Website Release</li>
+                                <li className="li-roadmap">Social Media Release</li>
+                                <li className="li-roadmap">White Paper Release</li>
+                                <li className="li-roadmap">Defight App Launch</li>
+                            </ul>
                         </div>
                     </li>
                     <li className="timeline-li">
                         <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
+                            <h3 className="roadmap-title">AND BEYOND</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Decentralized Governance Launch</li>
+                                <li className="li-roadmap">Many More : Cloud Mining, Staking Products, Exclusive NFT</li>
                                 
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="timeline-li">
-                        <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
-                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="timeline-li">
-                        <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
-                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li className="timeline-li">
-                        <div className="contents">
-                            <h3>fhofhsoihfpeshf</h3>
-                            <p>
-                                loihsoihivh jhshfp ehshf sejfopjseopfjpsejfpoj sepofjsoejfoj espfjpse f
-                                
-                            </p>
-                            <div className="time">
-                                <h4>January 2018</h4>
-                            </div>
+                            </ul>
+                            
                         </div>
                     </li>
                     <div className="clear"></div>
                 </ul>
                 </div>
-            </section> */}
+            </section>
 
 
 

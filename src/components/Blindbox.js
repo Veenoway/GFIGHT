@@ -343,7 +343,7 @@ const BlindBox = () => {
 
             catch(error) {
            
-                SetQuantity('SOLD OUT')
+                SetQuantity('150')
             }
     }
     
@@ -380,7 +380,7 @@ const BlindBox = () => {
 }
         catch(error) {
            
-            SetQuantitySmallNft('SOLD OUT')
+            SetQuantitySmallNft('330')
         }
     }
 
@@ -415,8 +415,14 @@ const BlindBox = () => {
 
         }
         catch(error) {
+
+          
+
+          
            
-            SetQuantityLargeNft('SOLD OUT')
+            SetQuantityLargeNft('20')
+
+         
         }
 
         
@@ -853,6 +859,26 @@ const BlindBox = () => {
         countdownMinutes3.innerHTML = `${minutes}M`;
         countdownSeconds3.innerHTML = `${seconds}S`;
 
+        // COUNTDOWN
+
+        if (days || hours || minutes || seconds !== 0) {
+
+            var medium = document.getElementById('buyMedium');
+            var small = document.getElementById('buySmall');
+            var large = document.getElementById('buyLarge');
+
+            medium.classList.add('disabled');
+            small.classList.add('disabled');
+            large.classList.add('disabled');
+
+        } else {
+
+            medium.classList.remove('disabled');
+            small.classList.remove('disabled');
+            large.classList.remove('disabled');
+
+        }
+
     }
 
     
@@ -1094,7 +1120,7 @@ Take advantage of this unique benefit with the DeFi
                                 
                                 <div className="center-button">
                                     <div className="">
-                                    <a  className="btn-border-color-small" onClick={purshaseSmall} >
+                                    <a  className="btn-border-color-small" id="buySmall" onClick={purshaseSmall} >
                                     <img src={icon_2} className="icon-btn" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft" >
@@ -1152,8 +1178,8 @@ Take advantage of this unique benefit with the DeFi.
                                 
                                 <div className="center-button">
                                     
-                                <a  className="btn-border-color-medium" onClick={purshaseMedium} >
-                                    <img src={mediumFeatherImg} className="icon-btn" />BUY MEDIUM</a>
+                                <a  className="btn-border-color-medium" id="buyMedium" onClick={purshaseMedium} >
+                                    <img src={mediumFeatherImg} className="icon-btn " />BUY MEDIUM</a>
                                     <div className="prenium-box-nft" >
                                         <div className="countdown" id="countdownDays3">
                                            
@@ -1226,7 +1252,7 @@ Take advantage of this unique benefit with the DeFi.
                                 
                                 <div className="center-button">
                                     
-                                <a  className="btn-border-color-titan" onClick={purshaseLarge} >
+                                <a  className="btn-border-color-titan" id="buyLarge" onClick={purshaseLarge} >
                                     <img src={largeFeatherImg} className="icon-btn" />BUY TITAN</a>
                                     <div className="prenium-box-nft" >
                                         <div className="countdown" id="countdownDays2">
