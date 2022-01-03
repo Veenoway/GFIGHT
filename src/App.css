@@ -744,7 +744,7 @@ align-items:center;
 
 .boite-3{
 height:330px;
-margin-top: -140px;
+margin-top: -93px;
 }
 
 .left-text-presale{
@@ -3101,7 +3101,7 @@ align-items:center;
     
   }
   .width100{
-    width: 100% !important;
+    
   }
   .flex-container{
     margin-bottom:50px;
@@ -3231,6 +3231,9 @@ align-items:center;
     display:none
   }
 
+  .presale-section-title{
+  
+  }
   .eggs2{
     height: auto;
     width: 100%;
@@ -3302,7 +3305,7 @@ align-items:center;
 
   .boite-3{
     height: 320px;
-    margin-top: -80px;
+    margin-top: -58px;
   }
   .right-home{
     /* position:initial;
@@ -3477,7 +3480,7 @@ align-items:center;
   }
 
   .gallus-team-container{
-    padding-bottom:27px .presale-section-title;
+    padding-bottom:27px 
   }
 
   .container-play2earn{
@@ -3803,11 +3806,15 @@ margin-top: 0px;
   background: linear-gradient(180deg,#ed0000,#edd600 100%,#f8b21a 0);
       background-clip: border-box;
   -webkit-background-clip: text;
-  font-size:38px
+  font-size: 38px;
+  margin-left:2%
+
   }
 
   .heightMain{
     width: 100%;
+    
+    padding-bottom: 230px !important;
   }
 
   .btn-border-color-3:hover{
@@ -4133,7 +4140,7 @@ margin-top: 0px;
 }
 
 .width100{
-  width:100%
+  
 }
 
 .padding-nft-2{

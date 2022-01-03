@@ -302,7 +302,7 @@ const Home = () => {
 
     
         const now = new Date().getTime();
-        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
+        const countDownDate = new Date('January 4, 2022 19:00:00 GMT+01').getTime();
 
         const distanceBase = countDownDate - now ;
         const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
