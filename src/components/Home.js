@@ -306,19 +306,43 @@ const Home = () => {
         const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
 
         const distanceBase = countDownDate - now ;
-        const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
-        const seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
+        var days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
+        var seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
         console.log(days, hours, minutes,seconds)
         var countdownDays = document.getElementById('countdownDays');
         var countdownHours = document.getElementById('countdownHours');
         var countdownMinutes = document.getElementById('countdownMinutes');
         var countdownSeconds = document.getElementById('countdownSeconds');
-        countdownDays.innerHTML = `${days}D`;
-        countdownHours.innerHTML = `${hours}H`;
-        countdownMinutes.innerHTML = `${minutes}M`;
-        countdownSeconds.innerHTML = `${seconds}S`;
+        
+
+
+        if (days || hours || minutes || seconds !== 0) {
+
+            countdownDays.innerHTML = `${days}D`;
+            countdownHours.innerHTML = `${hours}H`;
+            countdownMinutes.innerHTML = `${minutes}M`;
+            countdownSeconds.innerHTML = `${seconds}S`;
+
+            console.log(days)
+
+           
+
+        } else {
+            days = 0;
+            hours = 0;
+            minutes =0;
+            seconds = 0
+        }
+
+        if (days, hours, minutes, seconds <= 0 ) {
+
+            countdownDays.innerHTML = `L`;
+            countdownHours.innerHTML = "I";
+            countdownMinutes.innerHTML = "V";
+            countdownSeconds.innerHTML = "E";
+        }
 
        
 
@@ -381,8 +405,7 @@ const Home = () => {
                     <div className="main-title">
                         <div className="left-1">
                             <h3 className="rofi-title">GALLUS FIGHTER<br /> <span className="defight-color">DEFIGHT</span></h3>
-                            <p className="p-text">Welcome to Gallus Fighter, home of the first DeFiGht play to earn Metaverse !
-</p>
+                            <p className="p-text">Welcome to Gallus Fighter, home of the first DeFight play to earn Metaverse !</p>
                             <p className="p-text">Get your NFT Gallus and engage in Play to earn fighting tournaments, bet on your favourite champion or use as collateral in the latest DeFi products</p>
                             <div className="btn-1">
                                 <NavLink exact to="/presale" className="btn-border-color-3 ">
@@ -461,7 +484,7 @@ Be one of the first to acquire this one and Join the Action !
                        <br /><br /><div className="prenium-box-nft2" >
                         <NavLink exact to="/#presale" className="btn-border-color-nftSale">
                                     <img src={yours} className="icon-btn-nftSale" />
-                                   GET YOURS !
+                                   BUY
                                     
                                 </NavLink>
                                 <div className="title-countdown">
@@ -563,7 +586,7 @@ Be one of the first to acquire this one and Join the Action !
             </section> */} 
              <section className="section-common section-3">
                 <div className="normal-layout">
-                    <h3 className="tokenomic-title">GALLUS <br /><span className="yellowColorText">TOKENOMIC</span></h3>
+                    <h3 className="tokenomic-title">GALLUS <br /><span className="yellowColorText">TOKENOMICS</span></h3>
                     <div className="main-tokenomic">
                         <p className="left-text">The $GALLUS token is a BEP-20 token running on the Binance Smart Chain (BSC). The BSC is one of the most powerful blockchain stack for decentralized projects looking for very low transaction fees.<br /><br />
 
@@ -621,7 +644,7 @@ Be one of the first to acquire this one and Join the Action !
                         <div className="box-3">
                             {/* <img src={blackHole4} className="box-3-img" alt="logo blackHole"/> */}
                             <img src={mining} alt="nft" className="metaverse-images" />
-                            <h5 className="box-title">MINING</h5>
+                            <h5 className="box-title">CLOUD MINING</h5>
                             <p className="box-text">Contribute easily and without knowledge to several online blockchains by owning miners that earn tokens! Done with legal cleanliness and compliance with the necessary protection measures at the facility.</p>
                         </div>
                         <div className="box-3">
@@ -838,10 +861,34 @@ Set the amount you want to buy and click the exchange button.
                             <h3 className="roadmap-title">NFT FEATHER</h3>
                             <ul className="ul-roadmap">
                                 <li className="li-roadmap">NFT Feather Smart Contract Deployement</li>
-                                <li className="li-roadmap">NFT Feather Sale</li>
+                                <li className="li-roadmap">NFT Feather Initial Sale</li>
+                                <li className="li-roadmap">Release Official Gallus Website</li>
                                 
                             </ul>
                             
+                        </div>
+                    </li>
+                    
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">$GALLUS TOKEN</h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">$GALLUS Fair Launch</li>
+                                <li className="li-roadmap">Presale Airdrop Reward</li>
+                                <li className="li-roadmap">Pancake Swap Launch</li>
+                                
+                            </ul>
+                           
+                        </div>
+                    </li>
+                    <li className="timeline-li">
+                        <div className="contents">
+                            <h3 className="roadmap-title">MARKETPLACE </h3>
+                            <ul className="ul-roadmap">
+                                <li className="li-roadmap">Release Gallus NFT Market</li>
+                                <li className="li-roadmap">Included on CoinmarketCap etc...</li>
+                                <li className="li-roadmap">Join Binance MVB Program / NFT Market</li>
+                            </ul>
                         </div>
                     </li>
                     <li className="timeline-li">
@@ -857,34 +904,11 @@ Set the amount you want to buy and click the exchange button.
                     </li>
                     <li className="timeline-li">
                         <div className="contents">
-                            <h3 className="roadmap-title">$GALLUS TOKEN</h3>
-                            <ul className="ul-roadmap">
-                                <li className="li-roadmap">$GALLUS Fair Launch</li>
-                                <li className="li-roadmap">$GALLUS Airdrop to community</li>
-                                <li className="li-roadmap">Pancake Swap Launch</li>
-                                
-                            </ul>
-                           
-                        </div>
-                    </li>
-                    <li className="timeline-li">
-                        <div className="contents">
-                            <h3 className="roadmap-title">MARKETPLACE </h3>
-                            <ul className="ul-roadmap">
-                                <li className="li-roadmap">NFT Gallus Market Place</li>
-                                <li className="li-roadmap">Included on CoinmarketCap, CoinGecko, Dappradar etc...</li>
-                                <li className="li-roadmap">Join Binance MVB Program</li>
-                                <li className="li-roadmap">Enter Binance NFT Marktet</li>
-                                
-                            </ul>
-                        </div>
-                    </li>
-                    <li className="timeline-li">
-                        <div className="contents">
                             <h3 className="roadmap-title">DEFI</h3>
                             <ul className="ul-roadmap">
                                 <li className="li-roadmap">Launch Defight Farming Pairs</li>
                                 <li className="li-roadmap">Smart Tools Launch</li>
+                                <li className="li-roadmap">Staking Pool</li> 
                                
                             </ul>
                             
@@ -895,26 +919,19 @@ Set the amount you want to buy and click the exchange button.
                             <h3 className="roadmap-title">GAME LAUNCH</h3>
                             <ul className="ul-roadmap">
                                 <li className="li-roadmap">Release Gallus Fighter Game</li>
+                                <li className="li-roadmap">Initial Gallus Fighter Tournament</li>
+                                <li className="li-roadmap">Launch bet in 1V1 </li>
                             </ul>
                         </div>
                     </li>
-                    <li className="timeline-li">
-                        <div className="contents">
-                            <h3 className="roadmap-title">IGNITION</h3>
-                            <ul className="ul-roadmap">
-                                <li className="li-roadmap">Project Website Release</li>
-                                <li className="li-roadmap">Social Media Release</li>
-                                <li className="li-roadmap">White Paper Release</li>
-                                <li className="li-roadmap">Defight App Launch</li>
-                            </ul>
-                        </div>
-                    </li>
+                    
                     <li className="timeline-li">
                         <div className="contents">
                             <h3 className="roadmap-title">AND BEYOND</h3>
                             <ul className="ul-roadmap">
                                 <li className="li-roadmap">Decentralized Governance Launch</li>
-                                <li className="li-roadmap">Many More : Cloud Mining, Staking Products, Exclusive NFT</li>
+                                <li className="li-roadmap">Many More : Cloud Mining, Exclusive NFT</li>
+                                <li className="li-roadmap">Gallus Figurine</li>
                                 
                             </ul>
                             

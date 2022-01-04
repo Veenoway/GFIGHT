@@ -3122,6 +3122,7 @@ align-items:center;
   .center-button{
     justify-content:center;
     margin-top:35px;
+    flex-wrap: wrap;
   }
 
   .timeline-li{
@@ -3477,11 +3478,14 @@ align-items:center;
 
   .prenium-box-nft2{
     justify-content: center !important;
+    
   }
 
-  .title-countdown{
-    margin-top:20px
+  .prenium-box-nft{
+    margin-top:20px;
   }
+
+ 
 
   .btn-border-color-3{
     height:45px !important;
@@ -3735,6 +3739,9 @@ align-items:center;
   }
   .rofi-title-2{
     font-size: 32px;
+  }
+  .title-countdown{
+    margin-top:20px
   }
 
   
@@ -4446,12 +4453,7 @@ p{
 
 .roadmap-title{
   font-family:Bungee;
-  color: rgba(255, 0, 0, 0);
-  
-  background: rgb(237,0,0);
-  background: linear-gradient(
-180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
-  -webkit-background-clip: text;
+  color:#f8b21a;
   letter-spacing: .5px;
 }
 
@@ -5377,13 +5379,14 @@ ul{
 /* BUTTON */
 
 .icon-btn{
-  height:66px;
-  position:absolute;
-  top:-07px;
-  left:-18px;
-  box-shadow:0 0 5px rgba(255, 255, 255, 0.185);
-  border-radius:50%;
-  transform:scale(1)
+  height: 66px;
+      position: relative;
+      top: 2px;
+      left: -24px
+;
+      box-shadow: 0 0 5px rgb(255 255 255 / 19%);
+      border-radius: 50%;
+      transform: scale(1);
 
 }
 
@@ -5439,7 +5442,7 @@ ul{
     line-height:1.2;
     display:inline-flex;
     align-items:center;
-    justify-content: end;
+    justify-content: center;
     text-align: center;
     cursor:pointer;
     transition: all .3s ease 0s;
@@ -5449,7 +5452,7 @@ ul{
     line-height:0;
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:187px;
+    min-width:125px;
     box-sizing:border-box;
     margin-right: 24px;
     margin-top:0px;
@@ -5457,6 +5460,36 @@ ul{
     font-family: 'bungee', cursive;
     position:relative;
     margin-left:20px;
+    padding-left:55px;
+}
+.btn-border-color-nftSale:hover{
+  border: 2px solid #0707b4;
+    color: #f7F7F7;
+    background-color: #0000ff;
+    height:52px;
+    line-height:1.2;
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    cursor:pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 9px;
+    font-size:18px;
+    line-height:0;
+    border-radius:15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+    padding-left:55px;
+    
+    box-sizing:border-box;
+    margin-right: 24px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position:relative;
+    margin-left:20px;
+    transform: scale(1.1);
+    transition:transform 200ms ease-in-out, background 200ms ease-in-out,box-shadow 200ms ease-in-out
 }
 
 
@@ -5473,12 +5506,12 @@ ul{
     cursor:pointer;
     transition: all .3s ease 0s;
     font-weight: 700;
-    padding: 0 9px;
+    padding:0 9px 0px 0px;
     font-size:18px;
-    line-height:0;
+    
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:207px;
+    min-width:227px;
     box-sizing:border-box;
     margin-right: 24px;
     text-decoration: none;
@@ -5530,9 +5563,10 @@ ul{
     font-weight: 700;
     padding: 0 9px;
     font-size:18px;
-    line-height:0;
+  
     border-radius:15px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.829);
+    padding:0 9px 0px 0px;
     
     box-sizing:border-box;
     margin-right: 24px;

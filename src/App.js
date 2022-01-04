@@ -38,10 +38,10 @@ function App() {
         {/* <Route exact path="/gsgrf" component={Pool} /> */}
         {/* <Route exact path="/fse" component={Farms}/> */}
         <Route exact path="/presale" component={BlindBox} />
-        <Route exact path="/nft-market" component={NftMarket} />
+        {/* <Route exact path="/nft-market" component={NftMarket} />
         <Route exact path="/nft-market/medium" component={Medium} />
         <Route exact path="/nft-market/small" component={Small} />
-        <Route exact path="/nft-market/titan" component={Titan} />
+        <Route exact path="/nft-market/titan" component={Titan} /> */}
       
         
         

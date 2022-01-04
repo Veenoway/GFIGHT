@@ -59,7 +59,7 @@ const BlindBox = () => {
     var [quantityLargeNft, SetQuantityLargeNft] = useState([])
     var [quantitySmallNft, SetQuantitySmallNft] = useState([])
 
-    const gallusFeatherNFTAddress = "0xBA5112b636d75e33d789175690b8Af70881ce336";
+    const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
     
     async function connectMetaMask() {
 
@@ -827,41 +827,47 @@ const BlindBox = () => {
         const countDownDate = new Date('January 4, 2022 19:00:00 GMT+00').getTime();
 
         const distanceBase = countDownDate - now ;
-        const days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
-        const seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
+        var days = Math.floor(distanceBase / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distanceBase % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distanceBase % (1000 * 60 * 60 )) / (1000 * 60));
+        var seconds = Math.floor((distanceBase % (1000 * 60)) / 1000 );
         console.log(days, hours, minutes,seconds)
         var countdownDays = document.getElementById('countdownDays');
         var countdownHours = document.getElementById('countdownHours');
         var countdownMinutes = document.getElementById('countdownMinutes');
         var countdownSeconds = document.getElementById('countdownSeconds');
-        countdownDays.innerHTML = `${days}D`;
-        countdownHours.innerHTML = `${hours}H`;
-        countdownMinutes.innerHTML = `${minutes}M`;
-        countdownSeconds.innerHTML = `${seconds}S`;
+        
 
         var countdownDays2 = document.getElementById('countdownDays2');
         var countdownHours2 = document.getElementById('countdownHours2');
         var countdownMinutes2 = document.getElementById('countdownMinutes2');
         var countdownSeconds2 = document.getElementById('countdownSeconds2');
-        countdownDays2.innerHTML = `${days}D`;
-        countdownHours2.innerHTML = `${hours}H`;
-        countdownMinutes2.innerHTML = `${minutes}M`;
-        countdownSeconds2.innerHTML = `${seconds}S`;
+        
 
         var countdownDays3 = document.getElementById('countdownDays3');
         var countdownHours3 = document.getElementById('countdownHours3');
         var countdownMinutes3 = document.getElementById('countdownMinutes3');
         var countdownSeconds3 = document.getElementById('countdownSeconds3');
-        countdownDays3.innerHTML = `${days}D`;
-        countdownHours3.innerHTML = `${hours}H`;
-        countdownMinutes3.innerHTML = `${minutes}M`;
-        countdownSeconds3.innerHTML = `${seconds}S`;
+        
 
         // COUNTDOWN
 
         if (days || hours || minutes || seconds !== 0) {
+
+            countdownDays.innerHTML = `${days}D`;
+            countdownHours.innerHTML = `${hours}H`;
+            countdownMinutes.innerHTML = `${minutes}M`;
+            countdownSeconds.innerHTML = `${seconds}S`;
+
+            countdownDays2.innerHTML = `${days}D`;
+            countdownHours2.innerHTML = `${hours}H`;
+            countdownMinutes2.innerHTML = `${minutes}M`;
+            countdownSeconds2.innerHTML = `${seconds}S`;
+
+            countdownDays3.innerHTML = `${days}D`;
+            countdownHours3.innerHTML = `${hours}H`;
+            countdownMinutes3.innerHTML = `${minutes}M`;
+            countdownSeconds3.innerHTML = `${seconds}S`;
 
             var medium = document.getElementById('buyMedium');
             var small = document.getElementById('buySmall');
@@ -870,20 +876,52 @@ const BlindBox = () => {
             medium.classList.add('disabled');
             small.classList.add('disabled');
             large.classList.add('disabled');
+            console.log(days)
+
+           
 
         } else {
+            days = 0;
+            hours = 0;
+            minutes =0;
+            seconds = 0
+        }
+        if (days, hours, minutes, seconds <= 0 ) {
+
+            
+
+            countdownDays2.innerHTML = "L";
+            countdownHours2.innerHTML = "I";
+            countdownMinutes2.innerHTML = "V";
+            countdownSeconds2.innerHTML = "E";
+
+             countdownDays.innerHTML = `L`;
+            countdownHours.innerHTML = `I`;
+            countdownMinutes.innerHTML = `V`;
+            countdownSeconds.innerHTML = `E`;
+            
+            countdownDays3.innerHTML = "L";
+            countdownHours3.innerHTML = "I";
+            countdownMinutes3.innerHTML = "V";
+            countdownSeconds3.innerHTML = "E";
 
             medium.classList.remove('disabled');
             small.classList.remove('disabled');
             large.classList.remove('disabled');
+            
 
-        }
+        }   
+
+        
+
+        
 
     }
 
     
 
     const countDownInterval = setInterval(() => {
+
         getChrono()
     }, 1000)
 
@@ -1066,6 +1104,7 @@ Enjoy Great Rewards Customized to the model of your NFT Feather!</p>
 
                     </div>
                </div>
+               
             <div className="pool background-section-2">
             
             <div className="normal-layout">

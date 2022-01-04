@@ -78,7 +78,7 @@ const MyNft = () => {
 
   
 
-    const gallusFeatherNFTAddress = "0xBA5112b636d75e33d789175690b8Af70881ce336";
+    const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
 
     async function connectMetaMask() {
         if (typeof window.ethereum !== 'undefined') {
@@ -263,7 +263,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                                 </NavLink>
                             </li>
                             <li class="menut-item">
-                                <NavLink exact to="/my-nft" activeClassName="nav-active" className="display disabled">
+                                <NavLink exact to="/" activeClassName="nav-active" className="display disabled">
                                
                                 <i class="fas fa-coins yellow-icon"></i>Buy GALLUS
                                 <span className="tagSoon ">Soon..</span>
