@@ -112,7 +112,7 @@ const MyNft = () => {
                 test.innerHTML = newWalletAdress; 
 
                 const signer = provider.getSigner();
-                const contract = new ethers.Contract(gallusFeatherNFTAddress && epicAddress, GallusFeatherNFT.abi, signer);
+                const contract = new ethers.Contract(gallusFeatherNFTAddress || epicAddress, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
             
