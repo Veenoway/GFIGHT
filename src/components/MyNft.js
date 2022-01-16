@@ -14,11 +14,13 @@ const MyNft = () => {
 
     var [NftOwned, SetNftOwned] = useState('')
     var [Http, setHttp] = useState('')
+    var [HttpEpic, setHttpEpic] = useState('')
 
    
 
 
         var [data, setData] = useState([])
+        var [datas, setDatas] = useState([])
     
         useEffect(() => {
     
@@ -79,6 +81,7 @@ const MyNft = () => {
   
 
     const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
+    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
 
     async function connectMetaMask() {
         if (typeof window.ethereum !== 'undefined') {
@@ -109,23 +112,24 @@ const MyNft = () => {
                 test.innerHTML = newWalletAdress; 
 
                 const signer = provider.getSigner();
-                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+                const contract = new ethers.Contract(gallusFeatherNFTAddress && epicAddress, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
-
+            
                 
                 
                 // var nftOwned = document.createElement("NavLink");
                 // nftOwned.classList.add('nft-owned');
                 
                 // SetNftOwned('My NFT : ' + balance);
-                
-
+               
+               
                 for (let i=0;i<balance;i++) {
                     const nftId = await contract.tokenOfOwnerByIndex(walletAdress, i);
                     console.log(nftId.toString())
                     const uri = await contract.tokenURI(nftId);
                     console.log(uri)
+                   
 
                     // changing url
                   
@@ -133,6 +137,7 @@ const MyNft = () => {
  
                     var deleteFirstChar = uri.substring(6, uri.length - 0);
                     var url = 'https://gateway.pinata.cloud/ipfs' + deleteFirstChar 
+                    
                     
                     
                     // Get url to data
@@ -157,7 +162,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                         
                         
                     }
-                    
+
 
                     let myNft = document.getElementById('main');
                     
