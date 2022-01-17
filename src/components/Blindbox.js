@@ -140,8 +140,70 @@ const BlindBox = () => {
                 let myNft = document.getElementById('my-nft');
 
                 var nftOwned = document.createElement("NavLink");
-                nftOwned.classList.add('nft-owned');
-                myNft.appendChild(nftOwned);
+                
+                
+                SetNftOwned('MY NFT : ' + balance);
+                balanceNft()
+                test.addEventListener('click',function(e) {
+                    e.preventDefault()
+                }, false);
+                
+                for (let i=0;i<balance;i++) {
+                    const nftId = await contract.tokenOfOwnerByIndex(walletAdress, i);
+                    console.log(nftId.toString())
+                    const uri = await contract.tokenURI(nftId);
+                    console.log(uri)
+                }
+
+            }
+        }
+    }
+    
+
+
+    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
+    
+    async function balanceNft() {
+
+        
+            //  console.log(network.name)
+            //  if (network.name === 'rinkeby' ) {
+            //  }
+
+        if (typeof window.ethereum !== 'undefined') {
+            
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            console.log(provider);
+            let network = await  provider.getNetwork()
+            console.log(window.ethereum.selectedAddress);
+        
+            // request metamask to access the account
+
+            if ( window.ethereum.selectedAddress !== 'undefined') {
+
+                await window.ethereum.request({ method: "eth_requestAccounts" });
+                console.log(window.ethereum.selectedAddress);
+                var test = document.getElementById('test') ;
+                var walletAdress = window.ethereum.selectedAddress;
+                var firstWalletAdress = walletAdress.substring(0, walletAdress.length - 36) + '...';
+                var lastWalletAdress = walletAdress.substring(38, walletAdress.length - 0);
+                var newWalletAdress = firstWalletAdress + lastWalletAdress;
+                test.innerHTML = newWalletAdress; 
+
+                
+
+
+                
+
+                const signer = provider.getSigner();
+                const contract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, signer);
+                const balance = await contract.balanceOf(walletAdress);
+                console.log(balance.toString())
+
+                let myNft = document.getElementById('my-nft');
+
+                var nftOwned = document.createElement("NavLink");
+                
                 SetNftOwned('MY NFT : ' + balance);
                 
 
@@ -155,7 +217,9 @@ const BlindBox = () => {
             }
         }
     }
-    
+
+
+
     async function purshaseSmall() {
         if (typeof window.ethereum !== 'undefined') {
 

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GallusFighter.github.io/static/css/main.fedd3760.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.7948c31a.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.7948c31a.chunk.js.map",
+    "main.js": "/GallusFighter.github.io/static/js/main.c98c4849.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.c98c4849.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.1776477a.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
@@ -112,6 +112,6 @@
     "static/css/2.a75f5a2c.chunk.css",
     "static/js/2.d498db5b.chunk.js",
     "static/css/main.fedd3760.chunk.css",
-    "static/js/main.7948c31a.chunk.js"
+    "static/js/main.c98c4849.chunk.js"
   ]
 }

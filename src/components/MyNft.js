@@ -81,7 +81,8 @@ const MyNft = () => {
   
 
     const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
-    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
+    
+    const [addresse, setAddresse ] = useState(gallusFeatherNFTAddress);
 
     async function connectMetaMask() {
         if (typeof window.ethereum !== 'undefined') {
@@ -112,9 +113,10 @@ const MyNft = () => {
                 test.innerHTML = newWalletAdress; 
 
                 const signer = provider.getSigner();
-                const contract = new ethers.Contract(gallusFeatherNFTAddress || epicAddress, GallusFeatherNFT.abi, signer);
+                const contract = new ethers.Contract(addresse, GallusFeatherNFT.abi, signer);
                 const balance = await contract.balanceOf(walletAdress);
                 console.log(balance.toString())
+                console.log(contract)
             
                 
                 
@@ -215,11 +217,126 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
 
     }
     useEffect(() => {
-        connectMetaMask()
+        connectMetaMask();
+        showNftYT();
     }, [])
 
    
-  
+  async function showNftYT() {
+
+
+    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
+
+    if (typeof window.ethereum !== 'undefined') {
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        console.log(provider);
+        console.log(window.ethereum.selectedAddress);
+    
+        // request metamask to access the account
+
+        if ( window.ethereum.selectedAddress !== 'undefined') {
+
+            requestAccount()
+            console.log(window.ethereum.selectedAddress);
+
+            var test = document.getElementById('test') ;
+            var walletAdress = window.ethereum.selectedAddress;
+
+            test.addEventListener("click", function(e) {
+                e.preventDefault()
+                console.log("woops")
+            }, false);
+
+
+            // Slice wallet adress and Show it
+
+
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, signer);
+            const balance = await contract.balanceOf(walletAdress);
+            console.log(balance.toString())
+            console.log(contract)
+
+            for (let i=0;i<balance;i++) {
+                const nftId = await contract.tokenOfOwnerByIndex(walletAdress, i);
+                console.log(nftId.toString())
+                const uri = await contract.tokenURI(nftId);
+                console.log(uri)
+               
+
+                // changing url
+              
+              
+
+                var deleteFirstChar = uri.substring(6, uri.length - 0);
+                var url = 'https://gateway.pinata.cloud/ipfs' + deleteFirstChar 
+                
+                
+                
+                // Get url to data
+               
+                await axios
+                .get(url)
+                .then((res) => 
+                data = res.data) 
+                console.log(data)
+                var url = data.image
+                    console.log(url)
+                    console.log(Http)
+                    
+                setHttp(url)
+                var ipfsImage = uri.substring(0, uri.length - 36);
+                console.log(ipfsImage)
+var deleteImageChar = data.image.substring(6, data.image.length - 0)
+               var imageUrl = 'https://gallus.mypinata.cloud/ipfs' + deleteImageChar
+               console.log(imageUrl)
+
+
+                let myNft = document.getElementById('main');
+                
+            //    var imageUrl = url
+        
+                var nftBoxCreated = `<div class="row margin-row">
+                <div class="col-lg-6 flex-container">
+                    
+                    <div class="image-container ">
+                        <div class="neon-nft-perso"></div>
+                        
+                        
+                        <video  width="250" class="image-nft-box " autoPlay muted loop>
+                            
+                            <source src=${imageUrl} type="video/mp4" autoplay loop/>
+                            <source src=${imageUrl} type="video/webm" autoplay loop/>
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-6 flexBox-nft">
+          
+                    <div class="detail-container">
+                        <h1 class="title-Nft-desc">${data.name}<span className="title-nft-secondColor"></span></h1>
+                        <div class="liseret-nft"></div>
+                        <p class="text-description-nft">${data.description}</p>
+                        
+                        <div class="center-button">
+                            
+                            
+          
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>`
+                myNft.innerHTML += nftBoxCreated
+
+               
+        
+        
+            }
+        }
+    }
+
+  }
     
     
     
@@ -368,7 +485,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
             </div>
             <div className="right-nav">
                 <div className="right-item">
-                    <a href="#my-nft" className="nft-owned ">{NftOwned}</a>
+                    {/* <a href="#my-nft" className="nft-owned ">}</a> */}
                     <a href="#my-nft" id="test" className="wallet pool1" ></a>
                 </div>
 
