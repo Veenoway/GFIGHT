@@ -351,7 +351,7 @@ const Home = () => {
     
 
     const countDownInterval = setInterval(() => {
-        getChrono()
+        
     }, 1000)
 
     
@@ -413,7 +413,7 @@ const Home = () => {
                                    NFT PRE-SALE 
                                 
                                 </NavLink>
-                                <NavLink exact to="/gallus-story" className="btn-border-color-3">
+                                <NavLink exact to="/gallus-story" className="btn-border-color-31">
                                     <img src={gallusStory} className="icon-btn" />
                                    GALLUS STORY
                                     
@@ -491,16 +491,16 @@ Be one of the first to acquire this one and Join the Action !
                                 <h4 className="countdown-start">Presale Start in :</h4>
                                         <div className="flexCount">
                                             <div className="countdown" id="countdownDays">
-                                            
+                                             L
                                             </div>
                                             <div className="countdown" id="countdownHours">
-                                                
+                                                I
                                             </div>
                                             <div className="countdown" id="countdownMinutes">
-                                                
+                                              V  
                                             </div>
                                             <div className="countdown" id="countdownSeconds">
-                                                
+                                              E  
                                             </div>
                                        </div> 
                                     </div>
