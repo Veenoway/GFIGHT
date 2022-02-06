@@ -18,55 +18,177 @@ const GallusStory = () => {
 
     var [NftOwned, SetNftOwned] = useState('')
 
-    const gallusFeatherNFTAddress = "0x08a78270b5dC972F9cFF6619714221a1DA4d8F81";
+   
 
-    async function connectMetaMask() {
+    var [nftOwned, setNftOwned] = useState([]);
+    var [epicNftOwned, setEpicNftOwned] = useState([])
+
+    var [smallFeather, setSmallFeather] = useState('')
+    var [mediumFeather, setMediumFeather] = useState('')
+    var [largeFeather, setLargeFeather] = useState('')
+
+    const [loadingState, setLoadingState] = useState('not-loaded');
+
+    const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
+    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
+
+    useEffect(() => {
+        loadNfts();
+        
+    }, []);
+
+    async function loadNfts() {
+
         if (typeof window.ethereum !== 'undefined') {
 
+           
+
             const provider = new ethers.providers.Web3Provider(window.ethereum);
-            console.log(provider);
-            console.log(window.ethereum.selectedAddress);
-        
-            // request metamask to access the account
-
-            if ( window.ethereum.selectedAddress !== 'undefined') {
-
-                await window.ethereum.request({ method: "eth_requestAccounts" });
-                console.log(window.ethereum.selectedAddress);
-                var test = document.getElementById('test') ;
-                var walletAdress = window.ethereum.selectedAddress;
-                var firstWalletAdress = walletAdress.substring(0, walletAdress.length - 36) + '...';
-                var lastWalletAdress = walletAdress.substring(38, walletAdress.length - 0);
-                var newWalletAdress = firstWalletAdress + lastWalletAdress;
-                test.innerHTML = newWalletAdress; 
-
-                
-
-
-
-
             const signer = provider.getSigner();
-                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-                const balance = await contract.balanceOf(walletAdress);
-                console.log(balance.toString())
-
-                let myNft = document.getElementById('my-nft');
-
-                var nftOwned = document.createElement("NavLink");
-                nftOwned.classList.add('nft-owned');
-                myNft.appendChild(nftOwned);
-                SetNftOwned('My NFT : ' + balance);
+            const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+            console.log(window.ethereum.selectedAddress)
                 
+            setLoadingState('loaded');
+            featherQuantity();
+            nftOwnedInWallet();
 
-                for (let i=0;i<balance;i++) {
-                    const nftId = await contract.tokenOfOwnerByIndex(walletAdress, i);
-                    console.log(nftId.toString())
-                    const uri = await contract.tokenURI(nftId);
-                    console.log(uri)
-                }
+            // IF NETWORK ISNT BNB 
 
+            let network = await  provider.getNetwork()
+
+            if (network.name !== 'bnb') {
+
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+                
+    
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box')
+    
+    
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = 'Wrong Network'
+                title.classList.add('title-popup-network')
+    
+    
+                var text = document.createElement('p');
+                popupBox.appendChild(text);
+                text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+                text.classList.add('text-popup-network')
+    
+    
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+    
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+    
+    
             }
         }
+    }
+
+    async function connectWallet() {
+
+
+    try{
+
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        window.location.reload();
+
+    }  catch(err) {
+         
+        var maint = document.getElementById('contain')
+        var containert = document.createElement('div');
+        containert.classList.add('container-popup-network');
+        maint.appendChild(containert);
+
+        var popupBox = document.createElement('div');
+        containert.appendChild(popupBox);
+        popupBox.classList.add('popup-box')
+
+        var title = document.createElement('h3')
+        popupBox.appendChild(title);
+        title.innerHTML = 'Connect Wallet'
+        title.classList.add('title-popup-network')
+
+        var text = document.createElement('a');
+        popupBox.appendChild(text);
+        text.innerHTML = 'Please connect your Trust Wallet'
+        text.classList.add('text-popup-network');
+        text.href="https://link.trustwallet.com/wc?uri=wc%3Aca1fccc0-f4d1-46c2-90b7-c07fce1c0cae%401%3Fbridge%3Dhttps%253A%252F%252Fbridge.walletconnect.org%26key%3Da413d90751839c7628873557c718fd73fcedc5e8e8c07cfecaefc0d3a178b1d8";
+
+        var button = document.createElement('button');
+        popupBox.appendChild(button);
+        button.classList.add('btn-popup-network')
+        button.innerHTML = 'OK'
+
+        button.addEventListener('click', function (e) {
+            containert.style.display = 'none'
+        })
+           
+    }
+        
+
+    }
+
+
+    async function featherQuantity() {
+
+        // FETCH QUANTITY OF EACH FEATHER
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+
+        var smallFeather = await featherContract.remainingSmall();
+        var mediumFeather = await featherContract.remainingMedium();
+        var largeFeather = await featherContract.remainingLarge();
+
+        setSmallFeather(smallFeather.toString());
+        setMediumFeather(mediumFeather.toString());
+        setLargeFeather(largeFeather.toString());
+
+        console.log(smallFeather.toString())
+        
+    }
+
+    async function nftOwnedInWallet() {
+
+        // FETCH BALANCE 
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+        const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, signer);
+        const balanceFeather = await featherContract.balanceOf(window.ethereum.selectedAddress);
+        const balanceEpicFeather = await epicFeatherContract.balanceOf(window.ethereum.selectedAddress);
+
+        setNftOwned(Number(balanceFeather));
+        setEpicNftOwned(Number(balanceEpicFeather));
+
+        var wallet = document.getElementById('wallet');
+
+            // SHOW WALLET ADDRESS 
+
+            var originalAdress = window.ethereum.selectedAddress;
+            var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
+            var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
+            var newWalletAdress = firstWalletAdress + lastWalletAdress;
+            wallet.innerHTML = newWalletAdress; 
+
+            // SHOW NFT OWNED
+
+            var myNfts = document.getElementById('showNft');
+            myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;
+            
     }
     
     function AfficherMasquer()
@@ -210,8 +332,8 @@ const GallusStory = () => {
             </div>
             <div className="right-nav">
                     <div className="right-item" id="my-nft">
-                        <NavLink exact to="/my-nft" className="nft-owned ">{NftOwned}</NavLink>
-                        <a  id="test" className="wallet pool1" >Connect Wallet</a>
+                        <NavLink exact to="/my-nft" className="nft-owned " id='showNft'></NavLink>
+                        <a  id="wallet" className="wallet pool1" onClick={connectWallet}>Connect Wallet</a>
                         {/* onClick={connectMetaMask} */}
                     </div>
 

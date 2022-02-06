@@ -66,6 +66,7 @@ const BlindBox = () => {
 
     async function loadNfts() {
 
+
         if (typeof window.ethereum !== 'undefined') {
 
             await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -82,31 +83,26 @@ const BlindBox = () => {
             // IF NETWORK ISNT BNB 
 
             let network = await  provider.getNetwork()
-
             if (network.name !== 'bnb') {
 
                 var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
                 containert.classList.add('container-popup-network');
                 maint.appendChild(containert);
-                
     
                 var popupBox = document.createElement('div');
                 containert.appendChild(popupBox);
                 popupBox.classList.add('popup-box')
-    
     
                 var title = document.createElement('h3')
                 popupBox.appendChild(title);
                 title.innerHTML = 'Wrong Network'
                 title.classList.add('title-popup-network')
     
-    
                 var text = document.createElement('p');
                 popupBox.appendChild(text);
                 text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
                 text.classList.add('text-popup-network')
-    
     
                 var button = document.createElement('button');
                 popupBox.appendChild(button);
@@ -116,56 +112,49 @@ const BlindBox = () => {
                 button.addEventListener('click', function (e) {
                     containert.style.display = 'none'
                 })
-    
-    
             }
+        } else {
+            alert('Please download Metamask !')
         }
     }
 
     async function connectWallet() {
 
+        try{
+            await window.ethereum.request({ method: "eth_requestAccounts" });
+            window.location.reload();
 
-    try{
+        }  catch(err) {
+            
+            var maint = document.getElementById('contain')
+            var containert = document.createElement('div');
+            containert.classList.add('container-popup-network');
+            maint.appendChild(containert);
 
-        await window.ethereum.request({ method: "eth_requestAccounts" });
-        window.location.reload();
+            var popupBox = document.createElement('div');
+            containert.appendChild(popupBox);
+            popupBox.classList.add('popup-box')
 
-    }  catch(err) {
-         
-        var maint = document.getElementById('contain')
-        var containert = document.createElement('div');
-        containert.classList.add('container-popup-network');
-        maint.appendChild(containert);
+            var title = document.createElement('h3')
+            popupBox.appendChild(title);
+            title.innerHTML = 'Connect Wallet'
+            title.classList.add('title-popup-network')
 
-        var popupBox = document.createElement('div');
-        containert.appendChild(popupBox);
-        popupBox.classList.add('popup-box')
+            var text = document.createElement('p');
+            popupBox.appendChild(text);
+            text.innerHTML = 'Please install MetaMask !'
+            text.classList.add('text-popup-network');
 
-        var title = document.createElement('h3')
-        popupBox.appendChild(title);
-        title.innerHTML = 'Connect Wallet'
-        title.classList.add('title-popup-network')
+            var button = document.createElement('button');
+            popupBox.appendChild(button);
+            button.classList.add('btn-popup-network')
+            button.innerHTML = 'OK'
 
-        var text = document.createElement('a');
-        popupBox.appendChild(text);
-        text.innerHTML = 'Please connect your Trust Wallet'
-        text.classList.add('text-popup-network');
-        text.href="https://link.trustwallet.com/wc?uri=wc%3Aca1fccc0-f4d1-46c2-90b7-c07fce1c0cae%401%3Fbridge%3Dhttps%253A%252F%252Fbridge.walletconnect.org%26key%3Da413d90751839c7628873557c718fd73fcedc5e8e8c07cfecaefc0d3a178b1d8";
-
-        var button = document.createElement('button');
-        popupBox.appendChild(button);
-        button.classList.add('btn-popup-network')
-        button.innerHTML = 'OK'
-
-        button.addEventListener('click', function (e) {
-            containert.style.display = 'none'
-        })
-           
+            button.addEventListener('click', function (e) {
+                containert.style.display = 'none'
+            }) 
+        }
     }
-        
-
-    }
-
 
     async function featherQuantity() {
 
@@ -182,8 +171,6 @@ const BlindBox = () => {
         setSmallFeather(smallFeather.toString());
         setMediumFeather(mediumFeather.toString());
         setLargeFeather(largeFeather.toString());
-
-        console.log(smallFeather.toString())
         
     }
 
@@ -205,17 +192,16 @@ const BlindBox = () => {
 
             // SHOW WALLET ADDRESS 
 
-            var originalAdress = window.ethereum.selectedAddress;
-            var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
-            var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
-            var newWalletAdress = firstWalletAdress + lastWalletAdress;
-            wallet.innerHTML = newWalletAdress; 
+        var originalAdress = window.ethereum.selectedAddress;
+        var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
+        var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
+        var newWalletAdress = firstWalletAdress + lastWalletAdress;
+        wallet.innerHTML = newWalletAdress; 
 
             // SHOW NFT OWNED
 
-            var myNfts = document.getElementById('showNft');
-            myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;
-            
+        var myNfts = document.getElementById('showNft');
+        myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;        
     }
 
     // BUY SMALL
@@ -229,79 +215,100 @@ const BlindBox = () => {
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceSmall = await contract.getPriceSmall();
 
-            console.log(priceSmall.toString())
             try {
+
                 const transaction = await contract.purchaseSmall({value: priceSmall});
                 await transaction.wait();
-                let network = await provider.getNetwork();
-                if (network.name !== 'bnb') {
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
-                    
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
 
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
 
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
 
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Gallus Team'
-                    title.classList.add('title-popup-network')
-
-
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase '
-                    text.classList.add('text-popup-network')
-
-
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
-
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-
-
-                }
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase"
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                 window.location.reload();
-
             }
             catch(err) {
-                alert(err.data.message);
 
                 let network = await provider.getNetwork()
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
                 
+                img.classList.add('img-popup-network')
+                img.src = gallus
+
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Presale is closed for now.."
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+                
+                if (err.data.message == "execution reverted: Pausable: paused") {
+                    title.innerHTML = "Presale is closed for now";
+                }
+                    
+                var sentence = err.data.message.includes("err: insufficient funds for transfer:")
+                if (sentence) {
+                    title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                  
+                }   
+
                 if (network.name !== 'bnb') {
 
                     var maint = document.getElementById('contain')
                     var containert = document.createElement('div');
                     containert.classList.add('container-popup-network');
                     maint.appendChild(containert);
-                    
 
                     var popupBox = document.createElement('div');
                     containert.appendChild(popupBox);
                     popupBox.classList.add('popup-box')
-
 
                     var title = document.createElement('h3')
                     popupBox.appendChild(title);
                     title.innerHTML = 'Wrong Network'
                     title.classList.add('title-popup-network')
 
-
                     var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+                    popupBox.appendChild(text);  
                     text.classList.add('text-popup-network')
-
+                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
 
                     var button = document.createElement('button');
                     popupBox.appendChild(button);
@@ -311,87 +318,7 @@ const BlindBox = () => {
                     button.addEventListener('click', function (e) {
                         containert.style.display = 'none'
                     })
-
-
                 }
-
-                if (err.data.message == "execution reverted: Pausable: paused") {
-
-                                        var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    
-                    
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                    
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "Presale is closed for now.."
-                                    
-                                    title.classList.add('title-popup-soldout')
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
-                    
-                var sentence = err.data.message.includes("err: insufficient funds for transfer:")
-                if (sentence) {
-                    
-                                    var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "You don't have enough BNB for this transaction"
-                                    
-                                    title.classList.add('title-popup-soldout')
-                    
-                    
-                                    
-                    
-                    
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                    
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
-                    
-                                   
-                                   
-                                    var dataMessage = err.data.message.search("err: insufficient funds for transfer:")
-                                   
-                    
             }
         }
     }
@@ -411,168 +338,111 @@ const BlindBox = () => {
             try {
                 const transaction = await contract.purchaseMedium({value: priceMedium});
                 await transaction.wait();
-                let network = await provider.getNetwork();
-                if (network.name !== 'bnb') {
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
-                    
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
 
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
 
+                var img = document.createElement('img');
+                popupBox.appendChild(img); 
+                img.classList.add('img-popup-network')
+                img.src = gallus
 
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Gallus Team'
-                    title.classList.add('title-popup-network')
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase"
+                title.classList.add('title-popup-soldout')
 
-
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase '
-                    text.classList.add('text-popup-network')
-
-
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
-
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-
-
-                }
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                 window.location.reload();
-
             }
+
             catch(err) {
-                alert(err.data.message);
 
                 let network = await provider.getNetwork()
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
                 
-                if (network.name !== 'bnb') {
+                img.classList.add('img-popup-network')
+                img.src = gallus
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
-                    
-
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
-
-
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Wrong Network'
-                    title.classList.add('title-popup-network')
-
-
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-                    text.classList.add('text-popup-network')
-
-
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
-
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-
-
-                }
-
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Presale is closed for now.."
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+                
                 if (err.data.message == "execution reverted: Pausable: paused") {
-
-                                        var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    
-                    
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                    
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "Presale is closed for now.."
-                                    
-                                    title.classList.add('title-popup-soldout')
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
+                    title.innerHTML = "Presale is closed for now";
+                }
                     
                 var sentence = err.data.message.includes("err: insufficient funds for transfer:")
                 if (sentence) {
-                    
-                                    var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "You don't have enough BNB for this transaction"
-                                    
-                                    title.classList.add('title-popup-soldout')
-                    
-                    
-                                    
-                    
-                    
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                    
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
-                    
-                                   
-                                   
-                                    var dataMessage = err.data.message.search("err: insufficient funds for transfer:")
-                                   
-                    
+                    title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                                   
+                }   
+
+                if (network.name !== 'bnb') {
+
+                    var maint = document.getElementById('contain')
+                    var containert = document.createElement('div');
+                    containert.classList.add('container-popup-network');
+                    maint.appendChild(containert);                
+
+                    var popupBox = document.createElement('div');
+                    containert.appendChild(popupBox);
+                    popupBox.classList.add('popup-box')
+
+                    var title = document.createElement('h3')
+                    popupBox.appendChild(title);
+                    title.innerHTML = 'Wrong Network'                   
+                    title.classList.add('title-popup-network')
+
+                    var text = document.createElement('p');
+                    popupBox.appendChild(text); 
+                    text.classList.add('text-popup-network')
+                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+
+                    var button = document.createElement('button');
+                    popupBox.appendChild(button);
+                    button.classList.add('btn-popup-network')
+                    button.innerHTML = 'OK'
+
+                    button.addEventListener('click', function (e) {
+                        containert.style.display = 'none'
+                    })
+                }
             }
         }
     }
+
+    // BUY LARGE FEATHER OK
 
     async function buyLargeFeather() { 
 
@@ -583,169 +453,111 @@ const BlindBox = () => {
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceLarge = await contract.getPriceLarge();
 
-            console.log(priceLarge.toString())
             try {
+
                 const transaction = await contract.purchaseLarge({value: priceLarge});
                 await transaction.wait();
-                let network = await provider.getNetwork();
-                if (network.name !== 'bnb') {
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
-                    
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
 
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
 
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
+                
+                img.classList.add('img-popup-network')
+                img.src = gallus
 
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Gallus Team'
-                    title.classList.add('title-popup-network')
-
-
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase '
-                    text.classList.add('text-popup-network')
-
-
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
-
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-
-
-                }
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase"
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
                 window.location.reload();
-
             }
+
             catch(err) {
-                alert(err.data.message);
 
                 let network = await provider.getNetwork()
+                var maint = document.getElementById('contain')
+                var containert = document.createElement('div');
+                containert.classList.add('container-popup-network');
+                maint.appendChild(containert);
+
+                var popupBox = document.createElement('div');
+                containert.appendChild(popupBox);
+                popupBox.classList.add('popup-box-soldout')
+
+                var img = document.createElement('img');
+                popupBox.appendChild(img);
                 
-                if (network.name !== 'bnb') {
+                img.classList.add('img-popup-network')
+                img.src = gallus
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
-                    
-
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
-
-
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Wrong Network'
-                    title.classList.add('title-popup-network')
-
-
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);
-                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-                    text.classList.add('text-popup-network')
-
-
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
-
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-
-
-                }
-
+                var title = document.createElement('h3')
+                popupBox.appendChild(title);
+                title.innerHTML = "Presale is closed for now.."
+                
+                title.classList.add('title-popup-soldout')
+                var button = document.createElement('button');
+                popupBox.appendChild(button);
+                button.classList.add('btn-popup-network')
+                button.innerHTML = 'OK'
+                button.addEventListener('click', function (e) {
+                    containert.style.display = 'none'
+                })
+                
                 if (err.data.message == "execution reverted: Pausable: paused") {
-
-                                        var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    
-                    
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                    
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "Presale is closed for now.."
-                                    
-                                    title.classList.add('title-popup-soldout')
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
+                    title.innerHTML = "Presale is closed for now";        
+                }
                     
                 var sentence = err.data.message.includes("err: insufficient funds for transfer:")
                 if (sentence) {
-                    
-                                    var maint = document.getElementById('contain')
-                                    var containert = document.createElement('div');
-                                    containert.classList.add('container-popup-network');
-                                    maint.appendChild(containert);
-                                    var popupBox = document.createElement('div');
-                                    containert.appendChild(popupBox);
-                                    popupBox.classList.add('popup-box-soldout')
-                                    var img = document.createElement('img');
-                                    popupBox.appendChild(img);
-                                    
-                                    
-                                    img.classList.add('img-popup-network')
-                                    img.src = gallus
-                    
-                    
-                                    var title = document.createElement('h3')
-                                    popupBox.appendChild(title);
-                                    title.innerHTML = "You don't have enough BNB for this transaction"
-                                    
-                                    title.classList.add('title-popup-soldout')
-                    
-                    
-                                    
-                    
-                    
-                                    var button = document.createElement('button');
-                                    popupBox.appendChild(button);
-                                    button.classList.add('btn-popup-network')
-                                    button.innerHTML = 'OK'
-                    
-                                    button.addEventListener('click', function (e) {
-                                        containert.style.display = 'none'
-                                        })
-                                    }
-                    
-                                   
-                                   
-                                    var dataMessage = err.data.message.search("err: insufficient funds for transfer:")
-                                   
-                    
+                    title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                      
+                }   
+
+                if (network.name !== 'bnb') {
+
+                    var maint = document.getElementById('contain')
+                    var containert = document.createElement('div');
+                    containert.classList.add('container-popup-network');
+                    maint.appendChild(containert);       
+
+                    var popupBox = document.createElement('div');
+                    containert.appendChild(popupBox);
+                    popupBox.classList.add('popup-box')
+
+                    var title = document.createElement('h3')
+                    popupBox.appendChild(title);
+                    title.innerHTML = 'Wrong Network'         
+                    title.classList.add('title-popup-network')
+
+                    var text = document.createElement('p');
+                    popupBox.appendChild(text);               
+                    text.classList.add('text-popup-network')
+                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+
+                    var button = document.createElement('button');
+                    popupBox.appendChild(button);
+                    button.classList.add('btn-popup-network')
+                    button.innerHTML = 'OK'
+
+                    button.addEventListener('click', function (e) {
+                        containert.style.display = 'none'
+                    })
+                }
             }
         }
     }
