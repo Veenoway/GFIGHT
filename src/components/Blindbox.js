@@ -1956,22 +1956,22 @@ Take advantage of this unique benefit with the DeFi
                                 </div>
                                 
                                 <div className="center-button">
-                                    <div className="">
+                                    <div className="flexDis">
                                     <a  className="btn-border-color-small" id="buySmall" onClick={buySmallFeather} >
-                                    <img src={icon_2} className="icon-btn" />BUY SMALL</a></div>
+                                    <img src={icon_2} className="icon-btn icon-btn2" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft" >
                                         <div className="countdown" id="countdownDays">
-                                           
+                                           L
                                         </div>
                                         <div className="countdown" id="countdownHours">
-                                            
+                                           I 
                                         </div>
                                         <div className="countdown" id="countdownMinutes">
-                                            
+                                           V 
                                         </div>
                                         <div className="countdown" id="countdownSeconds">
-                                            
+                                           E 
                                         </div>
                                         
                                     </div>
@@ -2016,19 +2016,19 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="center-button">
                                     
                                 <a  className="btn-border-color-medium" id="buyMedium" onClick={buyMediumFeather} >
-                                    <img src={mediumFeatherImg} className="icon-btn " />BUY MEDIUM</a>
+                                    <img src={mediumFeatherImg} className="icon-btn icon-btn3" />BUY MEDIUM</a>
                                     <div className="prenium-box-nft" >
                                         <div className="countdown" id="countdownDays3">
-                                           
+                                           L
                                         </div>
                                         <div className="countdown" id="countdownHours3">
-                                            
+                                           I 
                                         </div>
                                         <div className="countdown" id="countdownMinutes3">
-                                            
+                                           V 
                                         </div>
                                         <div className="countdown" id="countdownSeconds3">
-                                            
+                                          E  
                                         </div>
                                         
                                     </div>
@@ -2090,19 +2090,19 @@ Take advantage of this unique benefit with the DeFi.
                                 <div className="center-button">
                                     
                                 <a  className="btn-border-color-titan" id="buyLarge" onClick={buyLargeFeather}>
-                                    <img src={largeFeatherImg} className="icon-btn" />BUY TITAN</a>
+                                    <img src={largeFeatherImg} className="icon-btn icon-btn4" />BUY TITAN</a>
                                     <div className="prenium-box-nft" >
                                         <div className="countdown" id="countdownDays2">
-                                           
+                                           L
                                         </div>
                                         <div className="countdown" id="countdownHours2">
-                                            
+                                            I
                                         </div>
                                         <div className="countdown" id="countdownMinutes2">
-                                            
+                                            V
                                         </div>
                                         <div className="countdown" id="countdownSeconds2">
-                                            
+                                          E 
                                         </div>
                                         
                                     </div>

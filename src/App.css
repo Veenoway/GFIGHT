@@ -3149,55 +3149,55 @@ align-items:center;
   }
   .btn-border-color-medium{
     border: 2px solid #0000ff;
-      color: #f7F7F7;
-      background-color: #0707b4;
-      height:52px;
-      line-height:1.2;
-      display:inline-flex;
-      align-items:center;
-      justify-content: end;
-      text-align: center;
-      cursor:pointer;
-      transition: all .3s ease 0s;
-      font-weight: 700;
-      padding: 0 9px;
-      font-size:18px;
-      line-height:0;
-      border-radius:15px;
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-      min-width:193px;
-      box-sizing:border-box;
-      margin-right: 24px;
-      text-decoration: none;
-      font-family: 'bungee', cursive;
-      position:relative;
-      margin-left:20px;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height: 52px;
+    /* line-height: 1.2; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 11px 0px 0px;
+    font-size: 18px;
+    line-height: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(255 255 255 / 29%);
+    min-width: 98px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position: relative;
+    margin-left: 18px;
   }
   .btn-border-color-small{
     border: 2px solid #0000ff;
-      color: #f7F7F7;
-      background-color: #0707b4;
-      height:52px;
-      line-height:1.2;
-      display:inline-flex;
-      align-items:center;
-      justify-content: end;
-      text-align: center;
-      cursor:pointer;
-      transition: all .3s ease 0s;
-      font-weight: 700;
-      padding: 0 9px;
-      font-size:18px;
-      line-height:0;
-      border-radius:15px;
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-      min-width:193px;
-      box-sizing:border-box;
-      margin-right: 24px;
-      text-decoration: none;
-      font-family: 'bungee', cursive;
-      position:relative;
-      margin-left:20px;
+    color: #f7F7F7;
+    background-color: #0707b4;
+    height: 52px;
+    /* line-height: 1.2; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    font-weight: 700;
+    padding: 0 11px 0px 0px;
+    font-size: 18px;
+    line-height: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(255 255 255 / 29%);
+    min-width: 98px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: 'bungee', cursive;
+    position: relative;
+    margin-left: 18px;
   }
 
   .btn-border-color-large{
@@ -5390,6 +5390,15 @@ ul{
 
 }
 
+.icon-btn2{
+  left:-11px
+}
+.icon-btn3{
+  left:-11px
+}
+.icon-btn4{
+  left:-10px;
+}
 .comingsoon-airdrop{
   margin-bottom:150px;
 }
@@ -5594,27 +5603,27 @@ ul{
   border: 2px solid #0000ff;
     color: #f7F7F7;
     background-color: #0707b4;
-    height:52px;
-    line-height:1.2;
-    display:inline-flex;
-    align-items:center;
+    height: 52px;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
     justify-content: end;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     transition: all .3s ease 0s;
     font-weight: 700;
-    padding: 0 9px;
-    font-size:18px;
-    line-height:0;
-    border-radius:15px;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.288);
-    min-width:176px;
-    box-sizing:border-box;
+    padding: 0 11px 0px 0px;
+    font-size: 18px;
+    line-height: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(255 255 255 / 29%);
+    min-width: 176px;
+    box-sizing: border-box;
     margin-right: 24px;
     text-decoration: none;
     font-family: 'bungee', cursive;
-    position:relative;
-    margin-left:20px;
+    position: relative;
+    margin-left: 20px;
 }
 
 .btn-border-color-small:hover{
@@ -5630,7 +5639,7 @@ ul{
   cursor:pointer;
   transition: all .3s ease 0s;
   font-weight: 700;
-  padding: 0 9px;
+  padding: 0 11px 0px 0px;
   font-size:18px;
   line-height:0;
   border-radius:15px;
@@ -5659,7 +5668,7 @@ ul{
     cursor:pointer;
     transition: all .3s ease 0s;
     font-weight: 700;
-    padding: 0 9px;
+    padding: 0 11px 0px 0px;
     font-size:18px;
     line-height:0;
     border-radius:15px;
@@ -5686,7 +5695,7 @@ ul{
   cursor:pointer;
   transition: all .3s ease 0s;
   font-weight: 700;
-  padding: 0 9px;
+  padding: 0 11px 0px 0px;
   font-size:18px;
   line-height:0;
   border-radius:15px;
@@ -5715,7 +5724,7 @@ ul{
     cursor:pointer;
     transition: all .3s ease 0s;
     font-weight: 700;
-    padding: 0 9px;
+    padding: 0 11px 0px 0px;
     font-size:18px;
     line-height:0;
     border-radius:15px;
@@ -5741,7 +5750,7 @@ ul{
   cursor:pointer;
   transition: all .3s ease 0s;
   font-weight: 700;
-  padding: 0 9px;
+  padding: 0 11px 0px 0px;
   font-size:18px;
   line-height:0;
   border-radius:15px;
@@ -5915,23 +5924,27 @@ ul{
   margin-top:20px
 }
 
+.flexDis{
+  display:flex;
+}
+
 .countdown{
   display: flex;
     flex-direction: column;
     height: 40px;
     width: 40px;
-    background:linear-gradient( 
-      180deg, rgba(237,0,0,1) 0%, rgba(237,214,0,1) 100%, rgba(248,178,26,1) 100%);
     justify-content: center;
     margin-right: 10px;
     align-items: center;
     border-radius: 10px;
     padding: 4px 10px;
     color:white;
-    font-family:Sen;
+    font-family:Bungee;
     box-shadow:0 0 6px #d0d0d090;
     font-weight: 300;
     font-size: 20px;
+    animation: 2s linear 0s infinite normal none running test;
+    background: linear-gradient(135deg, rgb(255, 0, 0) 0%,  rgb(208, 222, 33) 100%) 0% 0% / 300% 300%;
 }
 
 .prenium-box-nft{
