@@ -65,38 +65,42 @@ const BlindBox = () => {
     const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
     const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
 
+    
+
     useEffect(() => {
         loadNfts();
         
     }, []);
 
+    var web3Provider = new WalletConnectProvider({
+        rpc: {
+          // 1: "https://cloudflare-eth.com/", // https://ethereumnodes.com/
+          // 137: "https://polygon-rpc.com/", // https://docs.polygon.technology/docs/develop/network-details/network/
+          56: "https://bsc-dataseed.binance.org/"
+          // ...
+  
+        },
+        qrcodeModalOptions: {
+              mobileLinks: [
+              "rainbow",
+              "metamask",
+              "argent",
+              "trust",
+              "imtoken",
+              "pillar",
+              ],
+              
+          },
+          
+        // bridge: 'https://bridge.walletconnect.org',
+      });
+
     async function loadNfts() {
 
 
-        var web3Provider = new WalletConnectProvider({
-            rpc: {
-              // 1: "https://cloudflare-eth.com/", // https://ethereumnodes.com/
-              // 137: "https://polygon-rpc.com/", // https://docs.polygon.technology/docs/develop/network-details/network/
-              56: "https://bsc-dataseed.binance.org/"
-              // ...
-      
-            },
-            qrcodeModalOptions: {
-                  mobileLinks: [
-                  "rainbow",
-                  "metamask",
-                  "argent",
-                  "trust",
-                  "imtoken",
-                  "pillar",
-                  ],
-                  
-              },
-              
-            // bridge: 'https://bridge.walletconnect.org',
-          });
+        
 
-        if (typeof window.ethereum !== 'undefined') {
+        if (typeof window.ethereum !== 'undefined' && web3Provider !== 'undefined') {
 
             try{
                 await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -108,8 +112,9 @@ const BlindBox = () => {
             const provider = new ethers.providers.Web3Provider(web3Provider);
             const signer = provider.getSigner();
             console.log(provider)
-            const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+            const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
             console.log(window.ethereum.selectedAddress)
+            console.log(provider)
                 
             setLoadingState('loaded');
             featherQuantity();
@@ -194,10 +199,10 @@ const BlindBox = () => {
     async function featherQuantity() {
 
         // FETCH QUANTITY OF EACH FEATHER
-
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await web3Provider.enable();
+        const provider = new ethers.providers.Web3Provider(web3Provider);
         const signer = provider.getSigner();
-        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
 
         var smallFeather = await featherContract.remainingSmall();
         var mediumFeather = await featherContract.remainingMedium();
@@ -212,13 +217,15 @@ const BlindBox = () => {
     async function nftOwnedInWallet() {
 
         // FETCH BALANCE 
-
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await web3Provider.enable();
+        const provider = new ethers.providers.Web3Provider(web3Provider);
+        console.log(provider)
         const signer = provider.getSigner();
-        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-        const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, signer);
-        const balanceFeather = await featherContract.balanceOf(window.ethereum.selectedAddress);
-        const balanceEpicFeather = await epicFeatherContract.balanceOf(window.ethereum.selectedAddress);
+        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+        const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+        console.log(provider.provider.accounts[0])
+        const balanceFeather = await featherContract.balanceOf(provider.provider.accounts[0]);
+        const balanceEpicFeather = await epicFeatherContract.balanceOf(provider.provider.accounts[0]);
 
         setNftOwned(Number(balanceFeather));
         setEpicNftOwned(Number(balanceEpicFeather));
@@ -227,7 +234,7 @@ const BlindBox = () => {
 
             // SHOW WALLET ADDRESS 
 
-        var originalAdress = window.ethereum.selectedAddress;
+        var originalAdress = provider.provider.accounts[0];
         var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
         var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
         var newWalletAdress = firstWalletAdress + lastWalletAdress;
@@ -242,13 +249,14 @@ const BlindBox = () => {
     // BUY SMALL
 
     async function buySmallFeather() { 
-
-        if (typeof window.ethereum !== 'undefined') {
-
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
+        await web3Provider.enable();
+        const provider = new ethers.providers.Web3Provider(web3Provider);
             const signer = provider.getSigner();
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceSmall = await contract.getPriceSmall();
+
+        if (provider.provider.accounts[0] !== 'undefined' && window.ethereum.selectedAddress) {
+
 
             try {
 
@@ -283,9 +291,11 @@ const BlindBox = () => {
                     containert.style.display = 'none'
                 })
                 window.location.reload();
+                alert('ok')
             }
             catch(err) {
-
+                console.log(err)
+                console.log(err.error.message)
                 let network = await provider.getNetwork()
                 var maint = document.getElementById('contain')
                 var containert = document.createElement('div');
@@ -315,15 +325,15 @@ const BlindBox = () => {
                     containert.style.display = 'none'
                 })
                 
-                if (err.data.message == "execution reverted: Pausable: paused") {
+                if (err.error.message === "execution reverted: Pausable: paused") {
                     title.innerHTML = "Presale is closed for now";
                 }
                     
-                var sentence = err.data.message.includes("err: insufficient funds for transfer:")
+                var sentence = err.error.message.includes("err: insufficient funds for transfer:")
                 if (sentence) {
                     title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                  
                 }   
-
+                
                 if (network.name !== 'bnb') {
 
                     var maint = document.getElementById('contain')
