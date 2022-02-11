@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import NftDescription from "./NftDescription";
 import { ethers }from "ethers";
 import GallusFeatherNFT from '../GallusFeatherNFT.json';
+import Test from './Test';
 import { useEffect, useState } from "react";
 
 
@@ -1844,7 +1845,7 @@ const BlindBox = () => {
                 </div> 
         <div className="pool background-section">
             
-        
+       <Test />
         <div className="wallet-nav">
             <div className="button-aside-nav" >
                 <img src={gallusLogo} className="gallus-title-logo" />
@@ -1868,7 +1869,7 @@ const BlindBox = () => {
                 </div>
             </div>
         
-        
+            
             <div className="normal-layout padding-nft-2">
                 <div className="main-title">
                     <div className="left-1">

@@ -316,7 +316,15 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                     <div class="detail-container">
                         <h1 class="title-Nft-desc">${data.name}<span className="title-nft-secondColor"></span></h1>
                         <div class="liseret-nft"></div>
-                        <p class="text-description-nft">${data.description}</p>
+                        <ul>
+                            <li class="text-description-nft">${data.description}</li>
+                            <li class="text-description-nft" style="">Version : ${data.attributes[0].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Material : ${data.attributes[1].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Box : ${data.attributes[2].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Crest : ${data.attributes[3].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Sticker : ${data.attributes[4].value}</li>
+                        </ul>
+
                         
                         <div class="center-button">
                             
@@ -328,6 +336,8 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                 </div>
             </div>`
                 myNft.innerHTML += nftBoxCreated
+
+                console.log(data.attributes)
 
                
         
