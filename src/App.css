@@ -111,52 +111,52 @@
   opacity:.64;
 }
 .icon0{
-  background-image:url('../src/coin.svg');
+  background-image:url('../src/images/coin.svg');
 }
 .icon1{
-  background-image:url('../src/icon1.svg');
+  background-image:url('../src/images/icon1.svg');
 }
 .icon2{
-  background-image:url('../src/icon2.svg');
+  background-image:url('../src/images/icon2.svg');
 }
 .icon3{
-  background-image:url('../src/icon3.svg');
+  background-image:url('../src/images/icon3.svg');
 }
 .icon4{
-  background-image:url('../src/icon4.svg');
+  background-image:url('../src/images/icon4.svg');
 }
 .icon5{
-  background-image:url('../src/icon5.svg');
+  background-image:url('../src/images/icon5.svg');
 }
 .icon6{
-  background-image:url('../src/icon6.svg');
+  background-image:url('../src/images/icon6.svg');
 }
 .icon7{
-  background-image:url('../src/icon7.svg');
+  background-image:url('../src/images/icon7.svg');
 }
 .icon8{
-  background-image:url('../src/icon8.svg');
+  background-image:url('../src/images/icon8.svg');
 }
 .icon9{
-  background-image:url('../src/icon9.svg');
+  background-image:url('../src/images/icon9.svg');
 }
 .icon10{
-  background-image:url('../src/icon10.svg');
+  background-image:url('../src/images/icon10.svg');
 }
 .icon11{
-  background-image:url('../src/icon11.svg');
+  background-image:url('../src/images/icon11.svg');
 }
 .icon12{
-  background-image:url('../src/icon12.svg');
+  background-image:url('../src/images/icon12.svg');
 }
 .icon13{
-  background-image:url('../src/icon13.svg');
+  background-image:url('../src/images/icon13.svg');
 }
 .icon14{
-  background-image:url('../src/icon14.svg');
+  background-image:url('../src/images/icon14.svg');
 }
 .icon15{
-  background-image:url('../src/icon15.svg');
+  background-image:url('../src/images/icon15.svg');
 }
 
 .rofi-title-2{
@@ -294,7 +294,7 @@ display:flex;
 align-items:center;
 }
 
-.logoJOJO{
+.logoGALLUS{
   display:none
 }
 .list-marketnft{
@@ -406,7 +406,7 @@ align-items:center;
   background-size:auto 100%;
   background-position:50%;
   background-repeat:no-repeat;
-  background-image:url(../src/banner.png)
+ 
 
 }
 
@@ -419,7 +419,7 @@ align-items:center;
   background-size:auto 100%;
   background-position:50%;
   background-repeat:no-repeat;
-  background-image:url(../src/banner2.png)
+ 
 }
 
 .pool-title{
@@ -719,7 +719,7 @@ align-items:center;
 }
 
 .avatar-inner{
-  background-image: url(./plus1.svg);
+  background-image: url(./images/plus1.svg);
   background-size: 50%;
   cursor: pointer;
   background-position: 50%;
@@ -1003,7 +1003,7 @@ a{
   height:1px;
  
   background-repeat: repeat-x;
-  background-image: url(../src/tiret.svg);
+  background-image: url(../src/images/tiret.svg);
   position: relative;
   
    
@@ -1331,7 +1331,7 @@ a{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../src/banner1.jpg);
+    
     
     height: 100%;
     width: 100%;
@@ -1356,7 +1356,7 @@ a{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../src/banner2.jpg);
+   
     
     height: 100%;
     width: 100%;
@@ -1381,7 +1381,7 @@ a{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../src/banner-3.cad16fe8.jpg);
+    
     
     height: 100%;
     width: 100%;
@@ -1406,7 +1406,7 @@ a{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../src/banner4.jpg);
+    
     
     height: 100%;
     width: 100%;
@@ -1431,7 +1431,7 @@ a{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../src/banner5.jpg);
+    
     
     height: 100%;
     width: 100%;
@@ -1567,7 +1567,8 @@ a{
 }
 
 .nav-logo{
-  background: url('./logoJOJO.png');
+  
+
     background-repeat: no-repeat;
     height: 50px;
     width: 135px;
@@ -2337,7 +2338,7 @@ a{
 
 .animation-right{
   animation: 14s linear infinite img-left;
-  background-image: url('../src/images/img-top.png');
+ 
   background-position: 0 50%;
   background-size: auto 100%;
   background-repeat: repeat-x;
@@ -2348,7 +2349,7 @@ a{
 
 .animation-left{
   animation: 14s linear infinite img-right;
-  background-image: url('../src/images/img-bottom.png');
+ 
   background-position: 0 50%;
   background-size: auto 100%;
   background-repeat: repeat-x;

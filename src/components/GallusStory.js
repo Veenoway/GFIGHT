@@ -325,7 +325,7 @@ const GallusStory = () => {
                 </a>
             </div>
         <div className="logo-nav-wallet">
-            <a href="" className="logoJOJO"></a>
+            <a href="" className="logoGALLUS"></a>
                 <div className="pool1">
                     Gallus story
                 </div>

@@ -488,7 +488,7 @@ var deleteImageChar = data.image.substring(6, data.image.length - 0)
                 </a>
             </div>
         <div className="logo-nav-wallet">
-            <a href="" className="logoJOJO"></a>
+            <a href="" className="logoGALLUS"></a>
                 <div className="pool1">
                     Your Nft
                 </div>

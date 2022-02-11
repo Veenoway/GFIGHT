@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 
 import nftBox from "../images/nft-box.gif";
-import egg from "../eggIncub.jpg";
+import egg from "../images/eggIncub.jpg";
 import hamburger from "../images/hamburger.jpg";
 import bsc from "../images/bsc.png";
 import prenium from "../images/normal.gif";
@@ -1854,7 +1854,7 @@ const BlindBox = () => {
                 </a>
             </div>
             <div className="logo-nav-wallet">
-                <a href="" className="logoJOJO"></a>
+                <a href="" className="logoGALLUS"></a>
                     <div className="pool1" >
                         Exclusive Pre-Sale Launch 
                     </div>

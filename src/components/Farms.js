@@ -1,5 +1,4 @@
-import coin from '../coin.png'
-import logo from '../logo.png'
+
 import Header from './Header';
 
 const Farms = () => {
@@ -8,7 +7,7 @@ const Farms = () => {
         <Header />
        <div className="wallet-nav">
            <div className="logo-nav">
-               <a href="" className="logoJOJO"></a>
+               <a href="" className="logoGALLUS"></a>
                 <div clasName="pool">
                     Farms
                 </div>
@@ -29,7 +28,7 @@ const Farms = () => {
                 Farms - Share 2,200,000,000 $ROFI
                 </div>
                 <div className="farms-brief">
-                Stake JOJO/BNB LP and Earn $ROFI, share 2,200,000,000 $JOJO
+                Stake GALLUS/BNB LP and Earn $ROFI, share 2,200,000,000 $GALLUS
                 </div>
                 <div className="button-brown">
                     <a href="" className="brown">More Info</a>
@@ -41,7 +40,7 @@ const Farms = () => {
                 <div className="farms-items">
                     <div className="farms-top">
                         <div className="top-item">
-                            <img src={coin} className="coin"/>
+                            <img src="" className="coin"/>
                             <div className="top-text">
                                 ROFI/BNB
                             </div>
@@ -56,7 +55,7 @@ const Farms = () => {
                         </div>
                         <div className="top-item-token">
                             <div className="value token-value">
-                                <img src={logo} className="coin"/>1,369,954,326
+                                <img src="" className="coin"/>1,369,954,326
                                 <span className="value-text"> = $ 1,035,676</span>
                             </div>
                             <div className="title-item">Remaining Tokens in Pool</div>
@@ -66,7 +65,7 @@ const Farms = () => {
                         <div className="bottom-item margin-right">
                             <div className="">
                                 <div className="token-value value">
-                                    <img src={coin} className="coin1"/>0
+                                    <img src="" className="coin1"/>0
                                     <span className="value-text">= $0</span>
                                 </div>
                                 <div className="title-item">Staked</div>
@@ -78,7 +77,7 @@ const Farms = () => {
                         <div className="bottom-item">
                             <div className="">
                                 <div className="token-value value">
-                                    <img src={coin} className="coin1"/>0
+                                    <img src=""className="coin1"/>0
                                     <span className="value-text">= $0</span>
                                 </div>
                                 <div className="title-item">Harvest</div>
@@ -98,7 +97,7 @@ const Farms = () => {
                         <div className="main-title">FAQ</div>
                         <ul className="content-faq">
                             <div className="faq-item">
-                                <div className="faq-value">1. You can stake ROFI/BNB LP and Earn $ROFI;</div>
+                                <div className="faq-value">1. You can stake GALLUS/BNB LP and Earn $ROFI;</div>
                             </div>
                             <div className="faq-item">
                                 <div className="faq-value">2. Please be sure to perform the operations of adding liquidity and removing liquidity on the ROFI official website, otherwise 10% of $ROFI will be burned during the operation.</div>

@@ -30,7 +30,7 @@ const Test = () => {
       account = accounts[0]; // get the primary account
         }
       catch(err) {
-          if(err.message == "User closed modal") {
+          if(err.message === "User closed modal") {
               alert('');
               
           }

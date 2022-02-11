@@ -10,44 +10,18 @@ import icon2 from "../images/icon-metaverse2.svg";
 import icon3 from "../images/icon-metaverse3.svg";
 import tokenomic from "../images/logo.gif";
 import { NavLink } from 'react-router-dom';
-import blackHole1 from "../images/icon-blackHole.svg";
-import blackHole2 from "../images/icon-blackHole-2.svg";
-import blackHole3 from "../images/icon-blackHole-3.svg";
-import blackHole4 from "../images/icon-blackHole-4.svg";
-import blackHole5 from "../images/icon-blackHole-5.svg";
-import blackHole6 from "../images/icon-blackHole-6.svg";
-import metamask1 from "../images/metamask-1.png";
-import metamask2 from "../images/metamask-2.png";
-import metamask3 from "../images/metamask-3.png";
-import binance from "../images/binance.png";
-import binanceNFT from "../images/binanceNFT.png";
-import certik from "../images/certik.png";
-import coinmarket from "../images/coinmarketcap.png";
-import coingecko from "../images/coingecko.png";
-import pancakeswap from "../images/pancakeswap.png";
-import trustwallet from "../images/trustwallet.png";
-import cryptonews from "../images/cryptonews.png";
+
 import footerTwitter from "../images/footer-twitter.svg";
 import footerMedium from "../images/footer-medium.svg";
 import footerMessage from "../images/footer-message.svg";
 import footerTelegram from "../images/footer-telegram.svg";
-import figurine from "../testegg.png";
-import egg from "../eggIncub.jpg";
-import testimg from "../TEST.jpg";
-import charles from "../halo2.jpg";
-import halo from "../halo.jpg";
-import space from "../space.jpg";
-import veeno from "../images/veeno.jpg"
-import miz from "../images/miz.jpg"
-import nico from "../images/nico.jpg"
-import macron from "../images/macron.jpg"
-import sylvain from "../images/sylvain.jpg"
-import niho from "../images/niho.jpg";
-import bios from "../images/bios.jpg";
+
+
+
 import $ from 'jquery';
-import title from "../images/title.png"
+
 import icon_2 from "../images/Asset_2.png";
-import controller from "../images/gamecontroller.png";
+
 import farm from "../images/farm.png";
 import governance from "../images/Governance.png";
 import reward from "../images/reward1.png";
@@ -56,12 +30,12 @@ import mining from "../images/mining.png";
 import swap from "../images/swap.png";
 import figurines from "../images/figurine.png";
 import finance from "../images/finance.png";
-import fightgallus from "../fight_chicken.png";
+
 import docpiece from "../images/doc_piece.png";
 import eggs from "../images/oeuf.png";
-import VideoLarge from "../images/large.mp4";
+
 import logoGallus from "../images/logoGallus.png";
-import team from "../images/moov.png";
+
 import mine from "../images/troll.png";
 import mine1 from "../images/mine1.png";
 import boite3 from "../images/boite3.png"
@@ -69,7 +43,7 @@ import gallusStory from "../images/gallusStory.png"
 import presale from "../images/presale.png"
 import yours from "../images/yours.png";
 import status from "../images/STATUE.png";
-import roadmap from "../images/roadmap.png"
+
 
 
 
@@ -379,7 +353,8 @@ const Home = () => {
                         <a href="https://galluspaper.gallusfighter.com/" className="unselected font">DOCS</a>
 
                     </div>
-                    <img src={logoGallus} className="barreNav-logo" />
+                    <img src={logoGallus
+                    } className="barreNav-logo" />
                     <a className="menu-icon cursor" id="menu-icon" onClick={showHeader}>
                         <i class="fas fa-bars"></i>
                         

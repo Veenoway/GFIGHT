@@ -213,7 +213,7 @@ const Community = () => {
                 </a>
             </div>
         <div className="logo-nav-wallet">
-            <a href="" className="logoJOJO"></a>
+            <a href="" className="logoGALLUS"></a>
                 <div className="pool1">
                     Community 
                 </div>

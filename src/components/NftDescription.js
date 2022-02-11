@@ -1,6 +1,6 @@
 import Header from "./Header";
 import { NavLink } from "react-router-dom";
-import egg from "../eggIncub.jpg"
+import egg from "../images/eggIncub.jpg"
 
 const NftDescription = () => {
     return (
@@ -8,7 +8,7 @@ const NftDescription = () => {
             <Header />
             <div className="wallet-nav">
             <div className="logo-nav">
-                <a href="" className="logoJOJO"></a>
+                <a href="" className="logoGALLUS"></a>
                     <div className="pool1">
                         NFT Market
                     </div>
