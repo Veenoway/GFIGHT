@@ -42,6 +42,10 @@ import gallusVideo from "../images/gallus_intro_low_reso.mp4";
 import icon_2 from "../images/Asset_2.png";
 import story from "../images/story.png";
 
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3 from "web3";
+
+
 const BlindBox = () => {
     // useEffect(() => {
     //     purshase
@@ -55,6 +59,7 @@ const BlindBox = () => {
     var [mediumFeather, setMediumFeather] = useState('')
     var [largeFeather, setLargeFeather] = useState('')
 
+   
     const [loadingState, setLoadingState] = useState('not-loaded');
 
     const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
@@ -68,12 +73,41 @@ const BlindBox = () => {
     async function loadNfts() {
 
 
+        var web3Provider = new WalletConnectProvider({
+            rpc: {
+              // 1: "https://cloudflare-eth.com/", // https://ethereumnodes.com/
+              // 137: "https://polygon-rpc.com/", // https://docs.polygon.technology/docs/develop/network-details/network/
+              56: "https://bsc-dataseed.binance.org/"
+              // ...
+      
+            },
+            qrcodeModalOptions: {
+                  mobileLinks: [
+                  "rainbow",
+                  "metamask",
+                  "argent",
+                  "trust",
+                  "imtoken",
+                  "pillar",
+                  ],
+                  
+              },
+              
+            // bridge: 'https://bridge.walletconnect.org',
+          });
+
         if (typeof window.ethereum !== 'undefined') {
 
-            await window.ethereum.request({ method: "eth_requestAccounts" });
-
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            try{
+                await window.ethereum.request({ method: "eth_requestAccounts" });
+            } catch {
+                 await web3Provider.enable();
+            }
+            
+           
+            const provider = new ethers.providers.Web3Provider(web3Provider);
             const signer = provider.getSigner();
+            console.log(provider)
             const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             console.log(window.ethereum.selectedAddress)
                 
