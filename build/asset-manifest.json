@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.4c95f557.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.0a534db8.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.0a534db8.chunk.js.map",
+    "main.css": "/GallusFighter.github.io/static/css/main.b32f910b.chunk.css",
+    "main.js": "/GallusFighter.github.io/static/js/main.d9c7adeb.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.d9c7adeb.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.e4f73c17.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.e4f73c17.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.945f02a0.chunk.js.map": "/GallusFighter.github.io/static/js/3.945f02a0.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.4c95f557.chunk.css.map": "/GallusFighter.github.io/static/css/main.4c95f557.chunk.css.map",
+    "static/css/main.b32f910b.chunk.css.map": "/GallusFighter.github.io/static/css/main.b32f910b.chunk.css.map",
     "static/js/2.64ae5b77.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.64ae5b77.chunk.js.LICENSE.txt",
     "static/media/Asset_2.1a3ccaef.png": "/GallusFighter.github.io/static/media/Asset_2.1a3ccaef.png",
     "static/media/Governance.84c1c293.png": "/GallusFighter.github.io/static/media/Governance.84c1c293.png",
@@ -45,7 +45,6 @@
     "static/media/largefeather.a01577d9.png": "/GallusFighter.github.io/static/media/largefeather.a01577d9.png",
     "static/media/little.0028918e.mp4": "/GallusFighter.github.io/static/media/little.0028918e.mp4",
     "static/media/logo.4a11f490.gif": "/GallusFighter.github.io/static/media/logo.4a11f490.gif",
-    "static/media/logo.6ce24c58.svg": "/GallusFighter.github.io/static/media/logo.6ce24c58.svg",
     "static/media/logoGallus.2e384411.png": "/GallusFighter.github.io/static/media/logoGallus.2e384411.png",
     "static/media/medium.772078ff.mp4": "/GallusFighter.github.io/static/media/medium.772078ff.mp4",
     "static/media/medium2.e52b8ff9.png": "/GallusFighter.github.io/static/media/medium2.e52b8ff9.png",
@@ -79,7 +78,7 @@
     "static/js/runtime-main.e4f73c17.js",
     "static/css/2.a75f5a2c.chunk.css",
     "static/js/2.64ae5b77.chunk.js",
-    "static/css/main.4c95f557.chunk.css",
-    "static/js/main.0a534db8.chunk.js"
+    "static/css/main.b32f910b.chunk.css",
+    "static/js/main.d9c7adeb.chunk.js"
   ]
 }

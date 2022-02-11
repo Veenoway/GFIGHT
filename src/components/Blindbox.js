@@ -1873,8 +1873,8 @@ const BlindBox = () => {
             <div className="normal-layout padding-nft-2">
                 <div className="main-title">
                     <div className="left-1">
-                        <h3 className="rofi-title-2">THE ROYAL FEATHER<br /> <span className="defight-color">NFT Collection BY</span></h3>
-                        <p className="p-text">Welcome to the very first collection of rare NFT Feathers <br /><span className="royalFeather">to introduce the latest evolution in the GameFi universe : </span><br />the DEFIGHT Metaverse</p>
+                        <h3 className="rofi-title-2">THE GALLUS ROYAL FEATHER NFT Collection</h3>
+                        <p className="p-text">Welcome to the very first collection of rare NFT Feathers to introduce the latest evolution in the GameFi universe : the DEFIGHT Metaverse</p>
                         <p className="p-text">Each NFT Feather is a unique piece of digital art. Participate in our mystery box pre-sale to capture an Exclusive NFT Feather among the 500 available.
                             Choose the model you want: Small, Medium or Titan! <br /><br />
                             Each NFT Feather is inside one of 6 beautiful boxes decorated with 6 beautiful stickers and 7 different colored crests that make this collection so rare. 

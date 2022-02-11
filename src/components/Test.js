@@ -15,6 +15,16 @@ const Test = () => {
         // ...
 
       },
+      qrcodeModalOptions: {
+        mobileLinks: [
+          "rainbow",
+          "metamask",
+          "argent",
+          "trust",
+          "imtoken",
+          "pillar",
+        ],
+      },
       // bridge: 'https://bridge.walletconnect.org',
     });
 
