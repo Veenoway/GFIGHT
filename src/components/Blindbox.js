@@ -161,7 +161,8 @@ const BlindBox = () => {
     async function connectWallet() {
 
         try{
-            await window.ethereum.request({ method: "eth_requestAccounts" });
+            
+            await web3Provider.enable();
             window.location.reload();
 
         }  catch(err) {
