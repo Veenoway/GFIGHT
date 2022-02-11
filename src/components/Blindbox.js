@@ -54,7 +54,9 @@ const BlindBox = () => {
 
     var [nftOwned, setNftOwned] = useState([]);
     var [epicNftOwned, setEpicNftOwned] = useState([])
-    var [account, setAccount] = useState([])
+    
+
+    const [account, setAccount] = useState([])
 
     var [smallFeather, setSmallFeather] = useState('')
     var [mediumFeather, setMediumFeather] = useState('')
@@ -123,6 +125,7 @@ const BlindBox = () => {
             setLoadingState('loaded');
             featherQuantity();
             nftOwnedInWallet();
+            setAccount(provider.provider.accounts[0])
 
             // IF NETWORK ISNT BNB 
 
@@ -203,6 +206,8 @@ const BlindBox = () => {
 
     async function featherQuantity() {
 
+        if (account !== 'undefined' || window.ethereum.selectedAddress) {
+
         // FETCH QUANTITY OF EACH FEATHER
         await web3Provider.enable();
         const provider = new ethers.providers.Web3Provider(web3Provider);
@@ -217,10 +222,11 @@ const BlindBox = () => {
         setMediumFeather(mediumFeather.toString());
         setLargeFeather(largeFeather.toString());
         
+        }
     }
 
     async function nftOwnedInWallet() {
-
+        if (account !== 'undefined' || window.ethereum.selectedAddress) {
         // FETCH BALANCE 
         await web3Provider.enable();
         console.log(web3Provider)
@@ -251,6 +257,7 @@ const BlindBox = () => {
 
         var myNfts = document.getElementById('showNft');
         myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;        
+        }
     }
 
     // BUY SMALL
@@ -262,7 +269,7 @@ const BlindBox = () => {
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceSmall = await contract.getPriceSmall();
 
-        if (provider.provider.accounts[0] !== 'undefined' || window.ethereum.selectedAddress) {
+        if (account !== 'undefined' || window.ethereum.selectedAddress!== 'undefined') {
 
 
             try {
