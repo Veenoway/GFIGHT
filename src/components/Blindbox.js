@@ -54,6 +54,7 @@ const BlindBox = () => {
 
     var [nftOwned, setNftOwned] = useState([]);
     var [epicNftOwned, setEpicNftOwned] = useState([])
+    var [account, setAccount] = useState([])
 
     var [smallFeather, setSmallFeather] = useState('')
     var [mediumFeather, setMediumFeather] = useState('')
@@ -100,22 +101,25 @@ const BlindBox = () => {
 
         
 
-        if (typeof window.ethereum !== 'undefined' && web3Provider !== 'undefined') {
+        // if (typeof window.ethereum !== 'undefined' && web3Provider !== 'undefined') {
 
-            try{
-                await window.ethereum.request({ method: "eth_requestAccounts" });
-            } catch {
-                 await web3Provider.enable();
-            }
-            
-           
+            // try {
+
+            //     await window.ethereum.request({ method: "eth_requestAccounts" });
+
+            // } catch {
+
+                
+    
+            // }
+           await web3Provider.enable();
             const provider = new ethers.providers.Web3Provider(web3Provider);
             const signer = provider.getSigner();
             console.log(provider)
             const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
             console.log(window.ethereum.selectedAddress)
             console.log(provider)
-                
+            
             setLoadingState('loaded');
             featherQuantity();
             nftOwnedInWallet();
@@ -153,9 +157,9 @@ const BlindBox = () => {
                     containert.style.display = 'none'
                 })
             }
-        } else {
-            alert('Please download Metamask !')
-        }
+        // } else {
+        //     alert('Please download Metamask !')
+        // }
     }
 
     async function connectWallet() {
@@ -219,6 +223,8 @@ const BlindBox = () => {
 
         // FETCH BALANCE 
         await web3Provider.enable();
+        console.log(web3Provider)
+        console.log()
         const provider = new ethers.providers.Web3Provider(web3Provider);
         console.log(provider)
         const signer = provider.getSigner();
@@ -256,7 +262,7 @@ const BlindBox = () => {
             const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
             const priceSmall = await contract.getPriceSmall();
 
-        if (provider.provider.accounts[0] !== 'undefined' && window.ethereum.selectedAddress) {
+        if (provider.provider.accounts[0] !== 'undefined' || window.ethereum.selectedAddress) {
 
 
             try {
