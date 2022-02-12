@@ -64,10 +64,12 @@ const BlindBox = () => {
     var [smallFeather, setSmallFeather] = useState('')
     var [mediumFeather, setMediumFeather] = useState('')
     var [largeFeather, setLargeFeather] = useState('')
+    
 
    
     const [loadingState, setLoadingState] = useState('not-loaded');
 
+    // const gallusFeatherNFTAddress = "REEL : 0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A TEST :0xf3b2bF0Cf14011aE704972D6B4726e61dd813d18";
     const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
     const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
 
@@ -75,14 +77,15 @@ const BlindBox = () => {
 
     useEffect(() => {
         // loadNfts();
-        
+        fetchData()
     }, []);
 
-    var web3Provider = new WalletConnectProvider({
+    const web3Provider = new WalletConnectProvider({
         rpc: {
           // 1: "https://cloudflare-eth.com/", // https://ethereumnodes.com/
           // 137: "https://polygon-rpc.com/", // https://docs.polygon.technology/docs/develop/network-details/network/
-          56: "https://bsc-dataseed.binance.org/"
+          56: "https://bsc-dataseed.binance.org/",
+          97: "https://data-seed-prebsc-2-s1.binance.org:8545/"
           // ...
   
         },
@@ -91,294 +94,294 @@ const BlindBox = () => {
         // bridge: 'https://bridge.walletconnect.org',
       });
 
-    async function loadNfts() {
+    // async function loadNfts() {
 
 
         
 
-        // if (typeof window.ethereum !== 'undefined' && web3Provider !== 'undefined') {
+    //     // if (typeof window.ethereum !== 'undefined' && web3Provider !== 'undefined') {
 
-            // try {
+    //         // try {
 
-            //     await window.ethereum.request({ method: "eth_requestAccounts" });
+    //         //     await window.ethereum.request({ method: "eth_requestAccounts" });
 
-            // } catch {
+    //         // } catch {
 
                 
     
-            // }
+    //         // }
            
-            const provider = new ethers.providers.Web3Provider(web3Provider);
-            const signer = provider.getSigner();
-            console.log(provider)
-            const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
-            console.log(window.ethereum.selectedAddress)
-            console.log(provider)
+    //         const provider = new ethers.providers.Web3Provider(web3Provider);
+    //         const signer = provider.getSigner();
+    //         console.log(provider)
+    //         const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+    //         console.log(window.ethereum.selectedAddress)
+    //         console.log(provider)
             
-            setLoadingState('loaded');
-            featherQuantity();
-            nftOwnedInWallet();
-            setAccount(provider.provider.accounts[0])
+    //         setLoadingState('loaded');
+    //         featherQuantity();
+    //         nftOwnedInWallet();
+    //         setAccount(provider.provider.accounts[0])
 
-            // IF NETWORK ISNT BNB 
+    //         // IF NETWORK ISNT BNB 
 
-            let network = await  provider.getNetwork()
-            if (network.name !== 'bnb') {
+    //         let network = await  provider.getNetwork()
+    //         if (network.name !== 'bnb') {
 
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
+    //             var maint = document.getElementById('contain')
+    //             var containert = document.createElement('div');
+    //             containert.classList.add('container-popup-network');
+    //             maint.appendChild(containert);
     
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box')
+    //             var popupBox = document.createElement('div');
+    //             containert.appendChild(popupBox);
+    //             popupBox.classList.add('popup-box')
     
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = 'Wrong Network'
-                title.classList.add('title-popup-network')
+    //             var title = document.createElement('h3')
+    //             popupBox.appendChild(title);
+    //             title.innerHTML = 'Wrong Network'
+    //             title.classList.add('title-popup-network')
     
-                var text = document.createElement('p');
-                popupBox.appendChild(text);
-                text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
-                text.classList.add('text-popup-network')
+    //             var text = document.createElement('p');
+    //             popupBox.appendChild(text);
+    //             text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+    //             text.classList.add('text-popup-network')
     
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
+    //             var button = document.createElement('button');
+    //             popupBox.appendChild(button);
+    //             button.classList.add('btn-popup-network')
+    //             button.innerHTML = 'OK'
     
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                })
-            }
-        // } else {
-        //     alert('Please download Metamask !')
-        // }
-    }
+    //             button.addEventListener('click', function (e) {
+    //                 containert.style.display = 'none'
+    //             })
+    //         }
+    //     // } else {
+    //     //     alert('Please download Metamask !')
+    //     // }
+    // }
 
    
 
-    async function connectWallet() {
-        await web3Provider.enable();
-        try{
-            console.log('ok')
+    // async function connectWallet() {
+    //     await web3Provider.enable();
+    //     try{
+    //         console.log('ok')
 
 
 
             
             
 
-        }  catch(err) {
+    //     }  catch(err) {
             
-            var maint = document.getElementById('contain')
-            var containert = document.createElement('div');
-            containert.classList.add('container-popup-network');
-            maint.appendChild(containert);
+    //         var maint = document.getElementById('contain')
+    //         var containert = document.createElement('div');
+    //         containert.classList.add('container-popup-network');
+    //         maint.appendChild(containert);
 
-            var popupBox = document.createElement('div');
-            containert.appendChild(popupBox);
-            popupBox.classList.add('popup-box')
+    //         var popupBox = document.createElement('div');
+    //         containert.appendChild(popupBox);
+    //         popupBox.classList.add('popup-box')
 
-            var title = document.createElement('h3')
-            popupBox.appendChild(title);
-            title.innerHTML = 'Connect Wallet'
-            title.classList.add('title-popup-network')
+    //         var title = document.createElement('h3')
+    //         popupBox.appendChild(title);
+    //         title.innerHTML = 'Connect Wallet'
+    //         title.classList.add('title-popup-network')
 
-            var text = document.createElement('p');
-            popupBox.appendChild(text);
-            text.innerHTML = 'Please install MetaMask !'
-            text.classList.add('text-popup-network');
+    //         var text = document.createElement('p');
+    //         popupBox.appendChild(text);
+    //         text.innerHTML = 'Please install MetaMask !'
+    //         text.classList.add('text-popup-network');
 
-            var button = document.createElement('button');
-            popupBox.appendChild(button);
-            button.classList.add('btn-popup-network')
-            button.innerHTML = 'OK'
+    //         var button = document.createElement('button');
+    //         popupBox.appendChild(button);
+    //         button.classList.add('btn-popup-network')
+    //         button.innerHTML = 'OK'
 
-            button.addEventListener('click', function (e) {
-                containert.style.display = 'none'
-            }) 
-        }
-    }
+    //         button.addEventListener('click', function (e) {
+    //             containert.style.display = 'none'
+    //         }) 
+    //     }
+    // }
 
-    async function featherQuantity() {
+    // async function featherQuantity() {
 
-        if (account !== 'undefined' || window.ethereum.selectedAddress !== 'undefined' ) {
+    //     if (account !== 'undefined' || window.ethereum.selectedAddress !== 'undefined' ) {
 
-        // FETCH QUANTITY OF EACH FEATHER
+    //     // FETCH QUANTITY OF EACH FEATHER
         
-        const provider = new ethers.providers.Web3Provider(web3Provider);
-        const signer = provider.getSigner();
-        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+    //     const provider = new ethers.providers.Web3Provider(web3Provider);
+    //     const signer = provider.getSigner();
+    //     const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
 
-        var smallFeather = await featherContract.remainingSmall();
-        var mediumFeather = await featherContract.remainingMedium();
-        var largeFeather = await featherContract.remainingLarge();
+    //     var smallFeather = await featherContract.remainingSmall();
+    //     var mediumFeather = await featherContract.remainingMedium();
+    //     var largeFeather = await featherContract.remainingLarge();
 
-        setSmallFeather(smallFeather.toString());
-        setMediumFeather(mediumFeather.toString());
-        setLargeFeather(largeFeather.toString());
+    //     setSmallFeather(smallFeather.toString());
+    //     setMediumFeather(mediumFeather.toString());
+    //     setLargeFeather(largeFeather.toString());
         
-        }
-    }
+    //     }
+    // }
 
-    async function nftOwnedInWallet() {
-        if (account !== 'undefined' || window.ethereum.selectedAddress) {
-        // FETCH BALANCE 
+    // async function nftOwnedInWallet() {
+    //     if (account !== 'undefined' || window.ethereum.selectedAddress) {
+    //     // FETCH BALANCE 
         
-        console.log(web3Provider)
-        console.log()
-        const provider = new ethers.providers.Web3Provider(web3Provider);
-        console.log(provider)
-        const signer = provider.getSigner();
-        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
-        const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
-        console.log(provider.provider.accounts[0])
-        const balanceFeather = await featherContract.balanceOf(provider.provider.accounts[0]);
-        const balanceEpicFeather = await epicFeatherContract.balanceOf(provider.provider.accounts[0]);
+    //     console.log(web3Provider)
+    //     console.log()
+    //     const provider = new ethers.providers.Web3Provider(web3Provider);
+    //     console.log(provider)
+    //     const signer = provider.getSigner();
+    //     const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+    //     const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+    //     console.log(provider.provider.accounts[0])
+    //     const balanceFeather = await featherContract.balanceOf(provider.provider.accounts[0]);
+    //     const balanceEpicFeather = await epicFeatherContract.balanceOf(provider.provider.accounts[0]);
 
-        setNftOwned(Number(balanceFeather));
-        setEpicNftOwned(Number(balanceEpicFeather));
+    //     setNftOwned(Number(balanceFeather));
+    //     setEpicNftOwned(Number(balanceEpicFeather));
 
-        var wallet = document.getElementById('wallet');
+    //     var wallet = document.getElementById('wallet');
 
-            // SHOW WALLET ADDRESS 
+    //         // SHOW WALLET ADDRESS 
 
-        var originalAdress = provider.provider.accounts[0];
-        var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
-        var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
-        var newWalletAdress = firstWalletAdress + lastWalletAdress;
-        wallet.innerHTML = newWalletAdress; 
+    //     var originalAdress = provider.provider.accounts[0];
+    //     var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
+    //     var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
+    //     var newWalletAdress = firstWalletAdress + lastWalletAdress;
+    //     wallet.innerHTML = newWalletAdress; 
 
-            // SHOW NFT OWNED
+    //         // SHOW NFT OWNED
 
-        var myNfts = document.getElementById('showNft');
-        myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;        
-        }
-    }
+    //     var myNfts = document.getElementById('showNft');
+    //     myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;        
+    //     }
+    // }
 
-    // BUY SMALL
+    // // BUY SMALL
 
-    async function buySmallFeather() { 
-        await web3Provider.enable();
-        const provider = new ethers.providers.Web3Provider(web3Provider);
-            const signer = provider.getSigner();
-            const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-            const priceSmall = await contract.getPriceSmall();
+    // async function buySmallFeather() { 
+    //     await web3Provider.enable();
+    //     const provider = new ethers.providers.Web3Provider(web3Provider);
+    //         const signer = provider.getSigner();
+    //         const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+    //         const priceSmall = await contract.getPriceSmall();
 
-        if (account !== 'undefined' || window.ethereum.selectedAddress!== 'undefined') {
+    //     if (account !== 'undefined' || window.ethereum.selectedAddress!== 'undefined') {
 
 
-            try {
+    //         try {
 
-                const transaction = await contract.purchaseSmall({value: priceSmall});
-                await transaction.wait();
+    //             const transaction = await contract.purchaseSmall({value: priceSmall});
+    //             await transaction.wait();
 
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
+    //             var maint = document.getElementById('contain')
+    //             var containert = document.createElement('div');
+    //             containert.classList.add('container-popup-network');
+    //             maint.appendChild(containert);
 
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
+    //             var popupBox = document.createElement('div');
+    //             containert.appendChild(popupBox);
+    //             popupBox.classList.add('popup-box-soldout')
 
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
+    //             var img = document.createElement('img');
+    //             popupBox.appendChild(img);
                 
-                img.classList.add('img-popup-network')
-                img.src = gallus
+    //             img.classList.add('img-popup-network')
+    //             img.src = gallus
 
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = "You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase"
+    //             var title = document.createElement('h3')
+    //             popupBox.appendChild(title);
+    //             title.innerHTML = "You are now one of the earliest fighter to join the Gallus Army ! Thanks for your purchase"
                 
-                title.classList.add('title-popup-soldout')
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                })
-                window.location.reload();
-                alert('ok')
-            }
-            catch(err) {
-                console.log(err)
-                console.log(err.error.message)
-                let network = await provider.getNetwork()
-                var maint = document.getElementById('contain')
-                var containert = document.createElement('div');
-                containert.classList.add('container-popup-network');
-                maint.appendChild(containert);
+    //             title.classList.add('title-popup-soldout')
+    //             var button = document.createElement('button');
+    //             popupBox.appendChild(button);
+    //             button.classList.add('btn-popup-network')
+    //             button.innerHTML = 'OK'
+    //             button.addEventListener('click', function (e) {
+    //                 containert.style.display = 'none'
+    //             })
+    //             window.location.reload();
+    //             alert('ok')
+    //         }
+    //         catch(err) {
+    //             console.log(err)
+    //             console.log(err.error.message)
+    //             let network = await provider.getNetwork()
+    //             var maint = document.getElementById('contain')
+    //             var containert = document.createElement('div');
+    //             containert.classList.add('container-popup-network');
+    //             maint.appendChild(containert);
 
-                var popupBox = document.createElement('div');
-                containert.appendChild(popupBox);
-                popupBox.classList.add('popup-box-soldout')
+    //             var popupBox = document.createElement('div');
+    //             containert.appendChild(popupBox);
+    //             popupBox.classList.add('popup-box-soldout')
 
-                var img = document.createElement('img');
-                popupBox.appendChild(img);
+    //             var img = document.createElement('img');
+    //             popupBox.appendChild(img);
                 
-                img.classList.add('img-popup-network')
-                img.src = gallus
+    //             img.classList.add('img-popup-network')
+    //             img.src = gallus
 
-                var title = document.createElement('h3')
-                popupBox.appendChild(title);
-                title.innerHTML = "Presale is closed for now.."
+    //             var title = document.createElement('h3')
+    //             popupBox.appendChild(title);
+    //             title.innerHTML = "Presale is closed for now.."
                 
-                title.classList.add('title-popup-soldout')
-                var button = document.createElement('button');
-                popupBox.appendChild(button);
-                button.classList.add('btn-popup-network')
-                button.innerHTML = 'OK'
-                button.addEventListener('click', function (e) {
-                    containert.style.display = 'none'
-                })
+    //             title.classList.add('title-popup-soldout')
+    //             var button = document.createElement('button');
+    //             popupBox.appendChild(button);
+    //             button.classList.add('btn-popup-network')
+    //             button.innerHTML = 'OK'
+    //             button.addEventListener('click', function (e) {
+    //                 containert.style.display = 'none'
+    //             })
                 
-                if (err.error.message === "execution reverted: Pausable: paused") {
-                    title.innerHTML = "Presale is closed for now";
-                }
+    //             if (err.error.message === "execution reverted: Pausable: paused") {
+    //                 title.innerHTML = "Presale is closed for now";
+    //             }
                     
-                var sentence = err.error.message.includes("err: insufficient funds for transfer:")
-                if (sentence) {
-                    title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                  
-                }   
+    //             var sentence = err.error.message.includes("err: insufficient funds for transfer:")
+    //             if (sentence) {
+    //                 title.innerHTML = "Sorry, you don\'t have enough BNB for this transaction";                  
+    //             }   
                 
-                if (network.name !== 'bnb') {
+    //             if (network.name !== 'bnb') {
 
-                    var maint = document.getElementById('contain')
-                    var containert = document.createElement('div');
-                    containert.classList.add('container-popup-network');
-                    maint.appendChild(containert);
+    //                 var maint = document.getElementById('contain')
+    //                 var containert = document.createElement('div');
+    //                 containert.classList.add('container-popup-network');
+    //                 maint.appendChild(containert);
 
-                    var popupBox = document.createElement('div');
-                    containert.appendChild(popupBox);
-                    popupBox.classList.add('popup-box')
+    //                 var popupBox = document.createElement('div');
+    //                 containert.appendChild(popupBox);
+    //                 popupBox.classList.add('popup-box')
 
-                    var title = document.createElement('h3')
-                    popupBox.appendChild(title);
-                    title.innerHTML = 'Wrong Network'
-                    title.classList.add('title-popup-network')
+    //                 var title = document.createElement('h3')
+    //                 popupBox.appendChild(title);
+    //                 title.innerHTML = 'Wrong Network'
+    //                 title.classList.add('title-popup-network')
 
-                    var text = document.createElement('p');
-                    popupBox.appendChild(text);  
-                    text.classList.add('text-popup-network')
-                    text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
+    //                 var text = document.createElement('p');
+    //                 popupBox.appendChild(text);  
+    //                 text.classList.add('text-popup-network')
+    //                 text.innerHTML = 'Sorry, You are not on the right network... Please verify that you are on the Binance Smart Chain network and try again.'
 
-                    var button = document.createElement('button');
-                    popupBox.appendChild(button);
-                    button.classList.add('btn-popup-network')
-                    button.innerHTML = 'OK'
+    //                 var button = document.createElement('button');
+    //                 popupBox.appendChild(button);
+    //                 button.classList.add('btn-popup-network')
+    //                 button.innerHTML = 'OK'
 
-                    button.addEventListener('click', function (e) {
-                        containert.style.display = 'none'
-                    })
-                }
-            }
-        }
-    }
+    //                 button.addEventListener('click', function (e) {
+    //                     containert.style.display = 'none'
+    //                 })
+    //             }
+    //         }
+    //     }
+    // }
 
     // BUY MEDIUM
 
@@ -676,12 +679,16 @@ const BlindBox = () => {
 
         container.innerHTML = popup;
         const metaconnect = document.getElementById('metaconnectId');
-        metaconnect.addEventListener('click', () => {
-            metamaskConnect();
+        metaconnect.addEventListener('click',async () => {
+            await metamaskConnect();
+            container.style.display = "none";
+            window.location.reload()
         })
         const walletconnectId = document.getElementById('walletconnectId');
-        walletconnectId.addEventListener('click', () => {
-            walletConnect();
+        walletconnectId.addEventListener('click',async () => {
+            await walletConnect();
+            container.style.display = "none";
+            window.location.reload()
         })
 
         const xButton = document.getElementById('x');
@@ -691,6 +698,205 @@ const BlindBox = () => {
             window.location.reload()
                 })
     }
+
+
+
+    var [newProvider, setNewProvider ] = useState('')
+    var [originalAdress, setOriginalAddress] = useState('')
+
+    async function fetchData() {
+
+        var provider;
+        var metamaskState;
+        var walletState;
+        var accountz;
+        var firstWalletAdress;
+        var lastWalletAdress;
+        var newWalletAdress
+        var wallet = document.getElementById('wallet');
+            
+        try {
+            console.log(web3Provider.accounts[0])
+            if (typeof window.ethereum !== 'undefined') {
+
+                provider = new ethers.providers.Web3Provider(window.ethereum);
+                accountz = window.ethereum.selectedAddress
+                console.log(window.ethereum.selectedAddress)
+                fetchNft(provider); 
+
+                setOriginalAddress(window.ethereum.selectedAddress);
+                
+
+                const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+                const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+                
+                const balanceFeather = await featherContract.balanceOf(accountz);
+                const balanceEpicFeather = await epicFeatherContract.balanceOf(accountz);
+
+                setNftOwned(Number(balanceFeather));
+                setEpicNftOwned(Number(balanceEpicFeather));
+                setNewProvider(provider)
+                console.log(newProvider)
+
+                firstWalletAdress =  accountz.substring(0,  accountz.length - 36) + '...';
+                lastWalletAdress =  accountz.substring(38,  accountz.length - 0);
+                newWalletAdress = firstWalletAdress + lastWalletAdress;
+                wallet.innerHTML = newWalletAdress; 
+
+                var myNfts = document.getElementById('showNft');
+                myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`; 
+                document.getElementById('buySmall').addEventListener('click',() => {
+                    buySmall(provider)
+                    console.log("ojk")
+                })
+
+                console.log(accountz)
+                metamaskState = 'loaded'
+            }
+        } catch(err) {
+            console.log(err.message)
+
+        }
+        try{
+
+            if (web3Provider.accounts[0] !== 'undefined')
+
+                provider = new ethers.providers.Web3Provider(web3Provider);
+                accountz = web3Provider.wc.accounts[0]
+                console.log(accountz)
+
+                fetchNft(provider);
+
+                walletState = 'loaded'
+
+                const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+                const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+                
+                const balanceFeather = await featherContract.balanceOf(accountz);
+                const balanceEpicFeather = await epicFeatherContract.balanceOf(accountz);
+
+                setNftOwned(Number(balanceFeather));
+                setEpicNftOwned(Number(balanceEpicFeather));
+                setNewProvider(provider);
+                console.log(newProvider)
+                
+                firstWalletAdress =  accountz.substring(0,  accountz.length - 36) + '...';
+                lastWalletAdress =  accountz.substring(38,  accountz.length - 0);
+                newWalletAdress = firstWalletAdress + lastWalletAdress;
+                wallet.innerHTML = newWalletAdress; 
+
+                var myNfts = document.getElementById('showNft');
+                myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`; 
+                document.getElementById('buySmall').addEventListener('click',() => {
+                    buySmall(provider)
+                    console.log("ojk")
+                })
+                console.log(accountz)
+                
+        } catch(err) {
+            console.log(err)
+            
+        }    
+    }
+
+    async function buySmall() {
+
+        var provider;
+        if (typeof window.ethereum == 'undefined') {
+            try {
+                provider = new ethers.providers.Web3Provider(web3Provider);
+                const signer = provider.getSigner();
+                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+                const priceSmall = await contract.getPriceSmall();
+                try {
+    
+                    const transaction = await contract.purchaseSmall({value: priceSmall});
+                    await transaction.wait();
+                } catch(err) {
+                    console.log(err)
+                }
+            } catch(err) {
+                console.log(err)
+            } 
+            
+        }
+
+        if (typeof window.ethereum !== 'undefined') { 
+            try {
+            provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+                const priceSmall = await contract.getPriceSmall();
+                try {
+    
+                    const transaction = await contract.purchaseSmall({value: priceSmall});
+                    await transaction.wait();
+                } catch(err) {
+                    console.log(err.data.message)
+                }
+            } catch(err) {
+
+            }
+            
+        }
+        console.log(provider)
+        
+        
+    
+            
+    
+    
+                // try {
+    
+                //     const transaction = await contract.purchaseSmall({value: priceSmall});
+                //     await transaction.wait();
+                // } catch(err) {
+                //     console.log(err)
+                // }
+            
+    }
+
+    async function fetchWallet(provider) {
+
+        // const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+        // const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+        
+        // const balanceFeather = await featherContract.balanceOf(originalAdress);
+        // const balanceEpicFeather = await epicFeatherContract.balanceOf(originalAdress);
+
+        // setNftOwned(Number(balanceFeather));
+        // setEpicNftOwned(Number(balanceEpicFeather));
+
+        // var wallet = document.getElementById('wallet');
+
+        //     // SHOW WALLET ADDRESS 
+
+        
+        // var firstWalletAdress = originalAdress.substring(0, originalAdress.length - 36) + '...';
+        // var lastWalletAdress = originalAdress.substring(38, originalAdress.length - 0);
+        // var newWalletAdress = firstWalletAdress + lastWalletAdress;
+        // wallet.innerHTML = newWalletAdress; 
+
+        //     // SHOW NFT OWNED
+
+        // var myNfts = document.getElementById('showNft');
+        // myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`;        
+        
+    }
+
+    async function fetchNft(provider) {
+        const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
+    
+        var smallFeather = await featherContract.remainingSmall();
+        var mediumFeather = await featherContract.remainingMedium();
+        var largeFeather = await featherContract.remainingLarge();
+
+        setSmallFeather(smallFeather.toString());
+        setMediumFeather(mediumFeather.toString());
+        setLargeFeather(largeFeather.toString());
+    }
+
+    
 
     // function closePopup() {
     //     const xButton = document.getElementById('x');
@@ -2093,7 +2299,7 @@ Take advantage of this unique benefit with the DeFi
                                 
                                 <div className="center-button">
                                     <div className="flexDis">
-                                    <a  className="btn-border-color-small" id="buySmall" onClick={buySmallFeather} >
+                                    <a  className="btn-border-color-small" id="buySmall" onClick={buySmall} >
                                     <img src={icon_2} className="icon-btn icon-btn2" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft" >
