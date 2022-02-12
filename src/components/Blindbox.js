@@ -41,6 +41,9 @@ import VideoLarge from "../images/large.mp4";
 import gallusVideo from "../images/gallus_intro_low_reso.mp4";
 import icon_2 from "../images/Asset_2.png";
 import story from "../images/story.png";
+import metamask from "../images/metamask.png"
+import walletconnect from "../images/walletconnect.svg"
+import point from "../images/3.png"
 
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3 from "web3";
@@ -71,7 +74,7 @@ const BlindBox = () => {
     
 
     useEffect(() => {
-        loadNfts();
+        // loadNfts();
         
     }, []);
 
@@ -83,17 +86,7 @@ const BlindBox = () => {
           // ...
   
         },
-        qrcodeModalOptions: {
-              mobileLinks: [
-              "rainbow",
-              "metamask",
-              "argent",
-              "trust",
-              "imtoken",
-              "pillar",
-              ],
-              
-          },
+       
           
         // bridge: 'https://bridge.walletconnect.org',
       });
@@ -114,7 +107,7 @@ const BlindBox = () => {
                 
     
             // }
-           await web3Provider.enable();
+           
             const provider = new ethers.providers.Web3Provider(web3Provider);
             const signer = provider.getSigner();
             console.log(provider)
@@ -165,12 +158,17 @@ const BlindBox = () => {
         // }
     }
 
-    async function connectWallet() {
+   
 
+    async function connectWallet() {
+        await web3Provider.enable();
         try{
+            console.log('ok')
+
+
+
             
-            await web3Provider.enable();
-            window.location.reload();
+            
 
         }  catch(err) {
             
@@ -206,10 +204,10 @@ const BlindBox = () => {
 
     async function featherQuantity() {
 
-        if (account !== 'undefined' || window.ethereum.selectedAddress) {
+        if (account !== 'undefined' || window.ethereum.selectedAddress !== 'undefined' ) {
 
         // FETCH QUANTITY OF EACH FEATHER
-        await web3Provider.enable();
+        
         const provider = new ethers.providers.Web3Provider(web3Provider);
         const signer = provider.getSigner();
         const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
@@ -228,7 +226,7 @@ const BlindBox = () => {
     async function nftOwnedInWallet() {
         if (account !== 'undefined' || window.ethereum.selectedAddress) {
         // FETCH BALANCE 
-        await web3Provider.enable();
+        
         console.log(web3Provider)
         console.log()
         const provider = new ethers.providers.Web3Provider(web3Provider);
@@ -622,7 +620,86 @@ const BlindBox = () => {
     }
 
 
-    
+
+    // CONNECT TO WALLET 
+    //
+
+    async function walletConnect() {
+        await web3Provider.enable();
+        console.log("ok")
+    }
+
+    async function metamaskConnect() {
+        await window.ethereum.request({ method: "eth_requestAccounts" })
+    }
+
+    // SHOW MULTI WALLET POP UP 
+    //
+
+    async function showMultiWallet() {
+
+        const container = document.getElementById('popupwallet');
+        const popup = 
+            `<div class="multiwallet-container">
+            <div class="multiwallet-box">
+                <div class="multiwallet-top">
+                    <div class="mwContainer-title">
+                        <h2 class="multiwallet-title">Connect Wallet</h2>
+                    </div>
+                    <button class="multiwallet-close-btn" id='x'>X</button>
+                </div>
+                <div class="multiwallet-center">
+                    <div class="multiwallet-grid">
+                        <button class="metamask-containerMW commun-btn-connect"  id="walletconnectId">
+                            <img src=${walletconnect} class="walletconnect-logoMW"/>
+                            <div class="metamask-text">
+                                Connect Wallet
+                            </div>
+                        </button>
+                        <button class="walletConnect-containerMW commun-btn-connect" id="metaconnectId" >
+                            <img src=${metamask} class="metamask-logoMW"/>
+                            <div class="metamask-text">
+                                Metamask
+                            </div>
+                        </button>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="multiwallet-bottom">
+                    <p class="multiwallet-bottom-text">Haven't got a crypto wallet yet ?</p>
+                    <a href="" class="multiwallet-bottom-link">Learn How to Create one</a>
+                </div>
+            </div>
+            </div> `;
+
+        container.innerHTML = popup;
+        const metaconnect = document.getElementById('metaconnectId');
+        metaconnect.addEventListener('click', () => {
+            metamaskConnect();
+        })
+        const walletconnectId = document.getElementById('walletconnectId');
+        walletconnectId.addEventListener('click', () => {
+            walletConnect();
+        })
+
+        const xButton = document.getElementById('x');
+        xButton.addEventListener('click', () => {
+            container.style.display = "none";
+            console.log('helloword')
+            window.location.reload()
+                })
+    }
+
+    // function closePopup() {
+    //     const xButton = document.getElementById('x');
+    //     xButton.addEventListener('click', () => {
+            
+        
+    // }
+
+  
 //     async function purshaseSmall() {
 //         if (typeof window.ethereum !== 'undefined') {
 
@@ -1901,7 +1978,7 @@ const BlindBox = () => {
                         </ul>
                     </div>
                 </div> 
-        <div className="pool background-section">
+        <div className="pool background-section" >
             
        <Test />
         <div className="wallet-nav">
@@ -1920,7 +1997,7 @@ const BlindBox = () => {
                 <div className="right-nav">
                     <div className="right-item" id="my-nft">
                         <NavLink exact to="/my-nft" className="nft-owned " id="showNft"></NavLink>
-                        <a  id="wallet"  onClick={connectWallet} className="wallet pool1" >Connect Wallet</a>
+                        <a  id="wallet"  onClick={showMultiWallet} className="wallet pool1" >Connect Wallet</a>
                     </div>
                     {/* onClick={connectMetaMask} */}
 
@@ -1928,7 +2005,7 @@ const BlindBox = () => {
             </div>
         
             
-            <div className="normal-layout padding-nft-2">
+            <div className="normal-layout padding-nft-2" >
                 <div className="main-title">
                     <div className="left-1">
                         <h3 className="rofi-title-2">THE GALLUS ROYAL FEATHER NFT Collection</h3>
@@ -1962,7 +2039,7 @@ const BlindBox = () => {
                 </div>
             </div>
                
-            <div className="pool background-section-2">
+            <div className="pool background-section-2" id="popupwallet">
             
             <div className="normal-layout">
             
@@ -2204,6 +2281,10 @@ Take advantage of this unique benefit with the DeFi.
                 
                     
                 </div>
+
+
+
+                
             
            
         </div>
