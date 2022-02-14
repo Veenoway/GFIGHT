@@ -70,8 +70,7 @@ const BlindBox = () => {
     const [loadingState, setLoadingState] = useState('not-loaded');
 
     // const gallusFeatherNFTAddress = "REEL : 0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A TEST :0xf3b2bF0Cf14011aE704972D6B4726e61dd813d18";
-    const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
-    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
+    
 
     
 
@@ -622,7 +621,8 @@ const BlindBox = () => {
         }
     }
 
-
+    const gallusFeatherNFTAddress = "0x1Ae5F2D1149e0eF80b7C6cAdC27C898CEac1d21A";
+    const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
 
     // CONNECT TO WALLET 
     //
@@ -704,6 +704,8 @@ const BlindBox = () => {
     var [newProvider, setNewProvider ] = useState('')
     var [originalAdress, setOriginalAddress] = useState('')
 
+    var loaded = "not-loaded";
+
     async function fetchData() {
 
         var provider;
@@ -716,7 +718,7 @@ const BlindBox = () => {
         var wallet = document.getElementById('wallet');
             
         try {
-            console.log(web3Provider.accounts[0])
+            
             if (typeof window.ethereum !== 'undefined') {
 
                 provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -743,8 +745,11 @@ const BlindBox = () => {
                 newWalletAdress = firstWalletAdress + lastWalletAdress;
                 wallet.innerHTML = newWalletAdress; 
 
+                loaded = 'loaded metamask'
+                console.log(loaded)
+
                 var myNfts = document.getElementById('showNft');
-                myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`; 
+                myNfts.innerHTML = `NFT Owned : ${parseInt(balanceEpicFeather)  + parseInt(balanceFeather)}`; 
                 document.getElementById('buySmall').addEventListener('click',() => {
                     buySmall(provider)
                     console.log("ojk")
@@ -752,64 +757,85 @@ const BlindBox = () => {
 
                 console.log(accountz)
                 metamaskState = 'loaded'
+                
             }
         } catch(err) {
             console.log(err.message)
 
-        }
-        try{
-
-            if (web3Provider.accounts[0] !== 'undefined')
-
+            if (err.message === 'invalid address or ENS name (argument="name", value=null, code=INVALID_ARGUMENT, version=contracts/5.5.0)') {
+                
                 provider = new ethers.providers.Web3Provider(web3Provider);
                 accountz = web3Provider.wc.accounts[0]
                 console.log(accountz)
 
                 fetchNft(provider);
-
-                walletState = 'loaded'
-
+                console.log(accountz)
+                
+                
                 const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
                 const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
+                console.log(featherContract)
                 
-                const balanceFeather = await featherContract.balanceOf(accountz);
-                const balanceEpicFeather = await epicFeatherContract.balanceOf(accountz);
+                // const balanceFeather = await featherContract.balanceOf(accountz);           
+                // const balanceEpicFeather = await epicFeatherContract.balanceOf(accountz);
+                // var balance1Epic = parseInt(balanceEpicFeather);
+                // var balance2Feather = parseInt(balanceFeather);
 
-                setNftOwned(Number(balanceFeather));
-                setEpicNftOwned(Number(balanceEpicFeather));
-                setNewProvider(provider);
-                console.log(newProvider)
-                
                 firstWalletAdress =  accountz.substring(0,  accountz.length - 36) + '...';
                 lastWalletAdress =  accountz.substring(38,  accountz.length - 0);
                 newWalletAdress = firstWalletAdress + lastWalletAdress;
                 wallet.innerHTML = newWalletAdress; 
+                
+                loaded = 'loaded walletConnect';
+                console.log(loaded)
 
-                var myNfts = document.getElementById('showNft');
-                myNfts.innerHTML = `NFT Owned : ${Number(balanceEpicFeather)  + Number(balanceFeather)}`; 
+                myNfts = document.getElementById('showNft');
+                myNfts.innerHTML = "MY NFTs"; 
+                
                 document.getElementById('buySmall').addEventListener('click',() => {
                     buySmall(provider)
-                    console.log("ojk")
+                    
                 })
-                console.log(accountz)
+                console.log(accountz)   
                 
-        } catch(err) {
-            console.log(err)
-            
-        }    
+            }
+        }
     }
 
-    async function buySmall() {
+    async function buySmall(provider) {
 
-        var provider;
-        if (typeof window.ethereum == 'undefined') {
-            try {
+        
+        if (loaded === 'loaded walletConnect') {
+
+       console.log('test')
+           
                 provider = new ethers.providers.Web3Provider(web3Provider);
+                const signer = provider.getSigner();
+                console.log("walletconnect")
+                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
+                console.log("walletconnect")
+                const priceSmall = await contract.getPriceSmall();
+                console.log("walletconnect")
+                console.log("walletconnect")
+                try {
+    
+                    const transaction = await contract.purchaseSmall({value: priceSmall});
+                    await transaction.wait();
+                } catch(err) {
+                    console.log(err)
+                }
+           
+         }
+
+            if (loaded === 'loaded metamask')
+            try {
+                provider = new ethers.providers.Web3Provider(window.ethereum);
                 const signer = provider.getSigner();
                 const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
                 const priceSmall = await contract.getPriceSmall();
+                console.log("metamasl")
+                
                 try {
-    
                     const transaction = await contract.purchaseSmall({value: priceSmall});
                     await transaction.wait();
                 } catch(err) {
@@ -819,29 +845,13 @@ const BlindBox = () => {
                 console.log(err)
             } 
             
-        }
-
-        if (typeof window.ethereum !== 'undefined') { 
-            try {
-            provider = new ethers.providers.Web3Provider(window.ethereum);
-            const signer = provider.getSigner();
-                const contract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, signer);
-                const priceSmall = await contract.getPriceSmall();
-                try {
-    
-                    const transaction = await contract.purchaseSmall({value: priceSmall});
-                    await transaction.wait();
-                } catch(err) {
-                    console.log(err.data.message)
-                }
-            } catch(err) {
-
-            }
+        
+     
             
-        }
+        
         console.log(provider)
         
-        
+    
     
             
     
@@ -2299,7 +2309,7 @@ Take advantage of this unique benefit with the DeFi
                                 
                                 <div className="center-button">
                                     <div className="flexDis">
-                                    <a  className="btn-border-color-small" id="buySmall" onClick={buySmall} >
+                                    <a  className="btn-border-color-small" id="buySmall"  >
                                     <img src={icon_2} className="icon-btn icon-btn2" />BUY SMALL</a></div>
                                     {/* onClick={purshase} */}
                                     <div className="prenium-box-nft" >
