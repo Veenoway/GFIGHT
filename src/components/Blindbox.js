@@ -336,7 +336,6 @@ const BlindBox = () => {
     const epicAddress = "0xBE748f53ACfc0410abf42a04D00702c40Fa76FA5";
 
     // CONNECT TO WALLET 
-    //
 
     async function walletConnect() {
         await web3Provider.enable();
@@ -348,13 +347,12 @@ const BlindBox = () => {
     }
 
     // SHOW MULTI WALLET POP UP 
-    //
 
     async function showMultiWallet() {
 
         const container = document.getElementById('popupwallet');
         const popup = 
-            `<div class="multiwallet-container">
+        `<div class="multiwallet-container">
             <div class="multiwallet-box">
                 <div class="multiwallet-top">
                     <div class="mwContainer-title">
@@ -376,18 +374,14 @@ const BlindBox = () => {
                                 Metamask
                             </div>
                         </button>
-                        
-                        
-                    </div>
-                    
+                    </div> 
                 </div>
                 <div class="multiwallet-bottom">
                     <p class="multiwallet-bottom-text">Haven't got a crypto wallet yet ?</p>
                     <a href="" class="multiwallet-bottom-link">Learn How to Create one</a>
                 </div>
             </div>
-            </div> `;
-
+        </div> `;
         container.innerHTML = popup;
         const metaconnect = document.getElementById('metaconnectId');
         metaconnect.addEventListener('click',async () => {
@@ -418,26 +412,43 @@ const BlindBox = () => {
         var wallet;
         web3 = new Web3(window.ethereum)
         var provider = new ethers.providers.Web3Provider(web3.currentProvider);
+        console.log(typeof window.ethereum)
         
-        try {
-            wallet = web3Provider.wc.accounts[0]
-            console.log(wallet)
-            loaded = 'loaded walletConnect' 
-
-        } catch(err) {
-            console.log(err)
-        }   
+            try {
             
-        try {
-            web3.eth.requestAccounts().then(accounts => console.log(accounts));
-            var walletNo = await web3.eth.getAccounts();
-            wallet = walletNo[0]
-            console.log(walletNo[0])
-            loaded = 'loaded metamask'
-
-        } catch(err){
-            console.log(err)
-        }
+                var walletNo = await web3.eth.getAccounts();
+                wallet = walletNo[0]
+                console.log(walletNo[0])
+                loaded = 'loaded metamask'
+                console.log(web3.currentProvider)
+                
+                if (wallet === undefined) {
+                    wallet = web3Provider.wc.accounts[0]
+                    console.log(wallet)
+                    loaded = 'loaded walletConnect' 
+                    console.log(web3.currentProvider)
+                }
+    
+            } catch(err){
+                console.log(err)
+                
+            } 
+         
+            // try {
+            //     wallet = web3Provider.wc.accounts[0]
+            //     console.log(wallet)
+            //     loaded = 'loaded walletConnect' 
+            //     console.log(web3.currentProvider)
+    
+            // } catch(err) {
+            //     console.log(err)
+                
+            // }  
+            
+        
+        
+            
+        
 
         const featherContract = new ethers.Contract(gallusFeatherNFTAddress, GallusFeatherNFT.abi, provider);
         const epicFeatherContract = new ethers.Contract(epicAddress, GallusFeatherNFT.abi, provider);
@@ -452,7 +463,6 @@ const BlindBox = () => {
         var newWalletAdress = firstWalletAdress + lastWalletAdress;
         wallets.innerHTML = newWalletAdress; 
 
-        console.log(loaded)
         fetchNft(provider)
         var myNfts = document.getElementById('showNft');
         myNfts.innerHTML = `NFT Owned : ${totalBalance}`; 
