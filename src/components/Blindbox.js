@@ -427,34 +427,40 @@ const BlindBox = () => {
     } 
 
     async function fetchDataWallet() {
-
-        
+   
         var web3;
         var wallet;
         web3 = new Web3(window.ethereum)
         var provider = new ethers.providers.Web3Provider(web3.currentProvider);
         
         
-                try {
-                
-                
+            try {
+
+              
                 wallet = web3Provider.wc.accounts[0]
                 console.log(provider)
                 console.log(wallet)
                 setAccountUser(wallet)  
                 loaded = 'loaded walletConnect'
+                console.log(accountUser)
                 
             } catch(err) {
-                console.log(err)            
+                console.log(err)
+            }   
+            
+            try {
                 web3.eth.requestAccounts().then(accounts => console.log(accounts));
                 console.log(web3.eth.accounts)
-                var walletNo = web3.eth.getAccounts();
+                var walletNo = await web3.eth.getAccounts();
                 wallet = walletNo[0]
-                console.log(wallet)
+                console.log(walletNo)
                 setAccountUser(wallet)
                 
                 loaded = 'loaded metamask'
+            } catch(err){
+                console.log(err)
             }
+            
 
         console.log(wallet)
 
@@ -464,8 +470,8 @@ const BlindBox = () => {
         console.log(featherContract)
         
 
-            const balanceEpicFeather = await epicFeatherContract.balanceOf(accountUser);
-            const balanceFeather = await featherContract.balanceOf(accountUser);
+            const balanceEpicFeather = await epicFeatherContract.balanceOf(wallet);
+            const balanceFeather = await featherContract.balanceOf(wallet);
             const totalBalance = Number(balanceFeather) + Number(balanceEpicFeather)
     
             var wallets = document.getElementById('wallet');

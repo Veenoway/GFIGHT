@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/GallusFighter.github.io/static/css/main.b32f910b.chunk.css",
-    "main.js": "/GallusFighter.github.io/static/js/main.ed807a27.chunk.js",
-    "main.js.map": "/GallusFighter.github.io/static/js/main.ed807a27.chunk.js.map",
+    "main.css": "/GallusFighter.github.io/static/css/main.c0d57b9f.chunk.css",
+    "main.js": "/GallusFighter.github.io/static/js/main.74a09176.chunk.js",
+    "main.js.map": "/GallusFighter.github.io/static/js/main.74a09176.chunk.js.map",
     "runtime-main.js": "/GallusFighter.github.io/static/js/runtime-main.e4f73c17.js",
     "runtime-main.js.map": "/GallusFighter.github.io/static/js/runtime-main.e4f73c17.js.map",
     "static/css/2.a75f5a2c.chunk.css": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.c789d671.chunk.js": "/GallusFighter.github.io/static/js/2.c789d671.chunk.js",
-    "static/js/2.c789d671.chunk.js.map": "/GallusFighter.github.io/static/js/2.c789d671.chunk.js.map",
+    "static/js/2.a62d265c.chunk.js": "/GallusFighter.github.io/static/js/2.a62d265c.chunk.js",
+    "static/js/2.a62d265c.chunk.js.map": "/GallusFighter.github.io/static/js/2.a62d265c.chunk.js.map",
     "static/js/3.945f02a0.chunk.js": "/GallusFighter.github.io/static/js/3.945f02a0.chunk.js",
     "static/js/3.945f02a0.chunk.js.map": "/GallusFighter.github.io/static/js/3.945f02a0.chunk.js.map",
     "index.html": "/GallusFighter.github.io/index.html",
     "static/css/2.a75f5a2c.chunk.css.map": "/GallusFighter.github.io/static/css/2.a75f5a2c.chunk.css.map",
-    "static/css/main.b32f910b.chunk.css.map": "/GallusFighter.github.io/static/css/main.b32f910b.chunk.css.map",
-    "static/js/2.c789d671.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.c789d671.chunk.js.LICENSE.txt",
+    "static/css/main.c0d57b9f.chunk.css.map": "/GallusFighter.github.io/static/css/main.c0d57b9f.chunk.css.map",
+    "static/js/2.a62d265c.chunk.js.LICENSE.txt": "/GallusFighter.github.io/static/js/2.a62d265c.chunk.js.LICENSE.txt",
+    "static/media/3.877cac24.png": "/GallusFighter.github.io/static/media/3.877cac24.png",
     "static/media/Asset_2.1a3ccaef.png": "/GallusFighter.github.io/static/media/Asset_2.1a3ccaef.png",
     "static/media/Governance.84c1c293.png": "/GallusFighter.github.io/static/media/Governance.84c1c293.png",
     "static/media/GrandePlume.7e2b31c1.gif": "/GallusFighter.github.io/static/media/GrandePlume.7e2b31c1.gif",
@@ -49,6 +50,7 @@
     "static/media/medium.772078ff.mp4": "/GallusFighter.github.io/static/media/medium.772078ff.mp4",
     "static/media/medium2.e52b8ff9.png": "/GallusFighter.github.io/static/media/medium2.e52b8ff9.png",
     "static/media/mediumfeather.76962390.png": "/GallusFighter.github.io/static/media/mediumfeather.76962390.png",
+    "static/media/metamask.87671570.png": "/GallusFighter.github.io/static/media/metamask.87671570.png",
     "static/media/mine1.e48decec.png": "/GallusFighter.github.io/static/media/mine1.e48decec.png",
     "static/media/mining.5f95c82d.png": "/GallusFighter.github.io/static/media/mining.5f95c82d.png",
     "static/media/moyennePlume.9ecd5b5f.gif": "/GallusFighter.github.io/static/media/moyennePlume.9ecd5b5f.gif",
@@ -69,6 +71,7 @@
     "static/media/testfeather2.7414e78a.mp4": "/GallusFighter.github.io/static/media/testfeather2.7414e78a.mp4",
     "static/media/troll.cfd73f98.png": "/GallusFighter.github.io/static/media/troll.cfd73f98.png",
     "static/media/twitter.490fa312.png": "/GallusFighter.github.io/static/media/twitter.490fa312.png",
+    "static/media/walletconnect.dfa25e47.svg": "/GallusFighter.github.io/static/media/walletconnect.dfa25e47.svg",
     "static/media/webton_anglais_001.240f24a4.jpg": "/GallusFighter.github.io/static/media/webton_anglais_001.240f24a4.jpg",
     "static/media/webton_anglais_002.a7f18c00.jpg": "/GallusFighter.github.io/static/media/webton_anglais_002.a7f18c00.jpg",
     "static/media/webton_anglais_003.3aa6fda6.jpg": "/GallusFighter.github.io/static/media/webton_anglais_003.3aa6fda6.jpg",
@@ -77,8 +80,8 @@
   "entrypoints": [
     "static/js/runtime-main.e4f73c17.js",
     "static/css/2.a75f5a2c.chunk.css",
-    "static/js/2.c789d671.chunk.js",
-    "static/css/main.b32f910b.chunk.css",
-    "static/js/main.ed807a27.chunk.js"
+    "static/js/2.a62d265c.chunk.js",
+    "static/css/main.c0d57b9f.chunk.css",
+    "static/js/main.74a09176.chunk.js"
   ]
 }
