@@ -1,7 +1,7 @@
 {
   "name": "bad",
   "version": "0.1.0",
-  "homepage": "https://veenoway.github.io/GallusFighter.github.io/",
+  "homepage": "https://veenoway.github.io/GFIGHT/",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.8.3",
