@@ -5,7 +5,7 @@ import telegram from "../images/telegram.png";
 import discord from "../images/discord.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ethers }from "ethers";
+
 import GallusFeatherNFT from '../GallusFeatherNFT.json';
 import cotcot from '../images/fight_chicken_2.png';
 import gallusLogo from '../images/logoGallus.png';
