@@ -232,7 +232,15 @@ const MyNft = () => {
                     <div class="detail-container">
                         <h1 class="title-Nft-desc">${data.name}<span className="title-nft-secondColor"></span></h1>
                         <div class="liseret-nft"></div>
-                        <p class="text-description-nft">${data.description}</p>
+                        <ul>
+                            <li class="text-description-nft">${data.description}</li>
+                            <li class="text-description-nft" style="">Version : ${data.attributes[0].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Material : ${data.attributes[1].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Box : ${data.attributes[2].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Crest : ${data.attributes[3].value}</li>
+                            <li class="text-description-nft" style="margin:0px">Sticker : ${data.attributes[4].value}</li>
+                        </ul>
+
                         
                         <div class="center-button">
                             
@@ -242,8 +250,20 @@ const MyNft = () => {
                         
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>`;
           myNft.innerHTML += nftBoxCreated;
+=======
+            </div>`
+                myNft.innerHTML += nftBoxCreated
+
+                console.log(data.attributes)
+
+               
+        
+        
+            }
+>>>>>>> b4e03f7a909d7789fa3237033d72434aee169251
         }
       }
     }
@@ -316,6 +336,7 @@ const MyNft = () => {
               </NavLink>
             </li>
 
+<<<<<<< HEAD
             <li class="menut-item ">
               <NavLink
                 exact
@@ -359,6 +380,31 @@ const MyNft = () => {
                 <i class="fas fa-tractor yellow-icon"></i>Farms
               </NavLink>
             </li>
+=======
+                    </ul>
+                </div>
+            </div> 
+        <div className="pool">
+        
+        <div className="wallet-nav">
+        <div className="button-aside-nav" >
+                <img src={gallusLogo} className="gallus-title-logo" />
+                <a className="hamburger-nav-app" id="hhh" onClick={AfficherMasquer}>
+                    <i className="fas fa-bars hamburger-img"></i>
+                </a>
+            </div>
+        <div className="logo-nav-wallet">
+            <a href="" className="logoGALLUS"></a>
+                <div className="pool1">
+                    Your Nft
+                </div>
+            </div>
+            <div className="right-nav">
+                <div className="right-item">
+                    {/* <a href="#my-nft" className="nft-owned ">}</a> */}
+                    <a href="#my-nft" id="test" className="wallet pool1" ></a>
+                </div>
+>>>>>>> b4e03f7a909d7789fa3237033d72434aee169251
 
             <li class="menut-item">
               <NavLink

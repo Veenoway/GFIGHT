@@ -1,4 +1,4 @@
-import egg from "../eggIncub.jpg";
+import egg from "../images/eggIncub.jpg";
 import bsc from "../images/bsc.png";
 import NftDescription from "./NftDescription"
 

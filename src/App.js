@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from "./components/Header";
 import Pool from "./components/Pool";
@@ -16,6 +16,7 @@ import Airdrop from './components/Airdrop';
 import Medium from './components/MarketComponent/Medium';
 import Small from './components/MarketComponent/Small';
 import Titan from './components/MarketComponent/Titan';
+
 
 
 

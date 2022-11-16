@@ -169,7 +169,7 @@ const NftMarket = () => {
         
         <div className="wallet-nav">
             <div className="logo-nav">
-                <a href="" className="logoJOJO"></a>
+                <a href="" className="logoGALLUS"></a>
                     <div className="pool1">
                         NFT Market
                     </div>

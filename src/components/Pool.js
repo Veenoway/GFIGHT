@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../logo.png';
+
 import Header from './Header';
 
 const Pool = () => {
@@ -9,7 +9,7 @@ const Pool = () => {
         <Header />
        <div className="wallet-nav">
            <div className="logo-nav">
-               <a href="" className="logoJOJO"></a>
+               <a href="" className="logoGALLUS"></a>
                 <div clasName="pool">
                     Pool
                 </div>
@@ -54,7 +54,7 @@ const Pool = () => {
                        <div className="item-total">
                            <div className="title-pool">ROFI Fight Pool</div>
                            <div className="value">
-                               <img src={img} className="img-logo"/>
+                               <img src="" className="img-logo"/>
                                503,060,000
                            </div>
                            <div className="usd-value">= $378,089</div>
@@ -63,7 +63,7 @@ const Pool = () => {
                            <div className="data-item item-total">
                                 <div className="title-data">ROFI</div>
                                 <div className="values">
-                                <img src={img} className="img-logo"/>
+                                <img src="" className="img-logo"/>
                                  <strong>0</strong><span className="grey"> = $0</span></div>
                            </div>
                            <div className="data-item item-total">
@@ -85,7 +85,7 @@ const Pool = () => {
                            <div className="data-item item-total">
                                 <div className="title-data">1000 Mining Hashrate/24h to get</div>
                                 <div className="values">
-                                    <img src={img} className="img-logo"/>
+                                    <img src="" className="img-logo"/>
                                     <strong>5,928 </strong>
                                     <span className="grey"> = $4,456</span>
                                 </div>
