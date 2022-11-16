@@ -250,10 +250,6 @@ const MyNft = () => {
                         
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>`;
-          myNft.innerHTML += nftBoxCreated;
-=======
             </div>`
                 myNft.innerHTML += nftBoxCreated
 
@@ -263,7 +259,6 @@ const MyNft = () => {
         
         
             }
->>>>>>> b4e03f7a909d7789fa3237033d72434aee169251
         }
       }
     }
@@ -336,51 +331,6 @@ const MyNft = () => {
               </NavLink>
             </li>
 
-<<<<<<< HEAD
-            <li class="menut-item ">
-              <NavLink
-                exact
-                to="/nft-market"
-                activeClassName="nav-active "
-                className="display disabled"
-              >
-                <i class="fas fa-shopping-cart yellow-icon"></i>NFT Market
-                <span className="tagSoon ">Soon..</span>
-              </NavLink>
-            </li>
-            <li class="menut-item">
-              <NavLink
-                exact
-                to="/comingsoon"
-                activeClassName="nav-active"
-                className="display disabled"
-              >
-                <i class="fas fa-feather-alt yellow-icon"></i>
-                Defight
-              </NavLink>
-            </li>
-            <li class="menut-item">
-              <NavLink
-                exact
-                to="/comingsoon"
-                activeClassName="nav-active"
-                className="display disabled"
-              >
-                <i class="fas fa-layer-group yellow-icon"></i>
-                Pool
-              </NavLink>
-            </li>
-            <li class="menut-item">
-              <NavLink
-                exact
-                to="/comingsoon"
-                activeClassName="nav-active"
-                className="display disabled"
-              >
-                <i class="fas fa-tractor yellow-icon"></i>Farms
-              </NavLink>
-            </li>
-=======
                     </ul>
                 </div>
             </div> 
@@ -404,7 +354,6 @@ const MyNft = () => {
                     {/* <a href="#my-nft" className="nft-owned ">}</a> */}
                     <a href="#my-nft" id="test" className="wallet pool1" ></a>
                 </div>
->>>>>>> b4e03f7a909d7789fa3237033d72434aee169251
 
             <li class="menut-item">
               <NavLink
